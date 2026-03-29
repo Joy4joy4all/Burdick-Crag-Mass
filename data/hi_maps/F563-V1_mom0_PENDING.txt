@@ -1,0 +1,20 @@
+BCM OFFSET - PENDING: F563-V1
+Notes: Substrate Ripple
+
+DOWNLOAD MANUALLY:
+
+Option 1 - NASA SkyView browser:
+  https://skyview.gsfc.nasa.gov/current/cgi/query.pl
+  Object: F563-V1
+  Survey: HI4PI
+  Pixels: 256  Size: 0.5 deg  Return: FITS
+
+Option 2 - NASA NED:
+  https://ned.ipac.caltech.edu/
+  Search: F563-V1 > Images > HI 21cm > FITS
+
+Option 3 - ESO Archive:
+  https://archive.eso.org/scienceportal/home
+  Target: F563-V1 > HI radio
+
+Save as: C:\TITS\SUBSTRATE_SOLVER\data\hi_maps\F563-V1_mom0.fits

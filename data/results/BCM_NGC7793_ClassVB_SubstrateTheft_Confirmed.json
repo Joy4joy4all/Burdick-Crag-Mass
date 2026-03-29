@@ -1,0 +1,31 @@
+{
+  "run_name": "BCM_NGC7793_ClassVB_SubstrateTheft_Confirmed",
+  "galaxy": "NGC7793",
+  "timestamp": "2026-03-29 06:53:06",
+  "bcm_class": "Class V-B",
+  "override_applied": true,
+  "dat_found": null,
+  "outer_slope": null,
+  "parameters": {
+    "grid": 128,
+    "layers": 8,
+    "lam": 0.1,
+    "gamma": 0.05,
+    "entangle": 0.02,
+    "c_wave": 1.0,
+    "settle": 20000,
+    "measure": 4000
+  },
+  "results": {
+    "rms_newton": 11.4868,
+    "rms_mond": 40.6314,
+    "rms_substrate": 9.3278,
+    "winner": "SUBSTRATE",
+    "outer_winner": "SUBSTRATE",
+    "sub_vs_newton": 2.1591,
+    "sub_vs_mond": 31.3036,
+    "corr_newton": 0.951425,
+    "corr_mond": 0.954845,
+    "corr_substrate": 0.977046
+  }
+}

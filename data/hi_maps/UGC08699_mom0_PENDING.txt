@@ -1,0 +1,20 @@
+BCM OFFSET - PENDING: UGC08699
+Notes: Relativistic Lag
+
+DOWNLOAD MANUALLY:
+
+Option 1 - NASA SkyView browser:
+  https://skyview.gsfc.nasa.gov/current/cgi/query.pl
+  Object: UGC08699
+  Survey: HI4PI
+  Pixels: 256  Size: 0.5 deg  Return: FITS
+
+Option 2 - NASA NED:
+  https://ned.ipac.caltech.edu/
+  Search: UGC08699 > Images > HI 21cm > FITS
+
+Option 3 - ESO Archive:
+  https://archive.eso.org/scienceportal/home
+  Target: UGC08699 > HI radio
+
+Save as: C:\TITS\SUBSTRATE_SOLVER\data\hi_maps\UGC08699_mom0.fits

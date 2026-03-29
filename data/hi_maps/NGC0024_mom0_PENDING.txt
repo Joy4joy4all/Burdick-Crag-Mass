@@ -1,0 +1,20 @@
+BCM OFFSET - PENDING: NGC0024
+Notes: LSB Center-Shift
+
+DOWNLOAD MANUALLY:
+
+Option 1 - NASA SkyView browser:
+  https://skyview.gsfc.nasa.gov/current/cgi/query.pl
+  Object: NGC0024
+  Survey: HI4PI
+  Pixels: 256  Size: 0.5 deg  Return: FITS
+
+Option 2 - NASA NED:
+  https://ned.ipac.caltech.edu/
+  Search: NGC0024 > Images > HI 21cm > FITS
+
+Option 3 - ESO Archive:
+  https://archive.eso.org/scienceportal/home
+  Target: NGC0024 > HI radio
+
+Save as: C:\TITS\SUBSTRATE_SOLVER\data\hi_maps\NGC0024_mom0.fits

@@ -1,0 +1,237 @@
+{
+  "NGC0801": {
+    "notes": "Extreme Warp Class IV",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC2976": {
+    "notes": "Ram Pressure Class V-A",
+    "status": "READY",
+    "size_kb": 4142
+  },
+  "NGC3953": {
+    "notes": "Barred Pipe Class VI",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC3992": {
+    "notes": "Barred Logic",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC3972": {
+    "notes": "Topological Fix",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC4100": {
+    "notes": "Warp Mapping",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC4138": {
+    "notes": "Core Rotation",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC7793": {
+    "notes": "Void/Theft Class V-B",
+    "status": "READY",
+    "size_kb": 4142
+  },
+  "UGC04305": {
+    "notes": "Holmberg II",
+    "status": "READY",
+    "size_kb": 4145
+  },
+  "NGC2683": {
+    "notes": "Edge-On Depth",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC5907": {
+    "notes": "Giant Warp",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC11914": {
+    "notes": "Giant LSB",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC2955": {
+    "notes": "High-Loss",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC05253": {
+    "notes": "Core Shear",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC09133": {
+    "notes": "Asymmetry",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC11455": {
+    "notes": "Extended Disk",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC02953": {
+    "notes": "High-Mass Warp",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC2998": {
+    "notes": "Substrate Wake",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC02916": {
+    "notes": "Pressure Slosh",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC5371": {
+    "notes": "Topological Bias",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC03205": {
+    "notes": "LSB Geometry",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "ESO563-G021": {
+    "notes": "Velocity Slosh",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC07261": {
+    "notes": "Impedance Fix",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC06787": {
+    "notes": "Density Peak",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC07089": {
+    "notes": "Gradient Mapping",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC0024": {
+    "notes": "LSB Center-Shift",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC3877": {
+    "notes": "Shear Layers",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC08699": {
+    "notes": "Relativistic Lag",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC1090": {
+    "notes": "Warp Alignment",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC3917": {
+    "notes": "Extended Flow",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC4010": {
+    "notes": "Edge-On Slosh",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC6195": {
+    "notes": "High-Mass Shear",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "NGC7814": {
+    "notes": "Bulge Distortion",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC05750": {
+    "notes": "LSB Warp",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC06399": {
+    "notes": "Non-Circular Fix",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC06628": {
+    "notes": "Density Lambda",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC07323": {
+    "notes": "Shear Gradient",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC07577": {
+    "notes": "Low-Mass Coherence",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGC09992": {
+    "notes": "Substrate Wake",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "CamB": {
+    "notes": "LSB Throttle",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "ESO079-G014": {
+    "notes": "2D Moment-0",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "F561-1": {
+    "notes": "Low-Mass Coherence",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "F563-V1": {
+    "notes": "Substrate Ripple",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "F579-V1": {
+    "notes": "High-V Impedance",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "IC4202": {
+    "notes": "Massive Spiral",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "KK98-251": {
+    "notes": "LSB Coherence",
+    "status": "PENDING",
+    "size_kb": 0
+  },
+  "UGCA281": {
+    "notes": "Ripple Control",
+    "status": "PENDING",
+    "size_kb": 0
+  }
+}

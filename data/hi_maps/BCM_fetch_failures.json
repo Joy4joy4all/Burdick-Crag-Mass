@@ -1,0 +1,222 @@
+{
+  "CamB": {
+    "notes": "LSB Throttle",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:11"
+  },
+  "ESO079-G014": {
+    "notes": "2D Moment-0",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:14"
+  },
+  "ESO563-G021": {
+    "notes": "Velocity Slosh",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:18"
+  },
+  "F561-1": {
+    "notes": "Low-Mass Coherence",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:21"
+  },
+  "F563-V1": {
+    "notes": "Substrate Ripple",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:25"
+  },
+  "F579-V1": {
+    "notes": "High-V Impedance",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:29"
+  },
+  "IC4202": {
+    "notes": "Massive Spiral",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:32"
+  },
+  "KK98-251": {
+    "notes": "LSB Coherence",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:36"
+  },
+  "NGC0024": {
+    "notes": "LSB Center-Shift",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:40"
+  },
+  "NGC0801": {
+    "notes": "Extreme Warp Class IV",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 11:46:08"
+  },
+  "NGC1090": {
+    "notes": "Warp Alignment",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:51"
+  },
+  "NGC2683": {
+    "notes": "Edge-On Depth",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:55"
+  },
+  "NGC2955": {
+    "notes": "High-Loss",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:44:58"
+  },
+  "NGC2998": {
+    "notes": "Substrate Wake",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:06"
+  },
+  "NGC3877": {
+    "notes": "Shear Layers",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:10"
+  },
+  "NGC3917": {
+    "notes": "Extended Flow",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:13"
+  },
+  "NGC3953": {
+    "notes": "Barred Pipe Class VI",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:21"
+  },
+  "NGC3972": {
+    "notes": "Topological Fix",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:25"
+  },
+  "NGC3992": {
+    "notes": "Barred Logic",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:33"
+  },
+  "NGC4010": {
+    "notes": "Edge-On Slosh",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:37"
+  },
+  "NGC4100": {
+    "notes": "Warp Mapping",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:42"
+  },
+  "NGC4138": {
+    "notes": "Core Rotation",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:46"
+  },
+  "NGC5371": {
+    "notes": "Topological Bias",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:50"
+  },
+  "NGC5907": {
+    "notes": "Giant Warp",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:53"
+  },
+  "NGC6195": {
+    "notes": "High-Mass Shear",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:45:57"
+  },
+  "NGC7814": {
+    "notes": "Bulge Distortion",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:01"
+  },
+  "UGC02916": {
+    "notes": "Pressure Slosh",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:09"
+  },
+  "UGC02953": {
+    "notes": "High-Mass Warp",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:13"
+  },
+  "UGC03205": {
+    "notes": "LSB Geometry",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:16"
+  },
+  "UGC05253": {
+    "notes": "Core Shear",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:24"
+  },
+  "UGC05750": {
+    "notes": "LSB Warp",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:28"
+  },
+  "UGC06399": {
+    "notes": "Non-Circular Fix",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:32"
+  },
+  "UGC06628": {
+    "notes": "Density Lambda",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:35"
+  },
+  "UGC06787": {
+    "notes": "Density Peak",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:39"
+  },
+  "UGC07089": {
+    "notes": "Gradient Mapping",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:43"
+  },
+  "UGC07261": {
+    "notes": "Impedance Fix",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:47"
+  },
+  "UGC07323": {
+    "notes": "Shear Gradient",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:51"
+  },
+  "UGC07577": {
+    "notes": "Low-Mass Coherence",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:55"
+  },
+  "UGC08699": {
+    "notes": "Relativistic Lag",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:46:59"
+  },
+  "UGC09133": {
+    "notes": "Asymmetry",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:47:07"
+  },
+  "UGC09992": {
+    "notes": "Substrate Wake",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:47:11"
+  },
+  "UGC11455": {
+    "notes": "Extended Disk",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:47:15"
+  },
+  "UGC11914": {
+    "notes": "Giant LSB",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:47:22"
+  },
+  "UGCA281": {
+    "notes": "Ripple Control",
+    "status": "PENDING",
+    "timestamp": "2026-03-28 07:47:26"
+  }
+}

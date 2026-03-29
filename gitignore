@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Data — large files not in repo
+data/sparc_raw/*.dat
+data/hi_maps/*.fits
+data/results/batch_*.json
+
+# Keep these result files
+!data/results/BCM_NGC3953_ClassVI_BarDipole_Confirmed.json
+!data/results/BCM_NGC7793_ClassVB_SubstrateTheft_Confirmed.json
+!data/results/BCM_NGC2841_ClassI_Control_Baseline.json
+!data/results/BCM_Saturn_planetary_wave.json
+!data/results/BCM_solar_system_batch.json
+!data/results/BCM_solar_system_registry.json
+!data/results/batch_20260327_140314.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Windows
+Thumbs.db
+desktop.ini

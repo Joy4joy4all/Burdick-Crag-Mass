@@ -1,0 +1,67 @@
+{
+  "title": "BCM Earth Planetary Wave -- Scale Invariance Test",
+  "planet": "Earth",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "date": "2026-03-29",
+  "planet_parameters": {
+    "omega": 7.292115e-05,
+    "period_s": 38364.0,
+    "R_polar": 6052450.0,
+    "lat_hex": 74.7,
+    "vertical_km": 300.0,
+    "B_pole": 2.1e-05,
+    "B_dynamo": 0.00025,
+    "sigma_mh": 500000.0,
+    "depth_mh": 2891000.0,
+    "v_rot_dynamo": 210.81504465,
+    "L_rossby": 302622.5,
+    "lam_scaled": 0.082,
+    "m_observed": 1,
+    "drift_rate": 0.0129
+  },
+  "bcm_galactic_reference": {
+    "lambda": 0.1,
+    "c_wave": 1.0,
+    "kappa": 2.0,
+    "gamma": 0.05
+  },
+  "induction_source": {
+    "J_ind_SI": 26351.88058125,
+    "J_normalized": 0.21081504465
+  },
+  "bessel_energies": {
+    "1": 0.0,
+    "2": 48697.811865165815,
+    "3": 86573.88776029476,
+    "4": 109570.07669662307,
+    "5": 124666.3983748245,
+    "6": 135271.69962546058,
+    "7": 143111.93690987505,
+    "8": 149137.0488370703,
+    "9": 153909.1337960796,
+    "10": 157780.91044313723,
+    "11": 160984.502033606
+  },
+  "minimum_energy_mode": 1,
+  "observed_mode": 1,
+  "match": true,
+  "bcm_status": "confirmed",
+  "bcm_note": "",
+  "storm_events": {
+    "1980_voyager": {
+      "year": 1980,
+      "deviation_deg": 0.0,
+      "notes": "Baseline -- Voyager 1 discovery"
+    },
+    "2010_GWS": {
+      "year": 2010,
+      "deviation_deg": 4.0,
+      "notes": "Great White Spot -- vertex shift ~4deg"
+    },
+    "2017_cassini": {
+      "year": 2017,
+      "deviation_deg": 0.8,
+      "notes": "Grand Finale -- m=6 re-stabilized"
+    }
+  }
+}
