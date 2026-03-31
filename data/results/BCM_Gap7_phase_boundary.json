@@ -1,0 +1,19 @@
+{
+  "sweep": {
+    "F_heat_range_W_m2": [
+      0.001,
+      100.0
+    ],
+    "n_points": 500
+  },
+  "actual_values": {
+    "F_uranus_actual": 0.042,
+    "F_neptune_actual": 0.433,
+    "J_uranus_actual": 20.259186889420818,
+    "J_neptune_actual": 16.265346074769248,
+    "regime_actual": "B-dominated -- Uranus > Neptune at actual F_heat"
+  },
+  "gap7_status": "no_inversion_in_realistic_range",
+  "scientific_note": "Gap 7 (Twin Paradox): BCM correctly predicts m=2 for both ice giants. J_ind amplitude ordering (Uranus > Neptune) persists across all realistic F_heat values because the 33% stronger B-field of Uranus cannot be overcome by convective velocity alone at ionic ocean conductivities. The model operates in a B-dominated regime for both planets. Resolution requires direct measurement of convective flow velocities at dynamo depth -- a target for the Uranus Orbiter and Probe mission.",
+  "inversion_point": null
+}

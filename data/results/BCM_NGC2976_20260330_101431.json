@@ -1,0 +1,35 @@
+{
+  "run_name": "BCM_NGC2976_20260330_101431",
+  "galaxy": "NGC2976",
+  "timestamp": "2026-03-30 10:14:34",
+  "bcm_class": "Class V-A",
+  "override_applied": false,
+  "dat_found": null,
+  "outer_slope": null,
+  "parameters": {
+    "grid": 128,
+    "layers": 8,
+    "lam": 0.1,
+    "gamma": 0.05,
+    "entangle": 0.02,
+    "c_wave": 1.0,
+    "settle": 20000,
+    "measure": 4000
+  },
+  "results": {
+    "rms_newton": 3.6846,
+    "rms_mond": 28.9232,
+    "rms_substrate": 20.7913,
+    "winner": "NEWTON",
+    "outer_winner": "NEWTON",
+    "sub_vs_newton": -17.1067,
+    "sub_vs_mond": 8.1319,
+    "corr_newton": 0.993645,
+    "corr_mond": 0.997371,
+    "corr_substrate": 0.926881,
+    "cos_delta_phi": 0.9999999964084462,
+    "delta_phi": 8.47532158121389e-05,
+    "decoupling_ratio": 103.35008618817425,
+    "substrate_excess": 4214214.241009006
+  }
+}

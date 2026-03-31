@@ -1,0 +1,90 @@
+{
+  "title": "BCM Stellar Batch -- Scale-Invariance Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "date": "2026-03-31",
+  "lambda_galactic": 0.1,
+  "lambda_planetary": 0.082,
+  "n_stars": 6,
+  "matches": "4/5",
+  "avg_lambda_ratio": null,
+  "stars": {
+    "Sun": {
+      "m_observed": 4,
+      "m_predicted_H": 4,
+      "m_rossby": 1.539,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 300000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class I -- Stable Coupled",
+      "pump_type": "tachocline_dynamo",
+      "notes": "Control star. 4-sector solar wind = m=4 substrate mode."
+    },
+    "Tabby": {
+      "m_observed": 0,
+      "m_predicted_H": 7,
+      "m_rossby": 6.554,
+      "match_hamiltonian": "N/A",
+      "match_rossby": "N/A",
+      "J_ind_SI": 4800000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class ? -- Anomalous",
+      "pump_type": "tachocline_rapid_rotator",
+      "notes": "KIC 8462852. Anomalous flux dips 0.1-22%. Rapid rotator. BCM prediction: substrate mode produces directed flux modulation."
+    },
+    "Proxima": {
+      "m_observed": 1,
+      "m_predicted_H": 1,
+      "m_rossby": 0.0,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 37500.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class V-A -- Substrate Suppressed",
+      "pump_type": "fully_convective",
+      "notes": "Fully convective -- no tachocline. Substrate coupling degraded. Single active longitude = m=1 dipole mode."
+    },
+    "EV_Lac": {
+      "m_observed": 2,
+      "m_predicted_H": 1,
+      "m_rossby": 0.967,
+      "match_hamiltonian": false,
+      "match_rossby": false,
+      "J_ind_SI": 960000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class II -- Marginal",
+      "pump_type": "near_fully_convective",
+      "notes": "Rapid rotator M dwarf. Strong field. Two active longitudes = m=2."
+    },
+    "HR_1099": {
+      "m_observed": 2,
+      "m_predicted_H": 2,
+      "m_rossby": 2.686,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 1980000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class VI -- Bar Channeled",
+      "pump_type": "tidal_bar_rs_cvn",
+      "notes": "RS CVn binary. Tidal forcing = bar-channeling analog. Two persistent active longitudes = m=2 substrate pipe."
+    },
+    "Epsilon_Eri": {
+      "m_observed": 3,
+      "m_predicted_H": 3,
+      "m_rossby": 2.254,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 337500.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class I -- Young Active Coupled",
+      "pump_type": "tachocline_dynamo_young",
+      "notes": "Young active K dwarf. Faster rotation than Sun. 3-sector magnetic structure from ZDI mapping. Intermediate mode between solar m=4 and fully active m=2."
+    }
+  }
+}

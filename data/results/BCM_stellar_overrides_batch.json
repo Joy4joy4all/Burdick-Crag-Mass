@@ -1,0 +1,212 @@
+{
+  "title": "BCM Stellar Overrides -- Combined Arms Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "date": "2026-03-31",
+  "tier_filter": null,
+  "n_stars": 13,
+  "hamiltonian_match": "9/10",
+  "rossby_match": "0/10",
+  "avg_lambda_ratio": 0.9773184357541899,
+  "lambda_galactic": 0.1,
+  "lambda_planetary": 0.082,
+  "stars": {
+    "Sun": {
+      "spectral_type": "G2V",
+      "bcm_class": "Class I -- Stable Coupled",
+      "tier": "vanguard",
+      "m_observed": 4,
+      "m_predicted_H": 4,
+      "m_rossby": 1.539,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 300000.0,
+      "lambda_stellar": 0.2,
+      "lambda_ratio": 2.0
+    },
+    "Tabby": {
+      "spectral_type": "F3V",
+      "bcm_class": "Class ? -- Anomalous",
+      "tier": "mystery",
+      "m_observed": 0,
+      "m_predicted_H": 7,
+      "m_rossby": 6.554,
+      "match_hamiltonian": "N/A",
+      "match_rossby": "N/A",
+      "J_ind_SI": 4800000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null
+    },
+    "Proxima": {
+      "spectral_type": "M5.5Ve",
+      "bcm_class": "Class V-A -- Substrate Suppressed",
+      "tier": "vanguard",
+      "m_observed": 1,
+      "m_predicted_H": 1,
+      "m_rossby": 0.0,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 37500.0,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998
+    },
+    "EV_Lac": {
+      "spectral_type": "M3.5Ve",
+      "bcm_class": "Class II -- Marginal",
+      "tier": "vanguard",
+      "m_observed": 2,
+      "m_predicted_H": 1,
+      "m_rossby": 0.967,
+      "match_hamiltonian": false,
+      "match_rossby": false,
+      "J_ind_SI": 960000.0,
+      "lambda_stellar": 0.2,
+      "lambda_ratio": 2.0
+    },
+    "HR_1099": {
+      "spectral_type": "K1IV",
+      "bcm_class": "Class VI -- Bar Channeled",
+      "tier": "vanguard",
+      "m_observed": 2,
+      "m_predicted_H": 2,
+      "m_rossby": 2.686,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 1980000.0,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998
+    },
+    "Epsilon_Eri": {
+      "spectral_type": "K2V",
+      "bcm_class": "Class I -- Young Active Coupled",
+      "tier": "vanguard",
+      "m_observed": 3,
+      "m_predicted_H": 3,
+      "m_rossby": 2.254,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 337500.0,
+      "lambda_stellar": 0.07731843575418995,
+      "lambda_ratio": 0.7731843575418995
+    },
+    "Alpha_Cen_A": {
+      "spectral_type": "G2V",
+      "bcm_class": "Class I -- Stable Coupled (Sun Twin)",
+      "tier": "vanguard",
+      "m_observed": 4,
+      "m_predicted_H": 4,
+      "m_rossby": 1.794,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 422400.0,
+      "lambda_stellar": 0.2,
+      "lambda_ratio": 2.0
+    },
+    "Tau_Ceti": {
+      "spectral_type": "G8.5V",
+      "bcm_class": "Class III -- Ground State (Quiescent)",
+      "tier": "vanguard",
+      "m_observed": 0,
+      "m_predicted_H": 2,
+      "m_rossby": 1.622,
+      "match_hamiltonian": "N/A",
+      "match_rossby": "N/A",
+      "J_ind_SI": 36000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null
+    },
+    "AB_Dor": {
+      "spectral_type": "K0V",
+      "bcm_class": "Class I -- Extreme Coupled (Rapid Rotator)",
+      "tier": "vanguard",
+      "m_observed": 2,
+      "m_predicted_H": 2,
+      "m_rossby": 5.962,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 4000000.0,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998
+    },
+    "V374_Peg": {
+      "spectral_type": "M4Ve",
+      "bcm_class": "Class V-A -- Substrate Suppressed (Fully Convective)",
+      "tier": "vanguard",
+      "m_observed": 1,
+      "m_predicted_H": 1,
+      "m_rossby": 0.0,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 100000.0,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998
+    },
+    "Betelgeuse": {
+      "spectral_type": "M2Iab",
+      "bcm_class": "Class ? -- Anomalous (Dying Supergiant)",
+      "tier": "mystery",
+      "m_observed": 3,
+      "m_predicted_H": 3,
+      "m_rossby": 0.121,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 500000.0,
+      "lambda_stellar": 0.2,
+      "lambda_ratio": 2.0
+    },
+    "TRAPPIST_1": {
+      "spectral_type": "M8V",
+      "bcm_class": "Class V-A -- Substrate Suppressed (Ultracool)",
+      "tier": "mystery",
+      "m_observed": 1,
+      "m_predicted_H": 1,
+      "m_rossby": 0.0,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 3000.0,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998
+    },
+    "Vega": {
+      "spectral_type": "A0V",
+      "bcm_class": "Class IV -- No Substrate Coupling (A-type)",
+      "tier": "mystery",
+      "m_observed": 0,
+      "m_predicted_H": 8,
+      "m_rossby": 7.503,
+      "match_hamiltonian": "N/A",
+      "match_rossby": "N/A",
+      "J_ind_SI": 2000.0,
+      "lambda_stellar": null,
+      "lambda_ratio": null
+    }
+  },
+  "class_map": {
+    "Class I": [
+      "Sun",
+      "Alpha_Cen_A",
+      "Epsilon_Eri",
+      "AB_Dor"
+    ],
+    "Class II": [
+      "EV_Lac"
+    ],
+    "Class III": [
+      "Tau_Ceti"
+    ],
+    "Class IV": [
+      "Vega"
+    ],
+    "Class V-A": [
+      "Proxima",
+      "V374_Peg",
+      "TRAPPIST_1"
+    ],
+    "Class VI": [
+      "HR_1099"
+    ],
+    "Class ?": [
+      "Tabby",
+      "Betelgeuse"
+    ]
+  }
+}

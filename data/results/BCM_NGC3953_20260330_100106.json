@@ -1,0 +1,35 @@
+{
+  "run_name": "BCM_NGC3953_20260330_100106",
+  "galaxy": "NGC3953",
+  "timestamp": "2026-03-30 10:01:17",
+  "bcm_class": "Class VI",
+  "override_applied": true,
+  "dat_found": null,
+  "outer_slope": null,
+  "parameters": {
+    "grid": 128,
+    "layers": 8,
+    "lam": 0.1,
+    "gamma": 0.05,
+    "entangle": 0.02,
+    "c_wave": 1.0,
+    "settle": 20000,
+    "measure": 4000
+  },
+  "results": {
+    "rms_newton": 18.2664,
+    "rms_mond": 85.7099,
+    "rms_substrate": 7.1824,
+    "winner": "SUBSTRATE",
+    "outer_winner": "SUBSTRATE",
+    "sub_vs_newton": 11.084,
+    "sub_vs_mond": 78.5275,
+    "corr_newton": 0.916713,
+    "corr_mond": 0.889395,
+    "corr_substrate": 0.931956,
+    "cos_delta_phi": 0.9999999996349462,
+    "delta_phi": 2.7020503606145496e-05,
+    "decoupling_ratio": 103.79977913157748,
+    "substrate_excess": 27237515.099234704
+  }
+}
