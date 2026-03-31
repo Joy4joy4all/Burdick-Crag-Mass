@@ -81,7 +81,7 @@ class SolverGUI:
         self.progress_label = ttk.Label(pf, text="Ready", style="Sub.TLabel", width=30)
         self.progress_label.pack(side="right")
 
-        # ── Notebook — Tab 1: Galactic Solver / Tab 2: Planetary ──
+        # ── Notebook — Tab 1: Galactic Solver / Tab 2: Planetary / Tab 3: Stellar ──
         self.notebook = ttk.Notebook(self.root)
         self.notebook.pack(fill="both", expand=True, padx=12, pady=4)
 
@@ -93,8 +93,15 @@ class SolverGUI:
         tab2 = ttk.Frame(self.notebook, style="Dark.TFrame")
         self.notebook.add(tab2, text="  PLANETARY  ")
 
+        # Tab 3 — Stellar Tachocline Analysis
+        tab3 = ttk.Frame(self.notebook, style="Dark.TFrame")
+        self.notebook.add(tab3, text="  STELLAR  ")
+
         # Build planetary tab content
         self._build_planetary_tab(tab2)
+
+        # Build stellar tab content
+        self._build_stellar_tab(tab3)
 
         # Main split (Tab 1 content)
         main = tab1
@@ -374,6 +381,248 @@ class SolverGUI:
             self._planet_log("ERROR: BCM_planetary_renderer.py not found in root dir.")
         except Exception as e:
             self._planet_log(f"Renderer error: {e}")
+
+    # ══════════════════════════════════════════════════════════════
+    #  TAB 3 — STELLAR TACHOCLINE ANALYSIS
+    # ══════════════════════════════════════════════════════════════
+
+    def _build_stellar_tab(self, parent):
+        """Tab 3 — BCM Stellar Tachocline Wave Solver (13 stars)."""
+        style_bg  = "#0a0c10"
+        style_fg  = "#a0b0cc"
+        style_acc = "#ffbb44"
+
+        # ── Header ──
+        hf = tk.Frame(parent, bg=style_bg)
+        hf.pack(fill="x", padx=12, pady=(10, 4))
+        tk.Label(hf, text="BCM STELLAR WAVE SOLVER",
+                 font=("Georgia", 16), fg="#d0d8e8", bg=style_bg).pack(side="left")
+        tk.Label(hf, text="Tachocline Resonance Hamiltonian — Select Star or Batch Run",
+                 font=("Consolas", 10), fg="#6a7a90", bg=style_bg).pack(side="left", padx=(16, 0))
+
+        # ── File Tree ──
+        tf = ttk.LabelFrame(parent, text="FILE LOCATIONS")
+        tf.pack(fill="x", padx=12, pady=4)
+        tree_text = (
+            'SUBSTRATE_SOLVER/\n'
+            '|   BCM_stellar_wave.py            <- stellar tachocline solver\n'
+            '|   BCM_stellar_overrides.py        <- stellar parameter overrides\n'
+            '|   BCM_stellar_renderer.py         <- publication figure renderer\n'
+            '|   launcher.py                     <- this GUI\n'
+            '|\n'
+            '+---data/\n'
+            '    +---results/\n'
+            '            BCM_stellar_batch.json           <- 13-star batch output\n'
+            '            BCM_stellar_m_comparison.png     <- Hamiltonian vs Rossby\n'
+            '            BCM_stellar_gallery.png          <- all spectra\n'
+            '            BCM_tachocline_gate.png          <- convective gate diagram\n'
+            '            BCM_Sun_stellar_wave.json        <- individual star runs\n'
+        )
+        tree_box = tk.Text(tf, height=12, bg="#0c0e14", fg="#70a0c0",
+                           font=("Consolas", 9), relief="flat", state="normal")
+        tree_box.insert("1.0", tree_text)
+        tree_box.config(state="disabled")
+        tree_box.pack(fill="x", padx=6, pady=4)
+
+        # ── Star Selector ──
+        self._stellar_registry = {}
+        self._load_stellar_registry()
+
+        sf = ttk.LabelFrame(parent, text="SELECT STAR")
+        sf.pack(fill="x", padx=12, pady=4)
+        sel_f = tk.Frame(sf, bg="#12151c")
+        sel_f.pack(fill="x", padx=6, pady=4)
+
+        self.star_select_var = tk.StringVar(value="Sun")
+        star_names = list(self._stellar_registry.keys()) if self._stellar_registry else [
+            "Sun", "Tabby", "Betelgeuse", "Proxima", "AB_Dor",
+            "V374_Peg", "Tau_Boo", "Alpha_Cen_A", "Alpha_Cen_B",
+            "EV_Lac", "Vega", "Sirius_A", "61_Cyg_A"]
+        star_menu = ttk.Combobox(sel_f, textvariable=self.star_select_var,
+                                  values=star_names, width=16,
+                                  font=("Consolas", 11), state="readonly")
+        star_menu.pack(side="left", padx=(0, 8))
+        star_menu.bind("<<ComboboxSelected>>", self._on_star_select)
+
+        self.star_info_var = tk.StringVar(value="Sun — G2V  m=4  Class I")
+        tk.Label(sel_f, textvariable=self.star_info_var,
+                 font=("Consolas", 9), fg=style_acc,
+                 bg="#12151c").pack(side="left")
+
+        # ── Star Parameters (read-only display) ──
+        pf = ttk.LabelFrame(parent, text="STAR PARAMETERS")
+        pf.pack(fill="x", padx=12, pady=4)
+
+        self.star_spectral  = tk.StringVar(value="G2V")
+        self.star_mass      = tk.StringVar(value="1.0")
+        self.star_rotation  = tk.StringVar(value="25.38")
+        self.star_conv_frac = tk.StringVar(value="0.287")
+        self.star_m_obs     = tk.StringVar(value="4")
+        self.star_B_tach    = tk.StringVar(value="1.0e-1")
+
+        params = [
+            ("Spectral type:",              self.star_spectral),
+            ("Mass (M_sun):",               self.star_mass),
+            ("Rotation period (days):",     self.star_rotation),
+            ("Conv depth fraction:",        self.star_conv_frac),
+            ("m observed:",                 self.star_m_obs),
+            ("B tachocline (T):",           self.star_B_tach),
+        ]
+        for i, (label, var) in enumerate(params):
+            tk.Label(pf, text=label, font=("Consolas", 10),
+                     fg=style_fg, bg="#12151c").grid(
+                         row=i, column=0, sticky="w", padx=10, pady=2)
+            ttk.Entry(pf, textvariable=var, width=16).grid(
+                row=i, column=1, padx=6, pady=2)
+
+        # ── Run Options ──
+        rf = ttk.LabelFrame(parent, text="RUN OPTIONS")
+        rf.pack(fill="x", padx=12, pady=4)
+        self.stellar_batch     = tk.BooleanVar(value=False)
+        self.stellar_solve_lam = tk.BooleanVar(value=True)
+        ttk.Checkbutton(rf, text="Batch run all 13 stars",
+                        variable=self.stellar_batch).pack(anchor="w", padx=10, pady=2)
+        ttk.Checkbutton(rf, text="Back-calculate λ_stellar from observed m",
+                        variable=self.stellar_solve_lam).pack(anchor="w", padx=10, pady=2)
+
+        # ── Run & Render Buttons ──
+        bf = ttk.Frame(parent, style="Dark.TFrame")
+        bf.pack(fill="x", padx=12, pady=6)
+        ttk.Button(bf, text="▶  RUN STELLAR SOLVER",
+                   style="Run.TButton",
+                   command=self._run_stellar).pack(fill="x", padx=4, pady=2)
+        ttk.Button(bf, text="⬡  Render Spectrum (selected star)",
+                   command=lambda: self._run_stellar_renderer("--star", self.star_select_var.get())).pack(fill="x", padx=4, pady=2)
+        ttk.Button(bf, text="⬡  Render Gallery (all stars)",
+                   command=lambda: self._run_stellar_renderer("--gallery")).pack(fill="x", padx=4, pady=2)
+        ttk.Button(bf, text="⬡  Render Hamiltonian vs Rossby Comparison",
+                   command=lambda: self._run_stellar_renderer("--m-compare")).pack(fill="x", padx=4, pady=2)
+        ttk.Button(bf, text="⬡  Render All Publication Figures",
+                   command=lambda: self._run_stellar_renderer("--all")).pack(fill="x", padx=4, pady=2)
+
+        # ── Output Log ──
+        lf = ttk.LabelFrame(parent, text="STELLAR LOG")
+        lf.pack(fill="both", expand=True, padx=12, pady=4)
+        self.stellar_log_widget = tk.Text(lf, height=12, bg="#0c0e14", fg="#c0d8e8",
+                                          font=("Consolas", 10), relief="flat",
+                                          insertbackground="#c0d8e8")
+        ss = ttk.Scrollbar(lf, orient="vertical", command=self.stellar_log_widget.yview)
+        self.stellar_log_widget.configure(yscrollcommand=ss.set)
+        self.stellar_log_widget.pack(side="left", fill="both", expand=True, padx=5, pady=5)
+        ss.pack(side="right", fill="y")
+        self.stellar_log_widget.insert("end",
+            "BCM Stellar Wave Solver ready.\n"
+            "Resonance Hamiltonian: H(m) = (c_s - Ω·R/m)²\n"
+            "Tachocline gate: fully convective → m=1\n"
+            "Output JSON → data/results/BCM_stellar_batch.json\n"
+            "─" * 55 + "\n")
+        self.stellar_log_widget.config(state="disabled")
+
+    def _stellar_log(self, msg):
+        """Write to stellar tab log."""
+        self.stellar_log_widget.config(state="normal")
+        self.stellar_log_widget.insert("end", msg + "\n")
+        self.stellar_log_widget.see("end")
+        self.stellar_log_widget.config(state="disabled")
+        self.root.update_idletasks()
+
+    def _load_stellar_registry(self):
+        """Load stellar registry from BCM_stellar_wave.py STELLAR_REGISTRY."""
+        try:
+            from BCM_stellar_wave import STELLAR_REGISTRY
+            self._stellar_registry = STELLAR_REGISTRY
+        except ImportError:
+            self._stellar_registry = {}
+
+    def _on_star_select(self, event=None):
+        """Load selected star parameters into the fields."""
+        name = self.star_select_var.get()
+        p = self._stellar_registry.get(name, {})
+        if not p:
+            return
+        self.star_spectral.set(p.get("spectral_type", "?"))
+        self.star_mass.set(str(p.get("mass_solar", "?")))
+        self.star_rotation.set(str(p.get("rotation_days", "?")))
+        self.star_conv_frac.set(str(p.get("conv_depth_frac", "?")))
+        self.star_m_obs.set(str(p.get("m_observed", "?")))
+        self.star_B_tach.set(f"{p.get('B_tachocline_T', 0):.2e}")
+        cls = p.get("bcm_class", "")[:40]
+        m   = p.get("m_observed", "?")
+        sp  = p.get("spectral_type", "")
+        self.star_info_var.set(f"{name} — {sp}  m={m}  {cls}")
+        self._stellar_log(f"  Loaded: {name}  {sp}  m_obs={m}  "
+                          f"P_rot={p.get('rotation_days','?')} d  "
+                          f"conv_frac={p.get('conv_depth_frac','?')}")
+
+    def _run_stellar(self):
+        """Run BCM_stellar_wave.py as subprocess and stream output to log."""
+        import subprocess
+
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "BCM_stellar_wave.py")
+        if not os.path.exists(script):
+            self._stellar_log("ERROR: BCM_stellar_wave.py not found in root dir.")
+            return
+
+        args = [sys.executable, script]
+        if self.stellar_batch.get():
+            args.append("--batch")
+        else:
+            star = self.star_select_var.get()
+            if star:
+                args += ["--star", star]
+        if self.stellar_solve_lam.get():
+            args.append("--solve-lambda")
+
+        self._stellar_log(f"Running: {' '.join(args)}")
+        self._stellar_log("─" * 55)
+
+        def _run():
+            try:
+                proc = subprocess.Popen(args, stdout=subprocess.PIPE,
+                                        stderr=subprocess.STDOUT,
+                                        text=True,
+                                        cwd=os.path.dirname(os.path.abspath(__file__)))
+                for line in proc.stdout:
+                    self.root.after(0, lambda l=line.rstrip(): self._stellar_log(l))
+                proc.wait()
+                self.root.after(0, lambda: self._stellar_log(
+                    "─" * 55 + "\nDone. Check data/results/ for JSON and PNG output."))
+            except Exception as e:
+                self.root.after(0, lambda: self._stellar_log(f"ERROR: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _run_stellar_renderer(self, *renderer_args):
+        """Run BCM_stellar_renderer.py with given args and stream output to log."""
+        import subprocess
+
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "BCM_stellar_renderer.py")
+        if not os.path.exists(script):
+            self._stellar_log("ERROR: BCM_stellar_renderer.py not found in root dir.")
+            return
+
+        args = [sys.executable, script] + list(renderer_args)
+
+        self._stellar_log(f"Rendering: {' '.join(args)}")
+        self._stellar_log("─" * 55)
+
+        def _run():
+            try:
+                proc = subprocess.Popen(args, stdout=subprocess.PIPE,
+                                        stderr=subprocess.STDOUT,
+                                        text=True,
+                                        cwd=os.path.dirname(os.path.abspath(__file__)))
+                for line in proc.stdout:
+                    self.root.after(0, lambda l=line.rstrip(): self._stellar_log(l))
+                proc.wait()
+                self.root.after(0, lambda: self._stellar_log(
+                    "─" * 55 + "\nRenderer done. PNGs saved to data/results/"))
+            except Exception as e:
+                self.root.after(0, lambda: self._stellar_log(f"ERROR: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
 
     def _build_controls(self, parent):
         # BCM STRUCTURAL OVERRIDES (top — always visible)
