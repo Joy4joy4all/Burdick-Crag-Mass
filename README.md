@@ -1,5 +1,5 @@
 # SUBSTRATE SOLVER
-
+https://github.com/Joy4joy4all/Burdick-Crag-Mass/
 **Stephen Justin Burdick, 2026 — Emerald Entities LLC**
 
 Multi-layer damped wave substrate solver with SPARC galaxy rotation curve validation.
