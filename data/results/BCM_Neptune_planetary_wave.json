@@ -2,7 +2,7 @@
   "title": "BCM Neptune Planetary Wave -- Scale Invariance Test",
   "planet": "Neptune",
   "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
-  "date": "2026-03-29",
+  "date": "2026-03-30",
   "planet_parameters": {
     "omega": 0.00010833,
     "period_s": 38364.0,
@@ -70,5 +70,13 @@
       "deviation_deg": 0.8,
       "notes": "Grand Finale -- m=6 re-stabilized"
     }
+  },
+  "phase_dynamics": {
+    "phase_sigma": 1.3761708571232063,
+    "phase_forcing": 1.3761708571232063,
+    "delta_phi": 0.0,
+    "cos_delta_phi": 1.0,
+    "decoupling_ratio": 9.23105326317733e-05,
+    "instrument_note": "Planetary proxy instrument. sigma=standing wave field. rho=induction-weighted Bessel. cos near 1.0=coupled/radiating. cos near 0.0=prime lock/contained."
   }
 }

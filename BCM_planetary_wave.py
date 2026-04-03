@@ -606,6 +606,65 @@ def run(solve_lambda=False, decay_analysis=False):
     # Also write a "last_run" pointer so renderer knows what to load
     last_run_path = os.path.join(out_dir, "BCM_planetary_last_run.json")
 
+    # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+    # Phase Dynamics Module -- Planetary Solver
+    #
+    # Extracts cos(delta_phi) from 1D Bessel radial profiles.
+    # Planetary equivalent of the galactic rho_avg / sigma_avg phase instrument.
+    #
+    # sigma_analog: J_{m_predicted}(k*r) -- substrate memory field
+    #               The mode the planet has settled into (standing wave)
+    # rho_analog:   J_{m_predicted}(k*r) * J_normalized -- forced response
+    #               Induction-weighted Bessel profile (what the pump drives)
+    #
+    # Phase of each extracted via FFT dominant mode.
+    # cos(delta_phi) wraps with np.angle(np.exp(1j*...)) -- no +-pi jump.
+    #
+    # Calibration targets:
+    #   Neptune (coupled, radiating):   cos_delta_phi -> 1.0
+    #   Uranus  (prime lock, contained): cos_delta_phi -> 0.0
+    # Separation expected to sharpen when v_conv measured directly at dynamo depth.
+    #
+    # Zero new parameters. Additive only. Uses existing k, min_m, R from above.
+
+    def _planetary_phase(m_mode, k_val, R_val, n_pts=512):
+        """Extract FFT phase from 1D Bessel radial profile J_m(k*r)."""
+        r_1d = np.linspace(0.01, R_val, n_pts)
+        profile = jv(m_mode, k_val * r_1d)
+        fft_result = np.fft.fft(profile)
+        n_half = len(fft_result) // 2
+        if n_half < 2:
+            return 0.0
+        dominant_idx = np.argmax(np.abs(fft_result[1:n_half])) + 1
+        return float(np.angle(fft_result[dominant_idx]))
+
+    # sigma analog: pure standing wave at predicted mode
+    # rho analog:   induction-weighted -- J_normalized scales the response
+    J_norm_val = J.get("J_normalized", 1.0)
+    k_val, c_s_val = compute_dynamo_wavenumber(params)
+    R_val = params["R_polar"]
+    m_use = max(min_m, 1)  # guard against m=0
+
+    phase_sigma_p  = _planetary_phase(m_use, k_val, R_val)
+    # rho forced by J_normalized -- phase shifts when induction is weak
+    r_1d_p = np.linspace(0.01, R_val, 512)
+    rho_profile = jv(m_use, k_val * r_1d_p) * max(J_norm_val, 1e-9)
+    fft_rho = np.fft.fft(rho_profile)
+    n_h = len(fft_rho) // 2
+    dom_idx = np.argmax(np.abs(fft_rho[1:n_h])) + 1 if n_h > 1 else 1
+    phase_forcing_p = float(np.angle(fft_rho[dom_idx]))
+
+    # Wrap to [-pi, pi] -- prevents discontinuity
+    delta_phi_p     = float(np.angle(np.exp(1j * (phase_sigma_p - phase_forcing_p))))
+    cos_delta_phi_p = float(np.cos(delta_phi_p))
+
+    # Amplitude decoupling ratio -- symptom variable
+    v_conv_val = J.get("v_conv_mlt", params.get("v_conv", 0.0))
+    v_rot_val  = params.get("v_rot_dynamo", 1.0)
+    decoupling_ratio_p = (v_conv_val / v_rot_val
+                          if v_rot_val > 0 else 0.0)
+    # === END ADDITION ===
+
     record = {
         "title": f"BCM {planet_name} Planetary Wave -- Scale Invariance Test",
         "planet": planet_name,
@@ -626,6 +685,20 @@ def run(solve_lambda=False, decay_analysis=False):
                      + str(min_m) + " standing wave in Hermean substrate.")
                     if params["m_observed"] == 0 else "",
         "storm_events": params["storm_events"],
+        # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+        "phase_dynamics": {
+            "phase_sigma":        phase_sigma_p,
+            "phase_forcing":      phase_forcing_p,
+            "delta_phi":          delta_phi_p,
+            "cos_delta_phi":      cos_delta_phi_p,
+            "decoupling_ratio":   decoupling_ratio_p,
+            "instrument_note": (
+                "Planetary proxy instrument. sigma=standing wave field. "
+                "rho=induction-weighted Bessel. "
+                "cos near 1.0=coupled/radiating. cos near 0.0=prime lock/contained."
+            ),
+        },
+        # === END ADDITION ===
     }
 
     with open(out_path, "w") as f:

@@ -490,6 +490,14 @@ class FullGenesisView(tk.Toplevel):
             render_field = spherical_shading(field)
             field_label = "Planet Sphere - height+light shading"
 
+        # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+        # cw/ch needed by gradient overlay regardless of PIL path
+        sx = max(1, G // fw)
+        sy = max(1, G // fh)
+        cw = fw / (G // sx)
+        ch = fh / (G // sy)
+        # === END ADDITION ===
+
         # PIL fast path (~50x faster than rectangle loop)
         if _PIL:
             img_mode = mode if mode != "planet" else "energy"
