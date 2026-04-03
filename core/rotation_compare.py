@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Rotation Curve Comparison - Four-Way (v6)
 Stephen Justin Burdick, 2026
@@ -100,6 +101,16 @@ def compare_rotation(solver_result, galaxy_data):
     so = sorted(oa.values())
     if len(so) >= 2 and so[1] - so[0] < 0.5: outer_winner = "TIE"
 
+    # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+    # Pull phase diagnostics from solver_result if available
+    # cos_delta_phi = cause (phase alignment between sigma and rho fields)
+    # decoupling_ratio = amplitude symptom (observable consequence)
+    cos_delta_phi    = solver_result.get("cos_delta_phi",    None)
+    decoupling_ratio = solver_result.get("decoupling_ratio", None)
+    substrate_excess = solver_result.get("substrate_excess", None)
+    delta_phi        = solver_result.get("delta_phi",        None)
+    # === END ADDITION ===
+
     return {
         "r_kpc": r_kpc, "v_obs": v_obs, "v_newton": v_newton,
         "v_mond": v_mond, "v_substrate": v_substrate,
@@ -109,6 +120,12 @@ def compare_rotation(solver_result, galaxy_data):
         "outer_rms_substrate": ors,
         "winner": winner, "outer_winner": outer_winner,
         "sub_vs_newton": rms_n - rms_s, "sub_vs_mond": rms_m - rms_s,
+        # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+        "cos_delta_phi":    cos_delta_phi,
+        "decoupling_ratio": decoupling_ratio,
+        "substrate_excess": substrate_excess,
+        "delta_phi":        delta_phi,
+        # === END ADDITION ===
     }
 
 

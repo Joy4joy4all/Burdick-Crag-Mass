@@ -1,0 +1,83 @@
+{
+  "title": "BCM Stellar Batch -- Alfven Hamiltonian -- Scale-Invariance Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "date": "2026-04-02",
+  "hamiltonian": "H(m) = (v_A - Omega*R_tach/m)^2  -- Alfven phase speed",
+  "lambda_galactic": 0.1,
+  "lambda_planetary": 0.082,
+  "n_stars": 5,
+  "matches": "3/4",
+  "avg_lambda_ratio": 1.1,
+  "stars": {
+    "Sun": {
+      "m_observed": 4,
+      "m_predicted_H": 4,
+      "m_rossby": 1.539,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 16800000.0,
+      "v_A_ms": 353.24,
+      "lambda_stellar": 0.2,
+      "lambda_ratio": 2.0,
+      "bcm_class": "Class I -- Stable Coupled",
+      "pump_type": "tachocline_dynamo",
+      "notes": "Control star. 4-sector solar wind = m=4 substrate mode."
+    },
+    "Tabby": {
+      "m_observed": 0,
+      "m_predicted_H": 12,
+      "m_rossby": 6.554,
+      "match_hamiltonian": "N/A",
+      "match_rossby": "N/A",
+      "J_ind_SI": 4800000.0,
+      "v_A_ms": 36.42,
+      "lambda_stellar": null,
+      "lambda_ratio": null,
+      "bcm_class": "Class ? -- Anomalous",
+      "pump_type": "tachocline_rapid_rotator",
+      "notes": "KIC 8462852. Anomalous flux dips 0.1-22%. Rapid rotator. BCM prediction: substrate mode produces directed flux modulation."
+    },
+    "Proxima": {
+      "m_observed": 1,
+      "m_predicted_H": 1,
+      "m_rossby": 0.0,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 37500.0,
+      "v_A_ms": 18.92,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998,
+      "bcm_class": "Class V-A -- Substrate Suppressed",
+      "pump_type": "fully_convective",
+      "notes": "Fully convective -- no tachocline. Substrate coupling degraded. Single active longitude = m=1 dipole mode."
+    },
+    "EV_Lac": {
+      "m_observed": 2,
+      "m_predicted_H": 2,
+      "m_rossby": 0.967,
+      "match_hamiltonian": true,
+      "match_rossby": false,
+      "J_ind_SI": 2400000.0,
+      "v_A_ms": 199.47,
+      "lambda_stellar": 0.2,
+      "lambda_ratio": 2.0,
+      "bcm_class": "Class II -- Marginal",
+      "pump_type": "near_fully_convective",
+      "notes": "Rapid rotator M dwarf. Strong field. Two active longitudes = m=2."
+    },
+    "HR_1099": {
+      "m_observed": 2,
+      "m_predicted_H": 12,
+      "m_rossby": 2.686,
+      "match_hamiltonian": false,
+      "match_rossby": false,
+      "J_ind_SI": 66000000.0,
+      "v_A_ms": 664.9,
+      "lambda_stellar": 0.02,
+      "lambda_ratio": 0.19999999999999998,
+      "bcm_class": "Class VI -- Bar Channeled",
+      "pump_type": "tidal_bar_rs_cvn",
+      "notes": "RS CVn binary. Tidal forcing = bar-channeling analog. Two persistent active longitudes = m=2 substrate pipe."
+    }
+  }
+}

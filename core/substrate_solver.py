@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Multi-Layer Substrate Wave Solver (v7)
 ======================================
@@ -247,6 +248,50 @@ class SubstrateSolver:
 
         elapsed = time.time() - t0
 
+        # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+        # Phase Dynamics Module
+        # Measures phase alignment between substrate memory (sigma_avg)
+        # and substrate forcing response (rho_avg).
+        #
+        # cos(delta_phi) interpretation:
+        #   ~+1.0 : phase aligned     — coupled regime (Neptune analog)
+        #   ~ 0.0 : phase separated   — prime lock / contained (Uranus analog)
+        #   ~-1.0 : anti-phase        — destructive coupling / void regime
+        #
+        # Implementation notes:
+        #   - Uses layer SUM (not layer 0) — entanglement distributes across layers
+        #   - Uses azimuthal mean (axis=0) — robust to bar/asymmetric galaxies
+        #   - np.angle(np.exp(1j*...)) wraps to [-pi, pi] preventing discontinuity
+        #   - Zero-parameter: no new tunable constants introduced
+
+        def _extract_phase(field_2d):
+            """Extract dominant mode phase from 2D field via FFT."""
+            radial_profile = field_2d.mean(axis=0)
+            fft_result = np.fft.fft(radial_profile)
+            n_half = len(fft_result) // 2
+            if n_half < 2:
+                return 0.0
+            dominant_idx = np.argmax(np.abs(fft_result[1:n_half])) + 1
+            return float(np.angle(fft_result[dominant_idx]))
+
+        sigma_field    = sigma_avg.sum(axis=0)   # layer sum — full entangled field
+        rho_field      = rho_avg.sum(axis=0)     # layer sum — full forcing response
+        phase_sigma    = _extract_phase(sigma_field)
+        phase_forcing  = _extract_phase(rho_field)
+
+        # Wrap difference to [-pi, pi] — prevents ±pi discontinuity artifacts
+        delta_phi     = float(np.angle(np.exp(1j * (phase_sigma - phase_forcing))))
+        cos_delta_phi = float(np.cos(delta_phi))
+
+        # Amplitude decoupling ratio — symptom variable (not cause)
+        # cos_delta_phi is the cause; decoupling_ratio is its observable symptom
+        rho_sub_max    = float(np.max(np.abs(rho_avg.sum(axis=0))))
+        rho_sig_max    = float(np.max(np.abs(sigma_avg.sum(axis=0))))
+        decoupling_ratio  = (rho_sig_max / rho_sub_max
+                             if rho_sub_max > 0 else 1.0)
+        substrate_excess  = rho_sig_max - rho_sub_max
+        # === END ADDITION ===
+
         result = {
             "elapsed": elapsed,
             "rho_avg": rho_avg,
@@ -265,6 +310,14 @@ class SubstrateSolver:
             "radial_phi_norm": pn_phi,
             "psi_max": float(np.max(np.abs(psi))),
             "rho_max": float(np.max(np.abs(rho_avg))),
+            # === BCM MASTER BUILD ADDITION v2.2 | 2026-03-30 EST ===
+            "phase_sigma":      phase_sigma,
+            "phase_forcing":    phase_forcing,
+            "delta_phi":        delta_phi,
+            "cos_delta_phi":    cos_delta_phi,
+            "decoupling_ratio": decoupling_ratio,
+            "substrate_excess": substrate_excess,
+            # === END ADDITION ===
             "config": {
                 "grid": self.grid,
                 "layers": self.layers,

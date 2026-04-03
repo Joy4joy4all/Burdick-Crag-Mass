@@ -1,0 +1,150 @@
+{
+  "title": "BCM Stellar Wave Registry -- Scale-Invariance Test Dataset",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "date": "2026-03-30",
+  "description": "Real published stellar parameters for BCM tachocline substrate wave solver. All values from peer-reviewed sources. No per-star tuning. Same wave equation as galactic and planetary solvers.",
+  "lambda_galactic": 0.1,
+  "lambda_planetary": 0.082,
+  "note": "m_observed = azimuthal mode number inferred from dominant observable pattern. 0 = unknown/anomalous.",
+
+  "stars": {
+    "Sun": {
+      "spectral_type": "G2V",
+      "mass_solar": 1.0,
+      "radius_km": 695700.0,
+      "rotation_days": 25.38,
+      "B_surface_gauss": 1.0,
+      "B_tachocline_T": 0.1,
+      "sigma_tach_sm": 1.0e4,
+      "conv_depth_frac": 0.287,
+      "v_conv_ms": 300.0,
+      "m_observed": 4,
+      "bcm_class": "Class I -- Stable Coupled",
+      "pump_type": "tachocline_dynamo",
+      "observable": "4-sector solar wind pattern; Hale 22-year magnetic cycle (m=2 magnetic, m=4 wind)",
+      "notes": "Control star. Convection zone depth from helioseismology. 4-sector solar wind = substrate m=4 standing mode.",
+      "citations": {
+        "rotation": "Snodgrass & Ulrich 1990, ApJ 351",
+        "conv_depth": "Christensen-Dalsgaard et al. 1991, ApJ 378",
+        "B_tachocline": "Charbonneau & MacGregor 1993 -- estimated from dynamo models",
+        "sigma": "Spitzer 1962 -- plasma conductivity at tachocline conditions",
+        "v_conv": "Miesch et al. 2008, ApJ 673 -- helioseismic inversions"
+      }
+    },
+
+    "Tabby": {
+      "spectral_type": "F3V",
+      "mass_solar": 1.43,
+      "radius_km": 1098060.0,
+      "rotation_days": 20.1,
+      "B_surface_gauss": 10.0,
+      "B_tachocline_T": 0.3,
+      "sigma_tach_sm": 1.2e4,
+      "conv_depth_frac": 0.12,
+      "v_conv_ms": 600.0,
+      "m_observed": 0,
+      "bcm_class": "Class ? -- Anomalous Flux",
+      "pump_type": "tachocline_f_type",
+      "observable": "Aperiodic flux dips 0.1-22% (Boyajian 2016). No clean periodic signal. Secular fading ~0.16 mag/century.",
+      "notes": "KIC 8462852. F-type stars have shallow convection zones. Rapid apparent rotation uncertain -- photometric period ~20d from Makarov & Goldin 2016. Anomalous dips unclassified. BCM prediction: substrate mode produces directed non-periodic flux modulation signature. If m_predicted != 0, substrate is active but aperiodic.",
+      "citations": {
+        "discovery": "Boyajian et al. 2016, MNRAS 457",
+        "rotation": "Makarov & Goldin 2016, ApJ 833 -- 20.1d photometric period",
+        "radius_mass": "Boyajian et al. 2016 -- spectroscopic parameters",
+        "secular_fading": "Schaefer 2016, ApJ 822",
+        "no_aliens": "Lisse et al. 2015 -- comet swarm hypothesis; Wright et al. 2016 -- KIC 8462852 as anomaly"
+      }
+    },
+
+    "Proxima": {
+      "spectral_type": "M5.5Ve",
+      "mass_solar": 0.1221,
+      "radius_km": 107100.0,
+      "rotation_days": 83.5,
+      "B_surface_gauss": 600.0,
+      "B_tachocline_T": 0.06,
+      "sigma_tach_sm": 5.0e3,
+      "conv_depth_frac": 1.0,
+      "v_conv_ms": 50.0,
+      "m_observed": 1,
+      "bcm_class": "Class V-A -- Substrate Suppressed",
+      "pump_type": "fully_convective",
+      "observable": "Single active longitude. Superflare events. 83.5d rotation period. Proxima b habitable zone candidate.",
+      "notes": "Fully convective -- no tachocline. Substrate coupling degraded or absent at tachocline layer. Single active longitude = dipole m=1 mode from surface convection. BCM: without tachocline interface, substrate field cannot form standing modes above m=1. Analogous to galaxy with no SMBH -- no controller.",
+      "citations": {
+        "rotation": "Suarez Mascareno et al. 2016, A&A 595",
+        "B_field": "Reiners & Basri 2008, ApJ 684",
+        "radius_mass": "Anglada-Escude et al. 2016, Nature 536",
+        "fully_convective": "Chabrier & Baraffe 1997 -- M < 0.35 Msun fully convective"
+      }
+    },
+
+    "EV_Lac": {
+      "spectral_type": "M3.5Ve",
+      "mass_solar": 0.35,
+      "radius_km": 225000.0,
+      "rotation_days": 4.378,
+      "B_surface_gauss": 3500.0,
+      "B_tachocline_T": 0.35,
+      "sigma_tach_sm": 6.0e3,
+      "conv_depth_frac": 0.90,
+      "v_conv_ms": 200.0,
+      "m_observed": 2,
+      "bcm_class": "Class II -- Marginal Coupling",
+      "pump_type": "near_fully_convective",
+      "observable": "Two active longitude flare clustering. Rapid rotator. High-amplitude flares. Strong field.",
+      "notes": "Near the fully-convective boundary. Rapid rotation and strong field suggest partial tachocline. Two active longitudes = m=2 quadrupole -- BCM predicts this as lowest stable mode above dipole when partial tachocline present. Analog: transition galaxy between Class I and V.",
+      "citations": {
+        "rotation_B": "Morin et al. 2008, MNRAS 390",
+        "two_active_long": "Bidin et al. 2006 -- active longitude clustering in M flare stars",
+        "mass_radius": "Delfosse et al. 2000 -- M dwarf mass-luminosity"
+      }
+    },
+
+    "HR_1099": {
+      "spectral_type": "K1IV",
+      "mass_solar": 1.1,
+      "radius_km": 520000.0,
+      "rotation_days": 2.84,
+      "B_surface_gauss": 200.0,
+      "B_tachocline_T": 0.3,
+      "sigma_tach_sm": 1.1e4,
+      "conv_depth_frac": 0.35,
+      "v_conv_ms": 600.0,
+      "m_observed": 2,
+      "bcm_class": "Class VI -- Bar Channeled (Tidal)",
+      "pump_type": "tidal_bar_rs_cvn",
+      "observable": "Persistent two active longitude structure. RS CVn binary (K1IV + G5V). Tidally synchronized rotation.",
+      "notes": "RS CVn binary system V711 Tau. Tidal forcing from binary companion = bar-channeling analog in BCM. Persistent m=2 active longitude structure maintained by tidal boundary condition -- not internal instability. Analogous to NGC3953 bar dipole. Substrate is being directed, not depleted.",
+      "citations": {
+        "rotation": "Fekel 1983, ApJ 268 -- spectroscopic binary orbit",
+        "active_long": "Berdyugina & Tuominen 1998, A&A 336 -- two active longitudes",
+        "B_field": "Donati et al. 1992, A&A 265",
+        "rs_cvn_class": "Hall 1976 -- RS CVn classification"
+      }
+    },
+
+    "Epsilon_Eri": {
+      "spectral_type": "K2V",
+      "mass_solar": 0.82,
+      "radius_km": 600000.0,
+      "rotation_days": 11.68,
+      "B_surface_gauss": 30.0,
+      "B_tachocline_T": 0.15,
+      "sigma_tach_sm": 9.0e3,
+      "conv_depth_frac": 0.32,
+      "v_conv_ms": 250.0,
+      "m_observed": 3,
+      "bcm_class": "Class I -- Young Active Coupled",
+      "pump_type": "tachocline_dynamo_young",
+      "observable": "Active young solar analog. 11.68d rotation. Circumstellar disk detected. 3-sector wind structure inferred from magnetic mapping.",
+      "notes": "Young active K dwarf. Faster rotation than Sun = stronger substrate coupling predicted. Confirmed debris disk. 3-sector magnetic structure from ZDI mapping. BCM: intermediate mode between solar m=4 and fully active m=2. Good test of rotation-rate dependence.",
+      "citations": {
+        "rotation": "Donahue et al. 1996, ApJ 466",
+        "B_mapping": "Jeffers et al. 2014, A&A 569 -- ZDI magnetic maps",
+        "disk": "Greaves et al. 1998, ApJ 506",
+        "mass_radius": "Valenti & Fischer 2005 -- spectroscopic parameters"
+      }
+    }
+  }
+}
