@@ -393,6 +393,32 @@ class SolverGUI:
         style_fg  = "#a0b0cc"
         style_acc = "#ffbb44"
 
+        # ── Scrollable container for stellar tab ──
+        scroll_canvas = tk.Canvas(parent, bg=style_bg, highlightthickness=0)
+        scroll_vbar = ttk.Scrollbar(parent, orient="vertical",
+                                     command=scroll_canvas.yview)
+        scroll_canvas.configure(yscrollcommand=scroll_vbar.set)
+        scroll_vbar.pack(side="right", fill="y")
+        scroll_canvas.pack(side="left", fill="both", expand=True)
+
+        sf = tk.Frame(scroll_canvas, bg=style_bg)
+        sf_id = scroll_canvas.create_window((0, 0), window=sf, anchor="nw")
+
+        def _sf_resize(event):
+            scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all"))
+        def _sc_resize(event):
+            scroll_canvas.itemconfig(sf_id, width=event.width)
+        sf.bind("<Configure>", _sf_resize)
+        scroll_canvas.bind("<Configure>", _sc_resize)
+
+        def _sf_wheel(event):
+            scroll_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        scroll_canvas.bind("<MouseWheel>", _sf_wheel)
+        sf.bind("<MouseWheel>", _sf_wheel)
+
+        # All stellar content goes in sf (scrollable frame)
+        parent = sf
+
         # ── Header ──
         hf = tk.Frame(parent, bg=style_bg)
         hf.pack(fill="x", padx=12, pady=(10, 4))
@@ -485,6 +511,60 @@ class SolverGUI:
         ttk.Checkbutton(rf, text="Run full stellar batch (all stars in registry)",
                         variable=self.stellar_batch).pack(anchor="w", padx=10, pady=2)
 
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        # Binary pair selector and orbital phase
+        bin_f = tk.Frame(rf, bg="#12151c")
+        bin_f.pack(fill="x", padx=10, pady=(6, 2))
+        tk.Label(bin_f, text="Binary Pair:",
+                 font=("Consolas", 10), fg="#a0b0cc",
+                 bg="#12151c").pack(side="left")
+        self._binary_pairs = []
+        try:
+            from BCM_stellar_overrides import BINARY_REGISTRY
+            self._binary_pairs = list(BINARY_REGISTRY.keys())
+        except ImportError:
+            pass
+        self.binary_select_var = tk.StringVar(
+            value=self._binary_pairs[0] if self._binary_pairs else "")
+        binary_menu = ttk.Combobox(bin_f, textvariable=self.binary_select_var,
+                                    values=self._binary_pairs, width=14,
+                                    font=("Consolas", 10), state="readonly")
+        binary_menu.pack(side="left", padx=(6, 8))
+
+        tk.Label(bin_f, text="Phase:",
+                 font=("Consolas", 10), fg="#a0b0cc",
+                 bg="#12151c").pack(side="left")
+        self.orbital_phase_var = tk.DoubleVar(value=0.5)
+        ttk.Spinbox(bin_f, from_=0.0, to=1.0, increment=0.1,
+                    textvariable=self.orbital_phase_var, width=5,
+                    font=("Consolas", 10)).pack(side="left", padx=(4, 4))
+        tk.Label(bin_f, text="(0=peri 1=apo)",
+                 font=("Consolas", 8), fg="#6a7a90",
+                 bg="#12151c").pack(side="left")
+
+        # Solver parameters for stellar/binary runs
+        sp_f = tk.Frame(rf, bg="#12151c")
+        sp_f.pack(fill="x", padx=10, pady=(4, 2))
+        tk.Label(sp_f, text="Grid:", font=("Consolas", 10),
+                 fg="#a0b0cc", bg="#12151c").pack(side="left")
+        self.stellar_grid_var = tk.IntVar(value=64)
+        ttk.Spinbox(sp_f, from_=32, to=256, increment=32,
+                    textvariable=self.stellar_grid_var, width=5,
+                    font=("Consolas", 10)).pack(side="left", padx=(4, 8))
+        tk.Label(sp_f, text="Settle:", font=("Consolas", 10),
+                 fg="#a0b0cc", bg="#12151c").pack(side="left")
+        self.stellar_settle_var = tk.IntVar(value=15000)
+        ttk.Spinbox(sp_f, from_=5000, to=50000, increment=5000,
+                    textvariable=self.stellar_settle_var, width=7,
+                    font=("Consolas", 10)).pack(side="left", padx=(4, 8))
+        tk.Label(sp_f, text="Measure:", font=("Consolas", 10),
+                 fg="#a0b0cc", bg="#12151c").pack(side="left")
+        self.stellar_measure_var = tk.IntVar(value=5000)
+        ttk.Spinbox(sp_f, from_=1000, to=20000, increment=1000,
+                    textvariable=self.stellar_measure_var, width=6,
+                    font=("Consolas", 10)).pack(side="left", padx=(4, 4))
+        # === END ADDITION ===
+
         # ── Run Button ──
         bf = ttk.Frame(parent, style="Dark.TFrame")
         bf.pack(fill="x", padx=12, pady=6)
@@ -494,6 +574,9 @@ class SolverGUI:
         # === BCM MASTER BUILD ADDITION v2.2 | 2026-04-03 EST ===
         ttk.Button(bf, text="★  Open Stellar Renderer",
                    command=self._open_stellar_renderer).pack(fill="x", padx=4, pady=2)
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        ttk.Button(bf, text="⬡  Run Binary Substrate Bridge",
+                   command=self._run_binary).pack(fill="x", padx=4, pady=2)
 
         # ── Output Log ──
         lf = ttk.LabelFrame(parent, text="STELLAR LOG")
@@ -511,6 +594,13 @@ class SolverGUI:
             "Output JSON → data/results/BCM_<star>_stellar_wave.json\n"
             "─" * 55 + "\n")
         self.stellar_log.config(state="disabled")
+
+        # Bind mousewheel to all children for scrolling
+        def _bind_stellar_wheel(widget):
+            widget.bind("<MouseWheel>", _sf_wheel)
+            for child in widget.winfo_children():
+                _bind_stellar_wheel(child)
+        self.root.after(200, lambda: _bind_stellar_wheel(sf))
 
     def _stellar_log_msg(self, msg):
         """Write to stellar tab log."""
@@ -558,6 +648,7 @@ class SolverGUI:
 
     def _run_stellar(self):
         """Run BCM_stellar_wave.py as subprocess and stream output to log."""
+        self._binary_data = None  # clear binary mode
         import subprocess
 
         script = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -600,9 +691,23 @@ class SolverGUI:
 
     # === BCM MASTER BUILD ADDITION v2.2 | 2026-04-03 EST ===
     def _open_stellar_renderer(self):
-        """Open BCM Stellar Renderer — loads last stellar run."""
+        """Open BCM Stellar Renderer — loads last stellar run or binary result."""
         try:
             from BCM_stellar_renderer import StellarRenderer
+            # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+            # Check for binary data first
+            if hasattr(self, '_binary_data') and self._binary_data:
+                # Close live window if still open
+                if hasattr(self, '_binary_win') and self._binary_win:
+                    try:
+                        self._binary_win.destroy()
+                    except Exception:
+                        pass
+                    self._binary_win = None
+                StellarRenderer(self.root,
+                                binary_data=self._binary_data)
+                return
+            # === END ADDITION ===
             base = os.path.dirname(os.path.abspath(__file__))
             results_dir = os.path.join(base, "data", "results")
             json_path = None
@@ -628,6 +733,500 @@ class SolverGUI:
                 "ERROR: BCM_stellar_renderer.py not found in root dir.")
         except Exception as e:
             self._stellar_log_msg(f"Renderer error: {e}")
+
+    # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+    def _run_binary(self):
+        """Run binary substrate bridge with live wave propagation window."""
+        pair_name = self.binary_select_var.get()
+        if not pair_name:
+            self._stellar_log_msg("ERROR: No binary pair selected.")
+            return
+
+        phase = self.orbital_phase_var.get()
+        grid = self.stellar_grid_var.get()
+        settle = self.stellar_settle_var.get()
+        measure = self.stellar_measure_var.get()
+
+        self._stellar_log_msg(f"\n{'═'*55}")
+        self._stellar_log_msg(f"  BINARY SUBSTRATE BRIDGE — {pair_name}")
+        self._stellar_log_msg(f"  grid={grid}  settle={settle}  measure={measure}  phase={phase:.2f}")
+        self._stellar_log_msg(f"{'═'*55}")
+
+        # ── Open live animation window ──
+        self._binary_win = tk.Toplevel(self.root)
+        self._binary_win.title(f"BCM BINARY WAVE PROPAGATION — {pair_name}")
+        self._binary_win.geometry("900x750")
+        self._binary_win.configure(bg="#080a0e")
+
+        # Header
+        hf = tk.Frame(self._binary_win, bg="#080a0e")
+        hf.pack(fill="x", padx=8, pady=(6, 2))
+        tk.Label(hf, text=f"BINARY SUBSTRATE BRIDGE — {pair_name}",
+                 font=("Georgia", 14), fg="#e0e8f0",
+                 bg="#080a0e").pack(side="left")
+        self._binary_status = tk.StringVar(value="Initializing...")
+        tk.Label(hf, textvariable=self._binary_status,
+                 font=("Consolas", 10), fg="#6a7a90",
+                 bg="#080a0e").pack(side="right")
+
+        # Canvas for live wave view
+        self._binary_canvas = tk.Canvas(self._binary_win,
+            bg="#080a0e", highlightthickness=0)
+        self._binary_canvas.pack(fill="both", expand=True, padx=8, pady=4)
+        self._binary_cw = 880
+        self._binary_ch = 660
+        self._binary_canvas.bind("<Configure>", self._on_binary_resize)
+
+        # Store pump info for overlay (set after source build)
+        self._binary_pump_info = None
+
+        def _run():
+            try:
+                from BCM_stellar_overrides import (run_binary, BINARY_REGISTRY,
+                                                    build_binary_source)
+                pair = BINARY_REGISTRY.get(pair_name)
+                if not pair:
+                    self.root.after(0, lambda: self._stellar_log_msg(
+                        f"ERROR: '{pair_name}' not in BINARY_REGISTRY"))
+                    return
+
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  {pair.get('description', '')}"))
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  Class: {pair.get('bcm_class', '')}"))
+                self.root.after(0, lambda: self._stellar_log_msg("─" * 55))
+
+                # Build source first to get pump locations
+                J_pre, info_pre = build_binary_source(pair, grid=grid,
+                                                       orbital_phase=phase)
+                self._binary_pump_info = info_pre
+                self.root.after(0, lambda: self._binary_status.set(
+                    f"Solving... grid={grid} settle={settle}"))
+
+                # Draw initial source field before solver starts
+                self.root.after(0, lambda j=J_pre.copy():
+                    self._draw_binary_live(
+                        j.reshape(1, grid, grid), 0, settle + measure))
+
+                # Live callback — draws rho on the binary canvas
+                def _binary_live_cb(step, total, rho, sigma):
+                    if step % 500 == 0:
+                        self.root.after(0, lambda r=rho.copy(), s=step, t=total:
+                            self._draw_binary_live(r, s, t))
+
+                result, J, info = run_binary(
+                    pair_name, grid=grid,
+                    orbital_phase=phase,
+                    settle=settle,
+                    measure=measure,
+                    verbose=False,
+                    callback=_binary_live_cb)
+
+                # Final frame with phase field
+                self.root.after(0, lambda: self._draw_binary_final(result, info))
+
+                # Log results
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  Pump A: {info['star_A']}  amp={info['amp_A']:.1f}"))
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  Pump B: {info['star_B']}  amp={info['amp_B']:.1f}"))
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  Separation: {info['sep_AU']:.1f} AU  "
+                    f"({info['sep_frac']:.2f} grid frac)"))
+
+                if 'L1_cos_mean' in info:
+                    self.root.after(0, lambda: self._stellar_log_msg(
+                        f"\n  BRIDGE DIAGNOSTICS:"))
+                    self.root.after(0, lambda: self._stellar_log_msg(
+                        f"    L1 cos(Δφ) mean: {info['L1_cos_mean']:+.4f}"))
+                    self.root.after(0, lambda: self._stellar_log_msg(
+                        f"    L1 curl max:     {info['L1_curl_max']:.6f}"))
+
+                corr = result.get("corr_full", 0)
+                cdp = result.get("cos_delta_phi", 0)
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"\n  Solver: Ψ~Φ={corr:+.4f}  "
+                    f"cos_delta_phi={cdp:+.4f}"))
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  Elapsed: {result.get('elapsed',0):.1f}s"))
+
+                # Save binary result JSON
+                base = os.path.dirname(os.path.abspath(__file__))
+                results_dir = os.path.join(base, "data", "results")
+                os.makedirs(results_dir, exist_ok=True)
+                out_path = os.path.join(results_dir,
+                    f"BCM_binary_{pair_name}_{time.strftime('%Y%m%d_%H%M%S')}.json")
+                save_data = {
+                    "pair": pair_name,
+                    "info": {k: v for k, v in info.items()
+                             if not isinstance(v, np.ndarray)},
+                    "corr_full": float(corr),
+                    "cos_delta_phi": float(cdp),
+                    "elapsed": result.get("elapsed", 0),
+                }
+                with open(out_path, 'w') as f:
+                    json.dump(save_data, f, indent=2)
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  Saved: {out_path}"))
+
+                # Store binary data for renderer
+                self._binary_data = {
+                    'J': J,
+                    'cpf': result.get('cos_delta_phi_field'),
+                    'dpf': result.get('delta_phi_field'),
+                    'rho_avg': result.get('rho_avg'),
+                    'info': info,
+                    'pair_name': pair_name,
+                }
+
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"\n{'═'*55}\n  BINARY RUN COMPLETE — Click ★ Renderer to view\n{'═'*55}"))
+
+            except ImportError as e:
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"ERROR: {e}"))
+                self.root.after(0, lambda: self._binary_status.set(
+                    f"IMPORT ERROR — check BCM_stellar_overrides.py"))
+            except Exception as e:
+                import traceback
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"ERROR: {e}\n{traceback.format_exc()}"))
+                self.root.after(0, lambda: self._binary_status.set(
+                    f"ERROR: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _on_binary_resize(self, event):
+        self._binary_cw = event.width
+        self._binary_ch = event.height
+
+    def _draw_binary_live(self, rho, step, total):
+        """Draw live wave propagation frame on binary canvas."""
+        if not hasattr(self, '_binary_canvas'):
+            return
+        try:
+            c = self._binary_canvas
+            c.delete("all")
+            w, h = self._binary_cw, self._binary_ch
+
+            field = np.abs(rho[0]) if len(rho.shape) == 3 else np.abs(rho)
+            ny, nx = field.shape
+            fm = np.max(field)
+            if fm <= 0:
+                fm = 1.0
+
+            # Draw field as heatmap
+            cw_px = w / nx
+            ch_px = (h - 60) / ny
+            sx = max(1, nx // 80)
+            sy = max(1, ny // 80)
+
+            for iy in range(0, ny, sy):
+                for ix in range(0, nx, sx):
+                    v = field[iy, ix] / fm
+                    # Emerald substrate palette
+                    r_c = int(min(255, 20 + v * 60))
+                    g_c = int(min(255, 30 + v * 225))
+                    b_c = int(min(255, 20 + v * 40))
+                    col = f"#{r_c:02x}{g_c:02x}{b_c:02x}"
+                    x0 = ix * cw_px
+                    y0 = iy * ch_px
+                    c.create_rectangle(x0, y0,
+                        (ix + sx) * cw_px, (iy + sy) * ch_px,
+                        fill=col, outline="")
+
+            # Pump markers
+            if self._binary_pump_info:
+                info = self._binary_pump_info
+                pA = info.get('pump_A', (nx//4, ny//2))
+                pB = info.get('pump_B', (3*nx//4, ny//2))
+                l1 = info.get('L1', (nx//2, ny//2))
+
+                ax = pA[0] * cw_px
+                ay = pA[1] * ch_px
+                bx = pB[0] * cw_px
+                by = pB[1] * ch_px
+                lx = l1[0] * cw_px
+                ly = l1[1] * ch_px
+
+                # Star A
+                c.create_oval(ax - 8, ay - 8, ax + 8, ay + 8,
+                              fill="#ff9944", outline="white", width=1)
+                c.create_text(ax, ay - 14,
+                    text=info.get('star_A', 'A'),
+                    fill="white", font=("Consolas", 8, "bold"))
+
+                # Star B
+                c.create_oval(bx - 6, by - 6, bx + 6, by + 6,
+                              fill="#44aaff", outline="white", width=1)
+                c.create_text(bx, by - 14,
+                    text=info.get('star_B', 'B'),
+                    fill="white", font=("Consolas", 8, "bold"))
+
+                # L1
+                c.create_polygon(lx, ly - 6, lx + 5, ly,
+                                 lx, ly + 6, lx - 5, ly,
+                                 fill="#ffbb44", outline="white")
+
+                # Bridge line
+                c.create_line(ax, ay, bx, by,
+                    fill="#60aaff", width=1, dash=(3, 6))
+
+                # Alfven resonance rings — mode structure overlay
+                for pump_xy, m_mode, color in [
+                    ((ax, ay), info.get('m_pred_A', 4), "#40ee70"),
+                    ((bx, by), info.get('m_pred_B', 4), "#60aaff")]:
+                    px, py = pump_xy
+                    m = max(1, m_mode)
+                    well_r = cw_px * grid * 0.08 * 2.5  # pump influence radius
+                    for i in range(1, m + 1):
+                        ring_r = well_r * i / m
+                        if ring_r > 4:
+                            c.create_oval(
+                                px - ring_r, py - ring_r,
+                                px + ring_r, py + ring_r,
+                                outline=color, dash=(2, 4), width=1)
+
+                # Inner infinity — lemniscate (light version for live view)
+                import math
+                mid_x = (ax + bx) / 2
+                mid_y = (ay + by) / 2
+                half_sep = abs(bx - ax) / 2
+                if half_sep > 10:
+                    n_pts = 80
+                    lem_pts = []
+                    for i in range(n_pts + 1):
+                        t = i / n_pts * 2 * math.pi
+                        sin_t = math.sin(t)
+                        cos_t = math.cos(t)
+                        denom = 1 + sin_t * sin_t
+                        x = half_sep * 1.05 * cos_t / denom + mid_x
+                        y = half_sep * 0.55 * sin_t * cos_t / denom + mid_y
+                        lem_pts.extend([x, y])
+                    if len(lem_pts) >= 4:
+                        c.create_line(*lem_pts,
+                            fill="#ffbb44", width=1, smooth=True, dash=(4, 4))
+
+            # Status bar
+            pct = step / total * 100 if total > 0 else 0
+            settle = self.stellar_settle_var.get()
+            phase_txt = "SETTLING" if step < settle else "MEASURING"
+            c.create_text(w // 2, h - 25,
+                text=f"{phase_txt}  step {step}/{total}  ({pct:.0f}%)  "
+                     f"|ρ|_max={fm:.2f}",
+                fill="#e0e8f0", font=("Consolas", 11, "bold"))
+            c.create_text(w // 2, h - 8,
+                text="BCM v7 Binary Wave Propagation — "
+                     "Emerald Entities LLC — GIBUSH",
+                fill="#3a4a60", font=("Consolas", 8))
+
+            self._binary_status.set(
+                f"Step {step}/{total}  ({pct:.0f}%)")
+        except Exception:
+            pass  # window may have been closed
+
+    def _draw_binary_final(self, result, info):
+        """Draw final frame on binary canvas — last rho frame + diagnostics overlay."""
+        if not hasattr(self, '_binary_canvas'):
+            return
+        try:
+            c = self._binary_canvas
+            c.delete("all")
+            w, h = self._binary_cw, self._binary_ch
+
+            # Use rho_avg layer 0 — same rendering as live view
+            rho_avg = result.get('rho_avg')
+            if rho_avg is None:
+                return
+            field = np.abs(rho_avg[0]) if len(rho_avg.shape) == 3 else np.abs(rho_avg)
+            ny, nx = field.shape
+            fm = np.max(field)
+            if fm <= 0:
+                fm = 1.0
+
+            cw_px = w / nx
+            ch_px = (h - 80) / ny
+            sx = max(1, nx // 100)
+            sy = max(1, ny // 100)
+
+            for iy in range(0, ny, sy):
+                for ix in range(0, nx, sx):
+                    v = field[iy, ix] / fm
+                    r_c = int(min(255, 20 + v * 60))
+                    g_c = int(min(255, 30 + v * 225))
+                    b_c = int(min(255, 20 + v * 40))
+                    col = f"#{r_c:02x}{g_c:02x}{b_c:02x}"
+                    x0 = ix * cw_px
+                    y0 = iy * ch_px
+                    c.create_rectangle(x0, y0,
+                        (ix + sx) * cw_px, (iy + sy) * ch_px,
+                        fill=col, outline="")
+
+            # Pump markers + L1
+            pA = info.get('pump_A', (nx//4, ny//2))
+            pB = info.get('pump_B', (3*nx//4, ny//2))
+            l1 = info.get('L1', (nx//2, ny//2))
+
+            ax, ay = pA[0]*cw_px, pA[1]*ch_px
+            bx, by = pB[0]*cw_px, pB[1]*ch_px
+            lx, ly = l1[0]*cw_px, l1[1]*ch_px
+
+            # Corona glow
+            for ri in range(20, 6, -2):
+                alpha = max(0, 1.0 - (ri-8)/14.0)
+                gc = int(alpha * 50)
+                c.create_oval(ax-ri, ay-ri, ax+ri, ay+ri,
+                    outline=f"#{gc+20:02x}{gc:02x}08", fill="")
+                c.create_oval(bx-ri, by-ri, bx+ri, by+ri,
+                    outline=f"#08{gc:02x}{gc+20:02x}", fill="")
+
+            c.create_oval(ax-10, ay-10, ax+10, ay+10,
+                          fill="#ff9944", outline="white", width=2)
+            c.create_text(ax, ay-18, text=info.get('star_A','A'),
+                fill="white", font=("Consolas", 9, "bold"))
+
+            c.create_oval(bx-8, by-8, bx+8, by+8,
+                          fill="#44aaff", outline="white", width=2)
+            c.create_text(bx, by-18, text=info.get('star_B','B'),
+                fill="white", font=("Consolas", 9, "bold"))
+
+            c.create_polygon(lx, ly-8, lx+6, ly, lx, ly+8, lx-6, ly,
+                             fill="#ffbb44", outline="white", width=1)
+            c.create_text(lx, ly-14, text="L1",
+                fill="#ffbb44", font=("Consolas", 9, "bold"))
+
+            c.create_line(ax, ay, bx, by,
+                fill="#60aaff", width=1, dash=(4, 8))
+
+            # Alfven resonance rings — mode structure overlay
+            for pump_xy, m_mode, color in [
+                ((ax, ay), info.get('m_pred_A', 4), "#40ee70"),
+                ((bx, by), info.get('m_pred_B', 4), "#60aaff")]:
+                px, py = pump_xy
+                m = max(1, m_mode)
+                well_r = cw_px * ny * 0.08 * 2.5
+                for i in range(1, m + 1):
+                    ring_r = well_r * i / m
+                    if ring_r > 4:
+                        c.create_oval(
+                            px - ring_r, py - ring_r,
+                            px + ring_r, py + ring_r,
+                            outline=color, dash=(2, 4), width=1)
+
+            # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+            # Substrate Topology Overlay — Burdick's Triple Structure
+            # 1. Outer torus — 360° maintenance field envelope per star
+            # 2. Inner infinity — figure-8 lemniscate through L1
+            # 3. L1 swirl — circulation indicator at the throat
+            import math
+
+            mid_x = (ax + bx) / 2
+            mid_y = (ay + by) / 2
+            half_sep = abs(bx - ax) / 2
+
+            # 1. Outer torus loops — full substrate envelope
+            for pump_xy, amp, color in [
+                ((ax, ay), info.get('amp_A', 8), "#40ee7040"),
+                ((bx, by), info.get('amp_B', 4), "#60aaff40")]:
+                px, py = pump_xy
+                torus_r = half_sep * 0.85 * (amp / max(info.get('amp_A', 8), 1))
+                torus_r = max(torus_r, half_sep * 0.3)
+                # Draw as multiple fading ovals
+                for ri_off in range(3):
+                    r = torus_r + ri_off * 4
+                    alpha_hex = max(20, 60 - ri_off * 15)
+                    c.create_oval(px - r, py - r, px + r, py + r,
+                        outline=color[:7], dash=(6, 4), width=1)
+
+            # 2. Inner infinity — lemniscate of Bernoulli
+            # Substrate flow path through both lobes via L1
+            n_pts = 120
+            lemniscate_pts = []
+            a_lem = half_sep * 1.05  # slightly wider than separation
+            h_lem = half_sep * 0.55  # height of each lobe
+            for i in range(n_pts + 1):
+                t = i / n_pts * 2 * math.pi
+                sin_t = math.sin(t)
+                cos_t = math.cos(t)
+                denom = 1 + sin_t * sin_t
+                x = a_lem * cos_t / denom + mid_x
+                y = h_lem * sin_t * cos_t / denom + mid_y
+                lemniscate_pts.extend([x, y])
+
+            if len(lemniscate_pts) >= 4:
+                c.create_line(*lemniscate_pts,
+                    fill="#ffbb44", width=2, smooth=True)
+                # Second trace slightly offset for depth
+                lemniscate_pts2 = []
+                for i in range(n_pts + 1):
+                    t = i / n_pts * 2 * math.pi + 0.05
+                    sin_t = math.sin(t)
+                    cos_t = math.cos(t)
+                    denom = 1 + sin_t * sin_t
+                    x = a_lem * 0.92 * cos_t / denom + mid_x
+                    y = h_lem * 0.92 * sin_t * cos_t / denom + mid_y
+                    lemniscate_pts2.extend([x, y])
+                c.create_line(*lemniscate_pts2,
+                    fill="#ffbb44", width=1, dash=(3, 5), smooth=True)
+
+            # 3. L1 swirl — circulation at the throat
+            # Archimedean spiral showing substrate pooling
+            spiral_pts = []
+            n_spiral = 60
+            for i in range(n_spiral):
+                t = i / n_spiral * 3 * math.pi
+                r = 3 + t * 2.5
+                x = lx + r * math.cos(t)
+                y = ly + r * math.sin(t)
+                spiral_pts.extend([x, y])
+            if len(spiral_pts) >= 4:
+                c.create_line(*spiral_pts,
+                    fill="#ff9944", width=1, smooth=True)
+
+            # Topology label
+            c.create_text(mid_x, mid_y - half_sep * 0.65,
+                text="∞ SUBSTRATE BRIDGE",
+                fill="#ffbb44", font=("Consolas", 9, "bold"))
+            # === END ADDITION ===
+
+            # Diagnostics overlay — bottom panel
+            cos_l1 = info.get('L1_cos_mean', 0)
+            curl_l1 = info.get('L1_curl_max', 0)
+            verdict = "COHERENT BRIDGE" if cos_l1 > 0.99 else (
+                "PARTIAL BRIDGE" if cos_l1 > 0.9 else "DECOHERENT")
+            v_color = "#40ee70" if cos_l1 > 0.99 else (
+                "#ffbb44" if cos_l1 > 0.9 else "#ff5555")
+
+            # Dark panel at bottom
+            panel_y = h - 75
+            c.create_rectangle(0, panel_y, w, h,
+                fill="#080a0e", outline="")
+
+            c.create_text(w // 2, panel_y + 12,
+                text=f"COMPLETE — {info.get('star_A','A')} + {info.get('star_B','B')}  |  "
+                     f"sep={info.get('sep_AU',0):.1f} AU  "
+                     f"e={info.get('eccentricity',0):.3f}  "
+                     f"phase={info.get('orbital_phase',0):.2f}",
+                fill="#e0e8f0", font=("Consolas", 10, "bold"))
+
+            c.create_text(w // 2, panel_y + 32,
+                text=f"L1 cos(Δφ) = {cos_l1:+.6f}   "
+                     f"curl = {curl_l1:.2e}   "
+                     f">>> {verdict}",
+                fill=v_color, font=("Consolas", 11, "bold"))
+
+            vortex_txt = ("SUBSTRATE POOLING" if curl_l1 > 0.001
+                          else "Laminar bridge (no vorticity)")
+            c.create_text(w // 2, panel_y + 50,
+                text=f">>> {vortex_txt}   |   "
+                     f"BCM v7 Binary Substrate Bridge — "
+                     f"Emerald Entities LLC — GIBUSH",
+                fill="#3a4a60", font=("Consolas", 8))
+
+            self._binary_status.set(
+                f"COMPLETE — {verdict}  L1={cos_l1:+.4f}")
+        except Exception:
+            pass
 
     def _build_controls(self, parent):
         # BCM STRUCTURAL OVERRIDES (top — always visible)

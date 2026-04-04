@@ -1,0 +1,186 @@
+{
+  "title": "BCM Substrate Colonization Sweep",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "pair": "Spica",
+  "phase": 0.0,
+  "grid": 192,
+  "amp_B": 2.38,
+  "amp_A_range": [
+    20,
+    100,
+    5
+  ],
+  "n_runs": 17,
+  "results": [
+    {
+      "amp_A": 20,
+      "amp_B": 2.38,
+      "ratio": 8.4,
+      "cos_delta_phi": 1.0,
+      "curl_max": 4.235164736271502e-21,
+      "corr_full": 0.9881,
+      "elapsed": 325.4,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 25,
+      "amp_B": 2.38,
+      "ratio": 10.5,
+      "cos_delta_phi": 1.0,
+      "curl_max": 5.929230630780102e-21,
+      "corr_full": 0.9904,
+      "elapsed": 255.1,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 30,
+      "amp_B": 2.38,
+      "ratio": 12.6,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.9918,
+      "elapsed": 252.6,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 35,
+      "amp_B": 2.38,
+      "ratio": 14.7,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.9928,
+      "elapsed": 249.8,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 40,
+      "amp_B": 2.38,
+      "ratio": 16.8,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.9935,
+      "elapsed": 323.4,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 45,
+      "amp_B": 2.38,
+      "ratio": 18.9,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.994,
+      "elapsed": 374.9,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 50,
+      "amp_B": 2.38,
+      "ratio": 21.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9944,
+      "elapsed": 325.9,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 55,
+      "amp_B": 2.38,
+      "ratio": 23.1,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9947,
+      "elapsed": 310.9,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 60,
+      "amp_B": 2.38,
+      "ratio": 25.2,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.995,
+      "elapsed": 307.8,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 65,
+      "amp_B": 2.38,
+      "ratio": 27.3,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 2.0328790734103208e-20,
+      "corr_full": 0.9952,
+      "elapsed": 308.0,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 70,
+      "amp_B": 2.38,
+      "ratio": 29.4,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 2.710505431213761e-20,
+      "corr_full": 0.9953,
+      "elapsed": 306.6,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 75,
+      "amp_B": 2.38,
+      "ratio": 31.5,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 2.710505431213761e-20,
+      "corr_full": 0.9955,
+      "elapsed": 311.0,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 80,
+      "amp_B": 2.38,
+      "ratio": 33.6,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 4.743384504624082e-20,
+      "corr_full": 0.9956,
+      "elapsed": 317.7,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 85,
+      "amp_B": 2.38,
+      "ratio": 35.7,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 4.0657581468206416e-20,
+      "corr_full": 0.9957,
+      "elapsed": 309.1,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 90,
+      "amp_B": 2.38,
+      "ratio": 37.8,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 2.710505431213761e-20,
+      "corr_full": 0.9958,
+      "elapsed": 310.8,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 95,
+      "amp_B": 2.38,
+      "ratio": 39.9,
+      "cos_delta_phi": 0.999998,
+      "curl_max": 4.0657581468206416e-20,
+      "corr_full": 0.9959,
+      "elapsed": 311.1,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 100,
+      "amp_B": 2.38,
+      "ratio": 42.0,
+      "cos_delta_phi": 0.999998,
+      "curl_max": 2.710505431213761e-20,
+      "corr_full": 0.9959,
+      "elapsed": 311.7,
+      "verdict": "COHERENT"
+    }
+  ]
+}

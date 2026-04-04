@@ -1,0 +1,208 @@
+{
+  "title": "BCM Substrate Colonization Reverse Sweep",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "pair": "Spica",
+  "phase": 0.0,
+  "grid": 192,
+  "mode": "REVERSE",
+  "sweep_target": "B",
+  "amp_A_held": 20.0,
+  "amp_B_range": [
+    2,
+    20,
+    1
+  ],
+  "n_runs": 19,
+  "results": [
+    {
+      "amp_A": 20.0,
+      "amp_B": 2.0,
+      "ratio": 10.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 4.235164736271502e-21,
+      "corr_full": 0.9899,
+      "elapsed": 207.9,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 3.0,
+      "ratio": 6.67,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.9851,
+      "elapsed": 202.0,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 4.0,
+      "ratio": 5.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9808,
+      "elapsed": 197.1,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 5.0,
+      "ratio": 4.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.9776,
+      "elapsed": 198.0,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 6.0,
+      "ratio": 3.33,
+      "cos_delta_phi": 1.0,
+      "curl_max": 8.893845946170154e-21,
+      "corr_full": 0.9757,
+      "elapsed": 198.8,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 7.0,
+      "ratio": 2.86,
+      "cos_delta_phi": 1.0,
+      "curl_max": 7.623296525288703e-21,
+      "corr_full": 0.9753,
+      "elapsed": 199.6,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 8.0,
+      "ratio": 2.5,
+      "cos_delta_phi": 1.0,
+      "curl_max": 9.317362419797304e-21,
+      "corr_full": 0.9761,
+      "elapsed": 276.4,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 9.0,
+      "ratio": 2.22,
+      "cos_delta_phi": 1.0,
+      "curl_max": 8.470329472543003e-21,
+      "corr_full": 0.978,
+      "elapsed": 241.1,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 10.0,
+      "ratio": 2.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.0164395367051604e-20,
+      "corr_full": 0.9806,
+      "elapsed": 200.5,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 11.0,
+      "ratio": 1.82,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.2705494208814505e-20,
+      "corr_full": 0.9836,
+      "elapsed": 203.6,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 12.0,
+      "ratio": 1.67,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.2705494208814505e-20,
+      "corr_full": 0.9867,
+      "elapsed": 199.4,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 13.0,
+      "ratio": 1.54,
+      "cos_delta_phi": 1.0,
+      "curl_max": 8.470329472543003e-21,
+      "corr_full": 0.9896,
+      "elapsed": 197.0,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 14.0,
+      "ratio": 1.43,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9922,
+      "elapsed": 196.7,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 15.0,
+      "ratio": 1.33,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9944,
+      "elapsed": 198.0,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 16.0,
+      "ratio": 1.25,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.0164395367051604e-20,
+      "corr_full": 0.996,
+      "elapsed": 233.4,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 17.0,
+      "ratio": 1.18,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9972,
+      "elapsed": 311.9,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 18.0,
+      "ratio": 1.11,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9979,
+      "elapsed": 311.2,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 19.0,
+      "ratio": 1.05,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9981,
+      "elapsed": 310.3,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 20.0,
+      "amp_B": 20.0,
+      "ratio": 1.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9981,
+      "elapsed": 277.9,
+      "verdict": "COHERENT"
+    }
+  ]
+}

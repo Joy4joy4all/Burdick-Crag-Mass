@@ -3,7 +3,7 @@
 BCM Stellar Wave Solver
 =======================
 Stephen Justin Burdick Sr., 2026 -- Emerald Entities LLC
-NSF I-Corps -- Team GIBUSH
+Emerald Entities LLC -- GIBUSH Systems
 
 Tests BCM Substrate Scale-Invariance at stellar scale.
 Derives the azimuthal wave number m for stellar surface phenomena
@@ -76,19 +76,19 @@ STELLAR_REGISTRY = {
     "Tabby": {
         "spectral_type":    "F3V",
         "mass_solar":       1.43,
-        "radius_km":        978000.0,
-        "rotation_days":    0.8797,
+        "radius_km":        1098060.0,
+        "rotation_days":    20.1,
         "B_surface_gauss":  10.0,
         "B_tachocline_T":   5.0e-1,
         "sigma_tach_sm":    1.2e4,
-        "conv_depth_frac":  0.15,
-        "v_conv_ms":        800.0,
+        "conv_depth_frac":  0.12,
+        "v_conv_ms":        600.0,
         "m_observed":       0,
-        "bcm_class":        "Class ? -- Anomalous",
-        "pump_type":        "tachocline_rapid_rotator",
-        "notes":            "KIC 8462852. Anomalous flux dips 0.1-22%. Rapid rotator. "
-                            "BCM prediction: substrate mode produces directed flux modulation.",
-        "observable":       "Anomalous aperiodic flux dips -- Boyajian 2016",
+        "bcm_class":        "Class ? -- Anomalous Flux",
+        "pump_type":        "tachocline_f_type",
+        "notes":            "KIC 8462852. F-type shallow CZ. B_tachocline estimated "
+                            "from dynamo scaling. rho from stellar structure scaling.",
+        "observable":       "Aperiodic flux dips 0.1-22% (Boyajian 2016). No clean periodic signal.",
         # === BCM MASTER BUILD ADDITION v2.2 | 2026-04-02 EST ===
         # F-type star -- shallower tachocline, lower density than Sun
         "rho_tachocline_kgm3": 150.0,
@@ -97,7 +97,7 @@ STELLAR_REGISTRY = {
     "Proxima": {
         "spectral_type":    "M5.5Ve",
         "mass_solar":       0.1221,
-        "radius_km":        107000.0,
+        "radius_km":        107100.0,
         "rotation_days":    83.5,
         "B_surface_gauss":  600.0,
         "B_tachocline_T":   1.5e-1,
@@ -155,6 +155,158 @@ STELLAR_REGISTRY = {
         # K subgiant -- similar density to Sun at tachocline
         "rho_tachocline_kgm3": 180.0,
         # === END ADDITION ===
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        # Binary orbital parameters for tidal Hamiltonian
+        # v_tidal = Omega_orb * R_tach / 2 -- companion's clock signal at m=2
+        # Source: Fekel 1983, ApJ 268 -- spectroscopic binary orbit
+        "P_orbital_days":       2.84,       # synchronized: P_rot = P_orb
+        "M_companion_solar":    1.0,        # G5V secondary
+        "binary_synchronized":  True,
+        # === END ADDITION ===
+    },
+    "Epsilon_Eri": {
+        "spectral_type":    "K2V",
+        "mass_solar":       0.82,
+        "radius_km":        600000.0,
+        "rotation_days":    11.68,
+        "B_surface_gauss":  30.0,
+        "B_tachocline_T":   3.0,
+        "sigma_tach_sm":    9.0e3,
+        "conv_depth_frac":  0.32,
+        "v_conv_ms":        250.0,
+        "m_observed":       3,
+        "bcm_class":        "Class I -- Young Active Coupled",
+        "pump_type":        "tachocline_dynamo_young",
+        "notes":            "Young active K dwarf. B_tachocline estimated from dynamo scaling. "
+                            "rho from stellar structure scaling.",
+        "observable":       "Active young solar analog. 3-sector wind structure from ZDI mapping.",
+        "rho_tachocline_kgm3": 350.0,
+    },
+    "Alpha_Cen_A": {
+        "spectral_type":    "G2V",
+        "mass_solar":       1.1,
+        "radius_km":        851457.0,
+        "rotation_days":    22.0,
+        "B_surface_gauss":  1.0,
+        "B_tachocline_T":   5.6,
+        "sigma_tach_sm":    1.0e4,
+        "conv_depth_frac":  0.287,
+        "v_conv_ms":        300.0,
+        "m_observed":       4,
+        "bcm_class":        "Class I -- Stable Coupled",
+        "pump_type":        "tachocline_dynamo",
+        "notes":            "Solar analog calibration. B_tachocline = solar value. "
+                            "rho from stellar structure scaling. Binary with Alpha Cen B.",
+        "observable":       "Solar twin. Deep Maunder-like minimum since 2005.",
+        "rho_tachocline_kgm3": 119.0,
+    },
+    "Alpha_Cen_B": {
+        "spectral_type":    "K1V",
+        "mass_solar":       0.907,
+        "radius_km":        600576.0,
+        "rotation_days":    41.0,
+        "B_surface_gauss":  2.0,
+        "B_tachocline_T":   3.0,
+        "sigma_tach_sm":    8.0e3,
+        "conv_depth_frac":  0.35,
+        "v_conv_ms":        200.0,
+        "m_observed":       4,
+        "bcm_class":        "Class I -- Stable Coupled",
+        "pump_type":        "tachocline_dynamo",
+        "notes":            "Binary companion to Alpha Cen A. B_tachocline from K-dwarf "
+                            "dynamo scaling. Substrate bridge target with Alpha Cen A.",
+        "observable":       "K-dwarf secondary. Long rotation period. Known activity cycle.",
+        "rho_tachocline_kgm3": 324.0,
+    },
+    "61_Cyg_A": {
+        "spectral_type":    "K5V",
+        "mass_solar":       0.677,
+        "radius_km":        464000.0,
+        "rotation_days":    35.54,
+        "B_surface_gauss":  2.0,
+        "B_tachocline_T":   2.5,
+        "sigma_tach_sm":    7.0e3,
+        "conv_depth_frac":  0.40,
+        "v_conv_ms":        250.0,
+        "m_observed":       4,
+        "bcm_class":        "Class I -- Stable Coupled",
+        "pump_type":        "tachocline_dynamo",
+        "notes":            "B_tachocline from K-dwarf dynamo scaling. rho from stellar "
+                            "structure scaling (deep CZ = high density).",
+        "observable":       "K-dwarf with solar-like magnetic cycle. High proper motion.",
+        "rho_tachocline_kgm3": 585.0,
+    },
+    "AU_Mic": {
+        "spectral_type":    "M1Ve",
+        "mass_solar":       0.6,
+        "radius_km":        570000.0,
+        "rotation_days":    4.84,
+        "B_surface_gauss":  2000.0,
+        "B_tachocline_T":   3.0,
+        "sigma_tach_sm":    1.5e4,
+        "conv_depth_frac":  0.80,
+        "v_conv_ms":        400.0,
+        "m_observed":       2,
+        "bcm_class":        "Class II -- Marginal",
+        "pump_type":        "near_fully_convective",
+        "notes":            "Rapid rotator near fully convective boundary. Standard Alfven "
+                            "Hamiltonian predicts m=12 -- same boundary problem as HR_1099.",
+        "observable":       "Young flare star. 4.84d rotation. Debris disk. Two active longitudes.",
+        "rho_tachocline_kgm3": 497.0,
+    },
+    "Vega": {
+        "spectral_type":    "A0Va",
+        "mass_solar":       2.135,
+        "radius_km":        1739000.0,
+        "rotation_days":    0.67,
+        "B_surface_gauss":  0.5,
+        "B_tachocline_T":   0.5,
+        "sigma_tach_sm":    5.0e2,
+        "conv_depth_frac":  0.02,
+        "v_conv_ms":        100.0,
+        "m_observed":       0,
+        "bcm_class":        "Class ? -- Anomalous",
+        "pump_type":        "rapid_rotator_thin_env",
+        "notes":            "Very thin convective envelope. Rapid rotation drives extreme "
+                            "OmegaR_tach. BCM prediction target -- no confirmed m_observed.",
+        "observable":       "A-star rapid rotator. Weak magnetic field. Nearly pole-on.",
+        "rho_tachocline_kgm3": 27.0,
+    },
+    "Spica_A": {
+        "spectral_type":    "B1 III-IV",
+        "mass_solar":       11.43,
+        "radius_km":        5196879.0,
+        "rotation_days":    2.29,
+        "B_surface_gauss":  100.0,
+        "B_tachocline_T":   1.0,
+        "sigma_tach_sm":    5.0e4,
+        "conv_depth_frac":  0.05,
+        "v_conv_ms":        1000.0,
+        "m_observed":       0,
+        "bcm_class":        "Class IV -- High-Energy Coupled",
+        "pump_type":        "iron_opacity_z_layer",
+        "notes":            "Massive B-type star. No traditional tachocline -- substrate pump "
+                            "driven by iron opacity Z-layer instability. Binary bridge target.",
+        "observable":       "Beta Cephei variable. Primary of Spica binary (P_orb=4.014d, e=0.13).",
+        "rho_tachocline_kgm3": 10.0,
+    },
+    "Spica_B": {
+        "spectral_type":    "B2 V",
+        "mass_solar":       7.21,
+        "radius_km":        2601918.0,
+        "rotation_days":    3.26,
+        "B_surface_gauss":  50.0,
+        "B_tachocline_T":   0.5,
+        "sigma_tach_sm":    2.0e4,
+        "conv_depth_frac":  0.05,
+        "v_conv_ms":        500.0,
+        "m_observed":       0,
+        "bcm_class":        "Class IV -- High-Energy Coupled",
+        "pump_type":        "radiative_pump",
+        "notes":            "Companion to Spica A. No traditional tachocline. Eccentric orbit "
+                            "(e=0.13) creates time-variable substrate coupling.",
+        "observable":       "Secondary in eccentric binary. Rotationally broadened (v sin i = 58 km/s).",
+        "rho_tachocline_kgm3": 50.0,
     },
 }
 
@@ -224,6 +376,33 @@ def compute_stellar_params(star_name, params):
 
     m_predicted = min(H_alfven, key=H_alfven.get) if H_alfven else 0
 
+    # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+    # Tidal Hamiltonian for binary stars
+    # H_tidal(m) = (v_A + v_tidal - Omega*R_tach/m)^2
+    # v_tidal = Omega_orb * R_tach / 2  -- companion's clock at tidal m=2
+    #
+    # Physics: the companion's tidal field imposes a persistent m=2
+    # boundary condition. v_tidal exactly cancels OmegaR/2 at m=2,
+    # leaving v_A^2 as the minimum energy. For synchronized binaries
+    # (P_rot = P_orb), m=2 is always the predicted mode.
+    # No free parameters -- v_tidal derived from orbital period.
+    #
+    # For non-synchronized binaries: the mismatch between Omega_rot
+    # and Omega_orb shifts the resonance away from m=2.
+    v_tidal     = 0.0
+    H_tidal     = {}
+    m_tidal     = m_predicted   # default: same as Alfven
+    if params.get("P_orbital_days") is not None:
+        P_orb       = params["P_orbital_days"]
+        omega_orb   = 2.0 * np.pi / (P_orb * 86400.0) if P_orb > 0 else 0.0
+        v_tidal     = omega_orb * R_tach / 2.0
+        for m in m_range:
+            v_phase     = omega * R_tach / m if m > 0 else 0.0
+            H_tidal[m]  = (v_A + v_tidal - v_phase) ** 2
+        m_tidal     = min(H_tidal, key=H_tidal.get) if H_tidal else m_predicted
+        m_predicted = m_tidal   # tidal overrides Alfven for binaries
+    # === END ADDITION ===
+
     # Keep Bessel energies for reference -- do not remove
     energies    = {}
     k_fund      = 2.0 * np.pi / R_tach if R_tach > 0 else 1.0
@@ -247,6 +426,12 @@ def compute_stellar_params(star_name, params):
         "v_A_ms":           round(v_A, 2),
         "H_alfven":         {str(m): round(v, 4) for m, v in H_alfven.items()},
         "energies":         {str(m): round(v, 6) for m, v in energies.items()},
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        "v_tidal_ms":       round(v_tidal, 2),
+        "H_tidal":          {str(m): round(v, 4) for m, v in H_tidal.items()} if H_tidal else {},
+        "m_alfven":         min(H_alfven, key=H_alfven.get) if H_alfven else 0,
+        "m_tidal":          m_tidal,
+        # === END ADDITION ===
         "cos_delta_phi":    cos_delta_phi,
         "decoupling_ratio": round(decoupling_ratio, 4),
     }

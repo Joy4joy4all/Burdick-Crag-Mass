@@ -3,7 +3,7 @@
 BCM Stellar Renderer
 ====================
 Stephen Justin Burdick Sr., 2026 -- Emerald Entities LLC
-NSF I-Corps -- Team GIBUSH
+Emerald Entities LLC -- GIBUSH Systems
 
 Standalone visualization for the BCM stellar substrate wave solver.
 Companion to BCM_stellar_wave.py
@@ -418,7 +418,7 @@ def project_hypercube(verts_nd, q, angle, cx, cy, scale):
 
 class StellarRenderer:
 
-    def __init__(self, parent, json_path=None, star_name=None):
+    def __init__(self, parent, json_path=None, star_name=None, binary_data=None):
         self.parent    = parent
         self.json_path = json_path
         self.result    = {}
@@ -428,6 +428,12 @@ class StellarRenderer:
         self.omega_r   = 1420.0
         self._angle    = 0.0
         self._anim_id  = None
+        self.v_tidal   = 0.0
+        self.m_alfven  = 4
+        self.m_tidal   = 4
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        self.binary_data = binary_data
+        # === END ADDITION ===
 
         # Load JSON if provided
         if json_path and os.path.exists(json_path):
@@ -436,6 +442,25 @@ class StellarRenderer:
             self.star_name = self.result.get("star", self.star_name)
             self.m_pred    = self.result.get("m_predicted_H", 4)
             self.v_A       = self.result.get("v_A_ms", 353.0)
+            # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+            # Load physical omega*R_tach for accurate Alfven line placement
+            omega_s = self.result.get("omega_rad_s", None)
+            R_tach  = self.result.get("R_tach_m", None)
+            if omega_s and R_tach:
+                self.omega_r = omega_s * R_tach
+            # Tidal velocity for binary stars
+            self.v_tidal   = self.result.get("v_tidal_ms", 0.0)
+            self.m_alfven  = self.result.get("m_alfven", self.m_pred)
+            self.m_tidal   = self.result.get("m_tidal", self.m_pred)
+            # === END ADDITION ===
+
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        # Binary mode: override star name for window title
+        if self.binary_data:
+            info = self.binary_data.get('info', {})
+            self.star_name = (f"{info.get('star_A', '?')} + "
+                              f"{info.get('star_B', '?')}")
+        # === END ADDITION ===
 
         # Regenerate fields for current star
         conv_depths = {
@@ -443,10 +468,17 @@ class StellarRenderer:
             "EV_Lac": 0.9, "HR_1099": 0.35
         }
         cd = conv_depths.get(self.star_name, 0.287)
-        self.alfven_field     = generate_alfven_field(256, m=max(1,self.m_pred),
-                                                       v_A=self.v_A,
-                                                       omega_r=self.omega_r)
-        self.tachocline_field = generate_tachocline_field(256, conv_depth=cd)
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        # Skip field generation in binary mode — not needed
+        if not self.binary_data:
+            self.alfven_field     = generate_alfven_field(256, m=max(1,self.m_pred),
+                                                           v_A=self.v_A,
+                                                           omega_r=self.omega_r)
+            self.tachocline_field = generate_tachocline_field(256, conv_depth=cd)
+        else:
+            self.alfven_field     = np.zeros((64, 64))
+            self.tachocline_field = np.zeros((64, 64))
+        # === END ADDITION ===
 
         self._build()
 
@@ -496,7 +528,10 @@ class StellarRenderer:
         # ── View selector ──
         vf = tk.Frame(self.win, bg=BG_MID)
         vf.pack(fill="x", padx=12, pady=(0,4))
-        self.view_var = tk.StringVar(value="stars")
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        self.view_var = tk.StringVar(
+            value="binary" if self.binary_data else "stars")
+        # === END ADDITION ===
         views = [
             ("Stars",          "stars"),
             ("Alfven Field",   "alfven"),
@@ -505,6 +540,9 @@ class StellarRenderer:
             ("H(m) Spectrum",  "spectrum"),
             ("Scale Table",    "scale"),
             ("Tensor Hypercube","tensor"),
+            # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+            ("Binary Bridge",  "binary"),
+            # === END ADDITION ===
         ]
         for label, val in views:
             tk.Radiobutton(vf, text=label, variable=self.view_var,
@@ -714,6 +752,8 @@ class StellarRenderer:
         elif view == "spectrum":    self._draw_spectrum()
         elif view == "scale":       self._draw_scale_table()
         elif view == "tensor":      self._start_tensor_anim()
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        elif view == "binary":      self._draw_binary()
 
     # ── Star gallery ──
 
@@ -842,6 +882,61 @@ class StellarRenderer:
             self.canvas.create_text(cx + r_tach + 5, cy,
                                     text="tachocline", fill=GOLD,
                                     font=("Consolas", 8), anchor="w")
+
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        # Alfven resonance lines — where H(m) = 0 for each mode
+        # r_resonance(m) = v_A * m / omega_r  (normalized to field view)
+        # Bright ring = predicted mode, dim rings = other modes
+        if self.omega_r > 0 and self.v_A > 0:
+            for m in range(1, 7):
+                r_res_norm = (self.v_A * m) / self.omega_r
+                r_res_px = int(r_res_norm * r_hex)
+                if 8 < r_res_px < r_hex * 1.3:
+                    is_pred = (m == self.m_pred)
+                    is_tidal = (m == self.m_tidal and self.v_tidal > 0)
+                    if is_pred:
+                        color = GREEN
+                        width = 2
+                        dash = ()
+                    elif is_tidal:
+                        color = RED
+                        width = 2
+                        dash = (4, 3)
+                    else:
+                        color = DIM
+                        width = 1
+                        dash = (2, 6)
+                    self.canvas.create_oval(
+                        cx - r_res_px, cy - r_res_px,
+                        cx + r_res_px, cy + r_res_px,
+                        outline=color, dash=dash, width=width)
+                    label_y = cy - r_res_px - 6
+                    if label_y > cy - r_hex - 30:
+                        tag = f"m={m}" + (" ★" if is_pred else "")
+                        tag += (" TIDAL" if is_tidal else "")
+                        self.canvas.create_text(
+                            cx + 8, label_y, text=tag,
+                            fill=color, font=("Consolas", 7),
+                            anchor="w")
+
+            # Standing wave node lines for predicted mode
+            m_draw = max(1, self.m_pred)
+            for i in range(m_draw):
+                angle_rad = math.radians(360 * i / m_draw - 90)
+                x0 = cx
+                y0 = cy
+                x1 = cx + int(r_hex * 0.95 * math.cos(angle_rad))
+                y1 = cy + int(r_hex * 0.95 * math.sin(angle_rad))
+                self.canvas.create_line(x0, y0, x1, y1,
+                    fill=GREEN, width=1, dash=(3, 6))
+
+            # Alfven speed annotation
+            v_tidal_txt = f"  v_tid={self.v_tidal:.0f}" if self.v_tidal > 0 else ""
+            self.canvas.create_text(
+                ox + 8, oy + S - 8,
+                text=f"v_A={self.v_A:.0f} m/s  ΩR={self.omega_r:.0f}{v_tidal_txt}",
+                fill=ACCENT, font=("Consolas", 8), anchor="sw")
+        # === END ADDITION ===
 
         # Outer boundary
         self.canvas.create_oval(cx-r_hex, cy-r_hex,
@@ -984,6 +1079,233 @@ class StellarRenderer:
             fill=GOLD, font=("Consolas", 10))
 
         self.status_var.set("Scale invariance -- galactic -> planetary -> stellar")
+
+    # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+    # Binary Bridge View — dual-pump substrate field visualization
+
+    def _draw_binary(self):
+        """Draw binary substrate bridge: two pumps, coupling field, vectors."""
+        W, H = self._cw, self._ch
+
+        if not self.binary_data:
+            self.canvas.create_text(W//2, H//2,
+                text="No binary data loaded.\n"
+                     "Run Binary Substrate Bridge from launcher first.",
+                fill=GOLD, font=("Consolas", 12))
+            return
+
+        info = self.binary_data.get('info', {})
+        cpf = self.binary_data.get('cpf')
+        dpf = self.binary_data.get('dpf')
+        J = self.binary_data.get('J')
+        grid = info.get('grid', 64)
+
+        # ── Header ──
+        pair_label = f"{info.get('star_A', '?')} + {info.get('star_B', '?')}"
+        bcm_class = info.get('bcm_class', '')
+        self.canvas.create_text(W//2, 22,
+            text=f"BCM BINARY SUBSTRATE BRIDGE — {pair_label}",
+            fill=WHITE, font=("Consolas", 14, "bold"))
+        self.canvas.create_text(W//2, 44,
+            text=f"{bcm_class}  |  sep={info.get('sep_AU', 0):.1f} AU  "
+                 f"e={info.get('eccentricity', 0):.3f}  "
+                 f"phase={info.get('orbital_phase', 0):.2f}",
+            fill=DIM, font=("Consolas", 10))
+
+        # ── Layout: field fills left 70%, diagnostics on far right ──
+        diag_width = 260
+        field_size = min(W - diag_width - 50, H - 100)
+        if field_size < 200:
+            field_size = min(W, H) - 40
+        ox = 20
+        oy = 70
+
+        # ── Render coupling field as PIL image ──
+        if cpf is not None and _PIL:
+            from PIL import Image, ImageTk
+            f = cpf.astype(float)
+            fmax = np.max(np.abs(f))
+            if fmax > 0:
+                f = f / fmax
+            gh, gw = f.shape
+            img = np.zeros((gh, gw, 3), dtype=np.uint8)
+            # Emerald palette: dark red -> gold -> green -> white
+            img[..., 0] = np.clip(40 + f * 60, 0, 255).astype(np.uint8)
+            img[..., 1] = np.clip(20 + f * 235, 0, 255).astype(np.uint8)
+            img[..., 2] = np.clip(f * 80, 0, 255).astype(np.uint8)
+            pil_img = Image.fromarray(img, mode="RGB")
+            pil_img = pil_img.resize((field_size, field_size), Image.NEAREST)
+            self._tk_binary_img = ImageTk.PhotoImage(pil_img)
+            self.canvas.create_image(ox, oy, anchor="nw",
+                                     image=self._tk_binary_img)
+        elif cpf is not None:
+            # Fallback: draw rectangles
+            step = max(1, grid // 60)
+            px = field_size / grid
+            fmax = np.max(np.abs(cpf)) or 1.0
+            for iy in range(0, grid, step):
+                for ix in range(0, grid, step):
+                    v = cpf[iy, ix] / fmax
+                    g = int(min(255, 20 + v * 235))
+                    col = f"#28{g:02x}28"
+                    x0 = ox + ix * px
+                    y0 = oy + iy * px
+                    self.canvas.create_rectangle(
+                        x0, y0, x0 + px*step + 1, y0 + px*step + 1,
+                        fill=col, outline="")
+
+        scale = field_size / grid
+
+        # ── Gradient vectors ──
+        if dpf is not None:
+            grad_y, grad_x = np.gradient(dpf)
+            mag = np.sqrt(grad_x**2 + grad_y**2)
+            mag_max = np.max(mag) if np.max(mag) > 0 else 1.0
+            vstep = max(1, grid // 16)
+            for iy in range(vstep, grid - vstep, vstep):
+                for ix in range(vstep, grid - vstep, vstep):
+                    gx = grad_x[iy, ix]
+                    gy = grad_y[iy, ix]
+                    m = mag[iy, ix]
+                    if m < mag_max * 0.05:
+                        continue
+                    x0 = ox + ix * scale
+                    y0 = oy + iy * scale
+                    arrow_len = min(scale * vstep * 0.8,
+                                    m / mag_max * scale * vstep)
+                    if m > 0:
+                        dx = gx / m * arrow_len
+                        dy = gy / m * arrow_len
+                    else:
+                        dx = dy = 0
+                    brightness = min(255, int(80 + m / mag_max * 175))
+                    col = f"#{brightness:02x}{brightness//2:02x}20"
+                    self.canvas.create_line(
+                        x0, y0, x0 + dx, y0 + dy,
+                        fill=col, width=1, arrow="last",
+                        arrowshape=(4, 6, 2))
+
+        # ── Star markers ──
+        pump_A = info.get('pump_A', (grid//4, grid//2))
+        pump_B = info.get('pump_B', (3*grid//4, grid//2))
+        l1 = info.get('L1', (grid//2, grid//2))
+
+        def _star_marker(px, py, name, amp, color):
+            sx = ox + px * scale
+            sy = oy + py * scale
+            r = max(12, int(amp * 2.5))
+            # Corona glow
+            for ri in range(r + 10, r - 1, -2):
+                alpha = max(0, 1.0 - (ri - r) / 12.0)
+                gc = int(alpha * 60)
+                gcol = f"#{gc:02x}{gc:02x}10"
+                self.canvas.create_oval(sx-ri, sy-ri, sx+ri, sy+ri,
+                                        outline=gcol, fill="")
+            # Star body
+            self.canvas.create_oval(sx-r, sy-r, sx+r, sy+r,
+                                    fill=color, outline=WHITE, width=1)
+            # Label
+            self.canvas.create_text(sx, sy + r + 14, text=name,
+                fill=WHITE, font=("Consolas", 9, "bold"))
+            self.canvas.create_text(sx, sy + r + 26,
+                text=f"amp={amp:.1f}",
+                fill=DIM, font=("Consolas", 7))
+
+        _star_marker(pump_A[0], pump_A[1],
+                     info.get('star_A', 'A'), info.get('amp_A', 8),
+                     STELLAR_HOT)
+        _star_marker(pump_B[0], pump_B[1],
+                     info.get('star_B', 'B'), info.get('amp_B', 4),
+                     STELLAR_COOL)
+
+        # ── L1 marker ──
+        l1x = ox + l1[0] * scale
+        l1y = oy + l1[1] * scale
+        self.canvas.create_polygon(
+            l1x, l1y - 10, l1x + 8, l1y, l1x, l1y + 10, l1x - 8, l1y,
+            fill=GOLD, outline=WHITE, width=1)
+        self.canvas.create_text(l1x, l1y - 16, text="L1",
+            fill=GOLD, font=("Consolas", 10, "bold"))
+
+        # ── Bridge line ──
+        ax = ox + pump_A[0] * scale
+        ay = oy + pump_A[1] * scale
+        bx = ox + pump_B[0] * scale
+        by = oy + pump_B[1] * scale
+        self.canvas.create_line(ax, ay, bx, by,
+            fill=ACCENT, width=1, dash=(4, 8))
+
+        # ── Diagnostics panel (right-aligned) ──
+        dx = W - diag_width
+        dy = oy
+        diag_items = [
+            ("BRIDGE DIAGNOSTICS", GOLD, ("Consolas", 11, "bold")),
+            ("", None, None),
+            (f"Star A: {info.get('star_A', '?')}", WHITE, ("Consolas", 9)),
+            (f"  amp = {info.get('amp_A', 0):.1f}", DIM, ("Consolas", 9)),
+            (f"Star B: {info.get('star_B', '?')}", WHITE, ("Consolas", 9)),
+            (f"  amp = {info.get('amp_B', 0):.1f}", DIM, ("Consolas", 9)),
+            ("", None, None),
+            (f"Separation: {info.get('sep_AU', 0):.1f} AU", ACCENT,
+             ("Consolas", 9)),
+            (f"Eccentricity: {info.get('eccentricity', 0):.3f}", ACCENT,
+             ("Consolas", 9)),
+            (f"Orbital phase: {info.get('orbital_phase', 0):.2f}", ACCENT,
+             ("Consolas", 9)),
+            (f"Synchronized: {'YES' if info.get('synchronized') else 'NO'}",
+             GREEN if info.get('synchronized') else GOLD, ("Consolas", 9)),
+            ("", None, None),
+            ("L1 COUPLING:", GOLD, ("Consolas", 10, "bold")),
+            (f"  cos(Δφ) = {info.get('L1_cos_mean', 0):+.6f}",
+             GREEN if info.get('L1_cos_mean', 0) > 0.99 else GOLD,
+             ("Consolas", 9)),
+            (f"  std     = {info.get('L1_cos_std', 0):.6f}", DIM,
+             ("Consolas", 9)),
+            (f"  curl    = {info.get('L1_curl_max', 0):.2e}", DIM,
+             ("Consolas", 9)),
+            ("", None, None),
+        ]
+
+        # Verdict
+        cos_l1 = info.get('L1_cos_mean', 0)
+        curl_l1 = info.get('L1_curl_max', 0)
+        if cos_l1 > 0.99:
+            verdict = "COHERENT BRIDGE"
+            v_color = GREEN
+        elif cos_l1 > 0.9:
+            verdict = "PARTIAL BRIDGE"
+            v_color = GOLD
+        else:
+            verdict = "DECOHERENT"
+            v_color = RED
+        diag_items.append((f">>> {verdict}", v_color,
+                           ("Consolas", 11, "bold")))
+
+        if curl_l1 > 0.001:
+            diag_items.append((">>> SUBSTRATE POOLING", RED,
+                               ("Consolas", 10, "bold")))
+        else:
+            diag_items.append((">>> Laminar (no vorticity)", DIM,
+                               ("Consolas", 9)))
+
+        for text, color, font in diag_items:
+            if text == "":
+                dy += 6
+                continue
+            self.canvas.create_text(dx, dy, text=text,
+                fill=color, font=font, anchor="nw")
+            dy += 16
+
+        # ── Footer ──
+        self.canvas.create_text(W//2, H - 12,
+            text="BCM v7 Binary Substrate Bridge — "
+                 "Emerald Entities LLC — GIBUSH Systems — 2026",
+            fill=DIM, font=("Consolas", 8))
+
+        self.status_var.set(
+            f"Binary: {pair_label}  L1 cos={cos_l1:+.4f}  "
+            f"sep={info.get('sep_AU', 0):.1f} AU  {verdict}")
+    # === END ADDITION ===
 
     # ── Tensor Hypercube (same as planetary renderer) ──
 
