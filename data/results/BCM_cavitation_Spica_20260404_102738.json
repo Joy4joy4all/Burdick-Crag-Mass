@@ -1,0 +1,75 @@
+{
+  "title": "BCM v9 Cavitation Sweep \u2014 Throat Bandwidth Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "pair": "Spica",
+  "phase": 0.0,
+  "grid": 256,
+  "width_range": [
+    0.02,
+    0.005,
+    6
+  ],
+  "n_runs": 6,
+  "results": [
+    {
+      "corridor_width_frac": 0.02,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 1.3552527156068805e-20,
+      "sig_drift": 1864.02,
+      "I_B": 11.09,
+      "corr_full": 0.9888,
+      "elapsed": 503.8,
+      "verdict": "COHERENT (resistant)"
+    },
+    {
+      "corridor_width_frac": 0.015157,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 2.202285662861181e-20,
+      "sig_drift": 1827.87,
+      "I_B": 15.85,
+      "corr_full": 0.989,
+      "elapsed": 457.1,
+      "verdict": "COHERENT (resistant)"
+    },
+    {
+      "corridor_width_frac": 0.011487,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 1.6940658945086007e-20,
+      "sig_drift": 1793.74,
+      "I_B": 26.98,
+      "corr_full": 0.9891,
+      "elapsed": 588.7,
+      "verdict": "COHERENT (resistant)"
+    },
+    {
+      "corridor_width_frac": 0.008706,
+      "cos_delta_phi": 0.999999,
+      "curl_max": 1.8634724839594607e-20,
+      "sig_drift": 1768.55,
+      "I_B": 37.94,
+      "corr_full": 0.9891,
+      "elapsed": 444.7,
+      "verdict": "COHERENT (resistant)"
+    },
+    {
+      "corridor_width_frac": 0.006598,
+      "cos_delta_phi": 1.0,
+      "curl_max": 2.710505431213761e-20,
+      "sig_drift": 1749.3,
+      "I_B": 50.54,
+      "corr_full": 0.9892,
+      "elapsed": 587.7,
+      "verdict": "COHERENT (resistant)"
+    },
+    {
+      "corridor_width_frac": 0.005,
+      "cos_delta_phi": 1.0,
+      "curl_max": 2.710505431213761e-20,
+      "sig_drift": 1732.6,
+      "I_B": 66.44,
+      "corr_full": 0.9892,
+      "elapsed": 453.8,
+      "verdict": "COHERENT (resistant)"
+    }
+  ]
+}

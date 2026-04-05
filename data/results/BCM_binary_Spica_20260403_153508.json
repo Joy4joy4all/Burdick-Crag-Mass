@@ -1,0 +1,37 @@
+{
+  "pair": "Spica",
+  "info": {
+    "star_A": "Spica_A",
+    "star_B": "Spica_B",
+    "amp_A": 20.0,
+    "amp_B": 2.38,
+    "pump_A": [
+      24,
+      80
+    ],
+    "pump_B": [
+      136,
+      80
+    ],
+    "L1": [
+      114,
+      80
+    ],
+    "sep_frac": 0.7,
+    "sep_AU": 0.17,
+    "orbital_phase": 2.0,
+    "grid": 160,
+    "eccentricity": 0.13,
+    "synchronized": false,
+    "bcm_class": "Class IV \u2014 High-Energy Non-Synchronous",
+    "m_pred_A": 0,
+    "m_pred_B": 0,
+    "L1_cos_mean": 0.9999997685650606,
+    "L1_cos_std": 3.0448733550009176e-07,
+    "L1_curl_max": 1.3552527156068805e-20,
+    "L1_curl_mean": 1.300741513239636e-21
+  },
+  "corr_full": 0.9797711948079357,
+  "cos_delta_phi": 0.9999608311737215,
+  "elapsed": 139.95707726478577
+}

@@ -1,0 +1,157 @@
+{
+  "title": "BCM v10 Phase-Lock Coherence Analysis",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "pair": "Spica",
+  "phase": 0.0,
+  "grid": 192,
+  "amp_A": 20.0,
+  "amp_B": 2.38,
+  "ratio": 8.4,
+  "sync": false,
+  "cpf_min": -1.0,
+  "cpf_max": 1.0,
+  "cpf_l1_min": 0.9999996,
+  "cpf_l1_mean": 0.99999992,
+  "phi_crit": null,
+  "phi_first_connect": 0.999999,
+  "I_B": 0.0,
+  "n_steps": 17,
+  "sweep": [
+    {
+      "phi_min": 0.999999,
+      "n_surviving": 11782,
+      "pct_surviving": 31.96,
+      "n_reachable": 3035,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.99999,
+      "n_surviving": 23511,
+      "pct_surviving": 63.78,
+      "n_reachable": 8193,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.9999,
+      "n_surviving": 32314,
+      "pct_surviving": 87.66,
+      "n_reachable": 12701,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.999,
+      "n_surviving": 35570,
+      "pct_surviving": 96.49,
+      "n_reachable": 13297,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.998,
+      "n_surviving": 35974,
+      "pct_surviving": 97.59,
+      "n_reachable": 13405,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.995,
+      "n_surviving": 36591,
+      "pct_surviving": 99.26,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.99,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.98,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.97,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.95,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.93,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.9,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.85,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.8,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.7,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.6,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    },
+    {
+      "phi_min": 0.5,
+      "n_surviving": 36853,
+      "pct_surviving": 99.97,
+      "n_reachable": 13533,
+      "connected": true,
+      "status": "CONNECTED"
+    }
+  ]
+}

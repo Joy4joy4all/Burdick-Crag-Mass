@@ -98,11 +98,18 @@ class SolverGUI:
         tab3 = ttk.Frame(self.notebook, style="Dark.TFrame")
         self.notebook.add(tab3, text="  STELLAR  ")
 
+        # Tab 4 — Black Hole Inspiral
+        tab4 = ttk.Frame(self.notebook, style="Dark.TFrame")
+        self.notebook.add(tab4, text="  BLACK HOLES  ")
+
         # Build planetary tab content
         self._build_planetary_tab(tab2)
 
         # Build stellar tab content
         self._build_stellar_tab(tab3)
+
+        # Build black hole tab content
+        self._build_blackhole_tab(tab4)
 
         # Main split (Tab 1 content)
         main = tab1
@@ -577,6 +584,9 @@ class SolverGUI:
         # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
         ttk.Button(bf, text="⬡  Run Binary Substrate Bridge",
                    command=self._run_binary).pack(fill="x", padx=4, pady=2)
+        # === BCM MASTER BUILD ADDITION v9 | 2026-04-04 EST ===
+        ttk.Button(bf, text="◆  Render 3D Binary Field",
+                   command=self._run_3d_renderer).pack(fill="x", padx=4, pady=2)
 
         # ── Output Log ──
         lf = ttk.LabelFrame(parent, text="STELLAR LOG")
@@ -895,6 +905,229 @@ class SolverGUI:
                     f"ERROR: {e}"))
 
         threading.Thread(target=_run, daemon=True).start()
+
+    # === BCM MASTER BUILD ADDITION v9 | 2026-04-04 EST ===
+    def _run_3d_renderer(self):
+        """Run 3D azimuthal revolution renderer for the selected binary."""
+        pair_name = self.binary_select_var.get()
+        if not pair_name:
+            self._stellar_log_msg("ERROR: No binary pair selected.")
+            return
+
+        phase = self.orbital_phase_var.get()
+        grid = self.stellar_grid_var.get()
+        settle = self.stellar_settle_var.get()
+        measure = self.stellar_measure_var.get()
+
+        self._stellar_log_msg(f"\n{'═'*55}")
+        self._stellar_log_msg(f"  3D RENDERER — {pair_name}  phase={phase:.2f}")
+        self._stellar_log_msg(f"  grid={grid}  (running solver + revolution...)")
+        self._stellar_log_msg(f"{'═'*55}")
+
+        def _run():
+            try:
+                from BCM_3d_renderer import render_3d
+                render_3d(pair_name=pair_name, phase=phase, grid=grid,
+                          field_type="sigma", settle=settle,
+                          measure=measure, n_theta=48)
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    "  3D render complete."))
+            except ImportError:
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    "ERROR: BCM_3d_renderer.py not found in root dir."))
+            except Exception as e:
+                self.root.after(0, lambda: self._stellar_log_msg(
+                    f"  3D render error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+    # === END ADDITION ===
+
+    # === BCM v11 BLACK HOLE TAB ===
+    def _build_blackhole_tab(self, parent):
+        """Tab 4 — BCM Binary Black Hole Inspiral (GW150914 analog)."""
+        style_bg  = "#0a0c10"
+        style_fg  = "#a0b0cc"
+        style_acc = "#ff6644"
+
+        scroll_canvas = tk.Canvas(parent, bg=style_bg, highlightthickness=0)
+        scroll_vbar = ttk.Scrollbar(parent, orient="vertical",
+                                     command=scroll_canvas.yview)
+        scroll_canvas.configure(yscrollcommand=scroll_vbar.set)
+        scroll_vbar.pack(side="right", fill="y")
+        scroll_canvas.pack(side="left", fill="both", expand=True)
+
+        sf = tk.Frame(scroll_canvas, bg=style_bg)
+        sf_id = scroll_canvas.create_window((0, 0), window=sf, anchor="nw")
+
+        def _sf_resize(event):
+            scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all"))
+        def _sc_resize(event):
+            scroll_canvas.itemconfig(sf_id, width=event.width)
+        sf.bind("<Configure>", _sf_resize)
+        scroll_canvas.bind("<Configure>", _sc_resize)
+
+        def _sf_wheel(event):
+            scroll_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        scroll_canvas.bind("<MouseWheel>", _sf_wheel)
+        sf.bind("<MouseWheel>", _sf_wheel)
+
+        parent = sf
+
+        # Header
+        hf = tk.Frame(parent, bg=style_bg)
+        hf.pack(fill="x", padx=12, pady=(10, 4))
+        tk.Label(hf, text="BCM BLACK HOLE INSPIRAL",
+                 font=("Georgia", 16), fg="#ff8844", bg=style_bg).pack(side="left")
+        tk.Label(hf, text="GW150914 Analog — Binary Merger Sweep",
+                 font=("Consolas", 10), fg="#6a7a90", bg=style_bg).pack(side="left", padx=(16, 0))
+
+        # GW150914 info
+        info_f = ttk.LabelFrame(parent, text="GW150914 — FIRST GRAVITATIONAL WAVE DETECTION")
+        info_f.pack(fill="x", padx=12, pady=4)
+        info_text = (
+            "Date: September 14, 2015 (LIGO Hanford + Livingston)\n"
+            "Black Hole A: 36 solar masses    Black Hole B: 29 solar masses\n"
+            "Mass Ratio: 1.24:1    Final Mass: 62 solar masses\n"
+            "Mass Radiated: 3 solar masses (gravitational waves)\n"
+            "Distance: 1.3 billion light years    Signal: 0.2 seconds\n"
+            "Frequency at merger: ~250 Hz    Velocity: ~0.6c"
+        )
+        info_box = tk.Text(info_f, height=6, bg="#0c0e14", fg="#70a0c0",
+                           font=("Consolas", 9), relief="flat")
+        info_box.insert("1.0", info_text)
+        info_box.config(state="disabled")
+        info_box.pack(fill="x", padx=6, pady=4)
+
+        # Controls
+        cf = ttk.LabelFrame(parent, text="INSPIRAL PARAMETERS")
+        cf.pack(fill="x", padx=12, pady=4)
+        ctrl_f = tk.Frame(cf, bg="#12151c")
+        ctrl_f.pack(fill="x", padx=6, pady=4)
+
+        self.bh_grid_var = tk.IntVar(value=128)
+        self.bh_amp_a_var = tk.DoubleVar(value=50.0)
+        self.bh_amp_b_var = tk.DoubleVar(value=43.0)
+        self.bh_steps_var = tk.IntVar(value=15)
+        self.bh_sep_start_var = tk.DoubleVar(value=0.60)
+        self.bh_sep_end_var = tk.DoubleVar(value=0.04)
+        self.bh_settle_var = tk.IntVar(value=15000)
+        self.bh_measure_var = tk.IntVar(value=5000)
+
+        row1 = tk.Frame(ctrl_f, bg="#12151c")
+        row1.pack(fill="x", pady=2)
+        for lbl, var, w in [("Grid:", self.bh_grid_var, 6),
+                              ("Amp A:", self.bh_amp_a_var, 6),
+                              ("Amp B:", self.bh_amp_b_var, 6),
+                              ("Steps:", self.bh_steps_var, 4)]:
+            tk.Label(row1, text=lbl, font=("Consolas", 9),
+                     fg=style_fg, bg="#12151c").pack(side="left", padx=(8, 2))
+            tk.Entry(row1, textvariable=var, width=w,
+                     font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                     insertbackground="#e0e8f0").pack(side="left")
+
+        row2 = tk.Frame(ctrl_f, bg="#12151c")
+        row2.pack(fill="x", pady=2)
+        for lbl, var, w in [("Sep start:", self.bh_sep_start_var, 5),
+                              ("Sep end:", self.bh_sep_end_var, 5),
+                              ("Settle:", self.bh_settle_var, 7),
+                              ("Measure:", self.bh_measure_var, 6)]:
+            tk.Label(row2, text=lbl, font=("Consolas", 9),
+                     fg=style_fg, bg="#12151c").pack(side="left", padx=(8, 2))
+            tk.Entry(row2, textvariable=var, width=w,
+                     font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                     insertbackground="#e0e8f0").pack(side="left")
+
+        # Buttons
+        bf = tk.Frame(parent, bg=style_bg)
+        bf.pack(fill="x", padx=12, pady=6)
+
+        ttk.Button(bf, text="\u2B24  Run Inspiral Sweep",
+                   command=self._run_bh_inspiral).pack(fill="x", padx=4, pady=2)
+
+        ttk.Button(bf, text="\u25C6  Render 3D Inspiral Sequence",
+                   command=self._run_bh_renderer).pack(fill="x", padx=4, pady=2)
+
+        # Log
+        log_f = ttk.LabelFrame(parent, text="INSPIRAL LOG")
+        log_f.pack(fill="both", expand=True, padx=12, pady=4)
+        self._bh_log = tk.Text(log_f, height=20, bg="#06080c", fg="#80b8d0",
+                                font=("Consolas", 9), relief="flat",
+                                wrap="word")
+        self._bh_log.pack(fill="both", expand=True, padx=4, pady=4)
+        self._bh_log_msg("BCM v11 Black Hole Inspiral — ready.")
+        self._bh_log_msg("GW150914 analog: 50.0/43.0 = 1.16:1 (observed 1.24:1)")
+
+    def _bh_log_msg(self, msg):
+        """Write to black hole tab log."""
+        self._bh_log.insert("end", msg + "\n")
+        self._bh_log.see("end")
+
+    def _run_bh_inspiral(self):
+        """Run binary inspiral sweep from Black Holes tab."""
+        grid = self.bh_grid_var.get()
+        amp_A = self.bh_amp_a_var.get()
+        amp_B = self.bh_amp_b_var.get()
+        steps = self.bh_steps_var.get()
+        sep_start = self.bh_sep_start_var.get()
+        sep_end = self.bh_sep_end_var.get()
+        settle = self.bh_settle_var.get()
+        measure = self.bh_measure_var.get()
+
+        self._bh_log_msg(f"\n{'='*55}")
+        self._bh_log_msg(f"  INSPIRAL SWEEP — grid={grid}  "
+                          f"ratio={amp_A/amp_B:.2f}:1")
+        self._bh_log_msg(f"  sep: {sep_start:.2f} -> {sep_end:.2f}  "
+                          f"({steps} steps)")
+        self._bh_log_msg(f"{'='*55}")
+
+        def _run():
+            try:
+                from BCM_inspiral_sweep import run_inspiral_sweep
+                result = run_inspiral_sweep(
+                    grid=grid, amp_A=amp_A, amp_B=amp_B,
+                    sep_start=sep_start, sep_end=sep_end,
+                    steps=steps, settle=settle, measure=measure)
+                if result:
+                    n = result.get("n_runs", 0)
+                    self.root.after(0, lambda: self._bh_log_msg(
+                        f"  Sweep complete. {n} runs saved."))
+            except ImportError:
+                self.root.after(0, lambda: self._bh_log_msg(
+                    "ERROR: BCM_inspiral_sweep.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._bh_log_msg(
+                    f"  Inspiral error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _run_bh_renderer(self):
+        """Run 3D inspiral renderer (4 key frames)."""
+        grid = self.bh_grid_var.get()
+        settle = self.bh_settle_var.get()
+        measure = self.bh_measure_var.get()
+
+        self._bh_log_msg(f"\n{'='*55}")
+        self._bh_log_msg(f"  3D INSPIRAL RENDERER — 4 key frames")
+        self._bh_log_msg(f"  grid={grid}  (inspiral -> snap -> "
+                          f"foreclosure -> merger)")
+        self._bh_log_msg(f"{'='*55}")
+
+        def _run():
+            try:
+                from BCM_inspiral_renderer import run_inspiral_sequence
+                run_inspiral_sequence(grid=grid, settle=settle,
+                                      measure=measure)
+                self.root.after(0, lambda: self._bh_log_msg(
+                    "  3D inspiral render complete."))
+            except ImportError:
+                self.root.after(0, lambda: self._bh_log_msg(
+                    "ERROR: BCM_inspiral_renderer.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._bh_log_msg(
+                    f"  3D render error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+    # === END BLACK HOLE TAB ===
 
     def _on_binary_resize(self, event):
         self._binary_cw = event.width

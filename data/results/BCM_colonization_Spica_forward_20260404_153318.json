@@ -1,0 +1,88 @@
+{
+  "title": "BCM Substrate Colonization Sweep (FORWARD)",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "pair": "Spica",
+  "phase": 0.0,
+  "grid": 256,
+  "mode": "FORWARD",
+  "sweep_target": "A",
+  "amp_B_held": 2.38,
+  "amp_A_range": [
+    50,
+    200,
+    25
+  ],
+  "n_runs": 7,
+  "results": [
+    {
+      "amp_A": 50,
+      "amp_B": 2.38,
+      "ratio": 21.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9942,
+      "elapsed": 408.7,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 75,
+      "amp_B": 2.38,
+      "ratio": 31.5,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.2281977735187355e-20,
+      "corr_full": 0.9953,
+      "elapsed": 383.3,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 100,
+      "amp_B": 2.38,
+      "ratio": 42.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "corr_full": 0.9957,
+      "elapsed": 369.9,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 125,
+      "amp_B": 2.38,
+      "ratio": 52.5,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.207021949837378e-20,
+      "corr_full": 0.996,
+      "elapsed": 385.3,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 150,
+      "amp_B": 2.38,
+      "ratio": 63.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9961,
+      "elapsed": 372.7,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 175,
+      "amp_B": 2.38,
+      "ratio": 73.5,
+      "cos_delta_phi": 1.0,
+      "curl_max": 8.046812998915853e-21,
+      "corr_full": 0.9962,
+      "elapsed": 378.2,
+      "verdict": "COHERENT"
+    },
+    {
+      "amp_A": 200,
+      "amp_B": 2.38,
+      "ratio": 84.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 1.3552527156068805e-20,
+      "corr_full": 0.9963,
+      "elapsed": 380.2,
+      "verdict": "COHERENT"
+    }
+  ]
+}

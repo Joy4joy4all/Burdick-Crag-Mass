@@ -1,0 +1,35 @@
+{
+  "pair": "HR_1099",
+  "info": {
+    "star_A": "HR_1099",
+    "star_B": "proxy",
+    "amp_A": 20.0,
+    "amp_B": 1.43,
+    "pump_A": [
+      26,
+      64
+    ],
+    "pump_B": [
+      102,
+      64
+    ],
+    "L1": [
+      83,
+      64
+    ],
+    "sep_frac": 0.6,
+    "sep_AU": 0.05,
+    "orbital_phase": 0.5,
+    "grid": 128,
+    "eccentricity": 0.0,
+    "synchronized": true,
+    "bcm_class": "Class VI \u2014 Tidal Bar Channel",
+    "L1_cos_mean": 0.9995796499918546,
+    "L1_cos_std": 0.0016765272693479588,
+    "L1_curl_max": 3.469446951953614e-18,
+    "L1_curl_mean": 1.292254640154842e-19
+  },
+  "corr_full": 0.9921078352179141,
+  "cos_delta_phi": 0.9998381193932854,
+  "elapsed": 58.47238731384277
+}

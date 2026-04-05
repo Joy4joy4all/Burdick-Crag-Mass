@@ -1,0 +1,135 @@
+{
+  "title": "BCM v9 Cavitation Sweep \u2014 Throat Bandwidth Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "pair": "Spica",
+  "phase": 0.0,
+  "grid": 192,
+  "width_range": [
+    0.06,
+    1.0,
+    12
+  ],
+  "n_runs": 12,
+  "results": [
+    {
+      "corridor_width_frac": 0.06,
+      "cos_delta_phi": 1.0,
+      "curl_max": 4.235164736271502e-21,
+      "sig_drift": 3492.84,
+      "I_B": 0.0,
+      "corr_full": 0.9881,
+      "elapsed": 207.6,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.077487,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3519.46,
+      "I_B": 0.0,
+      "corr_full": 0.9875,
+      "elapsed": 206.2,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.10007,
+      "cos_delta_phi": 1.0,
+      "curl_max": 4.658681209898652e-21,
+      "sig_drift": 3539.99,
+      "I_B": 0.0,
+      "corr_full": 0.9868,
+      "elapsed": 196.3,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.129236,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3555.04,
+      "I_B": 0.0,
+      "corr_full": 0.9858,
+      "elapsed": 198.2,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.166901,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3565.48,
+      "I_B": 0.0,
+      "corr_full": 0.9844,
+      "elapsed": 202.7,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.215545,
+      "cos_delta_phi": 1.0,
+      "curl_max": 3.3881317890172014e-21,
+      "sig_drift": 3572.4,
+      "I_B": 0.0,
+      "corr_full": 0.9828,
+      "elapsed": 197.3,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.278365,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3576.85,
+      "I_B": 0.0,
+      "corr_full": 0.981,
+      "elapsed": 200.6,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.359494,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3579.63,
+      "I_B": 0.0,
+      "corr_full": 0.9791,
+      "elapsed": 206.9,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.464268,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3581.35,
+      "I_B": 0.0,
+      "corr_full": 0.9773,
+      "elapsed": 205.4,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.599578,
+      "cos_delta_phi": 1.0,
+      "curl_max": 3.3881317890172014e-21,
+      "sig_drift": 3582.39,
+      "I_B": 0.0,
+      "corr_full": 0.9759,
+      "elapsed": 206.6,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 0.774324,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3583.02,
+      "I_B": 0.0,
+      "corr_full": 0.9748,
+      "elapsed": 206.0,
+      "verdict": "COHERENT (drain)"
+    },
+    {
+      "corridor_width_frac": 1.0,
+      "cos_delta_phi": 1.0,
+      "curl_max": 6.776263578034403e-21,
+      "sig_drift": 3583.41,
+      "I_B": 0.0,
+      "corr_full": 0.974,
+      "elapsed": 204.4,
+      "verdict": "COHERENT (drain)"
+    }
+  ]
+}

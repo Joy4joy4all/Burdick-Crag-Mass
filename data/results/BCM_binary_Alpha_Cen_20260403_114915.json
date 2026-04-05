@@ -1,0 +1,37 @@
+{
+  "pair": "Alpha_Cen",
+  "info": {
+    "star_A": "Alpha_Cen_A",
+    "star_B": "Alpha_Cen_B",
+    "amp_A": 8.0,
+    "amp_B": 2.29,
+    "pump_A": [
+      59,
+      96
+    ],
+    "pump_B": [
+      133,
+      96
+    ],
+    "L1": [
+      116,
+      96
+    ],
+    "sep_frac": 0.394,
+    "sep_AU": 23.4,
+    "orbital_phase": 0.5,
+    "grid": 192,
+    "eccentricity": 0.5179,
+    "synchronized": false,
+    "bcm_class": "Class I \u2014 Mode-Matched Bridge",
+    "m_pred_A": 4,
+    "m_pred_B": 4,
+    "L1_cos_mean": 0.9999999996653931,
+    "L1_cos_std": 4.602611101688749e-10,
+    "L1_curl_max": 1.6940658945086007e-21,
+    "L1_curl_mean": 6.958656903102345e-23
+  },
+  "corr_full": 0.9809784569458416,
+  "cos_delta_phi": 0.999999999044499,
+  "elapsed": 243.01657128334045
+}

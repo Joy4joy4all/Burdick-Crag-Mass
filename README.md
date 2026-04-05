@@ -2,8 +2,11 @@
 
 **Stephen Justin Burdick Sr., 2026 — Emerald Entities LLC — GIBUSH Systems**
 
-Multi-layer damped wave substrate solver with rotation curve validation across
-175 SPARC galaxies, 8 solar system planets, 13 stars, and 3 binary systems.
+Multi-layer damped wave substrate solver with Phase-Lock Coherence Law,
+topological selection rule (Phi_reach), amplitude stress testing to 420:1,
+binary black hole inspiral analog (GW150914), and rotation curve validation
+across 175 SPARC galaxies, 8 solar system planets, 13 stars, 5
+phase-mapped binary systems, and 1 binary black hole merger.
 
 **Zenodo DOI:** [10.5281/zenodo.19251192](https://doi.org/10.5281/zenodo.19251192)
 
@@ -219,6 +222,11 @@ Burdick-Crag-Mass/
 ├── BCM_colonization_sweep.py      # v8: forward amplitude sweep
 ├── BCM_colonization_sweep_reverse.py  # v8: reverse amplitude sweep
 ├── BCM_tunnel_timeseries.py       # v8: 3-point tunnel time-series
+├── BCM_cavitation_sweep.py        # v9: throat bandwidth sweep
+├── BCM_tcf_analyzer.py            # v9: time-cost function analyzer
+├── BCM_3d_renderer.py             # v9: cinematic 3D renderer
+├── BCM_phase_lock.py              # v10: phase-lock coherence analyzer
+├── BCM_inspiral_sweep.py          # v11: binary black hole inspiral
 ├── BCM_planetary_wave.py          # Planetary substrate solver (8 planets)
 ├── BCM_planetary_renderer.py      # Planetary visualization
 ├── Burdick_Crag_Mass.py           # Crag Mass injection (SMBH neutrino flux)
@@ -318,6 +326,132 @@ smooth, not a snap. Further systems required to determine universality.
 
 ---
 
+## Time-Cost Function and Cavitation Regimes (v9)
+
+v9 prices the flows measured in v8 and discovers three throat
+bandwidth regimes.
+
+### Three Regimes
+
+| Regime | Width range | sig_drift | I_B | Governor |
+|--------|-------------|-----------|-----|----------|
+| Throttle | 0.005–0.015 | Decreasing | Rising | Pipe-limited |
+| Default | 0.06 | 3493 | 0.0 | Balanced |
+| Saturation | 0.06–1.0 | ~3583 | 0.0 | Pump-limited |
+
+Narrowing the corridor protects the weaker star (orifice effect).
+Widening adds less than 3% more drain — pump-limited.
+Grid=256 validation confirms pattern is resolution-independent.
+
+### Time-Cost Function
+
+| System | Rate/k | Tax above baseline |
+|--------|--------|--------------------|
+| Spica periastron | 118.83 | +80.10 |
+| Alpha Cen | 71.69 | +32.96 |
+| Spica mean | 40.58 | +1.85 |
+| HR 1099 (baseline) | 38.73 | 0.00 |
+
+### External Validation
+
+HR 1099: no mass transfer for 70-80 Myr (Fekel 1983), consistent
+with I_B > 0 resistant prediction. Spica: Struve-Sahade effect
+confirms one-way drain spectroscopically.
+
+### Run commands (v9)
+
+```bash
+python BCM_cavitation_sweep.py --pair Spica --phase 0.0
+python BCM_tcf_analyzer.py --compare
+python BCM_3d_renderer.py --pair Spica --phase 0.0
+```
+
+---
+
+## Phase-Lock Coherence Law (v10)
+
+v10 establishes the Burdick Phase-Lock Coherence Law through
+amplitude stress testing and spatial phase-field topology analysis.
+
+### The Law
+
+Synchronization maximizes coherent reach. Coherent reach determines
+flow regime. Flow regime determines survival.
+
+### Amplitude Stress Test
+
+Solver maintains cos_delta_phi = +1.000000 from 8.4:1 through 336:1
+(12 runs at grid=256). First hairline fracture (0.999999) at 420:1.
+The solver is mathematically ideal across all physically meaningful
+ratios — no known binary exceeds ~100:1.
+
+### Phi_reach — Topological Selection Rule
+
+Phi_reach measures the fraction of ultra-coherent pixels
+(cos_delta_phi > 0.999999) reachable from the dominant pump.
+
+| System | Ratio | Sync | Phi_reach | I_B | Status |
+|--------|-------|------|-----------|-----|--------|
+| HR 1099 | 14:1 | Yes | 31.6% | +210.8 | RESISTANT |
+| Spica mean | 8.4:1 | No | 28.3% | 0.0 | DRAIN |
+| Spica peri | 8.4:1 | No | 25.7% | 0.0 | DRAIN |
+| Alpha Cen | 3.5:1 | No | 18.3% | 0.0 | DRAIN |
+
+Phi_reach reproduces the ordering of four independent metrics
+(sig_drift, I_B, TCF rate, Psi~Phi) without additional parameters.
+
+### Run commands (v10)
+
+```bash
+python BCM_phase_lock.py --pair Spica --phase 0.0
+python BCM_phase_lock.py --compare
+```
+
+---
+
+## Combined Stress Validation and Binary Black Hole Inspiral (v11)
+
+v11 validates the Phase-Lock Coherence Law under combined stress
+and extends the framework to binary black hole merger analogs.
+
+### Combined Stress Test
+
+Amplitude (amp_A=500, ratio 210:1) through narrowing corridor
+(0.02 to 0.002). First real phase crack: cos_delta_phi dropped
+to 0.9997 — three orders of magnitude below unity. Orifice
+protection survived: I_B rose from 0 to 223.6 under 40x natural
+pump pressure. The law holds under combined stress.
+
+### Binary Black Hole Inspiral — GW150914 Analog
+
+Two near-equal pumps (50:43, ratio 1.16:1, analog to GW150914
+observed 1.24:1) swept from wide separation to merger in 15 steps.
+Three unprecedented events in the framework's history:
+
+1. **Phase snap:** cos_delta_phi = -0.991 at sep=0.336.
+   First anti-phase reading ever. The substrate briefly fought
+   itself — possible analog of the ISCO transition.
+
+2. **Negative I_B:** foreclosure at sep=0.155. B loses sovereign
+   independence. The substrate dismantles B's territory.
+
+3. **Exact zero sig_drift:** at sep=0.087. Two pumps become one.
+   Merger is topological unification, not collision.
+
+Three phases match GW150914 structure: inspiral (I_B rising),
+merger (I_B negative, foreclosure), ringdown (sig_drift=0,
+single pump settles). rho_L1 rises continuously from 0.9 to
+627.3, mapping to the rising strain amplitude of the chirp.
+
+### Run commands (v11)
+
+```bash
+python BCM_cavitation_sweep.py --pair Spica --phase 0.0 --amp-A 500 --width-start 0.02 --width-end 0.002 --width-steps 6
+python BCM_inspiral_sweep.py --grid 128 --steps 15
+```
+
+---
+
 ## Troubleshooting
 
 - **Module import errors**: ensure you are running inside the virtual environment
@@ -341,6 +475,15 @@ smooth, not a snap. Further systems required to determine universality.
   drain regime; positive indicates active backflow (resistance).
 - **Tachocline:** The interface between radiative and convective zones
   in a star, where the substrate pump (J_ind) operates.
+- **Phi_reach:** Fraction of ultra-coherent pixels (cos_delta_phi >
+  0.999999) reachable from the dominant pump via flood-fill
+  connectivity. Topological selection rule for regime discrimination.
+- **Foreclosure:** State where I_B becomes negative — the secondary
+  pump has lost sovereign substrate independence and its territory
+  is being actively dismantled by the primary.
+- **Phase snap:** A transient anti-phase event (cos_delta_phi < 0)
+  during binary inspiral, possibly analogous to the innermost
+  stable circular orbit (ISCO) transition.
 
 ---
 
@@ -356,17 +499,26 @@ The framework would be challenged if:
   repeated runs with identical inputs
 - Synchronized binaries do not exhibit reduced drift compared to
   unsynchronized systems at comparable ratios
+- Phi_reach ordering does not reproduce sig_drift, I_B, and TCF
+  rankings across new binary systems not yet tested
+- The amplitude stress boundary (420:1) shifts significantly under
+  different solver parameters (lambda, gamma, entangle)
 
 ---
 
 ## References
 
+- Burdick, S. J. Sr. 2026, BCM v1-v9, Zenodo 10.5281/zenodo.19251192 — Burdick Crag Mass framework
 - Lelli, F., McGaugh, S. S., & Schombert, J. M. 2016, AJ, 152, 157 — SPARC rotation curve dataset
 - Walter, F., Brinks, E., de Blok, W. J. G., et al. 2008, AJ, 136, 2563 — THINGS VLA HI Moment-0
 - Pourbaix, D. & Boffin, H. M. J. 2016 — Alpha Centauri dynamical masses
 - Kervella, P. et al. 2016 — Alpha Centauri interferometric orbit
 - Herbison-Evans, D. et al. 1971, MNRAS, 151 — Spica binary orbit
-- Fekel, F. C. 1983, ApJ, 268 — HR 1099 spectroscopic binary orbit
+- Harrington, D. et al. 2016, A&A, 590 — Spica line-profile variations, apsidal motion
+- Tkachenko, A. et al. 2016, MNRAS, 458 — Spica stellar modelling, apsidal constant
+- Odell, A. P. 1974, ApJ, 192 — Spica internal structure constant discrepancy
+- Fekel, F. C. 1983, ApJ, 268 — HR 1099 spectroscopic binary, mass transfer prediction
+- Donati, J.-F. et al. 1999, MNRAS, 302 — HR 1099 magnetic cycles, period oscillation
 - Berdyugina, S. V. & Tuominen, I. 1998, A&A, 336 — RS CVn active longitudes
 
 ---
