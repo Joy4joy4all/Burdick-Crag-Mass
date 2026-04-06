@@ -1,0 +1,358 @@
+{
+  "title": "BCM v13 Pure Gradient Isolation Tests",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "ChatGPT clean kill conditions \u2014 no hidden energy",
+  "grid": 128,
+  "steps": 2000,
+  "results": {
+    "raw_drift": {
+      "delta_lam": 0.025,
+      "alive_steps": 410,
+      "early_drift": 0.1519,
+      "mid_drift": 0.824352,
+      "total_drift": 10.23335,
+      "E_initial": 78.539816,
+      "E_at_10pct": 47.60743,
+      "E_at_50pct": 7.256027
+    },
+    "symmetric": {
+      "grad_drift": 5.086771,
+      "flat_drift": 0.0,
+      "grad_steps": 1000,
+      "flat_steps": 1000
+    },
+    "energy_displacement": [
+      {
+        "step": 0,
+        "cum_drift": 0.003512,
+        "cum_E_lost": 0.938769,
+        "E_remaining": 77.601048,
+        "E_pct": 98.8
+      },
+      {
+        "step": 50,
+        "cum_drift": 0.185602,
+        "cum_E_lost": 35.726899,
+        "E_remaining": 42.812917,
+        "E_pct": 54.51
+      },
+      {
+        "step": 100,
+        "cum_drift": 0.379924,
+        "cum_E_lost": 54.64258,
+        "E_remaining": 23.897236,
+        "E_pct": 30.43
+      },
+      {
+        "step": 150,
+        "cum_drift": 0.5857,
+        "cum_E_lost": 65.061964,
+        "E_remaining": 13.477852,
+        "E_pct": 17.16
+      },
+      {
+        "step": 200,
+        "cum_drift": 0.80215,
+        "cum_E_lost": 70.866979,
+        "E_remaining": 7.672837,
+        "E_pct": 9.77
+      },
+      {
+        "step": 250,
+        "cum_drift": 1.028493,
+        "cum_E_lost": 74.134216,
+        "E_remaining": 4.4056,
+        "E_pct": 5.61
+      },
+      {
+        "step": 300,
+        "cum_drift": 1.263944,
+        "cum_E_lost": 75.990149,
+        "E_remaining": 2.549668,
+        "E_pct": 3.25
+      },
+      {
+        "step": 350,
+        "cum_drift": 1.507716,
+        "cum_E_lost": 77.053354,
+        "E_remaining": 1.486462,
+        "E_pct": 1.89
+      },
+      {
+        "step": 400,
+        "cum_drift": 1.759024,
+        "cum_E_lost": 77.667221,
+        "E_remaining": 0.872595,
+        "E_pct": 1.11
+      },
+      {
+        "step": 450,
+        "cum_drift": 2.017083,
+        "cum_E_lost": 78.024252,
+        "E_remaining": 0.515564,
+        "E_pct": 0.66
+      },
+      {
+        "step": 500,
+        "cum_drift": 2.28112,
+        "cum_E_lost": 78.233333,
+        "E_remaining": 0.306483,
+        "E_pct": 0.39
+      },
+      {
+        "step": 550,
+        "cum_drift": 2.550368,
+        "cum_E_lost": 78.356567,
+        "E_remaining": 0.183249,
+        "E_pct": 0.23
+      },
+      {
+        "step": 600,
+        "cum_drift": 2.824078,
+        "cum_E_lost": 78.429648,
+        "E_remaining": 0.110169,
+        "E_pct": 0.14
+      },
+      {
+        "step": 650,
+        "cum_drift": 3.10152,
+        "cum_E_lost": 78.473238,
+        "E_remaining": 0.066578,
+        "E_pct": 0.08
+      },
+      {
+        "step": 700,
+        "cum_drift": 3.381987,
+        "cum_E_lost": 78.499382,
+        "E_remaining": 0.040435,
+        "E_pct": 0.05
+      },
+      {
+        "step": 750,
+        "cum_drift": 3.664797,
+        "cum_E_lost": 78.515144,
+        "E_remaining": 0.024673,
+        "E_pct": 0.03
+      },
+      {
+        "step": 800,
+        "cum_drift": 3.949302,
+        "cum_E_lost": 78.524694,
+        "E_remaining": 0.015122,
+        "E_pct": 0.02
+      },
+      {
+        "step": 850,
+        "cum_drift": 4.234885,
+        "cum_E_lost": 78.530508,
+        "E_remaining": 0.009308,
+        "E_pct": 0.01
+      },
+      {
+        "step": 900,
+        "cum_drift": 4.520963,
+        "cum_E_lost": 78.534064,
+        "E_remaining": 0.005752,
+        "E_pct": 0.01
+      },
+      {
+        "step": 950,
+        "cum_drift": 4.806994,
+        "cum_E_lost": 78.536248,
+        "E_remaining": 0.003569,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1000,
+        "cum_drift": 5.092473,
+        "cum_E_lost": 78.537594,
+        "E_remaining": 0.002222,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1050,
+        "cum_drift": 5.376934,
+        "cum_E_lost": 78.538428,
+        "E_remaining": 0.001388,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1100,
+        "cum_drift": 5.659954,
+        "cum_E_lost": 78.538946,
+        "E_remaining": 0.00087,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1150,
+        "cum_drift": 5.941148,
+        "cum_E_lost": 78.539269,
+        "E_remaining": 0.000547,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1200,
+        "cum_drift": 6.22017,
+        "cum_E_lost": 78.539471,
+        "E_remaining": 0.000345,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1250,
+        "cum_drift": 6.496716,
+        "cum_E_lost": 78.539598,
+        "E_remaining": 0.000218,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1300,
+        "cum_drift": 6.770515,
+        "cum_E_lost": 78.539678,
+        "E_remaining": 0.000138,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1350,
+        "cum_drift": 7.041336,
+        "cum_E_lost": 78.539728,
+        "E_remaining": 8.8e-05,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1400,
+        "cum_drift": 7.308978,
+        "cum_E_lost": 78.53976,
+        "E_remaining": 5.6e-05,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1450,
+        "cum_drift": 7.573276,
+        "cum_E_lost": 78.539781,
+        "E_remaining": 3.6e-05,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1500,
+        "cum_drift": 7.834092,
+        "cum_E_lost": 78.539793,
+        "E_remaining": 2.3e-05,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1550,
+        "cum_drift": 8.091317,
+        "cum_E_lost": 78.539802,
+        "E_remaining": 1.5e-05,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1600,
+        "cum_drift": 8.344869,
+        "cum_E_lost": 78.539807,
+        "E_remaining": 9e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1650,
+        "cum_drift": 8.594687,
+        "cum_E_lost": 78.53981,
+        "E_remaining": 6e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1700,
+        "cum_drift": 8.840733,
+        "cum_E_lost": 78.539812,
+        "E_remaining": 4e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1750,
+        "cum_drift": 9.082987,
+        "cum_E_lost": 78.539814,
+        "E_remaining": 3e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1800,
+        "cum_drift": 9.321446,
+        "cum_E_lost": 78.539815,
+        "E_remaining": 2e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1850,
+        "cum_drift": 9.556124,
+        "cum_E_lost": 78.539815,
+        "E_remaining": 1e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1900,
+        "cum_drift": 9.787047,
+        "cum_E_lost": 78.539816,
+        "E_remaining": 1e-06,
+        "E_pct": 0.0
+      },
+      {
+        "step": 1950,
+        "cum_drift": 10.014251,
+        "cum_E_lost": 78.539816,
+        "E_remaining": 0.0,
+        "E_pct": 0.0
+      }
+    ],
+    "raw_sweep": [
+      {
+        "delta_lam": 0.0,
+        "drift": 0.0,
+        "alive_steps": 1000,
+        "E_final": 0.00115628,
+        "drift_per_dl": 0
+      },
+      {
+        "delta_lam": 0.005,
+        "drift": 1.122533,
+        "alive_steps": 1000,
+        "E_final": 0.00119068,
+        "drift_per_dl": 224.5066
+      },
+      {
+        "delta_lam": 0.01,
+        "drift": 2.215043,
+        "alive_steps": 1000,
+        "E_final": 0.00129796,
+        "drift_per_dl": 221.5043
+      },
+      {
+        "delta_lam": 0.025,
+        "drift": 5.086771,
+        "alive_steps": 1000,
+        "E_final": 0.00224296,
+        "drift_per_dl": 203.4709
+      },
+      {
+        "delta_lam": 0.05,
+        "drift": 8.193976,
+        "alive_steps": 1000,
+        "E_final": 0.01009205,
+        "drift_per_dl": 163.8795
+      },
+      {
+        "delta_lam": 0.075,
+        "drift": 9.887946,
+        "alive_steps": 1000,
+        "E_final": 0.06385548,
+        "drift_per_dl": 131.8393
+      },
+      {
+        "delta_lam": 0.1,
+        "drift": 10.681444,
+        "alive_steps": 1000,
+        "E_final": 0.4395902,
+        "drift_per_dl": 106.8144
+      }
+    ]
+  }
+}

@@ -292,6 +292,30 @@ class SubstrateSolver:
         substrate_excess  = rho_sig_max - rho_sub_max
         # === END ADDITION ===
 
+        # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+        # Phase Field Instrumentation — spatial delta_phi(x,y) extraction
+        # Promotes cos_delta_phi from scalar summary to 2D spatial field
+        # Uses Hilbert transform to recover analytic signal from real-valued fields
+        # Readout only — does not modify solver dynamics
+        #
+        # delta_phi_field: phase mismatch at each grid point
+        #   ~0 everywhere = uniform coupling (sanity check baseline)
+        #   localized distortion = phase decoherence zone (cavitation shadow)
+        # cos_delta_phi_field: coupling efficiency at each grid point
+        #   ~1.0 = coupled, ~0.0 = decoherent, <0 = anti-phase
+        try:
+            from scipy.signal import hilbert
+            sigma_analytic    = hilbert(sigma_field, axis=0)
+            rho_analytic      = hilbert(rho_field, axis=0)
+            phase_sigma_2d    = np.angle(sigma_analytic)
+            phase_rho_2d      = np.angle(rho_analytic)
+            delta_phi_field   = np.angle(np.exp(1j * (phase_sigma_2d - phase_rho_2d)))
+            cos_delta_phi_field = np.cos(delta_phi_field)
+        except ImportError:
+            delta_phi_field     = None
+            cos_delta_phi_field = None
+        # === END ADDITION ===
+
         result = {
             "elapsed": elapsed,
             "rho_avg": rho_avg,
@@ -317,6 +341,10 @@ class SubstrateSolver:
             "cos_delta_phi":    cos_delta_phi,
             "decoupling_ratio": decoupling_ratio,
             "substrate_excess": substrate_excess,
+            # === END ADDITION ===
+            # === BCM MASTER BUILD ADDITION v7 | 2026-04-03 EST ===
+            "delta_phi_field":     delta_phi_field,
+            "cos_delta_phi_field": cos_delta_phi_field,
             # === END ADDITION ===
             "config": {
                 "grid": self.grid,

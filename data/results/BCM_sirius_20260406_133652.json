@@ -1,0 +1,73 @@
+{
+  "title": "BCM v13 Sirius Downstream Corridor",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "grid_nx": 256,
+  "grid_ny": 128,
+  "steps": 3000,
+  "positions": {
+    "smbh": [
+      0,
+      64
+    ],
+    "sol": [
+      128,
+      64
+    ],
+    "alpha_cen": [
+      93,
+      99
+    ],
+    "sirius": [
+      208,
+      44
+    ]
+  },
+  "distances": {
+    "sol_ac_px": 49.5,
+    "sol_sirius_px": 82.46
+  },
+  "midpoint_lambda": {
+    "ac": 0.10331565575259176,
+    "sirius": 0.11953558518696385
+  },
+  "results": {
+    "sol_to_ac": {
+      "label": "\u2192AC",
+      "start": [
+        113,
+        79
+      ],
+      "target": [
+        93,
+        99
+      ],
+      "total_drift": 23.8007,
+      "dist_to_target": 4.484,
+      "mean_speed": 0.00793622,
+      "final_coherence": 0.3628,
+      "min_coherence": 0.223,
+      "alive": true,
+      "steps_completed": 3000,
+      "gap_crossed_pct": 84.1
+    },
+    "sol_to_sirius": {
+      "label": "\u2192SIR",
+      "start": [
+        143,
+        59
+      ],
+      "target": [
+        208,
+        44
+      ],
+      "total_drift": 3.9819,
+      "dist_to_target": 70.5365,
+      "mean_speed": 0.00134141,
+      "final_coherence": 0.2733,
+      "min_coherence": 0.2733,
+      "alive": true,
+      "steps_completed": 3000,
+      "gap_crossed_pct": 6.0
+    }
+  }
+}

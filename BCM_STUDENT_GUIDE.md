@@ -218,6 +218,122 @@ Three things instead of five mysteries.
 
 ---
 
+## v12 — The Lambda Drive (How We Travel)
+
+### The Trampoline
+
+You're standing on a trampoline. There are two bowling balls
+on it — one near you (Earth) and one far away (Saturn). The
+trampoline surface dips around each ball. That dip IS gravity.
+
+A rocket is like running uphill on the trampoline. Hard work.
+Burns fuel. Slow.
+
+The lambda drive is different. Instead of running uphill, you
+make the trampoline behind you a little flatter and the
+trampoline ahead of you a little steeper. The surface itself
+tips you forward. You didn't push off anything. The trampoline
+moved you.
+
+We tested it. Eight times. Every time it worked. In every
+direction. At every angle. With perfect reversal. Zero lag.
+Three independent AI systems designed tests to break it. None
+of them could.
+
+### The Saturn Mission
+
+If we can build a device that tilts the trampoline around a
+spaceship: Saturn in 234 days instead of 7 years. Total
+mission 15 months. Two robot ships go first.
+
+---
+
+## v13 — The SPINE (How We Reach the Stars)
+
+### The Problem
+
+Between stars, there's no trampoline. The substrate is unfunded.
+Nothing maintains it. A ship entering that void dissolves —
+like an ice cube dropped on hot pavement. At the default void
+level, you have about 101 steps before you cease to exist.
+
+### The Solution
+
+The ship carries its own trampoline. A nuclear reactor produces
+particle exhaust. Instead of shielding that exhaust, we channel
+it through two rings around the hull. The particles agitate the
+substrate locally — they fund a small bubble of maintained space
+around the ship. The ship carries its own funded zone.
+
+We tested it. The self-funded ship survived every void depth
+tested. Even the deepest void. The reactor doesn't push the
+ship. It keeps the ship REAL.
+
+### How It Moves
+
+Everything in BCM is binary — two sources, not one. The ship
+has two pump rings. The back ring runs at full power. The front
+ring runs at one-eighth power. This creates an asymmetry: the
+space ahead is slightly more funded than the space behind.
+
+The substrate dissolves the trailing edge (less funded) faster
+than the leading edge (more funded). The center of mass shifts
+forward. The ship crawls toward the zone its own front ring
+just funded.
+
+We tested this too. In uniform void — no external gradient at
+all — the binary pump produced 11 pixels of drift. The single
+pump produced ZERO. The ship makes its own wind.
+
+### The Throttle and the Brake
+
+The power ratio between the rings IS the throttle. More
+difference = faster drift. Equal power = zero drift (the
+brake). We swept ratios from 1:2 to 1:32. Drift scaled
+linearly. Double the asymmetry, double the speed.
+
+The brake comes from binary star physics. HR 1099 — a real
+star system with a 14:1 mass ratio — shows zero mass transfer
+for 70-80 million years because the stars are tidally
+synchronized. Force the rings into phase sync = stop.
+
+### The Stars Were the Blueprints
+
+The engineering specs came from real binary stars:
+- Spica (8.4:1 ratio) = the drive template
+- HR 1099 (14:1 ratio) = the brake template
+- Alpha Centauri (3.5:1 ratio) = the design limit
+
+The ring separation = 2.8 times the coherence width. We
+measured this from Spica's orbital parameters. Gemini
+derived the same constant independently. The number is 2.8.
+
+### Two Laws
+
+**Burdick's Transport Law:**
+Objects move toward regions of lower substrate decay.
+The speed is proportional to the gradient. Confirmed across
+20 tests. Stable across all timestep sizes tested.
+
+**Binary Geometric Propulsion:**
+Two pumps with unequal power create directional transport
+in empty space. No external push needed. The ship creates
+its own asymmetry and follows it.
+
+---
+
+## The Updated Rules
+
+Everything in BCM comes from three ideas and two laws:
+
+1. **Space is funded.** No payment, no space.
+2. **Time is cost.** Duration is the running total of the bill.
+3. **Existence requires coherence.** Below threshold, you dissolve.
+4. **Objects move toward lower decay.** The gradient IS gravity.
+5. **Two pumps move a ship.** Asymmetric funding creates transport.
+
+---
+
 *Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems — 2026*
 
 *"If you can't explain it to a six-year-old, you don't understand

@@ -1,0 +1,70 @@
+{
+  "title": "BCM v13 Energy Conservation Audit",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "ChatGPT adversarial kill condition \u2014 prove drift is not free",
+  "grid": 128,
+  "steps": 2000,
+  "results": {
+    "energy_audit": {
+      "E_final": 816.558068,
+      "E_initial": 80.659879,
+      "total_input": 9395.627782,
+      "total_loss": 7368.014153,
+      "E_balance": 2027.613629,
+      "total_drift": 6.9105,
+      "mean_speed": 0.06910492,
+      "control_drift": 5.5196,
+      "control_E_final": 0.00126614
+    },
+    "dt_sweep": {
+      "results": [
+        {
+          "dt": 0.01,
+          "steps": 10000,
+          "total_time": 100.0,
+          "drift": 6.8812,
+          "mean_speed": 0.00068812,
+          "E_final": 823.4828,
+          "coherence": 0.7202
+        },
+        {
+          "dt": 0.025,
+          "steps": 4000,
+          "total_time": 100.0,
+          "drift": 6.8922,
+          "mean_speed": 0.00172304,
+          "E_final": 820.8823,
+          "coherence": 0.7201
+        },
+        {
+          "dt": 0.05,
+          "steps": 2000,
+          "total_time": 100.0,
+          "drift": 6.9105,
+          "mean_speed": 0.00345525,
+          "E_final": 816.5581,
+          "coherence": 0.72
+        },
+        {
+          "dt": 0.075,
+          "steps": 1333,
+          "total_time": 100.0,
+          "drift": 6.9271,
+          "mean_speed": 0.00519665,
+          "E_final": 812.2463,
+          "coherence": 0.72
+        },
+        {
+          "dt": 0.1,
+          "steps": 1000,
+          "total_time": 100.0,
+          "drift": 6.9474,
+          "mean_speed": 0.0069474,
+          "E_final": 807.9471,
+          "coherence": 0.7133
+        }
+      ],
+      "cv": 0.003438
+    }
+  }
+}

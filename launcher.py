@@ -102,6 +102,10 @@ class SolverGUI:
         tab4 = ttk.Frame(self.notebook, style="Dark.TFrame")
         self.notebook.add(tab4, text="  BLACK HOLES  ")
 
+        # Tab 5 — Lambda Drive Navigation
+        tab5 = ttk.Frame(self.notebook, style="Dark.TFrame")
+        self.notebook.add(tab5, text="  \u039B DRIVE  ")
+
         # Build planetary tab content
         self._build_planetary_tab(tab2)
 
@@ -110,6 +114,9 @@ class SolverGUI:
 
         # Build black hole tab content
         self._build_blackhole_tab(tab4)
+
+        # Build lambda drive tab content
+        self._build_lambda_tab(tab5)
 
         # Main split (Tab 1 content)
         main = tab1
@@ -1128,6 +1135,211 @@ class SolverGUI:
 
         threading.Thread(target=_run, daemon=True).start()
     # === END BLACK HOLE TAB ===
+
+    # === BCM v12 LAMBDA DRIVE TAB ===
+    def _build_lambda_tab(self, parent):
+        """Tab 5 — BCM Lambda Drive Substrate Navigation."""
+        style_bg  = "#0a0c10"
+        style_fg  = "#a0b0cc"
+        style_acc = "#44ff88"
+
+        scroll_canvas = tk.Canvas(parent, bg=style_bg, highlightthickness=0)
+        scroll_vbar = ttk.Scrollbar(parent, orient="vertical",
+                                     command=scroll_canvas.yview)
+        scroll_canvas.configure(yscrollcommand=scroll_vbar.set)
+        scroll_vbar.pack(side="right", fill="y")
+        scroll_canvas.pack(side="left", fill="both", expand=True)
+
+        sf = tk.Frame(scroll_canvas, bg=style_bg)
+        sf_id = scroll_canvas.create_window((0, 0), window=sf, anchor="nw")
+
+        def _sf_resize(event):
+            scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all"))
+        def _sc_resize(event):
+            scroll_canvas.itemconfig(sf_id, width=event.width)
+        sf.bind("<Configure>", _sf_resize)
+        scroll_canvas.bind("<Configure>", _sc_resize)
+
+        def _sf_wheel(event):
+            scroll_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        scroll_canvas.bind("<MouseWheel>", _sf_wheel)
+        sf.bind("<MouseWheel>", _sf_wheel)
+
+        parent = sf
+
+        # Header
+        hf = tk.Frame(parent, bg=style_bg)
+        hf.pack(fill="x", padx=12, pady=(10, 4))
+        tk.Label(hf, text="\u039B DRIVE — SUBSTRATE NAVIGATION",
+                 font=("Georgia", 16), fg="#44ff88", bg=style_bg).pack(side="left")
+        tk.Label(hf, text="SMBH Coherency Lambda Drive — Solar System Transit",
+                 font=("Consolas", 10), fg="#6a7a90", bg=style_bg).pack(side="left", padx=(16, 0))
+
+        # Concept
+        concept_f = ttk.LabelFrame(parent, text="DRIVE CONCEPT")
+        concept_f.pack(fill="x", padx=12, pady=4)
+        concept_text = (
+            "The Lambda Drive modulates local substrate decay rate (\u03BB)\n"
+            "to create asymmetric sigma gradients. Lower \u03BB ahead deepens\n"
+            "substrate memory; higher \u03BB behind shallows it. The substrate's\n"
+            "own maintenance flow carries the ship along the gradient.\n"
+            "\n"
+            "Sun Slingshot: Fall inward to perihelion (free acceleration),\n"
+            "lambda-redirect at closest approach, ride exit gradient to Saturn.\n"
+            "Tangential capture at destination — Saturn's well is the brake."
+        )
+        concept_box = tk.Text(concept_f, height=8, bg="#0c0e14", fg="#60c080",
+                               font=("Consolas", 9), relief="flat")
+        concept_box.insert("1.0", concept_text)
+        concept_box.config(state="disabled")
+        concept_box.pack(fill="x", padx=6, pady=4)
+
+        # Mission Parameters
+        pf = ttk.LabelFrame(parent, text="MISSION PARAMETERS")
+        pf.pack(fill="x", padx=12, pady=4)
+        ctrl_f = tk.Frame(pf, bg="#12151c")
+        ctrl_f.pack(fill="x", padx=6, pady=4)
+
+        self.ld_launch_var = tk.StringVar(value="2032-12-01")
+        self.ld_perihelion_var = tk.DoubleVar(value=0.15)
+        self.ld_points_var = tk.IntVar(value=100)
+
+        row1 = tk.Frame(ctrl_f, bg="#12151c")
+        row1.pack(fill="x", pady=2)
+        tk.Label(row1, text="Launch date:", font=("Consolas", 9),
+                 fg=style_fg, bg="#12151c").pack(side="left", padx=(8, 2))
+        tk.Entry(row1, textvariable=self.ld_launch_var, width=12,
+                 font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                 insertbackground="#e0e8f0").pack(side="left")
+        tk.Label(row1, text="Perihelion (AU):", font=("Consolas", 9),
+                 fg=style_fg, bg="#12151c").pack(side="left", padx=(16, 2))
+        tk.Entry(row1, textvariable=self.ld_perihelion_var, width=6,
+                 font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                 insertbackground="#e0e8f0").pack(side="left")
+        tk.Label(row1, text="Points:", font=("Consolas", 9),
+                 fg=style_fg, bg="#12151c").pack(side="left", padx=(16, 2))
+        tk.Entry(row1, textvariable=self.ld_points_var, width=5,
+                 font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                 insertbackground="#e0e8f0").pack(side="left")
+
+        # Lambda modulation
+        lf = ttk.LabelFrame(parent, text="\u039B MODULATION")
+        lf.pack(fill="x", padx=12, pady=4)
+        lam_f = tk.Frame(lf, bg="#12151c")
+        lam_f.pack(fill="x", padx=6, pady=4)
+
+        self.ld_lam_base_var = tk.DoubleVar(value=0.10)
+        self.ld_lam_fore_var = tk.DoubleVar(value=0.05)
+        self.ld_lam_aft_var = tk.DoubleVar(value=0.20)
+        self.ld_grid_var = tk.IntVar(value=128)
+
+        row2 = tk.Frame(lam_f, bg="#12151c")
+        row2.pack(fill="x", pady=2)
+        for lbl, var, w in [("\u03BB base:", self.ld_lam_base_var, 5),
+                              ("\u03BB fore:", self.ld_lam_fore_var, 5),
+                              ("\u03BB aft:", self.ld_lam_aft_var, 5),
+                              ("Grid:", self.ld_grid_var, 5)]:
+            tk.Label(row2, text=lbl, font=("Consolas", 9),
+                     fg=style_fg, bg="#12151c").pack(side="left", padx=(8, 2))
+            tk.Entry(row2, textvariable=var, width=w,
+                     font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                     insertbackground="#e0e8f0").pack(side="left")
+
+        # Buttons
+        bf = tk.Frame(parent, bg=style_bg)
+        bf.pack(fill="x", padx=12, pady=6)
+
+        ttk.Button(bf, text="\u2B24  Plot Saturn Mission (2D Map)",
+                   command=self._run_ld_navigator).pack(fill="x", padx=4, pady=2)
+
+        ttk.Button(bf, text="\u25C6  Run \u039B Drive Transit Simulation",
+                   command=self._run_ld_transit).pack(fill="x", padx=4, pady=2)
+
+        # Log
+        log_f = ttk.LabelFrame(parent, text="\u039B DRIVE LOG")
+        log_f.pack(fill="both", expand=True, padx=12, pady=4)
+        self._ld_log = tk.Text(log_f, height=18, bg="#06080c", fg="#60c080",
+                                font=("Consolas", 9), relief="flat",
+                                wrap="word")
+        self._ld_log.pack(fill="both", expand=True, padx=4, pady=4)
+        self._ld_log_msg("\u039B DRIVE — Substrate Navigation ready.")
+        self._ld_log_msg("Default mission: Sun slingshot to Saturn, Dec 2032")
+        self._ld_log_msg("SPECULATIVE — theoretical extrapolation from BCM")
+
+    def _ld_log_msg(self, msg):
+        """Write to lambda drive tab log."""
+        self._ld_log.insert("end", msg + "\n")
+        self._ld_log.see("end")
+
+    def _run_ld_navigator(self):
+        """Run solar system navigator — 2D mission map."""
+        launch = self.ld_launch_var.get()
+        perihelion = self.ld_perihelion_var.get()
+        points = self.ld_points_var.get()
+
+        self._ld_log_msg(f"\n{'='*50}")
+        self._ld_log_msg(f"  SOLAR NAVIGATOR — {launch}")
+        self._ld_log_msg(f"  Perihelion: {perihelion} AU  Points: {points}")
+        self._ld_log_msg(f"{'='*50}")
+
+        parts = launch.split("-")
+
+        def _run():
+            try:
+                from BCM_solar_navigator import run_navigator
+                result = run_navigator(
+                    launch_year=int(parts[0]),
+                    launch_month=int(parts[1]),
+                    launch_day=int(parts[2]),
+                    perihelion_au=perihelion,
+                    n_points=points)
+                if result:
+                    v = result.get("peak_velocity_kms", 0)
+                    d = result.get("transit_days", 0)
+                    self.root.after(0, lambda: self._ld_log_msg(
+                        f"  Peak: {v:.0f} km/s  Transit: {d:.0f} days"))
+            except ImportError:
+                self.root.after(0, lambda: self._ld_log_msg(
+                    "ERROR: BCM_solar_navigator.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._ld_log_msg(
+                    f"  Navigator error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _run_ld_transit(self):
+        """Run lambda drive transit simulation."""
+        grid = self.ld_grid_var.get()
+        lam_base = self.ld_lam_base_var.get()
+        lam_fore = self.ld_lam_fore_var.get()
+        lam_aft = self.ld_lam_aft_var.get()
+
+        self._ld_log_msg(f"\n{'='*50}")
+        self._ld_log_msg(f"  \u039B DRIVE TRANSIT — grid={grid}")
+        self._ld_log_msg(f"  \u03BB base={lam_base}  fore={lam_fore}  "
+                          f"aft={lam_aft}")
+        self._ld_log_msg(f"{'='*50}")
+
+        def _run():
+            try:
+                from BCM_lambda_drive import run_lambda_drive
+                result = run_lambda_drive(
+                    grid=grid, lam_base=lam_base,
+                    lam_fore=lam_fore, lam_aft=lam_aft,
+                    n_transit_steps=20)
+                if result:
+                    c = "YES" if result.get("coherent") else "CHECK"
+                    self.root.after(0, lambda: self._ld_log_msg(
+                        f"  Transit complete. Coherence: {c}"))
+            except ImportError:
+                self.root.after(0, lambda: self._ld_log_msg(
+                    "ERROR: BCM_lambda_drive.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._ld_log_msg(
+                    f"  Transit error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+    # === END LAMBDA DRIVE TAB ===
 
     def _on_binary_resize(self, event):
         self._binary_cw = event.width

@@ -1,0 +1,92 @@
+{
+  "title": "BCM v12 Vector Alignment Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "test_design": "ChatGPT + Gemini advisory",
+  "grid": 128,
+  "steps": 2000,
+  "delta_lam": 0.05,
+  "spread": 10.0,
+  "results": [
+    {
+      "direction": [
+        0.9999999999989999,
+        0.0
+      ],
+      "displacement": [
+        21.28217425940369,
+        -4.2060801064280895e-07
+      ],
+      "total_distance": 21.282174259403693,
+      "cos_overall": 0.9999999999989997,
+      "angle_deg": 8.104106518114818e-05,
+      "cos_mean": 0.9999999999988991,
+      "cos_min": 0.999999999998808,
+      "cos_max": 0.9999999999989231,
+      "cos_std": 2.7904521017375655e-14,
+      "mean_speed": 0.010643808893527984,
+      "steps": 2000,
+      "label": "+x (baseline)"
+    },
+    {
+      "direction": [
+        0.0,
+        0.9999999999989999
+      ],
+      "displacement": [
+        -4.2060802485366366e-07,
+        21.28217425940369
+      ],
+      "total_distance": 21.282174259403693,
+      "cos_overall": 0.9999999999989997,
+      "angle_deg": 8.104106518114818e-05,
+      "cos_mean": 0.9999999999988991,
+      "cos_min": 0.999999999998808,
+      "cos_max": 0.999999999998923,
+      "cos_std": 2.7904555378171903e-14,
+      "mean_speed": 0.010643808893527968,
+      "steps": 2000,
+      "label": "+y (axis independence)"
+    },
+    {
+      "direction": [
+        0.7071067811860474,
+        0.7071067811860474
+      ],
+      "displacement": [
+        15.04148077925069,
+        15.041480779250705
+      ],
+      "total_distance": 21.271866116190566,
+      "cos_overall": 0.9999999999992929,
+      "angle_deg": 6.813627225792771e-05,
+      "cos_mean": 0.9999999999991926,
+      "cos_min": 0.9999999999991007,
+      "cos_max": 0.9999999999992184,
+      "cos_std": 2.847473055902551e-14,
+      "mean_speed": 0.010638652239727677,
+      "steps": 2000,
+      "label": "45 deg (lattice bias check)"
+    },
+    {
+      "direction": [
+        -0.7071067811860474,
+        0.7071067811860474
+      ],
+      "displacement": [
+        -15.041509463387293,
+        15.041479117368752
+      ],
+      "total_distance": 21.271885223820895,
+      "cos_overall": 0.9999999999987838,
+      "angle_deg": 8.936118846913497e-05,
+      "cos_mean": 0.9999999999965625,
+      "cos_min": 0.99999999992226,
+      "cos_max": 0.9999999999992116,
+      "cos_std": 9.86692573078739e-12,
+      "mean_speed": 0.010638661798351866,
+      "steps": 2000,
+      "label": "135 deg (anti-diagonal)"
+    }
+  ],
+  "all_aligned": true
+}

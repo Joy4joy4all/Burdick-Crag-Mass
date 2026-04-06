@@ -1,0 +1,48 @@
+{
+  "title": "BCM v12 Lambda Drift Kill Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "test_design": "ChatGPT advisory",
+  "grid": 128,
+  "steps": 2000,
+  "dt": 0.05,
+  "D": 0.5,
+  "base_lam": 0.1,
+  "delta_lam": 0.01,
+  "spread": 10.0,
+  "run_A": {
+    "label": "Lambda gradient active",
+    "displacement": [
+      4.800752159285153,
+      -4.2339911487943027e-07
+    ],
+    "total_distance": 4.800752159285172,
+    "mean_speed": 0.0024010565798083952,
+    "final_speed": 0.003483282559075004,
+    "final_coherence": 0.32932246930519504,
+    "energy_ratio": 4.031359191785507e-10,
+    "steps_completed": 2000
+  },
+  "run_B": {
+    "label": "Constant lambda (control)",
+    "displacement": [
+      -4.235386725781609e-07,
+      -4.235386725781609e-07
+    ],
+    "total_distance": 5.989741349495328e-07,
+    "mean_speed": 2.996415698939244e-10,
+    "final_speed": 3.6643395594924518e-09,
+    "final_coherence": 0.32718957452216546,
+    "energy_ratio": 3.923117975904331e-10,
+    "steps_completed": 2000
+  },
+  "divergence": {
+    "position_delta": [
+      4.800752582823826,
+      1.3955769873064128e-10
+    ],
+    "total_divergence": 4.800752582823826,
+    "speed_ratio": 8013068.973004691
+  },
+  "drift_magnitude": 4.800752159285172,
+  "verdict": "CASE_C_SUSTAINED_DRIFT"
+}

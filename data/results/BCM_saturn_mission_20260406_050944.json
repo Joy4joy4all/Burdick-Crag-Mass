@@ -1,0 +1,917 @@
+{
+  "title": "BCM v12 Saturn Mission \u2014 Sun Slingshot",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "status": "SPECULATIVE \u2014 theoretical extrapolation",
+  "launch_date": "2032-12-01",
+  "perihelion_au": 0.15,
+  "peak_velocity_kms": 107.9,
+  "perihelion_velocity_kms": 107.9,
+  "transit_days": 1166.6,
+  "positions": {
+    "Mercury": {
+      "x_au": -0.376,
+      "y_au": 0.2436,
+      "r_au": 0.4481,
+      "nu_deg": 147.06
+    },
+    "Venus": {
+      "x_au": 0.717,
+      "y_au": 0.0456,
+      "r_au": 0.7184,
+      "nu_deg": 3.64
+    },
+    "Earth": {
+      "x_au": 0.3112,
+      "y_au": 0.9446,
+      "r_au": 0.9945,
+      "nu_deg": 71.76
+    },
+    "Mars": {
+      "x_au": -1.6622,
+      "y_au": 0.1061,
+      "r_au": 1.6656,
+      "nu_deg": 176.35
+    },
+    "Jupiter": {
+      "x_au": 3.1747,
+      "y_au": -3.9095,
+      "r_au": 5.0361,
+      "nu_deg": 309.08
+    },
+    "Saturn": {
+      "x_au": -1.4196,
+      "y_au": 9.4803,
+      "r_au": 9.586,
+      "nu_deg": 98.52
+    }
+  },
+  "n_trajectory_points": 100,
+  "trajectory": [
+    {
+      "x_au": 0.3112,
+      "y_au": 0.9446,
+      "r_au": 0.9945,
+      "phase": "INWARD",
+      "v_kms": 15.3,
+      "day": 0.0
+    },
+    {
+      "x_au": 0.2113,
+      "y_au": 0.9448,
+      "r_au": 0.9681,
+      "phase": "INWARD",
+      "v_kms": 16.8,
+      "day": 2.5
+    },
+    {
+      "x_au": 0.1145,
+      "y_au": 0.9347,
+      "r_au": 0.9417,
+      "phase": "INWARD",
+      "v_kms": 18.3,
+      "day": 4.9
+    },
+    {
+      "x_au": 0.0217,
+      "y_au": 0.9151,
+      "r_au": 0.9153,
+      "phase": "INWARD",
+      "v_kms": 19.7,
+      "day": 7.4
+    },
+    {
+      "x_au": -0.0661,
+      "y_au": 0.8865,
+      "r_au": 0.8889,
+      "phase": "INWARD",
+      "v_kms": 21.1,
+      "day": 9.9
+    },
+    {
+      "x_au": -0.1482,
+      "y_au": 0.8497,
+      "r_au": 0.8625,
+      "phase": "INWARD",
+      "v_kms": 22.5,
+      "day": 12.4
+    },
+    {
+      "x_au": -0.2237,
+      "y_au": 0.8057,
+      "r_au": 0.8362,
+      "phase": "INWARD",
+      "v_kms": 23.9,
+      "day": 14.8
+    },
+    {
+      "x_au": -0.292,
+      "y_au": 0.7553,
+      "r_au": 0.8098,
+      "phase": "INWARD",
+      "v_kms": 25.3,
+      "day": 17.3
+    },
+    {
+      "x_au": -0.3528,
+      "y_au": 0.6994,
+      "r_au": 0.7834,
+      "phase": "INWARD",
+      "v_kms": 26.7,
+      "day": 19.8
+    },
+    {
+      "x_au": -0.4055,
+      "y_au": 0.6392,
+      "r_au": 0.757,
+      "phase": "INWARD",
+      "v_kms": 28.2,
+      "day": 22.2
+    },
+    {
+      "x_au": -0.45,
+      "y_au": 0.5756,
+      "r_au": 0.7306,
+      "phase": "INWARD",
+      "v_kms": 29.6,
+      "day": 24.7
+    },
+    {
+      "x_au": -0.486,
+      "y_au": 0.5096,
+      "r_au": 0.7042,
+      "phase": "INWARD",
+      "v_kms": 31.1,
+      "day": 27.2
+    },
+    {
+      "x_au": -0.5136,
+      "y_au": 0.4423,
+      "r_au": 0.6778,
+      "phase": "INWARD",
+      "v_kms": 32.7,
+      "day": 29.6
+    },
+    {
+      "x_au": -0.5329,
+      "y_au": 0.3747,
+      "r_au": 0.6514,
+      "phase": "INWARD",
+      "v_kms": 34.3,
+      "day": 32.1
+    },
+    {
+      "x_au": -0.5441,
+      "y_au": 0.3076,
+      "r_au": 0.625,
+      "phase": "INWARD",
+      "v_kms": 35.9,
+      "day": 34.6
+    },
+    {
+      "x_au": -0.5475,
+      "y_au": 0.2421,
+      "r_au": 0.5986,
+      "phase": "INWARD",
+      "v_kms": 37.6,
+      "day": 37.1
+    },
+    {
+      "x_au": -0.5435,
+      "y_au": 0.1791,
+      "r_au": 0.5723,
+      "phase": "INWARD",
+      "v_kms": 39.4,
+      "day": 39.5
+    },
+    {
+      "x_au": -0.5327,
+      "y_au": 0.1192,
+      "r_au": 0.5459,
+      "phase": "INWARD",
+      "v_kms": 41.2,
+      "day": 42.0
+    },
+    {
+      "x_au": -0.5156,
+      "y_au": 0.0632,
+      "r_au": 0.5195,
+      "phase": "INWARD",
+      "v_kms": 43.2,
+      "day": 44.5
+    },
+    {
+      "x_au": -0.4929,
+      "y_au": 0.0117,
+      "r_au": 0.4931,
+      "phase": "INWARD",
+      "v_kms": 45.3,
+      "day": 46.9
+    },
+    {
+      "x_au": -0.4654,
+      "y_au": -0.0347,
+      "r_au": 0.4667,
+      "phase": "INWARD",
+      "v_kms": 47.5,
+      "day": 49.4
+    },
+    {
+      "x_au": -0.4338,
+      "y_au": -0.0756,
+      "r_au": 0.4403,
+      "phase": "INWARD",
+      "v_kms": 49.8,
+      "day": 51.9
+    },
+    {
+      "x_au": -0.3988,
+      "y_au": -0.1107,
+      "r_au": 0.4139,
+      "phase": "INWARD",
+      "v_kms": 52.3,
+      "day": 54.4
+    },
+    {
+      "x_au": -0.3614,
+      "y_au": -0.1398,
+      "r_au": 0.3875,
+      "phase": "INWARD",
+      "v_kms": 55.0,
+      "day": 56.8
+    },
+    {
+      "x_au": -0.3224,
+      "y_au": -0.1626,
+      "r_au": 0.3611,
+      "phase": "INWARD",
+      "v_kms": 58.0,
+      "day": 59.3
+    },
+    {
+      "x_au": -0.2827,
+      "y_au": -0.1793,
+      "r_au": 0.3347,
+      "phase": "INWARD",
+      "v_kms": 61.2,
+      "day": 61.8
+    },
+    {
+      "x_au": -0.2429,
+      "y_au": -0.1899,
+      "r_au": 0.3083,
+      "phase": "INWARD",
+      "v_kms": 64.8,
+      "day": 64.2
+    },
+    {
+      "x_au": -0.204,
+      "y_au": -0.1946,
+      "r_au": 0.282,
+      "phase": "INWARD",
+      "v_kms": 68.9,
+      "day": 66.7
+    },
+    {
+      "x_au": -0.1668,
+      "y_au": -0.1937,
+      "r_au": 0.2556,
+      "phase": "INWARD",
+      "v_kms": 73.4,
+      "day": 69.2
+    },
+    {
+      "x_au": -0.1318,
+      "y_au": -0.1875,
+      "r_au": 0.2292,
+      "phase": "INWARD",
+      "v_kms": 78.7,
+      "day": 71.6
+    },
+    {
+      "x_au": -0.0998,
+      "y_au": -0.1765,
+      "r_au": 0.2028,
+      "phase": "INWARD",
+      "v_kms": 84.8,
+      "day": 74.1
+    },
+    {
+      "x_au": -0.0713,
+      "y_au": -0.1613,
+      "r_au": 0.1764,
+      "phase": "INWARD",
+      "v_kms": 92.2,
+      "day": 76.6
+    },
+    {
+      "x_au": -0.0469,
+      "y_au": -0.1425,
+      "r_au": 0.15,
+      "phase": "INWARD",
+      "v_kms": 101.4,
+      "day": 79.1
+    },
+    {
+      "x_au": -0.0469,
+      "y_au": -0.1425,
+      "r_au": 0.15,
+      "phase": "PERIHELION_SNAP",
+      "v_kms": 107.9,
+      "day": 79.1
+    },
+    {
+      "x_au": -0.0763,
+      "y_au": -0.2829,
+      "r_au": 0.293,
+      "phase": "KEPLER_COAST",
+      "v_kms": 76.6,
+      "v_kepler": 76.6,
+      "day": 82.3
+    },
+    {
+      "x_au": -0.0904,
+      "y_au": -0.4265,
+      "r_au": 0.4359,
+      "phase": "KEPLER_COAST",
+      "v_kms": 62.4,
+      "v_kepler": 62.4,
+      "day": 86.3
+    },
+    {
+      "x_au": -0.0889,
+      "y_au": -0.572,
+      "r_au": 0.5789,
+      "phase": "KEPLER_COAST",
+      "v_kms": 53.7,
+      "v_kepler": 53.7,
+      "day": 91.0
+    },
+    {
+      "x_au": -0.0717,
+      "y_au": -0.7183,
+      "r_au": 0.7219,
+      "phase": "KEPLER_COAST",
+      "v_kms": 47.7,
+      "v_kepler": 47.7,
+      "day": 96.3
+    },
+    {
+      "x_au": -0.0388,
+      "y_au": -0.864,
+      "r_au": 0.8648,
+      "phase": "KEPLER_COAST",
+      "v_kms": 43.2,
+      "v_kepler": 43.2,
+      "day": 102.3
+    },
+    {
+      "x_au": 0.0099,
+      "y_au": -1.0078,
+      "r_au": 1.0078,
+      "phase": "KEPLER_COAST",
+      "v_kms": 39.7,
+      "v_kepler": 39.7,
+      "day": 108.9
+    },
+    {
+      "x_au": 0.0741,
+      "y_au": -1.1484,
+      "r_au": 1.1508,
+      "phase": "KEPLER_COAST",
+      "v_kms": 36.9,
+      "v_kepler": 36.9,
+      "day": 116.2
+    },
+    {
+      "x_au": 0.1538,
+      "y_au": -1.2846,
+      "r_au": 1.2938,
+      "phase": "KEPLER_COAST",
+      "v_kms": 34.5,
+      "v_kepler": 34.5,
+      "day": 124.1
+    },
+    {
+      "x_au": 0.2485,
+      "y_au": -1.4151,
+      "r_au": 1.4367,
+      "phase": "KEPLER_COAST",
+      "v_kms": 32.4,
+      "v_kepler": 32.4,
+      "day": 132.7
+    },
+    {
+      "x_au": 0.3578,
+      "y_au": -1.5386,
+      "r_au": 1.5797,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 30.7,
+      "day": 141.6
+    },
+    {
+      "x_au": 0.4813,
+      "y_au": -1.6541,
+      "r_au": 1.7227,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 29.1,
+      "day": 150.6
+    },
+    {
+      "x_au": 0.6184,
+      "y_au": -1.7602,
+      "r_au": 1.8656,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 27.7,
+      "day": 159.9
+    },
+    {
+      "x_au": 0.7683,
+      "y_au": -1.8559,
+      "r_au": 2.0086,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 26.5,
+      "day": 169.4
+    },
+    {
+      "x_au": 0.9304,
+      "y_au": -1.94,
+      "r_au": 2.1516,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 25.3,
+      "day": 179.1
+    },
+    {
+      "x_au": 1.1038,
+      "y_au": -2.0116,
+      "r_au": 2.2945,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 24.3,
+      "day": 189.2
+    },
+    {
+      "x_au": 1.2876,
+      "y_au": -2.0697,
+      "r_au": 2.4375,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 23.4,
+      "day": 199.5
+    },
+    {
+      "x_au": 1.4808,
+      "y_au": -2.1133,
+      "r_au": 2.5805,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 22.5,
+      "day": 210.1
+    },
+    {
+      "x_au": 1.6824,
+      "y_au": -2.1417,
+      "r_au": 2.7235,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 21.7,
+      "day": 221.0
+    },
+    {
+      "x_au": 1.8913,
+      "y_au": -2.1539,
+      "r_au": 2.8664,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 20.9,
+      "day": 232.2
+    },
+    {
+      "x_au": 2.1062,
+      "y_au": -2.1495,
+      "r_au": 3.0094,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 20.2,
+      "day": 243.7
+    },
+    {
+      "x_au": 2.326,
+      "y_au": -2.1277,
+      "r_au": 3.1524,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 19.5,
+      "day": 255.5
+    },
+    {
+      "x_au": 2.5494,
+      "y_au": -2.088,
+      "r_au": 3.2953,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 18.9,
+      "day": 267.6
+    },
+    {
+      "x_au": 2.7751,
+      "y_au": -2.03,
+      "r_au": 3.4383,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 18.3,
+      "day": 280.1
+    },
+    {
+      "x_au": 3.0017,
+      "y_au": -1.9532,
+      "r_au": 3.5813,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 17.7,
+      "day": 292.9
+    },
+    {
+      "x_au": 3.2279,
+      "y_au": -1.8576,
+      "r_au": 3.7242,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 17.2,
+      "day": 306.0
+    },
+    {
+      "x_au": 3.4522,
+      "y_au": -1.7429,
+      "r_au": 3.8672,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 16.6,
+      "day": 319.5
+    },
+    {
+      "x_au": 3.6732,
+      "y_au": -1.609,
+      "r_au": 4.0102,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 16.1,
+      "day": 333.3
+    },
+    {
+      "x_au": 3.8896,
+      "y_au": -1.456,
+      "r_au": 4.1532,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 15.7,
+      "day": 347.5
+    },
+    {
+      "x_au": 4.0998,
+      "y_au": -1.284,
+      "r_au": 4.2961,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 15.2,
+      "day": 362.0
+    },
+    {
+      "x_au": 4.3024,
+      "y_au": -1.0932,
+      "r_au": 4.4391,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 14.7,
+      "day": 376.9
+    },
+    {
+      "x_au": 4.496,
+      "y_au": -0.8841,
+      "r_au": 4.5821,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 14.3,
+      "day": 392.1
+    },
+    {
+      "x_au": 4.6791,
+      "y_au": -0.6569,
+      "r_au": 4.725,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 13.9,
+      "day": 407.7
+    },
+    {
+      "x_au": 4.8505,
+      "y_au": -0.4123,
+      "r_au": 4.868,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 13.5,
+      "day": 423.7
+    },
+    {
+      "x_au": 5.0087,
+      "y_au": -0.151,
+      "r_au": 5.011,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 13.1,
+      "day": 440.0
+    },
+    {
+      "x_au": 5.1524,
+      "y_au": 0.1265,
+      "r_au": 5.1539,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 12.7,
+      "day": 456.7
+    },
+    {
+      "x_au": 5.2803,
+      "y_au": 0.4192,
+      "r_au": 5.2969,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 12.4,
+      "day": 473.8
+    },
+    {
+      "x_au": 5.3912,
+      "y_au": 0.7262,
+      "r_au": 5.4399,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 12.0,
+      "day": 491.3
+    },
+    {
+      "x_au": 5.4839,
+      "y_au": 1.0465,
+      "r_au": 5.5828,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 11.6,
+      "day": 509.1
+    },
+    {
+      "x_au": 5.5573,
+      "y_au": 1.379,
+      "r_au": 5.7258,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 11.3,
+      "day": 527.3
+    },
+    {
+      "x_au": 5.6103,
+      "y_au": 1.7226,
+      "r_au": 5.8688,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 11.0,
+      "day": 545.9
+    },
+    {
+      "x_au": 5.6419,
+      "y_au": 2.076,
+      "r_au": 6.0118,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 10.6,
+      "day": 564.9
+    },
+    {
+      "x_au": 5.6513,
+      "y_au": 2.4378,
+      "r_au": 6.1547,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 10.3,
+      "day": 584.2
+    },
+    {
+      "x_au": 5.6377,
+      "y_au": 2.8067,
+      "r_au": 6.2977,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 10.0,
+      "day": 604.0
+    },
+    {
+      "x_au": 5.6002,
+      "y_au": 3.1813,
+      "r_au": 6.4407,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 9.7,
+      "day": 624.1
+    },
+    {
+      "x_au": 5.5382,
+      "y_au": 3.5598,
+      "r_au": 6.5836,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 9.3,
+      "day": 644.6
+    },
+    {
+      "x_au": 5.4513,
+      "y_au": 3.9409,
+      "r_au": 6.7266,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 9.0,
+      "day": 665.5
+    },
+    {
+      "x_au": 5.3389,
+      "y_au": 4.3229,
+      "r_au": 6.8696,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 8.7,
+      "day": 686.8
+    },
+    {
+      "x_au": 5.2007,
+      "y_au": 4.7041,
+      "r_au": 7.0125,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 8.4,
+      "day": 708.5
+    },
+    {
+      "x_au": 5.0365,
+      "y_au": 5.0828,
+      "r_au": 7.1555,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 8.1,
+      "day": 730.6
+    },
+    {
+      "x_au": 4.8461,
+      "y_au": 5.4574,
+      "r_au": 7.2985,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 7.8,
+      "day": 753.1
+    },
+    {
+      "x_au": 4.6296,
+      "y_au": 5.826,
+      "r_au": 7.4415,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 7.5,
+      "day": 775.9
+    },
+    {
+      "x_au": 4.387,
+      "y_au": 6.1869,
+      "r_au": 7.5844,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 7.2,
+      "day": 799.2
+    },
+    {
+      "x_au": 4.1186,
+      "y_au": 6.5383,
+      "r_au": 7.7274,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 6.9,
+      "day": 822.8
+    },
+    {
+      "x_au": 3.8246,
+      "y_au": 6.8786,
+      "r_au": 7.8704,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 6.6,
+      "day": 846.9
+    },
+    {
+      "x_au": 3.5055,
+      "y_au": 7.2059,
+      "r_au": 8.0133,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 6.3,
+      "day": 871.3
+    },
+    {
+      "x_au": 3.162,
+      "y_au": 7.5185,
+      "r_au": 8.1563,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 5.9,
+      "day": 896.2
+    },
+    {
+      "x_au": 2.7945,
+      "y_au": 7.8146,
+      "r_au": 8.2993,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 5.6,
+      "day": 921.4
+    },
+    {
+      "x_au": 2.404,
+      "y_au": 8.0927,
+      "r_au": 8.4422,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 5.3,
+      "day": 947.1
+    },
+    {
+      "x_au": 1.9913,
+      "y_au": 8.3511,
+      "r_au": 8.5852,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 4.9,
+      "day": 973.1
+    },
+    {
+      "x_au": 1.5575,
+      "y_au": 8.5881,
+      "r_au": 8.7282,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 4.6,
+      "day": 999.5
+    },
+    {
+      "x_au": 1.1037,
+      "y_au": 8.8022,
+      "r_au": 8.8712,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 4.2,
+      "day": 1026.4
+    },
+    {
+      "x_au": 0.631,
+      "y_au": 8.992,
+      "r_au": 9.0141,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 3.8,
+      "day": 1053.6
+    },
+    {
+      "x_au": 0.1409,
+      "y_au": 9.156,
+      "r_au": 9.1571,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 3.4,
+      "day": 1081.2
+    },
+    {
+      "x_au": -0.3653,
+      "y_au": 9.2929,
+      "r_au": 9.3001,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 2.9,
+      "day": 1109.3
+    },
+    {
+      "x_au": -0.886,
+      "y_au": 9.4014,
+      "r_au": 9.443,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 2.4,
+      "day": 1137.7
+    },
+    {
+      "x_au": -1.4196,
+      "y_au": 9.4803,
+      "r_au": 9.586,
+      "phase": "LAMBDA_CRUISE",
+      "v_kms": 32.4,
+      "v_kepler": 1.7,
+      "day": 1166.6
+    }
+  ]
+}

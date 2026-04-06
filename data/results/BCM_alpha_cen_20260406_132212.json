@@ -1,0 +1,227 @@
+{
+  "title": "BCM v13 Alpha Centauri Corridor Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "grid_nx": 256,
+  "grid_ny": 128,
+  "steps": 3000,
+  "results": {
+    "direct_path": {
+      "drift": 11.679175280292709,
+      "speed": 0.0038974645006231686,
+      "coherence": 0.29390848923856255,
+      "dist_to_ac": 167.67917528029267,
+      "alive": true
+    },
+    "edge_riding": {
+      "total_drift": 15.753304242548193,
+      "min_coherence": 0.26511696068339363,
+      "dist_to_ac": 169.70057526354316,
+      "alive": true,
+      "total_steps": 3000
+    },
+    "convoy": {
+      "alpha": {
+        "drift": 6.065735419341173,
+        "speed": 0.003039047612014635,
+        "coherence": 0.2314413831252909,
+        "alive": true
+      },
+      "beta": {
+        "drift": 6.192797182695712,
+        "speed": 0.0032480021725065948,
+        "coherence": 0.2265540540790584,
+        "alive": true
+      }
+    },
+    "min_resistance": {
+      "corridor": [
+        {
+          "x": 40,
+          "lambda": 0.021606,
+          "zone": "Sol well"
+        },
+        {
+          "x": 45,
+          "lambda": 0.032548,
+          "zone": "Sol well"
+        },
+        {
+          "x": 50,
+          "lambda": 0.052988,
+          "zone": "Sol well"
+        },
+        {
+          "x": 55,
+          "lambda": 0.075824,
+          "zone": "Sol well"
+        },
+        {
+          "x": 60,
+          "lambda": 0.094782,
+          "zone": "corridor"
+        },
+        {
+          "x": 65,
+          "lambda": 0.107301,
+          "zone": "VOID"
+        },
+        {
+          "x": 70,
+          "lambda": 0.114147,
+          "zone": "VOID"
+        },
+        {
+          "x": 75,
+          "lambda": 0.117376,
+          "zone": "VOID"
+        },
+        {
+          "x": 80,
+          "lambda": 0.118775,
+          "zone": "VOID"
+        },
+        {
+          "x": 85,
+          "lambda": 0.119382,
+          "zone": "VOID"
+        },
+        {
+          "x": 90,
+          "lambda": 0.11967,
+          "zone": "VOID"
+        },
+        {
+          "x": 95,
+          "lambda": 0.11982,
+          "zone": "VOID"
+        },
+        {
+          "x": 100,
+          "lambda": 0.119903,
+          "zone": "VOID"
+        },
+        {
+          "x": 105,
+          "lambda": 0.119949,
+          "zone": "VOID"
+        },
+        {
+          "x": 110,
+          "lambda": 0.119974,
+          "zone": "VOID"
+        },
+        {
+          "x": 115,
+          "lambda": 0.119987,
+          "zone": "VOID"
+        },
+        {
+          "x": 120,
+          "lambda": 0.119994,
+          "zone": "VOID"
+        },
+        {
+          "x": 125,
+          "lambda": 0.119997,
+          "zone": "VOID"
+        },
+        {
+          "x": 130,
+          "lambda": 0.119999,
+          "zone": "VOID"
+        },
+        {
+          "x": 135,
+          "lambda": 0.119999,
+          "zone": "VOID"
+        },
+        {
+          "x": 140,
+          "lambda": 0.12,
+          "zone": "VOID"
+        },
+        {
+          "x": 145,
+          "lambda": 0.12,
+          "zone": "VOID"
+        },
+        {
+          "x": 150,
+          "lambda": 0.12,
+          "zone": "VOID"
+        },
+        {
+          "x": 155,
+          "lambda": 0.12,
+          "zone": "VOID"
+        },
+        {
+          "x": 160,
+          "lambda": 0.119999,
+          "zone": "VOID"
+        },
+        {
+          "x": 165,
+          "lambda": 0.119993,
+          "zone": "VOID"
+        },
+        {
+          "x": 170,
+          "lambda": 0.119961,
+          "zone": "VOID"
+        },
+        {
+          "x": 175,
+          "lambda": 0.119825,
+          "zone": "VOID"
+        },
+        {
+          "x": 180,
+          "lambda": 0.119333,
+          "zone": "VOID"
+        },
+        {
+          "x": 185,
+          "lambda": 0.117867,
+          "zone": "VOID"
+        },
+        {
+          "x": 190,
+          "lambda": 0.114262,
+          "zone": "VOID"
+        },
+        {
+          "x": 195,
+          "lambda": 0.107024,
+          "zone": "VOID"
+        },
+        {
+          "x": 200,
+          "lambda": 0.095333,
+          "zone": "corridor"
+        },
+        {
+          "x": 205,
+          "lambda": 0.080583,
+          "zone": "AC well"
+        },
+        {
+          "x": 210,
+          "lambda": 0.06705,
+          "zone": "AC well"
+        },
+        {
+          "x": 215,
+          "lambda": 0.060208,
+          "zone": "AC well"
+        }
+      ],
+      "max_void_lambda": 0.11999994474508194,
+      "max_void_x": 150,
+      "gap_width": 146,
+      "best_y_offset": 0,
+      "best_path_max_lambda": 0.11999994474508194,
+      "direct_path_max_lambda": 0.11999994474508194
+    }
+  }
+}

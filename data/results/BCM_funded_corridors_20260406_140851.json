@@ -1,0 +1,36 @@
+{
+  "title": "BCM v13 Self-Funded Corridor Comparison",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "grid_nx": 256,
+  "grid_ny": 128,
+  "steps": 3000,
+  "pump": 0.5,
+  "results": {
+    "alpha_centauri": {
+      "label": "AC-FUNDED",
+      "pump": 0.5,
+      "total_drift": 9.5787,
+      "dist_to_target": 18.7056,
+      "gap_crossed_pct": 33.9,
+      "mean_speed": 0.00319395,
+      "peak_end": 3.4176,
+      "coherence_end": 0.7216,
+      "min_coherence": 0.7052,
+      "survived": true,
+      "steps": 3000
+    },
+    "sirius": {
+      "label": "SIR-FUNDED",
+      "pump": 0.5,
+      "total_drift": 1.5169,
+      "dist_to_target": 68.0054,
+      "gap_crossed_pct": 2.3,
+      "mean_speed": 0.00051111,
+      "peak_end": 3.9378,
+      "coherence_end": 0.7095,
+      "min_coherence": 0.7011,
+      "survived": true,
+      "steps": 3000
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "BCM v13 Rigid Body & Decay Isolation",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Eroding dune or sailing ship?",
+  "grid": 128,
+  "steps": 2000,
+  "results": {
+    "rigid_body": {
+      "total_drift": 0.27856406,
+      "mean_speed": 0.000139282029,
+      "mean_force_x": -0.002785640582,
+      "final_x": 63.721436,
+      "final_y": 64.0,
+      "steps": 2000,
+      "moved": "True"
+    },
+    "decay_isolation": {
+      "no_decay_drift": 1e-06,
+      "with_decay_drift": 10.221358,
+      "E_initial": 78.5398,
+      "E_final_no_decay": 15.718,
+      "decay_required": true
+    }
+  }
+}

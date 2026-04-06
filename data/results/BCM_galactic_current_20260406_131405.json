@@ -1,0 +1,359 @@
+{
+  "title": "BCM v13 Galactic Current & Wake Analysis",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "grid": 128,
+  "steps": 2000,
+  "results": {
+    "current_test": [
+      {
+        "direction": "TOWARD SMBH (with current)",
+        "vector": [
+          -1,
+          0
+        ],
+        "drift_px": 20.6241,
+        "displacement": [
+          -20.6241,
+          -0.0
+        ],
+        "mean_speed": 0.01031521,
+        "coherence": 0.3722
+      },
+      {
+        "direction": "AWAY from SMBH (against current)",
+        "vector": [
+          1,
+          0
+        ],
+        "drift_px": 13.504,
+        "displacement": [
+          13.504,
+          -0.0
+        ],
+        "mean_speed": 0.00675376,
+        "coherence": 0.3629
+      },
+      {
+        "direction": "PERPENDICULAR (cross current)",
+        "vector": [
+          0,
+          1
+        ],
+        "drift_px": 14.6702,
+        "displacement": [
+          -3.1954,
+          14.3179
+        ],
+        "mean_speed": 0.00735012,
+        "coherence": 0.3511
+      }
+    ],
+    "wake_formation": {
+      "samples": [
+        {
+          "step": 300,
+          "ship_x": 33,
+          "behind_sigma": 0.03146825,
+          "ahead_sigma": 0.05515187,
+          "ratio": 0.5706
+        },
+        {
+          "step": 600,
+          "ship_x": 36,
+          "behind_sigma": 0.01075713,
+          "ahead_sigma": 0.01395356,
+          "ratio": 0.7709
+        },
+        {
+          "step": 900,
+          "ship_x": 38,
+          "behind_sigma": 0.00270833,
+          "ahead_sigma": 0.00448427,
+          "ratio": 0.604
+        },
+        {
+          "step": 1200,
+          "ship_x": 41,
+          "behind_sigma": 0.00075549,
+          "ahead_sigma": 0.00128688,
+          "ratio": 0.5871
+        }
+      ],
+      "profile": [
+        {
+          "x": 0,
+          "sigma": 3e-07
+        },
+        {
+          "x": 4,
+          "sigma": 7.7e-07
+        },
+        {
+          "x": 8,
+          "sigma": 2.29e-06
+        },
+        {
+          "x": 12,
+          "sigma": 6.16e-06
+        },
+        {
+          "x": 16,
+          "sigma": 1.473e-05
+        },
+        {
+          "x": 20,
+          "sigma": 3.178e-05
+        },
+        {
+          "x": 24,
+          "sigma": 6.299e-05
+        },
+        {
+          "x": 28,
+          "sigma": 0.00011678
+        },
+        {
+          "x": 32,
+          "sigma": 0.0002057
+        },
+        {
+          "x": 36,
+          "sigma": 0.00034501
+        },
+        {
+          "x": 40,
+          "sigma": 0.00053748
+        },
+        {
+          "x": 44,
+          "sigma": 0.00072756
+        },
+        {
+          "x": 48,
+          "sigma": 0.00077719
+        },
+        {
+          "x": 52,
+          "sigma": 0.00061216
+        },
+        {
+          "x": 56,
+          "sigma": 0.00035478
+        },
+        {
+          "x": 60,
+          "sigma": 0.00015684
+        },
+        {
+          "x": 64,
+          "sigma": 5.495e-05
+        },
+        {
+          "x": 68,
+          "sigma": 1.57e-05
+        },
+        {
+          "x": 72,
+          "sigma": 3.73e-06
+        },
+        {
+          "x": 76,
+          "sigma": 7.4e-07
+        },
+        {
+          "x": 80,
+          "sigma": 1.3e-07
+        },
+        {
+          "x": 84,
+          "sigma": 2e-08
+        },
+        {
+          "x": 88,
+          "sigma": 0.0
+        },
+        {
+          "x": 92,
+          "sigma": 0.0
+        },
+        {
+          "x": 96,
+          "sigma": 0.0
+        },
+        {
+          "x": 100,
+          "sigma": 0.0
+        },
+        {
+          "x": 104,
+          "sigma": 0.0
+        },
+        {
+          "x": 108,
+          "sigma": 0.0
+        },
+        {
+          "x": 112,
+          "sigma": 1e-08
+        },
+        {
+          "x": 116,
+          "sigma": 3e-08
+        },
+        {
+          "x": 120,
+          "sigma": 8e-08
+        },
+        {
+          "x": 124,
+          "sigma": 1.9e-07
+        }
+      ]
+    },
+    "exit_vector": [
+      {
+        "angle_deg": 0,
+        "direction": [
+          1.0,
+          0.0
+        ],
+        "drift_px": 3.1074,
+        "speed": 0.00155369,
+        "coherence": 0.3956,
+        "verdict": "VIABLE"
+      },
+      {
+        "angle_deg": 45,
+        "direction": [
+          0.707,
+          0.707
+        ],
+        "drift_px": 3.0452,
+        "speed": 0.00152259,
+        "coherence": 0.3957,
+        "verdict": "VIABLE"
+      },
+      {
+        "angle_deg": 90,
+        "direction": [
+          0.0,
+          1.0
+        ],
+        "drift_px": 3.4651,
+        "speed": 0.00173257,
+        "coherence": 0.3931,
+        "verdict": "VIABLE"
+      },
+      {
+        "angle_deg": 135,
+        "direction": [
+          -0.707,
+          0.707
+        ],
+        "drift_px": 8.7314,
+        "speed": 0.00436572,
+        "coherence": 0.3611,
+        "verdict": "OPTIMAL"
+      },
+      {
+        "angle_deg": 180,
+        "direction": [
+          -1.0,
+          0.0
+        ],
+        "drift_px": 13.6197,
+        "speed": 0.00680986,
+        "coherence": 0.3671,
+        "verdict": "OPTIMAL"
+      },
+      {
+        "angle_deg": 225,
+        "direction": [
+          -0.707,
+          -0.707
+        ],
+        "drift_px": 8.7314,
+        "speed": 0.00436572,
+        "coherence": 0.3611,
+        "verdict": "OPTIMAL"
+      },
+      {
+        "angle_deg": 270,
+        "direction": [
+          -0.0,
+          -1.0
+        ],
+        "drift_px": 3.4653,
+        "speed": 0.00173264,
+        "coherence": 0.3931,
+        "verdict": "VIABLE"
+      },
+      {
+        "angle_deg": 315,
+        "direction": [
+          0.707,
+          -0.707
+        ],
+        "drift_px": 3.0452,
+        "speed": 0.0015226,
+        "coherence": 0.3957,
+        "verdict": "VIABLE"
+      }
+    ],
+    "wake_relaxation": {
+      "samples": [
+        {
+          "step": 0,
+          "wake_energy": 4.30345176,
+          "ratio_of_initial": 0.995905
+        },
+        {
+          "step": 200,
+          "wake_energy": 1.89791699,
+          "ratio_of_initial": 0.439216
+        },
+        {
+          "step": 400,
+          "wake_energy": 0.83958632,
+          "ratio_of_initial": 0.194297
+        },
+        {
+          "step": 600,
+          "wake_energy": 0.3721941,
+          "ratio_of_initial": 0.086133
+        },
+        {
+          "step": 800,
+          "wake_energy": 0.16525222,
+          "ratio_of_initial": 0.038243
+        },
+        {
+          "step": 1000,
+          "wake_energy": 0.07345794,
+          "ratio_of_initial": 0.017
+        },
+        {
+          "step": 1200,
+          "wake_energy": 0.03268366,
+          "ratio_of_initial": 0.007564
+        },
+        {
+          "step": 1400,
+          "wake_energy": 0.01455257,
+          "ratio_of_initial": 0.003368
+        },
+        {
+          "step": 1600,
+          "wake_energy": 0.00648338,
+          "ratio_of_initial": 0.0015
+        },
+        {
+          "step": 1800,
+          "wake_energy": 0.0028898,
+          "ratio_of_initial": 0.000669
+        }
+      ],
+      "initial_energy": 4.321147534724485
+    }
+  }
+}

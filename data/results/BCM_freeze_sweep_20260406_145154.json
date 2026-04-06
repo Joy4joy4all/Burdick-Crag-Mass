@@ -1,0 +1,163 @@
+{
+  "title": "BCM v13 Freeze Energy Gradient Sweep",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "ChatGPT deciding test \u2014 geometric vs energy transport",
+  "grid": 128,
+  "steps": 2000,
+  "results": [
+    {
+      "label": "FROZEN_dl=0.0",
+      "delta_lam": 0.0,
+      "normalized": true,
+      "total_drift": 1e-06,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.2201,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FROZEN_dl=0.005",
+      "delta_lam": 0.005,
+      "normalized": true,
+      "total_drift": 2.881204,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.225,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FROZEN_dl=0.01",
+      "delta_lam": 0.01,
+      "normalized": true,
+      "total_drift": 5.704813,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.2305,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FROZEN_dl=0.025",
+      "delta_lam": 0.025,
+      "normalized": true,
+      "total_drift": 13.460807,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.2573,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FROZEN_dl=0.05",
+      "delta_lam": 0.05,
+      "normalized": true,
+      "total_drift": 23.813003,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.3027,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FROZEN_dl=0.075",
+      "delta_lam": 0.075,
+      "normalized": true,
+      "total_drift": 32.028844,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.3231,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FROZEN_dl=0.1",
+      "delta_lam": 0.1,
+      "normalized": true,
+      "total_drift": 38.492008,
+      "E_ref": 78.539816,
+      "E_final": 78.539816,
+      "E_cv": 0.0,
+      "coherence_end": 0.3475,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.0",
+      "delta_lam": 0.0,
+      "normalized": false,
+      "total_drift": 1e-06,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.26187304,
+      "coherence_end": 0.2201,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.005",
+      "delta_lam": 0.005,
+      "normalized": false,
+      "total_drift": 2.881204,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.26171208,
+      "coherence_end": 0.225,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.01",
+      "delta_lam": 0.01,
+      "normalized": false,
+      "total_drift": 5.704813,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.26123006,
+      "coherence_end": 0.2305,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.025",
+      "delta_lam": 0.025,
+      "normalized": false,
+      "total_drift": 13.460807,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.25789055,
+      "coherence_end": 0.2573,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.05",
+      "delta_lam": 0.05,
+      "normalized": false,
+      "total_drift": 23.813003,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.24642466,
+      "coherence_end": 0.3027,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.075",
+      "delta_lam": 0.075,
+      "normalized": false,
+      "total_drift": 32.028844,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.22870479,
+      "coherence_end": 0.3231,
+      "steps_completed": 2000
+    },
+    {
+      "label": "FREE_dl=0.1",
+      "delta_lam": 0.1,
+      "normalized": false,
+      "total_drift": 38.492008,
+      "E_ref": 78.539816,
+      "E_final": 0.0,
+      "E_cv": 3.20574959,
+      "coherence_end": 0.3475,
+      "steps_completed": 2000
+    }
+  ]
+}
