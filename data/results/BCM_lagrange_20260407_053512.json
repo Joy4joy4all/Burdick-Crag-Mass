@@ -1,0 +1,134 @@
+{
+  "title": "BCM v14 Lagrange Equilibrium Scanner",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Break Kill Test 1 \u2014 find persistent structure",
+  "grid": 128,
+  "steps": 1500,
+  "results": {
+    "baseline_scan": {
+      "n_candidates": 1,
+      "stable_count": 0,
+      "candidates": [
+        {
+          "x": 61,
+          "y": 64,
+          "speed": 0.0005527033307257202,
+          "sigma": 0.38739645785994864
+        }
+      ]
+    },
+    "pumps_off_scan": {
+      "n_candidates": 0,
+      "E_remaining": 2.7431689143,
+      "candidates": [],
+      "persisted": false
+    },
+    "memory_term": {
+      "alpha": 0.3,
+      "retention_memory": 0.00024199,
+      "retention_baseline": 2.172e-05,
+      "drift_memory": 3.225182,
+      "drift_baseline": 2.510083,
+      "avg_off_memory": 2.599e-06,
+      "avg_off_baseline": 1.817e-07
+    },
+    "alpha_sweep": [
+      {
+        "alpha": 0.0,
+        "retention": 4.37e-06,
+        "avg_off": 3.6585e-08,
+        "drift": 2.509898,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.05,
+        "retention": 8.08e-06,
+        "avg_off": 7.004e-08,
+        "drift": 2.60131,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.1,
+        "retention": 1.714e-05,
+        "avg_off": 1.54301e-07,
+        "drift": 2.701386,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.15,
+        "retention": 3.28e-05,
+        "avg_off": 3.07336e-07,
+        "drift": 2.811573,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.2,
+        "retention": 5.677e-05,
+        "avg_off": 5.55092e-07,
+        "drift": 2.933676,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.3,
+        "retention": 0.00014049,
+        "avg_off": 1.50893e-06,
+        "drift": 3.223421,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.4,
+        "retention": 0.00030551,
+        "avg_off": 3.661127e-06,
+        "drift": 3.59843,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.5,
+        "retention": 0.00064466,
+        "avg_off": 8.813165e-06,
+        "drift": 4.109243,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.6,
+        "retention": 0.00143756,
+        "avg_off": 2.3185548e-05,
+        "drift": 4.859398,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.7,
+        "retention": 0.00382062,
+        "avg_off": 7.6871487e-05,
+        "drift": 6.105229,
+        "stable": true,
+        "status": "LOST"
+      },
+      {
+        "alpha": 0.8,
+        "retention": 0.01718262,
+        "avg_off": 0.000480251795,
+        "drift": 8.817145,
+        "stable": true,
+        "status": "RETAINED"
+      },
+      {
+        "alpha": 0.9,
+        "retention": 2.45530473,
+        "avg_off": 0.126113402793,
+        "drift": 0,
+        "stable": false,
+        "status": "BLOWUP"
+      }
+    ]
+  }
+}

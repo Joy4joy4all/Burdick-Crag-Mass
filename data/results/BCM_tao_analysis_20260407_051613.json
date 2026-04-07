@@ -1,0 +1,2922 @@
+{
+  "title": "BCM v14 Tao Number-Theoretic Analysis",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "WTcubed \u2014 weak/strong ratio classification, critical boundaries, Bootes Void stress test, rational vs irrational transport structure",
+  "grid": 128,
+  "steps": 1500,
+  "results": {
+    "fine_sweep": [
+      {
+        "label": "R=0.000",
+        "ratio": 0.0,
+        "pump_A": 0.5,
+        "pump_B": 0.0,
+        "drift": 2e-06,
+        "speed": 1.5e-09,
+        "peak": 3.4077,
+        "coherence": 0.7149,
+        "E_final": 814.7185,
+        "survived": "True",
+        "efficiency": 0,
+        "class": "NULL",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.010",
+        "ratio": 0.01,
+        "pump_A": 0.5,
+        "pump_B": 0.005,
+        "drift": 0.726181,
+        "speed": 0.0004841206,
+        "peak": 3.3995,
+        "coherence": 0.7195,
+        "E_final": 815.4452,
+        "survived": "True",
+        "efficiency": 145.2362,
+        "class": "MARGINAL",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.020",
+        "ratio": 0.02,
+        "pump_A": 0.5,
+        "pump_B": 0.01,
+        "drift": 1.445202,
+        "speed": 0.0009634678,
+        "peak": 3.3975,
+        "coherence": 0.709,
+        "E_final": 816.118,
+        "survived": "True",
+        "efficiency": 144.5202,
+        "class": "WEAK",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.050",
+        "ratio": 0.05,
+        "pump_A": 0.5,
+        "pump_B": 0.025,
+        "drift": 3.560417,
+        "speed": 0.0023736115,
+        "peak": 3.395,
+        "coherence": 0.6972,
+        "E_final": 817.8777,
+        "survived": "True",
+        "efficiency": 142.4167,
+        "class": "WEAK",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.080",
+        "ratio": 0.08,
+        "pump_A": 0.5,
+        "pump_B": 0.04,
+        "drift": 5.615076,
+        "speed": 0.0037433842,
+        "peak": 3.392,
+        "coherence": 0.6881,
+        "E_final": 819.381,
+        "survived": "True",
+        "efficiency": 140.3769,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.100",
+        "ratio": 0.1,
+        "pump_A": 0.5,
+        "pump_B": 0.05,
+        "drift": 6.952548,
+        "speed": 0.0046350318,
+        "peak": 3.3724,
+        "coherence": 0.6726,
+        "E_final": 820.3196,
+        "survived": "True",
+        "efficiency": 139.051,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.125",
+        "ratio": 0.125,
+        "pump_A": 0.5,
+        "pump_B": 0.0625,
+        "drift": 8.589388,
+        "speed": 0.0057262588,
+        "peak": 3.3825,
+        "coherence": 0.6692,
+        "E_final": 821.4976,
+        "survived": "True",
+        "efficiency": 137.4302,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.150",
+        "ratio": 0.15,
+        "pump_A": 0.5,
+        "pump_B": 0.075,
+        "drift": 10.188662,
+        "speed": 0.0067924414,
+        "peak": 3.3569,
+        "coherence": 0.6611,
+        "E_final": 822.7528,
+        "survived": "True",
+        "efficiency": 135.8488,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.200",
+        "ratio": 0.2,
+        "pump_A": 0.5,
+        "pump_B": 0.1,
+        "drift": 13.279844,
+        "speed": 0.0088532291,
+        "peak": 3.3344,
+        "coherence": 0.6401,
+        "E_final": 825.7631,
+        "survived": "True",
+        "efficiency": 132.7984,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.250",
+        "ratio": 0.25,
+        "pump_A": 0.5,
+        "pump_B": 0.125,
+        "drift": 16.236131,
+        "speed": 0.0108240872,
+        "peak": 3.3199,
+        "coherence": 0.621,
+        "E_final": 829.8035,
+        "survived": "True",
+        "efficiency": 129.889,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.300",
+        "ratio": 0.3,
+        "pump_A": 0.5,
+        "pump_B": 0.15,
+        "drift": 19.066639,
+        "speed": 0.0127110925,
+        "peak": 3.2969,
+        "coherence": 0.5953,
+        "E_final": 835.2027,
+        "survived": "True",
+        "efficiency": 127.1109,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.350",
+        "ratio": 0.35,
+        "pump_A": 0.5,
+        "pump_B": 0.175,
+        "drift": 21.779664,
+        "speed": 0.0145197762,
+        "peak": 3.2527,
+        "coherence": 0.5839,
+        "E_final": 842.1829,
+        "survived": "True",
+        "efficiency": 124.4552,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.400",
+        "ratio": 0.4,
+        "pump_A": 0.5,
+        "pump_B": 0.2,
+        "drift": 24.382777,
+        "speed": 0.0162551844,
+        "peak": 3.2429,
+        "coherence": 0.5645,
+        "E_final": 850.881,
+        "survived": "True",
+        "efficiency": 121.9139,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.500",
+        "ratio": 0.5,
+        "pump_A": 0.5,
+        "pump_B": 0.25,
+        "drift": 29.286362,
+        "speed": 0.0195242412,
+        "peak": 3.1849,
+        "coherence": 0.5369,
+        "E_final": 873.672,
+        "survived": "True",
+        "efficiency": 117.1454,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.600",
+        "ratio": 0.6,
+        "pump_A": 0.5,
+        "pump_B": 0.3,
+        "drift": 33.826147,
+        "speed": 0.0225507645,
+        "peak": 3.1478,
+        "coherence": 0.5124,
+        "E_final": 903.6694,
+        "survived": "True",
+        "efficiency": 112.7538,
+        "class": "STRONG",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.700",
+        "ratio": 0.7,
+        "pump_A": 0.5,
+        "pump_B": 0.35,
+        "drift": 38.043357,
+        "speed": 0.025362238,
+        "peak": 3.1102,
+        "coherence": 0.481,
+        "E_final": 940.5941,
+        "survived": "True",
+        "efficiency": 108.6953,
+        "class": "WEAK",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.800",
+        "ratio": 0.8,
+        "pump_A": 0.5,
+        "pump_B": 0.4,
+        "drift": 41.973102,
+        "speed": 0.0279820683,
+        "peak": 3.0811,
+        "coherence": 0.4626,
+        "E_final": 984.0266,
+        "survived": "True",
+        "efficiency": 104.9328,
+        "class": "WEAK",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      },
+      {
+        "label": "R=0.900",
+        "ratio": 0.9,
+        "pump_A": 0.5,
+        "pump_B": 0.45,
+        "drift": 45.645481,
+        "speed": 0.0304303205,
+        "peak": 3.0459,
+        "coherence": 0.4563,
+        "E_final": 1033.5235,
+        "survived": "True",
+        "efficiency": 101.4344,
+        "class": "WEAK",
+        "_elasticity_data": [
+          {
+            "ratio_from": 0.01,
+            "ratio_to": 0.02,
+            "elasticity": 0.99014,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.02,
+            "ratio_to": 0.05,
+            "elasticity": 0.975741,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.05,
+            "ratio_to": 0.08,
+            "elasticity": 0.961806,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.08,
+            "ratio_to": 0.1,
+            "elasticity": 0.952772,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.1,
+            "ratio_to": 0.125,
+            "elasticity": 0.941721,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.125,
+            "ratio_to": 0.15,
+            "elasticity": 0.930959,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.15,
+            "ratio_to": 0.2,
+            "elasticity": 0.910183,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.2,
+            "ratio_to": 0.25,
+            "elasticity": 0.890458,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.25,
+            "ratio_to": 0.3,
+            "elasticity": 0.871669,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.3,
+            "ratio_to": 0.35,
+            "elasticity": 0.85375,
+            "regime": "LINEAR",
+            "invariant": true
+          },
+          {
+            "ratio_from": 0.35,
+            "ratio_to": 0.4,
+            "elasticity": 0.836642,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.4,
+            "ratio_to": 0.5,
+            "elasticity": 0.804434,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.5,
+            "ratio_to": 0.6,
+            "elasticity": 0.775068,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.6,
+            "ratio_to": 0.7,
+            "elasticity": 0.748038,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.7,
+            "ratio_to": 0.8,
+            "elasticity": 0.723075,
+            "regime": "INELASTIC",
+            "invariant": false
+          },
+          {
+            "ratio_from": 0.8,
+            "ratio_to": 0.9,
+            "elasticity": 0.699949,
+            "regime": "INELASTIC",
+            "invariant": false
+          }
+        ]
+      }
+    ],
+    "critical_boundary": {
+      "results": [
+        {
+          "label": "VL=0.01",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 3.607632,
+          "speed": 0.002405088,
+          "peak": 10.9573,
+          "coherence": 0.4839,
+          "E_final": 13706.3242,
+          "survived": "True",
+          "void_lambda": 0.01
+        },
+        {
+          "label": "VL=0.02",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 4.034979,
+          "speed": 0.002689986,
+          "peak": 8.8108,
+          "coherence": 0.5089,
+          "E_final": 8057.1105,
+          "survived": "True",
+          "void_lambda": 0.02
+        },
+        {
+          "label": "VL=0.03",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 4.506482,
+          "speed": 0.0030043212,
+          "peak": 7.3383,
+          "coherence": 0.5422,
+          "E_final": 5142.6441,
+          "survived": "True",
+          "void_lambda": 0.03
+        },
+        {
+          "label": "VL=0.05",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 5.559589,
+          "speed": 0.0037063928,
+          "peak": 5.4765,
+          "coherence": 0.5926,
+          "E_final": 2536.1128,
+          "survived": "True",
+          "void_lambda": 0.05
+        },
+        {
+          "label": "VL=0.08",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 7.330362,
+          "speed": 0.0048869078,
+          "peak": 3.9823,
+          "coherence": 0.6459,
+          "E_final": 1197.6469,
+          "survived": "True",
+          "void_lambda": 0.08
+        },
+        {
+          "label": "VL=0.10",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 8.589388,
+          "speed": 0.0057262588,
+          "peak": 3.3825,
+          "coherence": 0.6692,
+          "E_final": 821.4976,
+          "survived": "True",
+          "void_lambda": 0.1
+        },
+        {
+          "label": "VL=0.12",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 9.887576,
+          "speed": 0.0065917171,
+          "peak": 2.9367,
+          "coherence": 0.686,
+          "E_final": 599.3305,
+          "survived": "True",
+          "void_lambda": 0.12
+        },
+        {
+          "label": "VL=0.15",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 11.884232,
+          "speed": 0.0079228214,
+          "peak": 2.4632,
+          "coherence": 0.7039,
+          "E_final": 404.2233,
+          "survived": "True",
+          "void_lambda": 0.15
+        },
+        {
+          "label": "VL=0.20",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 15.295197,
+          "speed": 0.0101967983,
+          "peak": 1.9405,
+          "coherence": 0.7214,
+          "E_final": 240.3884,
+          "survived": "True",
+          "void_lambda": 0.2
+        },
+        {
+          "label": "VL=0.25",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 18.770065,
+          "speed": 0.0125133765,
+          "peak": 1.6096,
+          "coherence": 0.7378,
+          "E_final": 159.2398,
+          "survived": "True",
+          "void_lambda": 0.25
+        },
+        {
+          "label": "VL=0.30",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 22.285407,
+          "speed": 0.0148569383,
+          "peak": 1.3648,
+          "coherence": 0.7457,
+          "E_final": 113.1315,
+          "survived": "True",
+          "void_lambda": 0.3
+        },
+        {
+          "label": "VL=0.40",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 29.392524,
+          "speed": 0.0195950158,
+          "peak": 1.0546,
+          "coherence": 0.7546,
+          "E_final": 65.3529,
+          "survived": "True",
+          "void_lambda": 0.4
+        },
+        {
+          "label": "VL=0.50",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 36.563866,
+          "speed": 0.0243759105,
+          "peak": 0.8595,
+          "coherence": 0.7597,
+          "E_final": 42.3754,
+          "survived": "True",
+          "void_lambda": 0.5
+        },
+        {
+          "label": "VL=0.60",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 43.775938,
+          "speed": 0.0291839585,
+          "peak": 0.7244,
+          "coherence": 0.7689,
+          "E_final": 29.5991,
+          "survived": "True",
+          "void_lambda": 0.6
+        },
+        {
+          "label": "VL=0.80",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 58.276931,
+          "speed": 0.0388512875,
+          "peak": 0.5454,
+          "coherence": 0.7739,
+          "E_final": 16.652,
+          "survived": "True",
+          "void_lambda": 0.8
+        },
+        {
+          "label": "VL=1.00",
+          "ratio": 0.125,
+          "pump_A": 0.5,
+          "pump_B": 0.0625,
+          "drift": 69.219964,
+          "speed": 0.046146643,
+          "peak": 0.4472,
+          "coherence": 0.8053,
+          "E_final": 10.7485,
+          "survived": "True",
+          "void_lambda": 1.0
+        }
+      ],
+      "boundary": null
+    },
+    "bootes_void": [
+      {
+        "label": "BOO_0.3_0.125",
+        "ratio": 0.125,
+        "pump_A": 0.5,
+        "pump_B": 0.0625,
+        "drift": 22.285407,
+        "speed": 0.0148569383,
+        "peak": 1.3648,
+        "coherence": 0.7457,
+        "E_final": 113.1315,
+        "survived": "True",
+        "void_lambda": 0.3
+      },
+      {
+        "label": "BOO_0.3_0.25",
+        "ratio": 0.25,
+        "pump_A": 0.5,
+        "pump_B": 0.125,
+        "drift": 41.939057,
+        "speed": 0.0279593712,
+        "peak": 1.3235,
+        "coherence": 0.6715,
+        "E_final": 112.1867,
+        "survived": "True",
+        "void_lambda": 0.3
+      },
+      {
+        "label": "BOO_0.3_0.5",
+        "ratio": 0.5,
+        "pump_A": 0.5,
+        "pump_B": 0.25,
+        "drift": 68.443616,
+        "speed": 0.0456290771,
+        "peak": 1.3676,
+        "coherence": 0.6512,
+        "E_final": 124.1532,
+        "survived": "True",
+        "void_lambda": 0.3
+      },
+      {
+        "label": "BOO_0.3_0.75",
+        "ratio": 0.75,
+        "pump_A": 0.5,
+        "pump_B": 0.375,
+        "drift": 68.865139,
+        "speed": 0.0459100924,
+        "peak": 1.3923,
+        "coherence": 0.6274,
+        "E_final": 138.2273,
+        "survived": "True",
+        "void_lambda": 0.3
+      },
+      {
+        "label": "BOO_0.5_0.125",
+        "ratio": 0.125,
+        "pump_A": 0.5,
+        "pump_B": 0.0625,
+        "drift": 36.563866,
+        "speed": 0.0243759105,
+        "peak": 0.8595,
+        "coherence": 0.7597,
+        "E_final": 42.3754,
+        "survived": "True",
+        "void_lambda": 0.5
+      },
+      {
+        "label": "BOO_0.5_0.25",
+        "ratio": 0.25,
+        "pump_A": 0.5,
+        "pump_B": 0.125,
+        "drift": 67.328504,
+        "speed": 0.0448856692,
+        "peak": 0.8434,
+        "coherence": 0.716,
+        "E_final": 42.7008,
+        "survived": "True",
+        "void_lambda": 0.5
+      },
+      {
+        "label": "BOO_0.5_0.5",
+        "ratio": 0.5,
+        "pump_A": 0.5,
+        "pump_B": 0.25,
+        "drift": 69.998385,
+        "speed": 0.0466655897,
+        "peak": 0.8765,
+        "coherence": 0.7102,
+        "E_final": 46.0272,
+        "survived": "True",
+        "void_lambda": 0.5
+      },
+      {
+        "label": "BOO_0.5_0.75",
+        "ratio": 0.75,
+        "pump_A": 0.5,
+        "pump_B": 0.375,
+        "drift": 70.013441,
+        "speed": 0.046675627,
+        "peak": 0.8765,
+        "coherence": 0.6666,
+        "E_final": 49.6546,
+        "survived": "True",
+        "void_lambda": 0.5
+      },
+      {
+        "label": "BOO_0.8_0.125",
+        "ratio": 0.125,
+        "pump_A": 0.5,
+        "pump_B": 0.0625,
+        "drift": 58.276931,
+        "speed": 0.0388512875,
+        "peak": 0.5454,
+        "coherence": 0.7739,
+        "E_final": 16.652,
+        "survived": "True",
+        "void_lambda": 0.8
+      },
+      {
+        "label": "BOO_0.8_0.25",
+        "ratio": 0.25,
+        "pump_A": 0.5,
+        "pump_B": 0.125,
+        "drift": 71.01819,
+        "speed": 0.0473454598,
+        "peak": 0.5594,
+        "coherence": 0.7867,
+        "E_final": 17.1075,
+        "survived": "True",
+        "void_lambda": 0.8
+      },
+      {
+        "label": "BOO_0.8_0.5",
+        "ratio": 0.5,
+        "pump_A": 0.5,
+        "pump_B": 0.25,
+        "drift": 71.145905,
+        "speed": 0.0474306035,
+        "peak": 0.5591,
+        "coherence": 0.757,
+        "E_final": 17.6953,
+        "survived": "True",
+        "void_lambda": 0.8
+      },
+      {
+        "label": "BOO_0.8_0.75",
+        "ratio": 0.75,
+        "pump_A": 0.5,
+        "pump_B": 0.375,
+        "drift": 71.170385,
+        "speed": 0.0474469234,
+        "peak": 0.559,
+        "coherence": 0.7215,
+        "E_final": 18.6135,
+        "survived": "True",
+        "void_lambda": 0.8
+      },
+      {
+        "label": "BOO_1.0_0.125",
+        "ratio": 0.125,
+        "pump_A": 0.5,
+        "pump_B": 0.0625,
+        "drift": 69.219964,
+        "speed": 0.046146643,
+        "peak": 0.4472,
+        "coherence": 0.8053,
+        "E_final": 10.7485,
+        "survived": "True",
+        "void_lambda": 1.0
+      },
+      {
+        "label": "BOO_1.0_0.25",
+        "ratio": 0.25,
+        "pump_A": 0.5,
+        "pump_B": 0.125,
+        "drift": 71.60599,
+        "speed": 0.0477373266,
+        "peak": 0.4466,
+        "coherence": 0.8048,
+        "E_final": 10.8348,
+        "survived": "True",
+        "void_lambda": 1.0
+      },
+      {
+        "label": "BOO_1.0_0.5",
+        "ratio": 0.5,
+        "pump_A": 0.5,
+        "pump_B": 0.25,
+        "drift": 71.720486,
+        "speed": 0.0478136574,
+        "peak": 0.4476,
+        "coherence": 0.7745,
+        "E_final": 11.122,
+        "survived": "True",
+        "void_lambda": 1.0
+      },
+      {
+        "label": "BOO_1.0_0.75",
+        "ratio": 0.75,
+        "pump_A": 0.5,
+        "pump_B": 0.375,
+        "drift": 71.758992,
+        "speed": 0.0478393279,
+        "peak": 0.4479,
+        "coherence": 0.7443,
+        "E_final": 11.557,
+        "survived": "True",
+        "void_lambda": 1.0
+      }
+    ],
+    "rational_structure": [
+      {
+        "label": "1/2 (simple)",
+        "ratio": 0.5,
+        "pump_A": 0.5,
+        "pump_B": 0.25,
+        "drift": 29.286362,
+        "speed": 0.0195242412,
+        "peak": 3.1849,
+        "coherence": 0.5369,
+        "E_final": 873.672,
+        "survived": "True",
+        "efficiency": 117.1454
+      },
+      {
+        "label": "1/3 (simple)",
+        "ratio": 0.333333,
+        "pump_A": 0.5,
+        "pump_B": 0.166667,
+        "drift": 20.887895,
+        "speed": 0.0139252632,
+        "peak": 3.2703,
+        "coherence": 0.588,
+        "E_final": 839.6705,
+        "survived": "True",
+        "efficiency": 125.3274
+      },
+      {
+        "label": "1/4 (simple)",
+        "ratio": 0.25,
+        "pump_A": 0.5,
+        "pump_B": 0.125,
+        "drift": 16.236131,
+        "speed": 0.0108240872,
+        "peak": 3.3199,
+        "coherence": 0.621,
+        "E_final": 829.8035,
+        "survived": "True",
+        "efficiency": 129.889
+      },
+      {
+        "label": "1/5 (simple)",
+        "ratio": 0.2,
+        "pump_A": 0.5,
+        "pump_B": 0.1,
+        "drift": 13.279844,
+        "speed": 0.0088532291,
+        "peak": 3.3344,
+        "coherence": 0.6401,
+        "E_final": 825.7631,
+        "survived": "True",
+        "efficiency": 132.7984
+      },
+      {
+        "label": "1/7 (prime denom)",
+        "ratio": 0.142857,
+        "pump_A": 0.5,
+        "pump_B": 0.071429,
+        "drift": 9.73548,
+        "speed": 0.0064903201,
+        "peak": 3.3746,
+        "coherence": 0.6656,
+        "E_final": 822.3821,
+        "survived": "True",
+        "efficiency": 136.2967
+      },
+      {
+        "label": "1/8 (power of 2)",
+        "ratio": 0.125,
+        "pump_A": 0.5,
+        "pump_B": 0.0625,
+        "drift": 8.589388,
+        "speed": 0.0057262588,
+        "peak": 3.3825,
+        "coherence": 0.6692,
+        "E_final": 821.4976,
+        "survived": "True",
+        "efficiency": 137.4302
+      },
+      {
+        "label": "1/11 (prime denom)",
+        "ratio": 0.090909,
+        "pump_A": 0.5,
+        "pump_B": 0.045455,
+        "drift": 6.347744,
+        "speed": 0.0042318293,
+        "peak": 3.3937,
+        "coherence": 0.6828,
+        "E_final": 819.8955,
+        "survived": "True",
+        "efficiency": 139.6504
+      },
+      {
+        "label": "1/13 (prime denom)",
+        "ratio": 0.076923,
+        "pump_A": 0.5,
+        "pump_B": 0.038462,
+        "drift": 5.407049,
+        "speed": 0.0036046993,
+        "peak": 3.3975,
+        "coherence": 0.6891,
+        "E_final": 819.2339,
+        "survived": "True",
+        "efficiency": 140.5833
+      },
+      {
+        "label": "2/7 (composite)",
+        "ratio": 0.285714,
+        "pump_A": 0.5,
+        "pump_B": 0.142857,
+        "drift": 18.270259,
+        "speed": 0.0121801724,
+        "peak": 3.3031,
+        "coherence": 0.6063,
+        "E_final": 833.5067,
+        "survived": "True",
+        "efficiency": 127.8918
+      },
+      {
+        "label": "3/8 (composite)",
+        "ratio": 0.375,
+        "pump_A": 0.5,
+        "pump_B": 0.1875,
+        "drift": 23.094513,
+        "speed": 0.0153963419,
+        "peak": 3.2519,
+        "coherence": 0.5715,
+        "E_final": 846.3114,
+        "survived": "True",
+        "efficiency": 123.1707
+      },
+      {
+        "label": "1/e (transcendental)",
+        "ratio": 0.367879,
+        "pump_A": 0.5,
+        "pump_B": 0.18394,
+        "drift": 22.72276,
+        "speed": 0.0151485067,
+        "peak": 3.2495,
+        "coherence": 0.5796,
+        "E_final": 845.091,
+        "survived": "True",
+        "efficiency": 123.5337
+      },
+      {
+        "label": "1/pi (transcendental)",
+        "ratio": 0.31831,
+        "pump_A": 0.5,
+        "pump_B": 0.159155,
+        "drift": 20.073361,
+        "speed": 0.0133822409,
+        "peak": 3.2862,
+        "coherence": 0.5909,
+        "E_final": 837.5665,
+        "survived": "True",
+        "efficiency": 126.1246
+      },
+      {
+        "label": "phi/2 (golden)",
+        "ratio": 0.309017,
+        "pump_A": 0.5,
+        "pump_B": 0.154508,
+        "drift": 19.564359,
+        "speed": 0.0130429061,
+        "peak": 3.2813,
+        "coherence": 0.5938,
+        "E_final": 836.3397,
+        "survived": "True",
+        "efficiency": 126.6232
+      },
+      {
+        "label": "1/sqrt2 (algebraic)",
+        "ratio": 0.707107,
+        "pump_A": 0.5,
+        "pump_B": 0.353553,
+        "drift": 38.331743,
+        "speed": 0.0255544956,
+        "peak": 3.0999,
+        "coherence": 0.4862,
+        "E_final": 943.4712,
+        "survived": "True",
+        "efficiency": 108.4185
+      }
+    ]
+  }
+}

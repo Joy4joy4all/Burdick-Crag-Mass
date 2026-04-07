@@ -1,0 +1,477 @@
+{
+  "title": "BCM v14 Dual Pump Stability & Transport Matrix",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Define safe operating envelope for dual pump craft",
+  "grid": 128,
+  "steps": 1200,
+  "results": {
+    "phase_A": [
+      {
+        "stable": true,
+        "alpha": 0.7,
+        "avg_on": 0.020120148281,
+        "avg_off": 7.6871487e-05,
+        "retention": 0.00382062,
+        "drift": 6.105229,
+        "half_life": 3,
+        "transport_J": 0.06918434,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.71,
+        "avg_on": 0.020664743055,
+        "avg_off": 8.8645128e-05,
+        "retention": 0.00428968,
+        "drift": 6.279203,
+        "half_life": 3,
+        "transport_J": 0.07978061,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.72,
+        "avg_on": 0.02124712584,
+        "avg_off": 0.000102835706,
+        "retention": 0.00483998,
+        "drift": 6.46669,
+        "half_life": 3,
+        "transport_J": 0.09255214,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.73,
+        "avg_on": 0.021871505766,
+        "avg_off": 0.00012010287,
+        "retention": 0.00549129,
+        "drift": 6.669544,
+        "half_life": 3,
+        "transport_J": 0.10809258,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.74,
+        "avg_on": 0.022542742972,
+        "avg_off": 0.0001413414,
+        "retention": 0.00626993,
+        "drift": 6.890029,
+        "half_life": 3,
+        "transport_J": 0.12720726,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.75,
+        "avg_on": 0.023266479853,
+        "avg_off": 0.000167789053,
+        "retention": 0.00721162,
+        "drift": 7.130952,
+        "half_life": 3,
+        "transport_J": 0.15101015,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.76,
+        "avg_on": 0.024049305575,
+        "avg_off": 0.000201197246,
+        "retention": 0.00836603,
+        "drift": 7.395866,
+        "half_life": 3,
+        "transport_J": 0.18107752,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.77,
+        "avg_on": 0.024898964168,
+        "avg_off": 0.000244110646,
+        "retention": 0.00980405,
+        "drift": 7.689383,
+        "half_life": 3,
+        "transport_J": 0.21969958,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.78,
+        "avg_on": 0.025824620377,
+        "avg_off": 0.000300343847,
+        "retention": 0.01163014,
+        "drift": 8.017686,
+        "half_life": 4,
+        "transport_J": 0.27030946,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.79,
+        "avg_on": 0.026837202964,
+        "avg_off": 0.000375833581,
+        "retention": 0.0140042,
+        "drift": 8.389392,
+        "half_life": 4,
+        "transport_J": 0.33825022,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.8,
+        "avg_on": 0.027949853247,
+        "avg_off": 0.000480251795,
+        "retention": 0.01718262,
+        "drift": 8.817145,
+        "half_life": 4,
+        "transport_J": 0.43222662,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.81,
+        "avg_on": 0.029178518709,
+        "avg_off": 0.000630281342,
+        "retention": 0.02160087,
+        "drift": 9.320733,
+        "half_life": 4,
+        "transport_J": 0.56725321,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.82,
+        "avg_on": 0.03054274967,
+        "avg_off": 0.000856890114,
+        "retention": 0.02805543,
+        "drift": 9.933869,
+        "half_life": 5,
+        "transport_J": 0.7712011,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.83,
+        "avg_on": 0.03206678517,
+        "avg_off": 0.001223525845,
+        "retention": 0.03815555,
+        "drift": 10.72087,
+        "half_life": 5,
+        "transport_J": 1.10117326,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.84,
+        "avg_on": 0.033781058543,
+        "avg_off": 0.001880055846,
+        "retention": 0.05565414,
+        "drift": 11.825597,
+        "half_life": 5,
+        "transport_J": 1.69205026,
+        "decay_samples": 900
+      },
+      {
+        "stable": true,
+        "alpha": 0.85,
+        "avg_on": 0.035724324982,
+        "avg_off": 0.003204770744,
+        "retention": 0.08970836,
+        "drift": 0,
+        "half_life": 6,
+        "transport_J": 2.82019825,
+        "decay_samples": 880
+      },
+      {
+        "stable": true,
+        "alpha": 0.86,
+        "avg_on": 0.037946732728,
+        "avg_off": 0.007514151622,
+        "retention": 0.19801841,
+        "drift": 0,
+        "half_life": 7,
+        "transport_J": 5.38764671,
+        "decay_samples": 717
+      },
+      {
+        "stable": true,
+        "alpha": 0.87,
+        "avg_on": 0.040514364169,
+        "avg_off": 0.066551416938,
+        "retention": 1.64266226,
+        "drift": 0,
+        "half_life": 8,
+        "transport_J": 38.00085907,
+        "decay_samples": 571
+      },
+      {
+        "stable": true,
+        "alpha": 0.88,
+        "avg_on": 0.043516136438,
+        "avg_off": 0.083547710712,
+        "retention": 1.91992483,
+        "drift": 0,
+        "half_life": 9,
+        "transport_J": 48.29057679,
+        "decay_samples": 578
+      },
+      {
+        "stable": true,
+        "alpha": 0.89,
+        "avg_on": 0.04707462231,
+        "avg_off": 0.116497329632,
+        "retention": 2.47473743,
+        "drift": 0,
+        "half_life": 12,
+        "transport_J": 70.01489511,
+        "decay_samples": 601
+      },
+      {
+        "stable": true,
+        "alpha": 0.9,
+        "avg_on": 0.051363645891,
+        "avg_off": 0.126113402793,
+        "retention": 2.45530473,
+        "drift": 0,
+        "half_life": 38,
+        "transport_J": 79.95589737,
+        "decay_samples": 634
+      }
+    ],
+    "phase_B": {
+      "gamma": -0.00602393,
+      "A": 2.07e-06,
+      "half_life": Infinity,
+      "n_samples": 1426
+    },
+    "phase_C": {
+      "frequency_sweep": [
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.0
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.015662631666,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 18.795158,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.001
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.021824969406,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 26.189963,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.005
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.019244838934,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 23.093807,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.01
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.014340292146,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 17.208351,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.02
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.013297706447,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 15.957248,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.05
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.013396835191,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 16.076202,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.1
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.013449469869,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 16.139364,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.2
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.013438594917,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 16.126314,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 0.5
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.013411378105,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 16.093654,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "freq": 1.0
+        }
+      ],
+      "phase_sweep": [
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 0
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 45
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 90
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 135
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 180
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 225
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 270
+        },
+        {
+          "stable": true,
+          "alpha": 0.8,
+          "avg_on": 0.025842835526,
+          "avg_off": 0,
+          "retention": 0.0,
+          "drift": 31.011403,
+          "half_life": null,
+          "transport_J": 0,
+          "decay_samples": 0,
+          "phase_deg": 315
+        }
+      ],
+      "best_frequency": 0.0
+    },
+    "phase_D": {
+      "alpha_min": 0.78,
+      "alpha_max": null,
+      "gamma": -0.00602393,
+      "half_life": Infinity
+    }
+  }
+}

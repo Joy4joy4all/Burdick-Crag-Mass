@@ -322,15 +322,94 @@ its own asymmetry and follows it.
 
 ---
 
-## The Updated Rules
+## v14 — The Regulator (How We Control It)
 
-Everything in BCM comes from three ideas and two laws:
+### The Problem with Fixed Settings
+
+Imagine driving a truck with no transmission. One gear.
+One speed. On flat road, it works. Hit a hill — it stalls.
+Go downhill — it runs away. You need gears. You need a
+governor. You need brakes that actually stop you.
+
+The v13 binary drive had the same problem. Fixed pump
+separation. Fixed power ratio. It worked in one void
+density, but the interstellar medium isn't uniform.
+Lambda changes. Density changes. A fixed drive either
+stalls in deep void or overshoots in funded space.
+
+### Three Controls from the Mill
+
+The solution came from kraft mill operations, not physics
+textbooks. Three controls that every mill foreman knows:
+
+**1. The Telescopic Bridge (Gear Shifting)**
+
+In a mill, a hydraulic cylinder adjusts the reach of a
+press or conveyor arm. Short reach for heavy loads. Long
+reach for light work. The BCM version: the distance between
+the two pump rings adjusts with velocity. Starting up?
+Rings close together — high torque. Cruising? Rings spread
+apart — efficient. The telescope IS the transmission.
+
+**2. The Pneumatic Governor (Cruise Control)**
+
+In a mill, a pressure regulator keeps the process on
+target even when the load changes. If the digester pressure
+drops, the governor opens the valve wider. The BCM version:
+the power ratio between the rings adjusts based on how
+thick or thin the substrate is locally. Deep void? Governor
+boosts the front ring. Funded space? Governor backs off.
+
+The result: the ship maintains the SAME speed regardless
+of what the void throws at it. 76 pixels per simulation.
+Plus or minus 0.5. Across a 10x range of substrate density.
+That's what a governor does. The load changes. The output
+stays constant.
+
+**3. The Check Valve (No Backwash)**
+
+In a mill, a check valve lets fluid flow one direction but
+blocks reverse flow. You don't want your process backing up
+into the supply line. The BCM version: energy flows in the
+drive direction but gets blocked from washing back. This
+breaks the symmetry that was killing transport.
+
+Before the check valve: 2.38% of transport survived after
+the drive shut off. After: 18.14%. The check valve retains
+momentum. Not perfectly — not yet — but seven times better
+than without it.
+
+### The Ghost Test
+
+We ran three identical packets through the same void.
+Same starting position. Same lambda field. One got nothing
+(the ghost). One got fixed pumps. One got the full
+regulator.
+
+The ghost moved 0.01 pixels. Effectively zero. Dead.
+
+The fixed pump moved 51 pixels. Alive but variable.
+
+The regulated pump moved 80 pixels. Alive, fast, coherent,
+and efficient. Less energy stored, more energy spent on
+actually getting somewhere.
+
+Same field. Same start. Three outcomes. The regulator is
+the difference between dissolving, drifting, and arriving.
+
+### The Updated Rules
+
+Everything in BCM comes from three ideas, two laws, and
+three controls:
 
 1. **Space is funded.** No payment, no space.
-2. **Time is cost.** Duration is the running total of the bill.
-3. **Existence requires coherence.** Below threshold, you dissolve.
-4. **Objects move toward lower decay.** The gradient IS gravity.
-5. **Two pumps move a ship.** Asymmetric funding creates transport.
+2. **Time is cost.** Duration is the running total.
+3. **Existence requires coherence.** Below threshold, dissolve.
+4. **Objects move toward lower decay.** Gradient IS gravity.
+5. **Two pumps move a ship.** Asymmetric funding = transport.
+6. **Telescope adjusts for speed.** Variable bridge = gears.
+7. **Governor adjusts for density.** Constant output = cruise.
+8. **Check valve retains direction.** No backwash = momentum.
 
 ---
 

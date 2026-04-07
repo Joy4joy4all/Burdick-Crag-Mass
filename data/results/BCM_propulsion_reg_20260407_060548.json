@@ -1,0 +1,1374 @@
+{
+  "title": "BCM v14 Propulsion Regulator",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Telescopic bridge + governor + check valve",
+  "grid": 128,
+  "steps": 1500,
+  "results": {
+    "regulated_vs_fixed": {
+      "fixed": {
+        "label": "FIXED",
+        "stable": true,
+        "drift": 38.553513,
+        "avg_on": 0.0257023421,
+        "avg_off": 0,
+        "retention": 0.0,
+        "transport_J": 0,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.7111
+          },
+          {
+            "step": 100,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6812
+          },
+          {
+            "step": 200,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6706
+          },
+          {
+            "step": 300,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6693
+          },
+          {
+            "step": 400,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6699
+          },
+          {
+            "step": 500,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6657
+          },
+          {
+            "step": 600,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6624
+          },
+          {
+            "step": 700,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6659
+          },
+          {
+            "step": 800,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6627
+          },
+          {
+            "step": 900,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6662
+          },
+          {
+            "step": 1000,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6623
+          },
+          {
+            "step": 1100,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6664
+          },
+          {
+            "step": 1200,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6625
+          },
+          {
+            "step": 1300,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6666
+          },
+          {
+            "step": 1400,
+            "separation": 15.0,
+            "ratio": 0.125,
+            "velocity": 0.0,
+            "coherence": 0.6655
+          }
+        ]
+      },
+      "regulated": {
+        "label": "REGULATED",
+        "stable": true,
+        "drift": 76.226117,
+        "avg_on": 0.0989981002,
+        "avg_off": 0,
+        "retention": 0.0,
+        "transport_J": 0,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7238
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8352
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8508
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8557
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8451
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8523
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8494
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.851
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8552
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8497
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8486
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8518
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8552
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8497
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8486
+          }
+        ]
+      }
+    },
+    "check_valve_sweep": [
+      {
+        "label": "CV=0.0",
+        "stable": true,
+        "drift": 10.36292,
+        "avg_on": 0.0243149475,
+        "avg_off": 0.0005791901,
+        "retention": 0.02382033,
+        "transport_J": 0.637109,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7114
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.6897
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.6892
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.6811
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.6864
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.4052
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.2822
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.2168
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1762
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1484
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1282
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1123
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0984
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0897
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0834
+          }
+        ],
+        "cv": 0.0
+      },
+      {
+        "label": "CV=0.1",
+        "stable": true,
+        "drift": 38.888738,
+        "avg_on": 0.1842688706,
+        "avg_off": 0.0309195117,
+        "retention": 0.16779563,
+        "transport_J": 34.011463,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.723
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8301
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8214
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8391
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8029
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.354
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1476
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.081
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0526
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0391
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.031
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0262
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0227
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.021
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0194
+          }
+        ],
+        "cv": 0.1
+      },
+      {
+        "label": "CV=0.2",
+        "stable": true,
+        "drift": 33.671312,
+        "avg_on": 0.2149658021,
+        "avg_off": 0.0389915368,
+        "retention": 0.18138484,
+        "transport_J": 42.890691,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7214
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8544
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.85
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8421
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8316
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0481
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0153
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0096
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0075
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0071
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0071
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0069
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0071
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0072
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0074
+          }
+        ],
+        "cv": 0.2
+      },
+      {
+        "label": "CV=0.3",
+        "stable": true,
+        "drift": 34.669998,
+        "avg_on": 0.2761958329,
+        "avg_off": 0.0378257332,
+        "retention": 0.13695258,
+        "transport_J": 41.608307,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7238
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8352
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8508
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8557
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8403
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0885
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0277
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0156
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0115
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0103
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0093
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0092
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0089
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0088
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0089
+          }
+        ],
+        "cv": 0.3
+      },
+      {
+        "label": "CV=0.4",
+        "stable": true,
+        "drift": 34.479569,
+        "avg_on": 0.3990348198,
+        "avg_off": 0.0384382641,
+        "retention": 0.0963281,
+        "transport_J": 42.28209,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7211
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8701
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8481
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8769
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8412
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0871
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0237
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0143
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0106
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0091
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0088
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0086
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0084
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0084
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0086
+          }
+        ],
+        "cv": 0.4
+      },
+      {
+        "label": "CV=0.5",
+        "stable": true,
+        "drift": 34.532782,
+        "avg_on": 0.4051210249,
+        "avg_off": 0.0387673868,
+        "retention": 0.09569335,
+        "transport_J": 42.644125,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7366
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8588
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8613
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8761
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8785
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1228
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0267
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0141
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0102
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0091
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0082
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0085
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0082
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0081
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0082
+          }
+        ],
+        "cv": 0.5
+      },
+      {
+        "label": "CV=0.6",
+        "stable": true,
+        "drift": 38.16209,
+        "avg_on": 0.5561004047,
+        "avg_off": 0.0336190617,
+        "retention": 0.06045502,
+        "transport_J": 36.980968,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7418
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8751
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.883
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.9111
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8271
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.3417
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1303
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0678
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0427
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0319
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0255
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0222
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0201
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0182
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0173
+          }
+        ],
+        "cv": 0.6
+      },
+      {
+        "label": "CV=0.7",
+        "stable": true,
+        "drift": 5.826478,
+        "avg_on": 0.7816541542,
+        "avg_off": 0.0014701397,
+        "retention": 0.00188081,
+        "transport_J": 1.617154,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7485
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8656
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8418
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8938
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8915
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.5019
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.3248
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.2402
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1906
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1566
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1343
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1172
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.1065
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0948
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0852
+          }
+        ],
+        "cv": 0.7
+      },
+      {
+        "label": "CV=0.8",
+        "stable": true,
+        "drift": 8.867338,
+        "avg_on": 0.914002764,
+        "avg_off": 0.0351847804,
+        "retention": 0.03849527,
+        "transport_J": 38.703258,
+        "telemetry": [
+          {
+            "step": 0,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.7699
+          },
+          {
+            "step": 100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8785
+          },
+          {
+            "step": 200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8743
+          },
+          {
+            "step": 300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.8791
+          },
+          {
+            "step": 400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0345
+          },
+          {
+            "step": 500,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0487
+          },
+          {
+            "step": 600,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0186
+          },
+          {
+            "step": 700,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0119
+          },
+          {
+            "step": 800,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0094
+          },
+          {
+            "step": 900,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0088
+          },
+          {
+            "step": 1000,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0084
+          },
+          {
+            "step": 1100,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.008
+          },
+          {
+            "step": 1200,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0081
+          },
+          {
+            "step": 1300,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.008
+          },
+          {
+            "step": 1400,
+            "separation": 8.0,
+            "ratio": 0.21875,
+            "velocity": 0.0,
+            "coherence": 0.0081
+          }
+        ],
+        "cv": 0.8
+      }
+    ],
+    "governor_adaptation": {
+      "fixed": [
+        {
+          "void_lambda": 0.05,
+          "drift": 20.237872,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.08,
+          "drift": 31.123708,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.1,
+          "drift": 38.553513,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.15,
+          "drift": 57.566125,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.2,
+          "drift": 67.683167,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.3,
+          "drift": 68.753891,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.5,
+          "drift": 69.848873,
+          "stable": true
+        }
+      ],
+      "governed": [
+        {
+          "void_lambda": 0.05,
+          "drift": 75.835314,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.08,
+          "drift": 76.089964,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.1,
+          "drift": 76.226117,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.15,
+          "drift": 76.376604,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.2,
+          "drift": 76.551299,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.3,
+          "drift": 76.861671,
+          "stable": true
+        },
+        {
+          "void_lambda": 0.5,
+          "drift": 76.923845,
+          "stable": true
+        }
+      ]
+    }
+  }
+}

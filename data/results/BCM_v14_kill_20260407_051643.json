@@ -1,0 +1,58 @@
+{
+  "title": "BCM v14 ChatGPT Kill Tests Round 2",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Four adversarial conditions for binary drive",
+  "grid": 128,
+  "steps": 1500,
+  "results": {
+    "pumps_off": {
+      "avg_speed_on": 0.0094525283,
+      "avg_speed_off": 2.807e-07,
+      "total_drift_on": 1.890506,
+      "total_drift_off": 0.000365,
+      "speed_retention": 3e-05,
+      "pump_on_steps": 200
+    },
+    "mass_normalize": {
+      "drift_normalized": 24.886322,
+      "drift_free": 8.589388,
+      "speed_normalized": 0.0165908812,
+      "speed_free": 0.0057262588,
+      "ratio": 2.8973
+    },
+    "freeze_com": {
+      "drift_fixed": 0.985245,
+      "drift_tracking": 8.589388,
+      "ratio": 0.1147
+    },
+    "continuous_limit": [
+      {
+        "grid": 64,
+        "separation": 7,
+        "drift_px": 4.0149,
+        "drift_frac": 0.06273252,
+        "speed_frac": 4.1821678e-05,
+        "coherence": 0.863,
+        "peak": 2.1061
+      },
+      {
+        "grid": 128,
+        "separation": 15,
+        "drift_px": 8.5894,
+        "drift_frac": 0.0671046,
+        "speed_frac": 4.4736397e-05,
+        "coherence": 0.6692,
+        "peak": 3.3825
+      },
+      {
+        "grid": 256,
+        "separation": 30,
+        "drift_px": 17.1788,
+        "drift_frac": 0.06710458,
+        "speed_frac": 4.4736389e-05,
+        "coherence": 0.3205,
+        "peak": 4.2914
+      }
+    ]
+  }
+}
