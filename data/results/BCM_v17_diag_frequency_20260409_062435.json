@@ -1,0 +1,275 @@
+{
+  "title": "BCM v17 Coherence Frequency Lock",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Frequency decomposition of craft harmonics, biological harm band analysis, CMB coupling check",
+  "grid": 256,
+  "steps": 3000,
+  "architectural_frequencies": {
+    "probe_cycle_steps": 55,
+    "f_probe": 0.018182,
+    "f_pump": 1.0,
+    "f_memory": 1.0
+  },
+  "channel_results": {
+    "sigma_peak": {
+      "peaks": [
+        {
+          "freq": 0.006667,
+          "power": 1.0,
+          "period_steps": 150.0
+        },
+        {
+          "freq": 0.000667,
+          "power": 0.388139,
+          "period_steps": 1500.0
+        },
+        {
+          "freq": 0.002667,
+          "power": 0.2635,
+          "period_steps": 375.0
+        },
+        {
+          "freq": 0.009,
+          "power": 0.177101,
+          "period_steps": 111.1
+        },
+        {
+          "freq": 0.004667,
+          "power": 0.174567,
+          "period_steps": 214.3
+        }
+      ],
+      "dc": 3.730813
+    },
+    "sigma_total": {
+      "peaks": [
+        {
+          "freq": 0.009,
+          "power": 0.198613,
+          "period_steps": 111.1
+        },
+        {
+          "freq": 0.015333,
+          "power": 0.095838,
+          "period_steps": 65.2
+        },
+        {
+          "freq": 0.006333,
+          "power": 0.057592,
+          "period_steps": 157.9
+        }
+      ],
+      "dc": 564.632389
+    },
+    "com_velocity": {
+      "peaks": [
+        {
+          "freq": 0.2,
+          "power": 1.0,
+          "period_steps": 5.0
+        },
+        {
+          "freq": 0.009,
+          "power": 0.761432,
+          "period_steps": 111.1
+        },
+        {
+          "freq": 0.015333,
+          "power": 0.313164,
+          "period_steps": 65.2
+        },
+        {
+          "freq": 0.4,
+          "power": 0.276587,
+          "period_steps": 2.5
+        },
+        {
+          "freq": 0.036333,
+          "power": 0.178892,
+          "period_steps": 27.5
+        }
+      ],
+      "dc": 0.007365
+    },
+    "coherence": {
+      "peaks": [
+        {
+          "freq": 0.006667,
+          "power": 1.0,
+          "period_steps": 150.0
+        },
+        {
+          "freq": 0.007333,
+          "power": 0.748894,
+          "period_steps": 136.4
+        },
+        {
+          "freq": 0.002333,
+          "power": 0.639794,
+          "period_steps": 428.6
+        },
+        {
+          "freq": 0.003,
+          "power": 0.609391,
+          "period_steps": 333.3
+        },
+        {
+          "freq": 0.009,
+          "power": 0.449612,
+          "period_steps": 111.1
+        }
+      ],
+      "dc": 0.720214
+    }
+  },
+  "forbidden_zones": [
+    {
+      "freq_solver": 0.006667,
+      "band": "vestibular",
+      "dt_min_s": 0.00222233,
+      "dt_max_s": 0.013334
+    },
+    {
+      "freq_solver": 0.006667,
+      "band": "organ_resonance",
+      "dt_min_s": 0.00083338,
+      "dt_max_s": 0.00166675
+    },
+    {
+      "freq_solver": 0.006667,
+      "band": "spinal",
+      "dt_min_s": 0.00055558,
+      "dt_max_s": 0.00083338
+    },
+    {
+      "freq_solver": 0.006667,
+      "band": "head_neck",
+      "dt_min_s": 0.00033335,
+      "dt_max_s": 0.00044447
+    },
+    {
+      "freq_solver": 0.006667,
+      "band": "eyeball",
+      "dt_min_s": 8.334e-05,
+      "dt_max_s": 0.00033335
+    },
+    {
+      "freq_solver": 0.006667,
+      "band": "cellular",
+      "dt_min_s": 3.333e-05,
+      "dt_max_s": 6.667e-05
+    },
+    {
+      "freq_solver": 0.002667,
+      "band": "vestibular",
+      "dt_min_s": 0.000889,
+      "dt_max_s": 0.005334
+    },
+    {
+      "freq_solver": 0.002667,
+      "band": "organ_resonance",
+      "dt_min_s": 0.00033338,
+      "dt_max_s": 0.00066675
+    },
+    {
+      "freq_solver": 0.002667,
+      "band": "spinal",
+      "dt_min_s": 0.00022225,
+      "dt_max_s": 0.00033338
+    },
+    {
+      "freq_solver": 0.002667,
+      "band": "head_neck",
+      "dt_min_s": 0.00013335,
+      "dt_max_s": 0.0001778
+    },
+    {
+      "freq_solver": 0.002667,
+      "band": "eyeball",
+      "dt_min_s": 3.334e-05,
+      "dt_max_s": 0.00013335
+    },
+    {
+      "freq_solver": 0.002667,
+      "band": "cellular",
+      "dt_min_s": 1.334e-05,
+      "dt_max_s": 2.667e-05
+    },
+    {
+      "freq_solver": 0.009,
+      "band": "vestibular",
+      "dt_min_s": 0.003,
+      "dt_max_s": 0.018
+    },
+    {
+      "freq_solver": 0.009,
+      "band": "organ_resonance",
+      "dt_min_s": 0.001125,
+      "dt_max_s": 0.00225
+    },
+    {
+      "freq_solver": 0.009,
+      "band": "spinal",
+      "dt_min_s": 0.00075,
+      "dt_max_s": 0.001125
+    },
+    {
+      "freq_solver": 0.009,
+      "band": "head_neck",
+      "dt_min_s": 0.00045,
+      "dt_max_s": 0.0006
+    },
+    {
+      "freq_solver": 0.009,
+      "band": "eyeball",
+      "dt_min_s": 0.0001125,
+      "dt_max_s": 0.00045
+    },
+    {
+      "freq_solver": 0.009,
+      "band": "cellular",
+      "dt_min_s": 4.5e-05,
+      "dt_max_s": 9e-05
+    },
+    {
+      "freq_solver": 0.015333,
+      "band": "vestibular",
+      "dt_min_s": 0.005111,
+      "dt_max_s": 0.030666
+    },
+    {
+      "freq_solver": 0.015333,
+      "band": "organ_resonance",
+      "dt_min_s": 0.00191662,
+      "dt_max_s": 0.00383325
+    }
+  ],
+  "cmb_peak_hz": 160200000000.0,
+  "dominant_freqs": [
+    {
+      "channel": "sigma_peak",
+      "freq_solver": 0.006667,
+      "power": 1.0
+    },
+    {
+      "channel": "sigma_peak",
+      "freq_solver": 0.002667,
+      "power": 0.2635
+    },
+    {
+      "channel": "sigma_total",
+      "freq_solver": 0.009,
+      "power": 0.198613
+    },
+    {
+      "channel": "sigma_total",
+      "freq_solver": 0.015333,
+      "power": 0.095838
+    },
+    {
+      "channel": "sigma_total",
+      "freq_solver": 0.006333,
+      "power": 0.057592
+    }
+  ]
+}

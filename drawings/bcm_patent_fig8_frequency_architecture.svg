@@ -1,0 +1,113 @@
+<svg width="100%" viewBox="0 0 680 880" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<text x="340" y="28" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">FIG. 8 — FREQUENCY ARCHITECTURE: harmonic lock + bio safety</text>
+<text x="340" y="46" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">50-step cycle, pump-probe ratio = 10, triple-lock — Stephen Burdick Sr.</text>
+
+<!-- HARMONIC LADDER (full width) -->
+<text x="340" y="76" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Harmonic ladder (locked)</text>
+<rect x="60" y="84" width="560" height="140" fill="none" stroke="#333" stroke-width="0.5"/>
+
+<line x1="70" y1="200" x2="400" y2="200" stroke="#333" stroke-width="0.5"/>
+<text x="410" y="202" style="font-family:sans-serif;font-size:12px;fill:#555">0 (baseline)</text>
+
+<line x1="70" y1="190" x2="400" y2="190" stroke="#333" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="410" y="192" style="font-family:sans-serif;font-size:12px;fill:#555">0.010 — f/2 heartbeat (orientation)</text>
+
+<line x1="70" y1="178" x2="400" y2="178" stroke="#333" stroke-width="1.5"/>
+<text x="410" y="180" style="font-family:sans-serif;font-size:12px;fill:#555">0.020 — f₀ probe fundamental</text>
+
+<line x1="70" y1="164" x2="400" y2="164" stroke="#333" stroke-width="1"/>
+<text x="410" y="166" style="font-family:sans-serif;font-size:12px;fill:#555">0.040 — 2f₀ harmonic 2</text>
+
+<line x1="70" y1="140" x2="400" y2="140" stroke="#333" stroke-width="0.8"/>
+<text x="410" y="142" style="font-family:sans-serif;font-size:12px;fill:#555">0.100 — 5f₀</text>
+
+<line x1="70" y1="114" x2="400" y2="114" stroke="#333" stroke-width="2"/>
+<text x="410" y="116" style="font-family:sans-serif;font-size:12px;fill:#555">0.200 — 10f₀ pump mode (LOCKED)</text>
+
+<line x1="70" y1="96" x2="400" y2="96" stroke="#333" stroke-width="0.6"/>
+<text x="410" y="98" style="font-family:sans-serif;font-size:12px;fill:#555">0.400 — 20f₀</text>
+
+<!-- BEFORE / AFTER LOCK (side by side, below ladder) -->
+<text x="190" y="248" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Before (55-step)</text>
+<rect x="100" y="256" width="180" height="70" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="190" y="278" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">0.200 / 0.01818 = 11.01</text>
+<text x="190" y="296" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">IRRATIONAL — 5 beating pairs</text>
+<text x="190" y="314" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Phase walk every ~9 cycles</text>
+
+<line x1="290" y1="290" x2="340" y2="290" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+
+<text x="490" y="248" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">After (50-step)</text>
+<rect x="400" y="256" width="180" height="70" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="490" y="278" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">0.200 / 0.020 = 10</text>
+<text x="490" y="296" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">INTEGER — 0 beating pairs</text>
+<text x="490" y="314" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Phase locked every cycle</text>
+
+<!-- BIOLOGICAL HARM BANDS (full width, below comparison) -->
+<text x="340" y="358" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Biological harm bands</text>
+<rect x="60" y="366" width="560" height="120" fill="none" stroke="#333" stroke-width="0.5"/>
+
+<rect x="70" y="372" width="164" height="22" rx="3" fill="#f5f5f5" stroke="#333" stroke-width="0.5"/>
+<text x="152" y="387" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Vestibular 0.5–3 Hz</text>
+
+<rect x="244" y="372" width="180" height="22" rx="3" fill="#eee" stroke="#333" stroke-width="0.5"/>
+<text x="334" y="387" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Organ resonance 4–8 Hz</text>
+
+<rect x="434" y="372" width="176" height="22" rx="3" fill="#e8e8e8" stroke="#333" stroke-width="0.5"/>
+<text x="522" y="387" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Spinal 8–12 Hz</text>
+
+<rect x="70" y="400" width="164" height="22" rx="3" fill="#f0f0f0" stroke="#333" stroke-width="0.5"/>
+<text x="152" y="415" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Head/neck 15–20 Hz</text>
+
+<rect x="244" y="400" width="180" height="22" rx="3" fill="#eaeaea" stroke="#333" stroke-width="0.5"/>
+<text x="334" y="415" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Eyeball 20–80 Hz</text>
+
+<rect x="434" y="400" width="176" height="22" rx="3" fill="#e5e5e5" stroke="#333" stroke-width="0.5"/>
+<text x="522" y="415" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Cellular 100–200 Hz</text>
+
+<text x="340" y="446" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Each craft frequency → forbidden dt range. CMB lock dt = 1.25e-13 s/step</text>
+<text x="340" y="462" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">CMB dt is CLEAR of all biological bands</text>
+
+<!-- TRIPLE LOCK (full width) -->
+<text x="340" y="504" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Triple-lock requirement</text>
+
+<circle cx="170" cy="586" r="66" fill="none" stroke="#333" stroke-width="1"/>
+<text x="170" y="570" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Lock 1</text>
+<text x="170" y="588" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Internal harmonic</text>
+<text x="170" y="602" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">lock</text>
+<text x="170" y="660" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Ratio = 10 ✓</text>
+
+<circle cx="340" cy="586" r="66" fill="none" stroke="#333" stroke-width="1"/>
+<text x="340" y="570" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Lock 2</text>
+<text x="340" y="588" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Biological</text>
+<text x="340" y="602" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">avoidance window</text>
+<text x="340" y="660" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">dt CLEAR ✓</text>
+
+<circle cx="510" cy="586" r="66" fill="none" stroke="#333" stroke-width="1"/>
+<text x="510" y="570" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Lock 3</text>
+<text x="510" y="588" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">CMB coupling</text>
+<text x="510" y="602" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">alignment</text>
+<text x="510" y="660" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">160.2 GHz ✓</text>
+
+<!-- PHASE DECORRELATOR -->
+<rect x="60" y="688" width="560" height="80" rx="8" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="6 3"/>
+<text x="80" y="712" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Phase decorrelator principle</text>
+<text x="80" y="732" style="font-family:sans-serif;font-size:12px;fill:#555">Asymmetric segment timing (5/35/10) disperses spectral leakage.</text>
+<text x="80" y="748" style="font-family:sans-serif;font-size:12px;fill:#555">Symmetric timing (10/30/10) causes constructive ghost overlap — MORE ghosts, not fewer.</text>
+
+<!-- GEOMETRY COMPARISON (compact) -->
+<rect x="60" y="784" width="170" height="44" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="145" y="802" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">5/35/10 asymmetric</text>
+<text x="145" y="818" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">3 ghosts, 84.2%</text>
+
+<rect x="255" y="784" width="170" height="44" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="340" y="802" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">10/30/10 symmetric</text>
+<text x="340" y="818" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">8 ghosts, 59.7%</text>
+
+<rect x="450" y="784" width="170" height="44" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="535" y="802" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">5/30/15 extended</text>
+<text x="535" y="818" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">8 ghosts, 62.2%</text>
+
+<text x="340" y="860" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems</text>
+</svg>

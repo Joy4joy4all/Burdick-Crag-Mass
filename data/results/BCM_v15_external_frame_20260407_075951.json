@@ -1,0 +1,534 @@
+{
+  "title": "BCM v15 External Frame & Medium Coupling",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Two gates: inertial anchor and reaction force",
+  "grid": 128,
+  "steps": 2000,
+  "parameters": {
+    "dt": 0.05,
+    "D": 0.5,
+    "void_lambda": 0.1,
+    "pump_A": 0.5,
+    "alpha": 0.8,
+    "cv_strength": 0.2
+  },
+  "test_A": {
+    "test": "A_HARPOON",
+    "verdict": "PASS",
+    "reason": "Sigma displaced relative to fixed anchor. Omega stationary. Transport is frame-independent.",
+    "sigma_drift": 80.801609,
+    "omega_drift": 0.0,
+    "final_separation": 80.801609,
+    "timeline": [
+      {
+        "step": 0,
+        "sigma_x": 41.589732,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 0.410268,
+        "omega_drift": 0.0,
+        "separation": 0.410268,
+        "coherence": 0.7214
+      },
+      {
+        "step": 50,
+        "sigma_x": 76.887033,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 34.887033,
+        "omega_drift": 0.0,
+        "separation": 34.887033,
+        "coherence": 0.7357
+      },
+      {
+        "step": 100,
+        "sigma_x": 104.944675,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 62.944675,
+        "omega_drift": 0.0,
+        "separation": 62.944675,
+        "coherence": 0.8126
+      },
+      {
+        "step": 150,
+        "sigma_x": 109.329103,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 67.329103,
+        "omega_drift": 0.0,
+        "separation": 67.329103,
+        "coherence": 0.8571
+      },
+      {
+        "step": 200,
+        "sigma_x": 114.021188,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 72.021188,
+        "omega_drift": 0.0,
+        "separation": 72.021188,
+        "coherence": 0.8632
+      },
+      {
+        "step": 250,
+        "sigma_x": 116.758193,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 74.758193,
+        "omega_drift": 0.0,
+        "separation": 74.758193,
+        "coherence": 0.8462
+      },
+      {
+        "step": 300,
+        "sigma_x": 119.17705,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 77.17705,
+        "omega_drift": 0.0,
+        "separation": 77.17705,
+        "coherence": 0.8622
+      },
+      {
+        "step": 350,
+        "sigma_x": 119.171046,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 77.171046,
+        "omega_drift": 0.0,
+        "separation": 77.171046,
+        "coherence": 0.8683
+      },
+      {
+        "step": 400,
+        "sigma_x": 119.037421,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 77.037421,
+        "omega_drift": 0.0,
+        "separation": 77.037421,
+        "coherence": 0.848
+      },
+      {
+        "step": 450,
+        "sigma_x": 119.003156,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 77.003156,
+        "omega_drift": 0.0,
+        "separation": 77.003156,
+        "coherence": 0.8369
+      },
+      {
+        "step": 500,
+        "sigma_x": 118.882391,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 76.882391,
+        "omega_drift": 0.0,
+        "separation": 76.882391,
+        "coherence": 0.8502
+      },
+      {
+        "step": 550,
+        "sigma_x": 118.759563,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 76.759563,
+        "omega_drift": 0.0,
+        "separation": 76.759563,
+        "coherence": 0.8626
+      },
+      {
+        "step": 600,
+        "sigma_x": 118.377791,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 76.377791,
+        "omega_drift": 0.0,
+        "separation": 76.377791,
+        "coherence": 0.8777
+      },
+      {
+        "step": 650,
+        "sigma_x": 118.629924,
+        "sigma_y": 64.0,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 76.629924,
+        "omega_drift": 0.0,
+        "separation": 76.629924,
+        "coherence": 0.855
+      },
+      {
+        "step": 700,
+        "sigma_x": 117.805786,
+        "sigma_y": 64.000001,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 75.805786,
+        "omega_drift": 0.0,
+        "separation": 75.805786,
+        "coherence": 0.8264
+      },
+      {
+        "step": 750,
+        "sigma_x": 117.5202,
+        "sigma_y": 64.000018,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 75.5202,
+        "omega_drift": 0.0,
+        "separation": 75.5202,
+        "coherence": 0.8159
+      },
+      {
+        "step": 800,
+        "sigma_x": 117.971831,
+        "sigma_y": 64.000381,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 75.971831,
+        "omega_drift": 0.0,
+        "separation": 75.971831,
+        "coherence": 0.8033
+      },
+      {
+        "step": 850,
+        "sigma_x": 118.013803,
+        "sigma_y": 64.010063,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 76.013804,
+        "omega_drift": 0.0,
+        "separation": 76.013804,
+        "coherence": 0.7944
+      },
+      {
+        "step": 900,
+        "sigma_x": 116.797059,
+        "sigma_y": 63.742754,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 74.797501,
+        "omega_drift": 0.0,
+        "separation": 74.797501,
+        "coherence": 0.8184
+      },
+      {
+        "step": 950,
+        "sigma_x": 116.854152,
+        "sigma_y": 62.48701,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 74.869441,
+        "omega_drift": 0.0,
+        "separation": 74.869441,
+        "coherence": 0.8295
+      },
+      {
+        "step": 1000,
+        "sigma_x": 116.428648,
+        "sigma_y": 61.09228,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 74.485424,
+        "omega_drift": 0.0,
+        "separation": 74.485424,
+        "coherence": 0.8293
+      },
+      {
+        "step": 1050,
+        "sigma_x": 117.347424,
+        "sigma_y": 56.915324,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 75.679766,
+        "omega_drift": 0.0,
+        "separation": 75.679766,
+        "coherence": 0.8403
+      },
+      {
+        "step": 1100,
+        "sigma_x": 118.228178,
+        "sigma_y": 48.219309,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 77.844495,
+        "omega_drift": 0.0,
+        "separation": 77.844495,
+        "coherence": 0.878
+      },
+      {
+        "step": 1150,
+        "sigma_x": 118.81366,
+        "sigma_y": 42.387899,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 79.796124,
+        "omega_drift": 0.0,
+        "separation": 79.796124,
+        "coherence": 0.8773
+      },
+      {
+        "step": 1200,
+        "sigma_x": 118.815357,
+        "sigma_y": 38.352419,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.983934,
+        "omega_drift": 0.0,
+        "separation": 80.983934,
+        "coherence": 0.8915
+      },
+      {
+        "step": 1250,
+        "sigma_x": 118.934142,
+        "sigma_y": 36.932351,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 81.55685,
+        "omega_drift": 0.0,
+        "separation": 81.55685,
+        "coherence": 0.8943
+      },
+      {
+        "step": 1300,
+        "sigma_x": 118.795469,
+        "sigma_y": 34.814998,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 82.154174,
+        "omega_drift": 0.0,
+        "separation": 82.154174,
+        "coherence": 0.8842
+      },
+      {
+        "step": 1350,
+        "sigma_x": 118.880575,
+        "sigma_y": 32.72641,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 82.997953,
+        "omega_drift": 0.0,
+        "separation": 82.997953,
+        "coherence": 0.8941
+      },
+      {
+        "step": 1400,
+        "sigma_x": 118.403779,
+        "sigma_y": 31.716426,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 82.944358,
+        "omega_drift": 0.0,
+        "separation": 82.944358,
+        "coherence": 0.8962
+      },
+      {
+        "step": 1450,
+        "sigma_x": 118.061191,
+        "sigma_y": 31.413473,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 82.747729,
+        "omega_drift": 0.0,
+        "separation": 82.747729,
+        "coherence": 0.8912
+      },
+      {
+        "step": 1500,
+        "sigma_x": 117.596283,
+        "sigma_y": 30.853076,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 82.544028,
+        "omega_drift": 0.0,
+        "separation": 82.544028,
+        "coherence": 0.8752
+      },
+      {
+        "step": 1550,
+        "sigma_x": 117.189338,
+        "sigma_y": 30.74096,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 82.216788,
+        "omega_drift": 0.0,
+        "separation": 82.216788,
+        "coherence": 0.853
+      },
+      {
+        "step": 1600,
+        "sigma_x": 117.006818,
+        "sigma_y": 31.229434,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 81.853117,
+        "omega_drift": 0.0,
+        "separation": 81.853117,
+        "coherence": 0.8506
+      },
+      {
+        "step": 1650,
+        "sigma_x": 116.667867,
+        "sigma_y": 31.615841,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 81.388108,
+        "omega_drift": 0.0,
+        "separation": 81.388108,
+        "coherence": 0.8581
+      },
+      {
+        "step": 1700,
+        "sigma_x": 116.172694,
+        "sigma_y": 32.021745,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.772504,
+        "omega_drift": 0.0,
+        "separation": 80.772504,
+        "coherence": 0.8539
+      },
+      {
+        "step": 1750,
+        "sigma_x": 115.540121,
+        "sigma_y": 32.097751,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.16173,
+        "omega_drift": 0.0,
+        "separation": 80.16173,
+        "coherence": 0.8493
+      },
+      {
+        "step": 1800,
+        "sigma_x": 115.341758,
+        "sigma_y": 32.052995,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 79.997654,
+        "omega_drift": 0.0,
+        "separation": 79.997654,
+        "coherence": 0.8355
+      },
+      {
+        "step": 1850,
+        "sigma_x": 115.501607,
+        "sigma_y": 32.078649,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.134006,
+        "omega_drift": 0.0,
+        "separation": 80.134006,
+        "coherence": 0.8447
+      },
+      {
+        "step": 1900,
+        "sigma_x": 115.976005,
+        "sigma_y": 32.070934,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.572418,
+        "omega_drift": 0.0,
+        "separation": 80.572418,
+        "coherence": 0.8453
+      },
+      {
+        "step": 1950,
+        "sigma_x": 116.34278,
+        "sigma_y": 32.057289,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.914682,
+        "omega_drift": 0.0,
+        "separation": 80.914682,
+        "coherence": 0.842
+      },
+      {
+        "step": 1999,
+        "sigma_x": 116.221573,
+        "sigma_y": 32.061651,
+        "omega_x": 42.0,
+        "omega_y": 64.0,
+        "sigma_drift": 80.801609,
+        "omega_drift": 0.0,
+        "separation": 80.801609,
+        "coherence": 0.8473
+      }
+    ]
+  },
+  "test_E": {
+    "test": "E_OAR",
+    "verdict": "FAIL",
+    "reason": "No velocity-force scaling (r=-0.7021). No medium coupling detected.",
+    "correlation": -0.7021358150292186,
+    "has_reaction_force": true,
+    "has_lambda_distortion": true,
+    "ratio_sweep": [
+      {
+        "ratio": 0.05,
+        "drift": 73.53639,
+        "avg_velocity": 0.0624841562,
+        "avg_F_reaction": 0.0026234839,
+        "lambda_distortion": 2.32356,
+        "n_samples": 1899
+      },
+      {
+        "ratio": 0.1,
+        "drift": 74.612583,
+        "avg_velocity": 0.0584518532,
+        "avg_F_reaction": 0.0020143192,
+        "lambda_distortion": 2.3266,
+        "n_samples": 1899
+      },
+      {
+        "ratio": 0.15,
+        "drift": 73.357754,
+        "avg_velocity": 0.0368482592,
+        "avg_F_reaction": 0.0054725421,
+        "lambda_distortion": 3.875142,
+        "n_samples": 1899
+      },
+      {
+        "ratio": 0.25,
+        "drift": 73.579532,
+        "avg_velocity": 0.0495984656,
+        "avg_F_reaction": 0.0020373079,
+        "lambda_distortion": 2.37877,
+        "n_samples": 1899
+      },
+      {
+        "ratio": 0.35,
+        "drift": 72.53135,
+        "avg_velocity": 0.0276513797,
+        "avg_F_reaction": 0.0036488301,
+        "lambda_distortion": 4.063897,
+        "n_samples": 1899
+      },
+      {
+        "ratio": 0.5,
+        "drift": 72.540547,
+        "avg_velocity": 0.0565840763,
+        "avg_F_reaction": 0.0021474639,
+        "lambda_distortion": 2.531487,
+        "n_samples": 1899
+      }
+    ]
+  }
+}

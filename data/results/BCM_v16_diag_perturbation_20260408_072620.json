@@ -1,0 +1,552 @@
+{
+  "title": "BCM v16 Diagnostic 3: Perturbation Isolation",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Separate probe fingerprint from hazard signal",
+  "grid": 256,
+  "steps": 3000,
+  "run_A": "blind (no probes)",
+  "run_B": "probed (12 tunnel-cycling)",
+  "final_snr": 4.5581,
+  "final_fingerprint_rms": 0.52017873,
+  "final_grave_signal_rms": 2.37103904,
+  "max_delta_sigma": 8.79165294,
+  "max_delta_location": [
+    "245",
+    "129"
+  ],
+  "verdict": "FAIL",
+  "snapshots": [
+    {
+      "step": 500,
+      "fingerprint_rms": 0.7746662,
+      "grave_signal_rms": 0.0,
+      "snr": 0.0,
+      "correlation": -0.01465295,
+      "verdict": "FAIL"
+    },
+    {
+      "step": 1000,
+      "fingerprint_rms": 0.56267062,
+      "grave_signal_rms": 0.0067829,
+      "snr": 0.0121,
+      "correlation": -0.01595671,
+      "verdict": "FAIL"
+    },
+    {
+      "step": 1500,
+      "fingerprint_rms": 0.48466624,
+      "grave_signal_rms": 0.44126421,
+      "snr": 0.9104,
+      "correlation": -0.00650458,
+      "verdict": "FAIL"
+    },
+    {
+      "step": 2000,
+      "fingerprint_rms": 0.48368532,
+      "grave_signal_rms": 2.14244148,
+      "snr": 4.4294,
+      "correlation": -0.00901507,
+      "verdict": "PASS"
+    },
+    {
+      "step": 2500,
+      "fingerprint_rms": 0.53622414,
+      "grave_signal_rms": 2.44770381,
+      "snr": 4.5647,
+      "correlation": -0.01542306,
+      "verdict": "PASS"
+    },
+    {
+      "step": 2999,
+      "fingerprint_rms": 0.52017873,
+      "grave_signal_rms": 2.37103904,
+      "snr": 4.5581,
+      "correlation": -0.01597591,
+      "verdict": "PASS"
+    }
+  ],
+  "timeline_blind": [
+    {
+      "step": 0,
+      "x": 32.06,
+      "drift": 0.06,
+      "coherence": 0.7097,
+      "sigma_total": 161.44,
+      "sigma_max": 1.037818
+    },
+    {
+      "step": 100,
+      "x": 38.4,
+      "drift": 6.4,
+      "coherence": 0.6297,
+      "sigma_total": 545.5294,
+      "sigma_max": 3.27152
+    },
+    {
+      "step": 200,
+      "x": 43.27,
+      "drift": 11.27,
+      "coherence": 0.6202,
+      "sigma_total": 570.9815,
+      "sigma_max": 3.338533
+    },
+    {
+      "step": 300,
+      "x": 48.22,
+      "drift": 16.22,
+      "coherence": 0.6175,
+      "sigma_total": 575.5143,
+      "sigma_max": 3.345507
+    },
+    {
+      "step": 400,
+      "x": 53.41,
+      "drift": 21.41,
+      "coherence": 0.6096,
+      "sigma_total": 582.733,
+      "sigma_max": 3.350181
+    },
+    {
+      "step": 500,
+      "x": 58.98,
+      "drift": 26.98,
+      "coherence": 0.5953,
+      "sigma_total": 598.0164,
+      "sigma_max": 3.393723
+    },
+    {
+      "step": 600,
+      "x": 64.98,
+      "drift": 32.98,
+      "coherence": 0.5879,
+      "sigma_total": 628.4178,
+      "sigma_max": 3.505617
+    },
+    {
+      "step": 700,
+      "x": 71.15,
+      "drift": 39.15,
+      "coherence": 0.5945,
+      "sigma_total": 681.4783,
+      "sigma_max": 3.766078
+    },
+    {
+      "step": 800,
+      "x": 76.91,
+      "drift": 44.91,
+      "coherence": 0.5976,
+      "sigma_total": 755.6881,
+      "sigma_max": 4.171631
+    },
+    {
+      "step": 900,
+      "x": 81.81,
+      "drift": 49.81,
+      "coherence": 0.6029,
+      "sigma_total": 833.9093,
+      "sigma_max": 4.591968
+    },
+    {
+      "step": 1000,
+      "x": 85.9,
+      "drift": 53.9,
+      "coherence": 0.5981,
+      "sigma_total": 896.6275,
+      "sigma_max": 4.88437
+    },
+    {
+      "step": 1100,
+      "x": 89.46,
+      "drift": 57.46,
+      "coherence": 0.5865,
+      "sigma_total": 937.1639,
+      "sigma_max": 4.990076
+    },
+    {
+      "step": 1200,
+      "x": 92.8,
+      "drift": 60.8,
+      "coherence": 0.5827,
+      "sigma_total": 960.321,
+      "sigma_max": 5.006766
+    },
+    {
+      "step": 1300,
+      "x": 96.2,
+      "drift": 64.2,
+      "coherence": 0.5696,
+      "sigma_total": 975.1725,
+      "sigma_max": 4.954329
+    },
+    {
+      "step": 1400,
+      "x": 99.89,
+      "drift": 67.89,
+      "coherence": 0.5549,
+      "sigma_total": 992.2329,
+      "sigma_max": 4.897758
+    },
+    {
+      "step": 1500,
+      "x": 104.02,
+      "drift": 72.02,
+      "coherence": 0.5362,
+      "sigma_total": 1024.7237,
+      "sigma_max": 4.935608
+    },
+    {
+      "step": 1600,
+      "x": 108.58,
+      "drift": 76.58,
+      "coherence": 0.5357,
+      "sigma_total": 1089.4372,
+      "sigma_max": 5.135163
+    },
+    {
+      "step": 1700,
+      "x": 113.23,
+      "drift": 81.23,
+      "coherence": 0.5423,
+      "sigma_total": 1200.3843,
+      "sigma_max": 5.642185
+    },
+    {
+      "step": 1800,
+      "x": 117.46,
+      "drift": 85.46,
+      "coherence": 0.5414,
+      "sigma_total": 1354.2027,
+      "sigma_max": 6.336905
+    },
+    {
+      "step": 1900,
+      "x": 120.93,
+      "drift": 88.93,
+      "coherence": 0.546,
+      "sigma_total": 1524.8211,
+      "sigma_max": 7.138035
+    },
+    {
+      "step": 2000,
+      "x": 123.62,
+      "drift": 91.62,
+      "coherence": 0.5517,
+      "sigma_total": 1679.3966,
+      "sigma_max": 7.815086
+    },
+    {
+      "step": 2100,
+      "x": 125.65,
+      "drift": 93.65,
+      "coherence": 0.5522,
+      "sigma_total": 1796.9137,
+      "sigma_max": 8.30342
+    },
+    {
+      "step": 2200,
+      "x": 127.2,
+      "drift": 95.2,
+      "coherence": 0.5541,
+      "sigma_total": 1872.7753,
+      "sigma_max": 8.582593
+    },
+    {
+      "step": 2300,
+      "x": 128.4,
+      "drift": 96.4,
+      "coherence": 0.5508,
+      "sigma_total": 1913.2463,
+      "sigma_max": 8.75398
+    },
+    {
+      "step": 2400,
+      "x": 129.34,
+      "drift": 97.34,
+      "coherence": 0.5504,
+      "sigma_total": 1928.4252,
+      "sigma_max": 8.808333
+    },
+    {
+      "step": 2500,
+      "x": 130.08,
+      "drift": 98.08,
+      "coherence": 0.5505,
+      "sigma_total": 1927.7669,
+      "sigma_max": 8.785139
+    },
+    {
+      "step": 2600,
+      "x": 130.69,
+      "drift": 98.69,
+      "coherence": 0.5523,
+      "sigma_total": 1918.3611,
+      "sigma_max": 8.771176
+    },
+    {
+      "step": 2700,
+      "x": 131.18,
+      "drift": 99.18,
+      "coherence": 0.5551,
+      "sigma_total": 1904.8587,
+      "sigma_max": 8.718031
+    },
+    {
+      "step": 2800,
+      "x": 131.58,
+      "drift": 99.58,
+      "coherence": 0.5503,
+      "sigma_total": 1890.0286,
+      "sigma_max": 8.677664
+    },
+    {
+      "step": 2900,
+      "x": 131.92,
+      "drift": 99.92,
+      "coherence": 0.5541,
+      "sigma_total": 1875.3847,
+      "sigma_max": 8.596125
+    }
+  ],
+  "timeline_probed": [
+    {
+      "step": 0,
+      "x": 32.06,
+      "drift": 0.06,
+      "coherence": 0.7097,
+      "sigma_total": 161.44,
+      "sigma_max": 1.037818
+    },
+    {
+      "step": 100,
+      "x": 69.07,
+      "drift": 38.22,
+      "coherence": 0.1008,
+      "sigma_total": 4653.5525,
+      "sigma_max": 7.471168
+    },
+    {
+      "step": 200,
+      "x": 88.42,
+      "drift": 56.89,
+      "coherence": 0.1166,
+      "sigma_total": 6073.37,
+      "sigma_max": 9.347745
+    },
+    {
+      "step": 300,
+      "x": 106.55,
+      "drift": 74.75,
+      "coherence": 0.12,
+      "sigma_total": 7317.1329,
+      "sigma_max": 12.038579
+    },
+    {
+      "step": 400,
+      "x": 121.77,
+      "drift": 89.81,
+      "coherence": 0.1476,
+      "sigma_total": 8940.7804,
+      "sigma_max": 13.81611
+    },
+    {
+      "step": 500,
+      "x": 132.02,
+      "drift": 100.04,
+      "coherence": 0.1488,
+      "sigma_total": 9489.94,
+      "sigma_max": 12.644256
+    },
+    {
+      "step": 600,
+      "x": 137.53,
+      "drift": 105.54,
+      "coherence": 0.1309,
+      "sigma_total": 9131.462,
+      "sigma_max": 12.137854
+    },
+    {
+      "step": 700,
+      "x": 140.82,
+      "drift": 108.82,
+      "coherence": 0.1165,
+      "sigma_total": 8547.0292,
+      "sigma_max": 10.472473
+    },
+    {
+      "step": 800,
+      "x": 144.47,
+      "drift": 112.47,
+      "coherence": 0.1069,
+      "sigma_total": 7956.9194,
+      "sigma_max": 10.73054
+    },
+    {
+      "step": 900,
+      "x": 147.43,
+      "drift": 115.43,
+      "coherence": 0.0956,
+      "sigma_total": 7536.912,
+      "sigma_max": 10.703535
+    },
+    {
+      "step": 1000,
+      "x": 149.86,
+      "drift": 117.86,
+      "coherence": 0.0916,
+      "sigma_total": 7134.2487,
+      "sigma_max": 10.305413
+    },
+    {
+      "step": 1100,
+      "x": 152.51,
+      "drift": 120.51,
+      "coherence": 0.0842,
+      "sigma_total": 6925.7336,
+      "sigma_max": 9.652827
+    },
+    {
+      "step": 1200,
+      "x": 155.32,
+      "drift": 123.32,
+      "coherence": 0.0793,
+      "sigma_total": 6717.767,
+      "sigma_max": 9.9594
+    },
+    {
+      "step": 1300,
+      "x": 157.71,
+      "drift": 125.71,
+      "coherence": 0.0771,
+      "sigma_total": 6523.9735,
+      "sigma_max": 9.295749
+    },
+    {
+      "step": 1400,
+      "x": 160.46,
+      "drift": 128.46,
+      "coherence": 0.0748,
+      "sigma_total": 6300.4007,
+      "sigma_max": 9.642395
+    },
+    {
+      "step": 1500,
+      "x": 163.63,
+      "drift": 131.63,
+      "coherence": 0.0747,
+      "sigma_total": 6071.5971,
+      "sigma_max": 10.099621
+    },
+    {
+      "step": 1600,
+      "x": 168.34,
+      "drift": 136.34,
+      "coherence": 0.0734,
+      "sigma_total": 5848.3256,
+      "sigma_max": 9.508428
+    },
+    {
+      "step": 1700,
+      "x": 174.41,
+      "drift": 142.41,
+      "coherence": 0.0727,
+      "sigma_total": 5679.2854,
+      "sigma_max": 9.678362
+    },
+    {
+      "step": 1800,
+      "x": 181.41,
+      "drift": 149.41,
+      "coherence": 0.0751,
+      "sigma_total": 5462.7695,
+      "sigma_max": 9.800476
+    },
+    {
+      "step": 1900,
+      "x": 192.1,
+      "drift": 160.1,
+      "coherence": 0.081,
+      "sigma_total": 5206.7125,
+      "sigma_max": 8.685809
+    },
+    {
+      "step": 2000,
+      "x": 206.58,
+      "drift": 174.58,
+      "coherence": 0.0874,
+      "sigma_total": 5027.6711,
+      "sigma_max": 8.947016
+    },
+    {
+      "step": 2100,
+      "x": 221.3,
+      "drift": 189.3,
+      "coherence": 0.0922,
+      "sigma_total": 4924.3428,
+      "sigma_max": 9.048856
+    },
+    {
+      "step": 2200,
+      "x": 228.34,
+      "drift": 196.34,
+      "coherence": 0.0872,
+      "sigma_total": 4773.4349,
+      "sigma_max": 9.848471
+    },
+    {
+      "step": 2300,
+      "x": 227.83,
+      "drift": 195.83,
+      "coherence": 0.0817,
+      "sigma_total": 4818.5343,
+      "sigma_max": 9.547473
+    },
+    {
+      "step": 2400,
+      "x": 226.98,
+      "drift": 194.99,
+      "coherence": 0.0815,
+      "sigma_total": 4830.672,
+      "sigma_max": 8.962044
+    },
+    {
+      "step": 2500,
+      "x": 228.87,
+      "drift": 196.88,
+      "coherence": 0.0825,
+      "sigma_total": 4779.043,
+      "sigma_max": 9.650758
+    },
+    {
+      "step": 2600,
+      "x": 226.88,
+      "drift": 194.88,
+      "coherence": 0.0818,
+      "sigma_total": 4749.5616,
+      "sigma_max": 10.201363
+    },
+    {
+      "step": 2700,
+      "x": 228.58,
+      "drift": 196.58,
+      "coherence": 0.0838,
+      "sigma_total": 4733.3834,
+      "sigma_max": 9.537684
+    },
+    {
+      "step": 2800,
+      "x": 227.58,
+      "drift": 195.59,
+      "coherence": 0.0806,
+      "sigma_total": 4853.5758,
+      "sigma_max": 10.125898
+    },
+    {
+      "step": 2900,
+      "x": 227.97,
+      "drift": 195.97,
+      "coherence": 0.0794,
+      "sigma_total": 4873.6164,
+      "sigma_max": 9.571044
+    }
+  ]
+}

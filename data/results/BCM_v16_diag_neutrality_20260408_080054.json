@@ -1,0 +1,923 @@
+{
+  "title": "BCM v16 Diagnostic 3C: Energy Neutrality",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "VEV attack: does harvest require gradients or is it free energy?",
+  "grid": 256,
+  "steps": 3000,
+  "drifts": {
+    "normal_control": 194.3912,
+    "uniform_field": 194.5489,
+    "reversed_gradient": 191.4433,
+    "zero_pump": 194.1138
+  },
+  "sigma_changes": {
+    "normal": 4623.3339,
+    "uniform": 4623.1813,
+    "reversed": 4913.2888,
+    "zero_pump": 4067.063
+  },
+  "kill_conditions": {
+    "kill_1_uniform_pct": 100.0811,
+    "kill_1_pass": false,
+    "kill_2_reversed_pct": 98.4835,
+    "kill_2_reversed_exceeds": false,
+    "kill_2_pass": true,
+    "kill_3_zero_pct": 99.8573,
+    "kill_3_pass": false
+  },
+  "verdict": "FAIL",
+  "trajectory_comparison": [
+    {
+      "step": 0,
+      "uniform": 0.06,
+      "reversed": 0.06,
+      "zero_pump": 0.0,
+      "normal": 0.06
+    },
+    {
+      "step": 500,
+      "uniform": 104.25,
+      "reversed": 97.36,
+      "zero_pump": 107.21,
+      "normal": 100.04
+    },
+    {
+      "step": 1000,
+      "uniform": 190.03,
+      "reversed": 182.9,
+      "zero_pump": 125.56,
+      "normal": 117.86
+    },
+    {
+      "step": 1500,
+      "uniform": 194.69,
+      "reversed": 191.16,
+      "zero_pump": 159.62,
+      "normal": 131.63
+    },
+    {
+      "step": 2000,
+      "uniform": 195.6,
+      "reversed": 190.75,
+      "zero_pump": 195.29,
+      "normal": 174.58
+    },
+    {
+      "step": 2500,
+      "uniform": 197.08,
+      "reversed": 191.03,
+      "zero_pump": 196.78,
+      "normal": 196.88
+    }
+  ],
+  "timelines": {
+    "uniform": [
+      {
+        "step": 0,
+        "x": 32.06,
+        "drift": 0.06,
+        "coherence": 0.7097,
+        "sigma_total": 161.44
+      },
+      {
+        "step": 100,
+        "x": 67.85,
+        "drift": 37.19,
+        "coherence": 0.0942,
+        "sigma_total": 4371.5102
+      },
+      {
+        "step": 200,
+        "x": 85.02,
+        "drift": 53.94,
+        "coherence": 0.0905,
+        "sigma_total": 4952.9172
+      },
+      {
+        "step": 300,
+        "x": 102.04,
+        "drift": 70.8,
+        "coherence": 0.0909,
+        "sigma_total": 4953.2819
+      },
+      {
+        "step": 400,
+        "x": 118.32,
+        "drift": 86.78,
+        "coherence": 0.0918,
+        "sigma_total": 4916.1179
+      },
+      {
+        "step": 500,
+        "x": 135.86,
+        "drift": 104.25,
+        "coherence": 0.0938,
+        "sigma_total": 4906.735
+      },
+      {
+        "step": 600,
+        "x": 152.4,
+        "drift": 120.82,
+        "coherence": 0.0911,
+        "sigma_total": 4988.2531
+      },
+      {
+        "step": 700,
+        "x": 168.54,
+        "drift": 136.9,
+        "coherence": 0.0911,
+        "sigma_total": 5003.231
+      },
+      {
+        "step": 800,
+        "x": 186.76,
+        "drift": 155.1,
+        "coherence": 0.094,
+        "sigma_total": 4973.3153
+      },
+      {
+        "step": 900,
+        "x": 204.94,
+        "drift": 173.21,
+        "coherence": 0.0912,
+        "sigma_total": 4935.7597
+      },
+      {
+        "step": 1000,
+        "x": 221.83,
+        "drift": 190.03,
+        "coherence": 0.0907,
+        "sigma_total": 4901.8014
+      },
+      {
+        "step": 1100,
+        "x": 228.23,
+        "drift": 196.4,
+        "coherence": 0.0852,
+        "sigma_total": 4729.6295
+      },
+      {
+        "step": 1200,
+        "x": 228.33,
+        "drift": 196.46,
+        "coherence": 0.0802,
+        "sigma_total": 4817.0715
+      },
+      {
+        "step": 1300,
+        "x": 226.94,
+        "drift": 195.04,
+        "coherence": 0.0808,
+        "sigma_total": 4827.0366
+      },
+      {
+        "step": 1400,
+        "x": 228.41,
+        "drift": 196.52,
+        "coherence": 0.0822,
+        "sigma_total": 4755.6955
+      },
+      {
+        "step": 1500,
+        "x": 226.57,
+        "drift": 194.69,
+        "coherence": 0.0818,
+        "sigma_total": 4743.8964
+      },
+      {
+        "step": 1600,
+        "x": 228.8,
+        "drift": 196.92,
+        "coherence": 0.083,
+        "sigma_total": 4720.3897
+      },
+      {
+        "step": 1700,
+        "x": 226.79,
+        "drift": 194.92,
+        "coherence": 0.0803,
+        "sigma_total": 4877.1698
+      },
+      {
+        "step": 1800,
+        "x": 228.14,
+        "drift": 196.28,
+        "coherence": 0.0806,
+        "sigma_total": 4877.4643
+      },
+      {
+        "step": 1900,
+        "x": 226.39,
+        "drift": 194.57,
+        "coherence": 0.0823,
+        "sigma_total": 4809.5201
+      },
+      {
+        "step": 2000,
+        "x": 227.43,
+        "drift": 195.6,
+        "coherence": 0.0822,
+        "sigma_total": 4749.1466
+      },
+      {
+        "step": 2100,
+        "x": 227.08,
+        "drift": 195.2,
+        "coherence": 0.0871,
+        "sigma_total": 4714.2371
+      },
+      {
+        "step": 2200,
+        "x": 227.68,
+        "drift": 195.82,
+        "coherence": 0.0834,
+        "sigma_total": 4786.5159
+      },
+      {
+        "step": 2300,
+        "x": 227.89,
+        "drift": 196.04,
+        "coherence": 0.0819,
+        "sigma_total": 4816.1434
+      },
+      {
+        "step": 2400,
+        "x": 227.0,
+        "drift": 195.17,
+        "coherence": 0.0817,
+        "sigma_total": 4828.2091
+      },
+      {
+        "step": 2500,
+        "x": 228.87,
+        "drift": 197.08,
+        "coherence": 0.0827,
+        "sigma_total": 4777.9254
+      },
+      {
+        "step": 2600,
+        "x": 226.88,
+        "drift": 195.04,
+        "coherence": 0.0815,
+        "sigma_total": 4749.0953
+      },
+      {
+        "step": 2700,
+        "x": 228.58,
+        "drift": 196.73,
+        "coherence": 0.084,
+        "sigma_total": 4733.0885
+      },
+      {
+        "step": 2800,
+        "x": 227.58,
+        "drift": 195.75,
+        "coherence": 0.08,
+        "sigma_total": 4853.3756
+      },
+      {
+        "step": 2900,
+        "x": 227.97,
+        "drift": 196.12,
+        "coherence": 0.0792,
+        "sigma_total": 4873.4375
+      }
+    ],
+    "reversed": [
+      {
+        "step": 0,
+        "x": 32.06,
+        "drift": 0.06,
+        "coherence": 0.7097,
+        "sigma_total": 161.68
+      },
+      {
+        "step": 100,
+        "x": 64.43,
+        "drift": 33.6,
+        "coherence": 0.0896,
+        "sigma_total": 4494.2669
+      },
+      {
+        "step": 200,
+        "x": 79.53,
+        "drift": 48.29,
+        "coherence": 0.0904,
+        "sigma_total": 5029.3335
+      },
+      {
+        "step": 300,
+        "x": 95.73,
+        "drift": 64.34,
+        "coherence": 0.0901,
+        "sigma_total": 4975.8917
+      },
+      {
+        "step": 400,
+        "x": 111.7,
+        "drift": 80.04,
+        "coherence": 0.0906,
+        "sigma_total": 4922.8012
+      },
+      {
+        "step": 500,
+        "x": 129.07,
+        "drift": 97.36,
+        "coherence": 0.0926,
+        "sigma_total": 4909.68
+      },
+      {
+        "step": 600,
+        "x": 145.5,
+        "drift": 113.82,
+        "coherence": 0.0937,
+        "sigma_total": 4989.9801
+      },
+      {
+        "step": 700,
+        "x": 161.56,
+        "drift": 129.83,
+        "coherence": 0.0922,
+        "sigma_total": 5004.3514
+      },
+      {
+        "step": 800,
+        "x": 179.71,
+        "drift": 147.97,
+        "coherence": 0.0941,
+        "sigma_total": 4974.0634
+      },
+      {
+        "step": 900,
+        "x": 197.85,
+        "drift": 166.04,
+        "coherence": 0.0922,
+        "sigma_total": 4936.2637
+      },
+      {
+        "step": 1000,
+        "x": 214.76,
+        "drift": 182.9,
+        "coherence": 0.0914,
+        "sigma_total": 4902.1782
+      },
+      {
+        "step": 1100,
+        "x": 227.83,
+        "drift": 195.95,
+        "coherence": 0.0874,
+        "sigma_total": 4828.5374
+      },
+      {
+        "step": 1200,
+        "x": 225.68,
+        "drift": 193.76,
+        "coherence": 0.0767,
+        "sigma_total": 5014.8682
+      },
+      {
+        "step": 1300,
+        "x": 221.87,
+        "drift": 189.93,
+        "coherence": 0.0756,
+        "sigma_total": 5094.9434
+      },
+      {
+        "step": 1400,
+        "x": 222.02,
+        "drift": 190.08,
+        "coherence": 0.0757,
+        "sigma_total": 5070.0774
+      },
+      {
+        "step": 1500,
+        "x": 223.11,
+        "drift": 191.16,
+        "coherence": 0.0795,
+        "sigma_total": 5005.9289
+      },
+      {
+        "step": 1600,
+        "x": 223.21,
+        "drift": 191.26,
+        "coherence": 0.0782,
+        "sigma_total": 4997.7415
+      },
+      {
+        "step": 1700,
+        "x": 223.66,
+        "drift": 191.71,
+        "coherence": 0.0777,
+        "sigma_total": 5094.2786
+      },
+      {
+        "step": 1800,
+        "x": 221.06,
+        "drift": 189.1,
+        "coherence": 0.0758,
+        "sigma_total": 5118.1192
+      },
+      {
+        "step": 1900,
+        "x": 222.97,
+        "drift": 191.04,
+        "coherence": 0.0778,
+        "sigma_total": 5067.1612
+      },
+      {
+        "step": 2000,
+        "x": 222.69,
+        "drift": 190.75,
+        "coherence": 0.0784,
+        "sigma_total": 5030.0563
+      },
+      {
+        "step": 2100,
+        "x": 222.49,
+        "drift": 190.52,
+        "coherence": 0.0825,
+        "sigma_total": 5008.0842
+      },
+      {
+        "step": 2200,
+        "x": 222.9,
+        "drift": 190.94,
+        "coherence": 0.0791,
+        "sigma_total": 5049.0057
+      },
+      {
+        "step": 2300,
+        "x": 223.29,
+        "drift": 191.33,
+        "coherence": 0.0779,
+        "sigma_total": 5110.8176
+      },
+      {
+        "step": 2400,
+        "x": 221.54,
+        "drift": 189.59,
+        "coherence": 0.0777,
+        "sigma_total": 5097.7974
+      },
+      {
+        "step": 2500,
+        "x": 222.97,
+        "drift": 191.03,
+        "coherence": 0.0774,
+        "sigma_total": 5066.2631
+      },
+      {
+        "step": 2600,
+        "x": 223.27,
+        "drift": 191.31,
+        "coherence": 0.0781,
+        "sigma_total": 5009.9633
+      },
+      {
+        "step": 2700,
+        "x": 222.22,
+        "drift": 190.24,
+        "coherence": 0.0786,
+        "sigma_total": 5010.5
+      },
+      {
+        "step": 2800,
+        "x": 223.54,
+        "drift": 191.57,
+        "coherence": 0.0773,
+        "sigma_total": 5097.1884
+      },
+      {
+        "step": 2900,
+        "x": 222.6,
+        "drift": 190.61,
+        "coherence": 0.0761,
+        "sigma_total": 5110.5659
+      }
+    ],
+    "zero_pump": [
+      {
+        "step": 0,
+        "x": 32.0,
+        "drift": 0.0,
+        "coherence": 0.7084,
+        "sigma_total": 156.2943
+      },
+      {
+        "step": 100,
+        "x": 79.55,
+        "drift": 49.37,
+        "coherence": 0.0642,
+        "sigma_total": 4172.7285
+      },
+      {
+        "step": 200,
+        "x": 100.11,
+        "drift": 68.79,
+        "coherence": 0.0653,
+        "sigma_total": 5681.0349
+      },
+      {
+        "step": 300,
+        "x": 119.01,
+        "drift": 87.24,
+        "coherence": 0.0968,
+        "sigma_total": 7209.6909
+      },
+      {
+        "step": 400,
+        "x": 131.49,
+        "drift": 99.54,
+        "coherence": 0.0942,
+        "sigma_total": 7853.0113
+      },
+      {
+        "step": 500,
+        "x": 139.19,
+        "drift": 107.21,
+        "coherence": 0.059,
+        "sigma_total": 7349.2104
+      },
+      {
+        "step": 600,
+        "x": 143.74,
+        "drift": 111.74,
+        "coherence": 0.0309,
+        "sigma_total": 6843.9852
+      },
+      {
+        "step": 700,
+        "x": 146.57,
+        "drift": 114.57,
+        "coherence": 0.0188,
+        "sigma_total": 6496.8246
+      },
+      {
+        "step": 800,
+        "x": 150.61,
+        "drift": 118.61,
+        "coherence": 0.0151,
+        "sigma_total": 6152.6573
+      },
+      {
+        "step": 900,
+        "x": 154.15,
+        "drift": 122.15,
+        "coherence": 0.0116,
+        "sigma_total": 5925.0496
+      },
+      {
+        "step": 1000,
+        "x": 157.56,
+        "drift": 125.56,
+        "coherence": 0.0115,
+        "sigma_total": 5635.7894
+      },
+      {
+        "step": 1100,
+        "x": 161.6,
+        "drift": 129.6,
+        "coherence": 0.0082,
+        "sigma_total": 5520.7946
+      },
+      {
+        "step": 1200,
+        "x": 166.58,
+        "drift": 134.58,
+        "coherence": 0.0088,
+        "sigma_total": 5346.6089
+      },
+      {
+        "step": 1300,
+        "x": 172.3,
+        "drift": 140.31,
+        "coherence": 0.0104,
+        "sigma_total": 5136.8173
+      },
+      {
+        "step": 1400,
+        "x": 180.47,
+        "drift": 148.48,
+        "coherence": 0.0151,
+        "sigma_total": 4846.4272
+      },
+      {
+        "step": 1500,
+        "x": 191.62,
+        "drift": 159.62,
+        "coherence": 0.0241,
+        "sigma_total": 4592.9942
+      },
+      {
+        "step": 1600,
+        "x": 206.98,
+        "drift": 174.99,
+        "coherence": 0.0361,
+        "sigma_total": 4432.2066
+      },
+      {
+        "step": 1700,
+        "x": 223.71,
+        "drift": 191.71,
+        "coherence": 0.0372,
+        "sigma_total": 4442.6516
+      },
+      {
+        "step": 1800,
+        "x": 228.44,
+        "drift": 196.44,
+        "coherence": 0.0113,
+        "sigma_total": 4296.2786
+      },
+      {
+        "step": 1900,
+        "x": 226.15,
+        "drift": 194.15,
+        "coherence": 0.0077,
+        "sigma_total": 4257.0668
+      },
+      {
+        "step": 2000,
+        "x": 227.29,
+        "drift": 195.29,
+        "coherence": 0.007,
+        "sigma_total": 4191.6016
+      },
+      {
+        "step": 2100,
+        "x": 226.81,
+        "drift": 194.81,
+        "coherence": 0.0134,
+        "sigma_total": 4154.3288
+      },
+      {
+        "step": 2200,
+        "x": 227.57,
+        "drift": 195.57,
+        "coherence": 0.0083,
+        "sigma_total": 4225.9389
+      },
+      {
+        "step": 2300,
+        "x": 227.71,
+        "drift": 195.71,
+        "coherence": 0.0075,
+        "sigma_total": 4254.147
+      },
+      {
+        "step": 2400,
+        "x": 226.85,
+        "drift": 194.85,
+        "coherence": 0.0075,
+        "sigma_total": 4269.1506
+      },
+      {
+        "step": 2500,
+        "x": 228.78,
+        "drift": 196.78,
+        "coherence": 0.0075,
+        "sigma_total": 4211.7436
+      },
+      {
+        "step": 2600,
+        "x": 226.74,
+        "drift": 194.74,
+        "coherence": 0.006,
+        "sigma_total": 4189.9513
+      },
+      {
+        "step": 2700,
+        "x": 228.5,
+        "drift": 196.5,
+        "coherence": 0.008,
+        "sigma_total": 4168.3031
+      },
+      {
+        "step": 2800,
+        "x": 227.47,
+        "drift": 195.47,
+        "coherence": 0.0068,
+        "sigma_total": 4294.7171
+      },
+      {
+        "step": 2900,
+        "x": 227.84,
+        "drift": 195.84,
+        "coherence": 0.0056,
+        "sigma_total": 4311.3098
+      }
+    ],
+    "normal": [
+      {
+        "step": 0,
+        "x": 32.06,
+        "drift": 0.06,
+        "coherence": 0.7097,
+        "sigma_total": 161.44
+      },
+      {
+        "step": 100,
+        "x": 69.07,
+        "drift": 38.22,
+        "coherence": 0.1008,
+        "sigma_total": 4653.5525
+      },
+      {
+        "step": 200,
+        "x": 88.42,
+        "drift": 56.89,
+        "coherence": 0.1166,
+        "sigma_total": 6073.37
+      },
+      {
+        "step": 300,
+        "x": 106.55,
+        "drift": 74.75,
+        "coherence": 0.12,
+        "sigma_total": 7317.1329
+      },
+      {
+        "step": 400,
+        "x": 121.77,
+        "drift": 89.81,
+        "coherence": 0.1476,
+        "sigma_total": 8940.7804
+      },
+      {
+        "step": 500,
+        "x": 132.02,
+        "drift": 100.04,
+        "coherence": 0.1488,
+        "sigma_total": 9489.94
+      },
+      {
+        "step": 600,
+        "x": 137.53,
+        "drift": 105.54,
+        "coherence": 0.1309,
+        "sigma_total": 9131.462
+      },
+      {
+        "step": 700,
+        "x": 140.82,
+        "drift": 108.82,
+        "coherence": 0.1165,
+        "sigma_total": 8547.0292
+      },
+      {
+        "step": 800,
+        "x": 144.47,
+        "drift": 112.47,
+        "coherence": 0.1069,
+        "sigma_total": 7956.9194
+      },
+      {
+        "step": 900,
+        "x": 147.43,
+        "drift": 115.43,
+        "coherence": 0.0956,
+        "sigma_total": 7536.912
+      },
+      {
+        "step": 1000,
+        "x": 149.86,
+        "drift": 117.86,
+        "coherence": 0.0916,
+        "sigma_total": 7134.2487
+      },
+      {
+        "step": 1100,
+        "x": 152.51,
+        "drift": 120.51,
+        "coherence": 0.0842,
+        "sigma_total": 6925.7336
+      },
+      {
+        "step": 1200,
+        "x": 155.32,
+        "drift": 123.32,
+        "coherence": 0.0793,
+        "sigma_total": 6717.767
+      },
+      {
+        "step": 1300,
+        "x": 157.71,
+        "drift": 125.71,
+        "coherence": 0.0771,
+        "sigma_total": 6523.9735
+      },
+      {
+        "step": 1400,
+        "x": 160.46,
+        "drift": 128.46,
+        "coherence": 0.0748,
+        "sigma_total": 6300.4007
+      },
+      {
+        "step": 1500,
+        "x": 163.63,
+        "drift": 131.63,
+        "coherence": 0.0747,
+        "sigma_total": 6071.5971
+      },
+      {
+        "step": 1600,
+        "x": 168.34,
+        "drift": 136.34,
+        "coherence": 0.0734,
+        "sigma_total": 5848.3256
+      },
+      {
+        "step": 1700,
+        "x": 174.41,
+        "drift": 142.41,
+        "coherence": 0.0727,
+        "sigma_total": 5679.2854
+      },
+      {
+        "step": 1800,
+        "x": 181.41,
+        "drift": 149.41,
+        "coherence": 0.0751,
+        "sigma_total": 5462.7695
+      },
+      {
+        "step": 1900,
+        "x": 192.1,
+        "drift": 160.1,
+        "coherence": 0.081,
+        "sigma_total": 5206.7125
+      },
+      {
+        "step": 2000,
+        "x": 206.58,
+        "drift": 174.58,
+        "coherence": 0.0874,
+        "sigma_total": 5027.6711
+      },
+      {
+        "step": 2100,
+        "x": 221.3,
+        "drift": 189.3,
+        "coherence": 0.0922,
+        "sigma_total": 4924.3428
+      },
+      {
+        "step": 2200,
+        "x": 228.34,
+        "drift": 196.34,
+        "coherence": 0.0872,
+        "sigma_total": 4773.4349
+      },
+      {
+        "step": 2300,
+        "x": 227.83,
+        "drift": 195.83,
+        "coherence": 0.0817,
+        "sigma_total": 4818.5343
+      },
+      {
+        "step": 2400,
+        "x": 226.98,
+        "drift": 194.99,
+        "coherence": 0.0815,
+        "sigma_total": 4830.672
+      },
+      {
+        "step": 2500,
+        "x": 228.87,
+        "drift": 196.88,
+        "coherence": 0.0825,
+        "sigma_total": 4779.043
+      },
+      {
+        "step": 2600,
+        "x": 226.88,
+        "drift": 194.88,
+        "coherence": 0.0818,
+        "sigma_total": 4749.5616
+      },
+      {
+        "step": 2700,
+        "x": 228.58,
+        "drift": 196.58,
+        "coherence": 0.0838,
+        "sigma_total": 4733.3834
+      },
+      {
+        "step": 2800,
+        "x": 227.58,
+        "drift": 195.59,
+        "coherence": 0.0806,
+        "sigma_total": 4853.5758
+      },
+      {
+        "step": 2900,
+        "x": 227.97,
+        "drift": 195.97,
+        "coherence": 0.0794,
+        "sigma_total": 4873.6164
+      }
+    ]
+  }
+}

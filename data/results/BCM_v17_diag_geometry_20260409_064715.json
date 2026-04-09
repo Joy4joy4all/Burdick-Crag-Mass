@@ -1,0 +1,371 @@
+{
+  "title": "BCM v17 Segment Geometry Sweep",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Compare segment ratios for spectral cleanliness inside 50-step locked cycle",
+  "grid": 256,
+  "steps": 3000,
+  "f_probe": 0.02,
+  "configs": [
+    {
+      "config": "A: 5/35/10 (current)",
+      "segments": {
+        "transit": 5,
+        "arc": 35,
+        "fall": 10
+      },
+      "velocity_channel": {
+        "spectral_entropy": 4.3998,
+        "ghost_count": 1,
+        "ghost_power_ratio": 0.1128,
+        "harmonic_purity": 0.8872,
+        "dominant_modes": 5,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 1.0,
+            "period": 50.0,
+            "class": "HARMONIC 1"
+          },
+          {
+            "freq": 0.2,
+            "power": 0.465248,
+            "period": 5.0,
+            "class": "HARMONIC 10"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.220118,
+            "period": 100.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.04,
+            "power": 0.1501,
+            "period": 25.0,
+            "class": "HARMONIC 2"
+          },
+          {
+            "freq": 0.4,
+            "power": 0.115747,
+            "period": 2.5,
+            "class": "HARMONIC 20"
+          }
+        ]
+      },
+      "sigma_peak_channel": {
+        "spectral_entropy": 3.9957,
+        "ghost_count": 10,
+        "ghost_power_ratio": 0.8007,
+        "harmonic_purity": 0.1993,
+        "dominant_modes": 11,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 0.256644,
+            "period": 50.0,
+            "class": "HARMONIC 1"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.214727,
+            "period": 100.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.002,
+            "power": 0.146419,
+            "period": 500.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.007,
+            "power": 0.144646,
+            "period": 142.9,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.013,
+            "power": 0.127074,
+            "period": 76.9,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.008333,
+            "power": 0.081542,
+            "period": 120.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.007667,
+            "power": 0.070196,
+            "period": 130.4,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.001,
+            "power": 0.069122,
+            "period": 1000.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.017667,
+            "power": 0.062672,
+            "period": 56.6,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.004333,
+            "power": 0.060562,
+            "period": 230.8,
+            "class": "GHOST"
+          }
+        ]
+      }
+    },
+    {
+      "config": "B: 10/30/10 (symmetric)",
+      "segments": {
+        "transit": 10,
+        "arc": 30,
+        "fall": 10
+      },
+      "velocity_channel": {
+        "spectral_entropy": 4.482,
+        "ghost_count": 6,
+        "ghost_power_ratio": 0.2489,
+        "harmonic_purity": 0.7511,
+        "dominant_modes": 11,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 1.0,
+            "period": 50.0,
+            "class": "HARMONIC 1"
+          },
+          {
+            "freq": 0.2,
+            "power": 0.899034,
+            "period": 5.0,
+            "class": "HARMONIC 10"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.398998,
+            "period": 100.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.04,
+            "power": 0.353069,
+            "period": 25.0,
+            "class": "HARMONIC 2"
+          },
+          {
+            "freq": 0.4,
+            "power": 0.200152,
+            "period": 2.5,
+            "class": "HARMONIC 20"
+          },
+          {
+            "freq": 0.017333,
+            "power": 0.139714,
+            "period": 57.7,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.014667,
+            "power": 0.102383,
+            "period": 68.2,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.005,
+            "power": 0.087966,
+            "period": 200.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.18,
+            "power": 0.087552,
+            "period": 5.6,
+            "class": "HARMONIC 9"
+          },
+          {
+            "freq": 0.021,
+            "power": 0.061164,
+            "period": 47.6,
+            "class": "GHOST"
+          }
+        ]
+      },
+      "sigma_peak_channel": {
+        "spectral_entropy": 3.4582,
+        "ghost_count": 6,
+        "ghost_power_ratio": 0.8425,
+        "harmonic_purity": 0.1575,
+        "dominant_modes": 7,
+        "peaks": [
+          {
+            "freq": 0.009,
+            "power": 0.524127,
+            "period": 111.1,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.02,
+            "power": 0.19103,
+            "period": 50.0,
+            "class": "HARMONIC 1"
+          },
+          {
+            "freq": 0.005,
+            "power": 0.150149,
+            "period": 200.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.002667,
+            "power": 0.116521,
+            "period": 375.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.010333,
+            "power": 0.094606,
+            "period": 96.8,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.004333,
+            "power": 0.085769,
+            "period": 230.8,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.007333,
+            "power": 0.050827,
+            "period": 136.4,
+            "class": "GHOST"
+          }
+        ]
+      }
+    },
+    {
+      "config": "C: 5/30/15 (extended fall)",
+      "segments": {
+        "transit": 5,
+        "arc": 30,
+        "fall": 15
+      },
+      "velocity_channel": {
+        "spectral_entropy": 4.3481,
+        "ghost_count": 5,
+        "ghost_power_ratio": 0.2203,
+        "harmonic_purity": 0.7797,
+        "dominant_modes": 12,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 1.0,
+            "period": 50.0,
+            "class": "HARMONIC 1"
+          },
+          {
+            "freq": 0.2,
+            "power": 0.790473,
+            "period": 5.0,
+            "class": "HARMONIC 10"
+          },
+          {
+            "freq": 0.04,
+            "power": 0.675282,
+            "period": 25.0,
+            "class": "HARMONIC 2"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.413962,
+            "period": 100.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.4,
+            "power": 0.175871,
+            "period": 2.5,
+            "class": "HARMONIC 20"
+          },
+          {
+            "freq": 0.017333,
+            "power": 0.132466,
+            "period": 57.7,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.014667,
+            "power": 0.104627,
+            "period": 68.2,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.005,
+            "power": 0.093387,
+            "period": 200.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.06,
+            "power": 0.065901,
+            "period": 16.7,
+            "class": "HARMONIC 3"
+          },
+          {
+            "freq": 0.14,
+            "power": 0.054826,
+            "period": 7.1,
+            "class": "HARMONIC 7"
+          }
+        ]
+      },
+      "sigma_peak_channel": {
+        "spectral_entropy": 3.5237,
+        "ghost_count": 4,
+        "ghost_power_ratio": 0.8085,
+        "harmonic_purity": 0.1915,
+        "dominant_modes": 5,
+        "peaks": [
+          {
+            "freq": 0.009,
+            "power": 0.40848,
+            "period": 111.1,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.02,
+            "power": 0.187529,
+            "period": 50.0,
+            "class": "HARMONIC 1"
+          },
+          {
+            "freq": 0.005,
+            "power": 0.186637,
+            "period": 200.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.002667,
+            "power": 0.112568,
+            "period": 375.0,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.010333,
+            "power": 0.084117,
+            "period": 96.8,
+            "class": "GHOST"
+          }
+        ]
+      }
+    }
+  ],
+  "winner": "A: 5/35/10 (current)"
+}

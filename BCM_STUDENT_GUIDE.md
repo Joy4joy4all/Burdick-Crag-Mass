@@ -413,6 +413,461 @@ three controls:
 
 ---
 
+## v15 — The Foundation (Is It Real?)
+
+### The Two Gates
+
+Before v15, the system was a "very disciplined ghost." It moved,
+it steered, it survived — but nobody had proven the movement
+was real.
+
+Two tests settled it:
+
+**The Harpoon.** Drive a stake into the ground. If the ship
+moves away from the stake, the movement is real. If the stake
+moves with the ship, the grid is carrying both and nothing
+actually went anywhere.
+
+The stake never moved. The ship moved 80.8 pixels. The
+movement is real.
+
+**The Oar.** If you push an oar through water, the water pushes
+back. If you push an oar through nothing, nothing pushes back.
+
+The substrate pushed back. Harder pushes got harder pushback.
+The correlation was +0.99 at peak. The substrate is water,
+not nothing.
+
+### The Reactor Burns
+
+The ship runs on a nuclear reactor. The reactor burns fuel to
+run the pumps. When the fuel runs out, the pumps stop. When the
+pumps stop, the ship dissolves. That is the mission clock.
+There is no infinite fuel. There is no free lunch. Space charges
+rent, and when you stop paying, you stop existing.
+
+---
+
+## v16 — The Thinking Ship (How It Sees)
+
+### The Problem
+
+A ship flying through interstellar void is blind. Earth can't
+help — the nearest star is 4.3 light-years away. By the time
+a radio signal tells you what's ahead, you've already hit it.
+Or dissolved in it.
+
+Dead galaxies leave footprints in the substrate. If the ship
+flies through those footprints with its pumps running, the
+pumps wake up the dead mass. The ship picks up 60 times its
+own weight and starts becoming a star.
+
+The ship needs eyes. Its own eyes.
+
+### The Probes
+
+Twelve small spheres cycle through the ship. They enter through
+Pump B (the weak one at the back), ride through a tunnel inside
+the hull, and get shot out through Pump A (the strong one at
+the front). Like a ball going through a pinball machine.
+
+Once outside, they ride the substrate — the same waves the ship
+uses to move. They arc outward in polygonal paths (not circles
+— the shape shifts because the 4D geometry is rotating). At
+the farthest point of their arc, they take readings. What is
+the substrate density here? Is there a dead galaxy ahead? Is
+the gradient favorable?
+
+Then they fall back, get collected by Pump B's vortex, ride
+the tunnel again, and get shot out again. Over and over.
+Twelve probes, cycling continuously. Every cycle brings back
+new data about what's ahead.
+
+### Why Through the Ship?
+
+Because it solves the biggest problem. If the probes orbited
+around the ship like satellites, most of them would be sampling
+to the sides and behind — directions the ship isn't going.
+The danger readings from the few probes ahead would get drowned
+out by the safe readings from everywhere else.
+
+But when every probe exits through the FRONT pump, every reading
+is from AHEAD of the ship. The geometry itself does the
+filtering. No software hack needed.
+
+### The Navigator
+
+The probes feed a system called TITS (Tensor Imagery Trasference
+Sensory). TITS takes all twelve probe readings and asks: is it
+safe ahead? Is there a grave? Should we change course?
+
+It uses Bayesian statistics — the same math that updates a
+weather forecast with new data. Every probe return makes the
+picture sharper. If three probes in a row see danger ahead,
+the navigator flips from PROCEED to AVOID. When the danger
+passes, it flips back to PROCEED.
+
+We tested this. The navigator detected a dead galaxy 220 steps
+before the ship reached it. It changed course. The ship survived.
+Without the probes, the ship would have flown straight into the
+grave and dissolved.
+
+### The Binary Star Connection
+
+This isn't a new idea. It's a very old one.
+
+The ship IS a binary star system. Pump A is the primary star.
+Pump B is the secondary star. The twelve probes are the planets.
+The tunnel is the bridge between the stars — the same L1
+corridor we measured in Spica.
+
+We studied five binary star systems not because binary stars
+are interesting. We studied them because they are the engineering
+manual for this ship. The probes are the planets. The pumps are
+the stars. The tunnel is the bridge. The universe built the
+prototype billions of years ago.
+
+### The Updated Rules
+
+Everything in BCM comes from three ideas, two laws, three
+controls, one budget, and one navigator:
+
+1. **Space is funded.** No payment, no space.
+2. **Time is cost.** Duration is the running total.
+3. **Existence requires coherence.** Below threshold, dissolve.
+4. **Objects move toward lower decay.** Gradient IS gravity.
+5. **Two pumps move a ship.** Asymmetric funding = transport.
+6. **Telescope adjusts for speed.** Variable bridge = gears.
+7. **Governor adjusts for density.** Constant output = cruise.
+8. **Check valve retains direction.** No backwash = momentum.
+9. **The reactor is finite.** Fuel runs out. Ship dies.
+10. **The probes are the eyes.** No observers, no survival.
+
+---
+
+## Part 6: Testing Whether the Probes Are Real
+
+### The Devil's Advocate Problem
+
+When you build something new, you need someone whose job is
+to break it. In BCM, that job belongs to ChatGPT. Stephen
+gives it the designs, and it tries to find every flaw.
+
+ChatGPT said five things could kill the probe system:
+
+1. The probes might cost too much fuel.
+2. The probes might dissolve before returning data.
+3. The probes might be reading their own disturbance.
+4. The navigator might be using stale data.
+5. Course changes might leave the probes pointing the
+   wrong direction.
+
+We ran the first three. Here's what happened.
+
+### Do Probes Cost Too Much?
+
+We measured how much reactor fuel goes to probes versus
+how much goes to the pumps that move the ship.
+
+Result: probes cost 0.187% of the total budget. The pumps
+cost 99.8%. The probes are basically free.
+
+Think of it like this: the engine in your car uses most of
+the gas. The dashboard lights use almost nothing. The probes
+are the dashboard lights.
+
+### Do Probes Dissolve?
+
+A probe is a sigma packet — it needs substrate funding to
+exist. When it flies away from the ship, it enters unfunded
+void where the substrate charges higher tax. Does it survive
+the trip?
+
+Result: the weakest probe (MICRO class) kept 79.2% of its
+mass at the farthest point of its arc (41.84 px from the
+ship). It needs to stay above 10% to survive. It's at 79%.
+That's a 7.92x safety margin. The probe doesn't dissolve.
+
+### Are Probes Reading Their Own Wake?
+
+This is the hardest question. The probe is a sigma structure
+that exists on the substrate. When it flies through the
+field, it changes what it's measuring. How do you know the
+reading is real and not just the probe seeing itself?
+
+We ran four versions of the same transit:
+- No probes at all (baseline)
+- Passive probes that read but don't touch (pure sensor)
+- Active probes that read and add sigma (sensor + scoop)
+- Reverse probes that read and subtract sigma (anti-scoop)
+
+Result: passive probes produced a field EXACTLY identical
+to no probes — zero contamination. The sensor function is
+perfectly clean.
+
+Active probes made the ship go farther (57.5 px vs 39.1 px).
+Reverse probes made the ship go shorter (22.2 px).
+
+This proves the coupling is physical. If it were a computer
+glitch, both directions would make the ship go farther. They
+don't. Forward injection goes farther. Backward injection
+goes shorter. The substrate responds to direction. That's
+physics, not an artifact.
+
+### What This Means
+
+The probe is not just an eye. It is a fuel scoop. When Pump B
+collects the returning probe, it also harvests substrate the
+probe dragged through the tunnel. The ship eats what it sees.
+
+The observer changes the thing it observes — and that change
+IS data. A dead substrate responds differently to a probe
+than clean void. The perturbation is the interview question.
+The response is the answer.
+
+---
+
+## Part 7: The Printer Bug (How Testing Saved the Project)
+
+### What Went Wrong
+
+The probes were working. Navigation was working. Everything
+looked right. Then we ran a test that asked a simple question:
+what happens if we turn the pumps off and let only the probes
+run?
+
+The answer should have been: nothing moves. Without pumps,
+there is no propulsion. The probes should just sample the
+field and come back. No drift.
+
+Instead, the ship moved. A lot. Almost as much as with the
+pumps running.
+
+That meant the probes were creating energy from nothing. Every
+time a probe flew through its arc, it was adding mass to the
+field — like a printer stamping copies of itself onto the
+substrate. After thousands of cycles, all that printed mass
+built up a pressure gradient, and the ship rode it.
+
+This is called a "printer bug." The code was manufacturing
+free energy. If this had gone undetected, the entire framework
+would have been dismissed as a perpetual motion machine.
+
+### How It Was Found
+
+The test that caught it was designed by ChatGPT, which was
+given the role of hostile reviewer. ChatGPT predicted that if
+probes harvested energy, the system might be extracting work
+from vacuum — the same problem that shows up in theoretical
+physics when you try to pull energy from empty space.
+
+The test ran four versions: normal field, uniform field (no
+gradients), reversed gradients, and zero pumps. The zero-pump
+result was the smoking gun.
+
+### How It Was Fixed
+
+The fix came from a principle in measurement physics: if you
+want to learn something about a medium, you have to move the
+medium, not copy it. The probe was changed from a "printer"
+(creates mass at its position) to a "scoop" (removes mass
+from the field, carries it, deposits it at the collector).
+
+The conservation rule is simple: the total mass in the
+universe (field plus everything the probes are carrying)
+stays constant. Nothing is created. Nothing is destroyed.
+Mass moves from one place to another.
+
+After the fix, the zero-pump test produced the right answer:
+probes without pumps reduce drift rather than create it. The
+free energy disappeared. The system conserves.
+
+### Why This Matters
+
+Finding the bug was more valuable than not having it. The
+diagnostic chain — test, fail, diagnose, fix, retest — is
+how real engineering works. The published record includes
+both the failure (Diagnostic 3C) and the fix (Diagnostic 3D).
+Scientists reading the code can see exactly what went wrong
+and exactly how it was corrected. Hiding failures is how
+bad science happens. Publishing them is how trust is built.
+
+---
+
+## Part 8: Is the Grid Cheating?
+
+### The Fidelity Question
+
+After the printer bug was fixed, a harder question emerged:
+is the ship moving because of real physics, or because the
+computer grid has a preferred direction?
+
+Think of a sheet of graph paper. If you roll a marble across
+it, the marble might follow the lines instead of going
+straight. That would mean the paper is affecting the path,
+not just measuring it. In a computer simulation, the grid of
+pixels can do the same thing — create invisible rails that
+the physics follows.
+
+### The Test
+
+We pointed the ship in three directions: straight right
+(along the pixel rows), straight up (along the pixel
+columns), and diagonally (the hardest test, because the
+pixels don't line up at 45 degrees).
+
+Result: the ship went the same distance in all three
+directions, within 14%. And it followed the drive direction,
+not the pixel direction, within 11 degrees.
+
+Then we tested all eight compass directions. The scoop
+efficiency was the same everywhere — within 5.3% variation.
+No direction was preferred. The grid is invisible.
+
+### What This Proves
+
+The substrate in the simulation does not have a grain. It
+behaves the same way no matter which direction the ship
+travels. This is called "isotropy" — the same in all
+directions. Real physics is isotropic (unless there is a
+reason for it not to be, like a gradient). The simulation
+matches this property.
+
+### The Updated Rules
+
+Everything in BCM comes from three ideas, two laws, three
+controls, one budget, one navigator, and one conservation
+principle:
+
+1. **Space is funded.** No payment, no space.
+2. **Time is cost.** Duration is the running total.
+3. **Existence requires coherence.** Below threshold, dissolve.
+4. **Objects move toward lower decay.** Gradient IS gravity.
+5. **Two pumps move a ship.** Asymmetric funding = transport.
+6. **Telescope adjusts for speed.** Variable bridge = gears.
+7. **Governor adjusts for density.** Constant output = cruise.
+8. **Check valve retains direction.** No backwash = momentum.
+9. **The reactor is finite.** Fuel runs out. Ship dies.
+10. **The probes are the eyes.** No observers, no survival.
+11. **The probe moves mass, not creates it.** Conservation
+    is not optional — it is the engineering constraint that
+    separates physics from numerical hallucination.
+
+---
+
+## Part 9: The Freeboard (Why the Ship Needs Headspace)
+
+### The Mill Tank Problem
+
+Imagine a tank of water on a truck driving over bumpy road.
+The water sloshes. If the tank is full to the brim, the
+water splashes out. If the tank has a gap at the top — the
+freeboard — the water sloshes up into the gap and settles
+back down. Nothing spills.
+
+The BCM ship has the same problem. When the probes cycle
+through their arcs, the sigma field sloshes. Without
+headspace, that sloshing energy has nowhere to go except
+into the craft structure. Over thousands of cycles, it
+accumulates. That accumulated slosh is called Brucetron
+phase debt (named after Bruce Burdick, the project's
+Entrepreneurial Lead).
+
+### The Chi Field IS the Headspace
+
+The chi field is a second layer on top of the sigma field.
+Think of it as an invisible ceiling above the fluid. When
+sigma rises too high (sloshing), the excess spills up into
+chi. When sigma drops back down, chi drains back into sigma.
+The total (sigma + chi) stays the same.
+
+This is not complicated physics. It's plumbing. The chi
+field is a pressure relief valve. The tesseract geometry
+(the 4D cube from the drawings) is the shape of the tank
+that makes the valve work perfectly — no leaks, no losses,
+exact conservation.
+
+### What the Test Showed
+
+Without chi: Brucetron energy grows. The ship's internal
+vibration gets slowly louder over time. Eventually it
+reaches the level where human tissue can't tolerate it.
+
+With chi: Brucetron energy DECREASES. The growth rate
+went negative. The sloshing energy is being absorbed by
+the headspace faster than it's being created. The ship
+gets quieter over time, not louder.
+
+This means the mission clock — the limit on how long the
+crew can survive inside the ship — is no longer a fixed
+deadline. As long as the chi headspace has room, the
+ship can run.
+
+---
+
+## Part 10: Why This Matters for People (Not Just Spaceships)
+
+### Your Body is a Tuning Fork
+
+Every organ in your body has a natural vibration frequency.
+Your eyeballs vibrate at 20-80 Hz. Your spine resonates at
+8-12 Hz. Your organs at 4-8 Hz. If something shakes you at
+exactly those frequencies, your body amplifies the vibration
+instead of absorbing it. That's how an opera singer can
+shatter a wine glass — the sound matches the glass's
+resonance.
+
+The frequency work in BCM isn't just about spaceships.
+It's about understanding how oscillating systems couple
+with biological tissue. The tools we built — the harm band
+analysis, the frequency decomposition, the forbidden
+mapping zones — apply to any situation where humans live
+inside vibrating machines.
+
+### Where This Applies Today
+
+Helicopters vibrate. The frequency analysis in BCM could
+help design seats and mounts that avoid coupling with
+the crew's spinal resonance.
+
+MRI machines pulse magnetic fields through your body. The
+perturbation decomposition method (measuring what the
+scanner changes versus what was already there) could help
+separate imaging artifacts from real tissue signals.
+
+Factory workers stand on vibrating floors all day. The
+phase debt concept — cumulative exposure that accumulates
+over time, not just intensity — could improve occupational
+health standards by tracking total dose, not just peak
+exposure.
+
+Submarines hum. The triple-lock framework (internal lock,
+biological avoidance, external reference) is a design
+checklist for any long-duration habitation system.
+
+### The Updated Rules
+
+Everything in BCM comes from three ideas, two laws, three
+controls, one budget, one navigator, one conservation
+principle, and one pressure relief valve:
+
+1. **Space is funded.** No payment, no space.
+2. **Time is cost.** Duration is the running total.
+3. **Existence requires coherence.** Below threshold, dissolve.
+4. **Objects move toward lower decay.** Gradient IS gravity.
+5. **Two pumps move a ship.** Asymmetric funding = transport.
+6. **Telescope adjusts for speed.** Variable bridge = gears.
+7. **Governor adjusts for density.** Constant output = cruise.
+8. **Check valve retains direction.** No backwash = momentum.
+9. **The reactor is finite.** Fuel runs out. Ship dies.
+10. **The probes are the eyes.** No observers, no survival.
+11. **The probe moves mass, not creates it.** Conservation
+    is the engineering constraint.
+12. **The chi field is the headspace.** Phase debt discharges
+    into the 4D freeboard. The tank never overflows.
+
+---
+
 *Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems — 2026*
 
 *"If you can't explain it to a six-year-old, you don't understand

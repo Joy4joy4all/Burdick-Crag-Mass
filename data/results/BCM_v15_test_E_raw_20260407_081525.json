@@ -1,0 +1,140 @@
+{
+  "title": "BCM v15 Test E Raw \u2014 Governor Stripped",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Raw V-F coupling without governor masking",
+  "grid": 128,
+  "steps": 2000,
+  "parameters": {
+    "dt": 0.05,
+    "D": 0.5,
+    "void_lambda": 0.1,
+    "pump_A": 0.5,
+    "alpha": 0.8,
+    "separation": 15.0,
+    "exhaust_coupling": 0.002,
+    "governor": "OFF",
+    "telescope": "OFF",
+    "check_valve": "OFF"
+  },
+  "correlations": {
+    "avg_V_vs_avg_F": 0.752909,
+    "max_V_vs_max_F": 0.985592,
+    "drift_vs_distortion": 0.971426,
+    "ratio_vs_velocity": 0.974961,
+    "ratio_vs_force": 0.850085
+  },
+  "verdict": "PASS",
+  "reason": "Positive V-F correlation (r=+0.7529). Governor was masking it. Substrate pushes back.",
+  "ratio_sweep": [
+    {
+      "ratio": 0.03,
+      "drift": 9.396366,
+      "coherence": 0.5447,
+      "avg_velocity": 0.005311801,
+      "avg_F_reaction": 1.6646238968,
+      "max_velocity": 0.0115380182,
+      "max_F_reaction": 3.1051006868,
+      "lambda_distortion": 63.763061,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.05,
+      "drift": 8.369409,
+      "coherence": 0.5434,
+      "avg_velocity": 0.0053726739,
+      "avg_F_reaction": 1.8005441293,
+      "max_velocity": 0.0114927093,
+      "max_F_reaction": 3.2884175095,
+      "lambda_distortion": 63.892709,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.08,
+      "drift": 6.938111,
+      "coherence": 0.5361,
+      "avg_velocity": 0.0056950834,
+      "avg_F_reaction": 2.0177110091,
+      "max_velocity": 0.0177455553,
+      "max_F_reaction": 3.3699736245,
+      "lambda_distortion": 63.743805,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.1,
+      "drift": 5.93483,
+      "coherence": 0.539,
+      "avg_velocity": 0.0059650691,
+      "avg_F_reaction": 2.1552634324,
+      "max_velocity": 0.022261613,
+      "max_F_reaction": 3.556021687,
+      "lambda_distortion": 63.810324,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.15,
+      "drift": 3.329144,
+      "coherence": 0.5404,
+      "avg_velocity": 0.0068268558,
+      "avg_F_reaction": 2.4854123643,
+      "max_velocity": 0.0332100665,
+      "max_F_reaction": 4.1054601768,
+      "lambda_distortion": 63.942884,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.2,
+      "drift": 0.570574,
+      "coherence": 0.5363,
+      "avg_velocity": 0.0079771043,
+      "avg_F_reaction": 2.821244921,
+      "max_velocity": 0.0436504868,
+      "max_F_reaction": 4.4554516052,
+      "lambda_distortion": 63.876797,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.25,
+      "drift": 2.757177,
+      "coherence": 0.5387,
+      "avg_velocity": 0.0093382869,
+      "avg_F_reaction": 3.091599809,
+      "max_velocity": 0.0536305873,
+      "max_F_reaction": 4.7877513624,
+      "lambda_distortion": 64.673072,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.35,
+      "drift": 11.519306,
+      "coherence": 0.5243,
+      "avg_velocity": 0.0134117007,
+      "avg_F_reaction": 3.2529061737,
+      "max_velocity": 0.0723404246,
+      "max_F_reaction": 5.4245136296,
+      "lambda_distortion": 66.451137,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.5,
+      "drift": 40.141541,
+      "coherence": 0.5649,
+      "avg_velocity": 0.0257813024,
+      "avg_F_reaction": 3.3080335705,
+      "max_velocity": 0.0976492024,
+      "max_F_reaction": 5.8168363096,
+      "lambda_distortion": 73.026827,
+      "n_samples": 1949
+    },
+    {
+      "ratio": 0.75,
+      "drift": 59.614053,
+      "coherence": 0.5655,
+      "avg_velocity": 0.0321020344,
+      "avg_F_reaction": 3.3480727132,
+      "max_velocity": 0.1338228388,
+      "max_F_reaction": 6.6187160957,
+      "lambda_distortion": 74.799554,
+      "n_samples": 1949
+    }
+  ]
+}

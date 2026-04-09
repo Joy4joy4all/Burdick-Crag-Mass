@@ -1,0 +1,1048 @@
+{
+  "title": "BCM v16 Diagnostic 3D: Sigma Transport Neutrality",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Printer bug fix verification. Scoop/deposit replaces stamp_sigma.",
+  "grid": 256,
+  "steps": 3000,
+  "transport_model": {
+    "scoop_efficiency": 0.05,
+    "scoop_radius": 2.0,
+    "mechanism": "Remove sigma at probe position, carry as payload, deposit at B"
+  },
+  "drifts": {
+    "normal_control": 24.6572,
+    "uniform_field": 22.0632,
+    "reversed_gradient": 16.9013,
+    "zero_pump": 0.0
+  },
+  "kill_conditions": {
+    "kill_1_uniform_pct": 89.4797,
+    "kill_1_pass": true,
+    "kill_2_reversed_exceeds": false,
+    "kill_2_pass": true,
+    "kill_3_zero_pct": 0.0,
+    "kill_3_pass": true
+  },
+  "scooped_deposited": {
+    "1_uniform": {
+      "scooped": 1096.1765,
+      "deposited": 1086.6718
+    },
+    "2_reversed": {
+      "scooped": 5879.0321,
+      "deposited": 5813.4889
+    },
+    "3_zero": {
+      "scooped": 1.6164,
+      "deposited": 1.6164
+    },
+    "4_normal": {
+      "scooped": 1113.6444,
+      "deposited": 1103.6088
+    }
+  },
+  "verdict": "PASS",
+  "trajectory": [
+    {
+      "step": 0,
+      "uniform": 0.06,
+      "reversed": 0.06,
+      "zero_pump": 0.0,
+      "normal": 0.06
+    },
+    {
+      "step": 500,
+      "uniform": 5.93,
+      "reversed": 8.33,
+      "zero_pump": 16.37,
+      "normal": 5.98
+    },
+    {
+      "step": 1000,
+      "uniform": 9.09,
+      "reversed": 17.25,
+      "zero_pump": 10.04,
+      "normal": 9.22
+    },
+    {
+      "step": 1500,
+      "uniform": 12.5,
+      "reversed": 17.03,
+      "zero_pump": 6.29,
+      "normal": 12.81
+    }
+  ],
+  "timelines": {
+    "1_uniform": [
+      {
+        "step": 0,
+        "x": 32.06,
+        "drift": 0.06,
+        "coherence": 0.7097,
+        "sigma_field": 161.44,
+        "sigma_payload": 0.0,
+        "sigma_total": 161.44
+      },
+      {
+        "step": 100,
+        "x": 35.4,
+        "drift": 3.4,
+        "coherence": 0.7176,
+        "sigma_field": 508.8319,
+        "sigma_payload": 17.193398,
+        "sigma_total": 526.0253
+      },
+      {
+        "step": 200,
+        "x": 35.98,
+        "drift": 3.98,
+        "coherence": 0.7156,
+        "sigma_field": 569.956,
+        "sigma_payload": 12.357088,
+        "sigma_total": 582.3131
+      },
+      {
+        "step": 300,
+        "x": 36.56,
+        "drift": 4.57,
+        "coherence": 0.7239,
+        "sigma_field": 575.5863,
+        "sigma_payload": 10.959489,
+        "sigma_total": 586.5458
+      },
+      {
+        "step": 400,
+        "x": 37.21,
+        "drift": 5.22,
+        "coherence": 0.7219,
+        "sigma_field": 577.6575,
+        "sigma_payload": 10.04323,
+        "sigma_total": 587.7008
+      },
+      {
+        "step": 500,
+        "x": 37.92,
+        "drift": 5.93,
+        "coherence": 0.7256,
+        "sigma_field": 583.4421,
+        "sigma_payload": 9.809281,
+        "sigma_total": 593.2514
+      },
+      {
+        "step": 600,
+        "x": 38.76,
+        "drift": 6.76,
+        "coherence": 0.7252,
+        "sigma_field": 576.6574,
+        "sigma_payload": 11.848922,
+        "sigma_total": 588.5063
+      },
+      {
+        "step": 700,
+        "x": 39.24,
+        "drift": 7.24,
+        "coherence": 0.7219,
+        "sigma_field": 574.0708,
+        "sigma_payload": 11.618275,
+        "sigma_total": 585.6891
+      },
+      {
+        "step": 800,
+        "x": 40.08,
+        "drift": 8.08,
+        "coherence": 0.7077,
+        "sigma_field": 555.6645,
+        "sigma_payload": 13.461453,
+        "sigma_total": 569.1259
+      },
+      {
+        "step": 900,
+        "x": 40.57,
+        "drift": 8.57,
+        "coherence": 0.7258,
+        "sigma_field": 570.6212,
+        "sigma_payload": 12.625336,
+        "sigma_total": 583.2465
+      },
+      {
+        "step": 1000,
+        "x": 41.09,
+        "drift": 9.09,
+        "coherence": 0.7246,
+        "sigma_field": 570.5065,
+        "sigma_payload": 11.632068,
+        "sigma_total": 582.1386
+      },
+      {
+        "step": 1100,
+        "x": 41.87,
+        "drift": 9.88,
+        "coherence": 0.7157,
+        "sigma_field": 572.8054,
+        "sigma_payload": 9.655276,
+        "sigma_total": 582.4607
+      },
+      {
+        "step": 1200,
+        "x": 42.25,
+        "drift": 10.25,
+        "coherence": 0.7158,
+        "sigma_field": 571.6184,
+        "sigma_payload": 9.978689,
+        "sigma_total": 581.5971
+      },
+      {
+        "step": 1300,
+        "x": 43.09,
+        "drift": 11.1,
+        "coherence": 0.7118,
+        "sigma_field": 573.4158,
+        "sigma_payload": 12.789949,
+        "sigma_total": 586.2058
+      },
+      {
+        "step": 1400,
+        "x": 43.73,
+        "drift": 11.73,
+        "coherence": 0.7196,
+        "sigma_field": 572.7736,
+        "sigma_payload": 9.784633,
+        "sigma_total": 582.5583
+      },
+      {
+        "step": 1500,
+        "x": 44.5,
+        "drift": 12.5,
+        "coherence": 0.721,
+        "sigma_field": 575.0889,
+        "sigma_payload": 11.3543,
+        "sigma_total": 586.4432
+      },
+      {
+        "step": 1600,
+        "x": 45.14,
+        "drift": 13.14,
+        "coherence": 0.7202,
+        "sigma_field": 583.206,
+        "sigma_payload": 8.934109,
+        "sigma_total": 592.1401
+      },
+      {
+        "step": 1700,
+        "x": 45.9,
+        "drift": 13.9,
+        "coherence": 0.7203,
+        "sigma_field": 570.3587,
+        "sigma_payload": 11.679464,
+        "sigma_total": 582.0382
+      },
+      {
+        "step": 1800,
+        "x": 46.6,
+        "drift": 14.61,
+        "coherence": 0.7326,
+        "sigma_field": 576.0935,
+        "sigma_payload": 11.395504,
+        "sigma_total": 587.489
+      },
+      {
+        "step": 1900,
+        "x": 47.34,
+        "drift": 15.36,
+        "coherence": 0.7235,
+        "sigma_field": 563.9009,
+        "sigma_payload": 12.480881,
+        "sigma_total": 576.3818
+      },
+      {
+        "step": 2000,
+        "x": 47.86,
+        "drift": 15.87,
+        "coherence": 0.7182,
+        "sigma_field": 575.8243,
+        "sigma_payload": 10.577959,
+        "sigma_total": 586.4023
+      },
+      {
+        "step": 2100,
+        "x": 48.74,
+        "drift": 16.74,
+        "coherence": 0.7199,
+        "sigma_field": 549.3304,
+        "sigma_payload": 16.532821,
+        "sigma_total": 565.8633
+      },
+      {
+        "step": 2200,
+        "x": 49.21,
+        "drift": 17.21,
+        "coherence": 0.726,
+        "sigma_field": 578.0283,
+        "sigma_payload": 10.555007,
+        "sigma_total": 588.5833
+      },
+      {
+        "step": 2300,
+        "x": 49.68,
+        "drift": 17.69,
+        "coherence": 0.7207,
+        "sigma_field": 568.626,
+        "sigma_payload": 11.480464,
+        "sigma_total": 580.1065
+      },
+      {
+        "step": 2400,
+        "x": 50.35,
+        "drift": 18.36,
+        "coherence": 0.7217,
+        "sigma_field": 574.1683,
+        "sigma_payload": 10.980507,
+        "sigma_total": 585.1488
+      },
+      {
+        "step": 2500,
+        "x": 50.75,
+        "drift": 18.76,
+        "coherence": 0.724,
+        "sigma_field": 579.1284,
+        "sigma_payload": 9.69907,
+        "sigma_total": 588.8275
+      },
+      {
+        "step": 2600,
+        "x": 51.46,
+        "drift": 19.47,
+        "coherence": 0.7236,
+        "sigma_field": 584.7227,
+        "sigma_payload": 9.22432,
+        "sigma_total": 593.947
+      },
+      {
+        "step": 2700,
+        "x": 52.18,
+        "drift": 20.2,
+        "coherence": 0.7223,
+        "sigma_field": 581.408,
+        "sigma_payload": 9.859985,
+        "sigma_total": 591.2679
+      },
+      {
+        "step": 2800,
+        "x": 52.89,
+        "drift": 20.9,
+        "coherence": 0.7207,
+        "sigma_field": 577.4452,
+        "sigma_payload": 10.709868,
+        "sigma_total": 588.155
+      },
+      {
+        "step": 2900,
+        "x": 53.55,
+        "drift": 21.57,
+        "coherence": 0.7137,
+        "sigma_field": 572.2807,
+        "sigma_payload": 11.021085,
+        "sigma_total": 583.3017
+      }
+    ],
+    "2_reversed": [
+      {
+        "step": 0,
+        "x": 32.06,
+        "drift": 0.06,
+        "coherence": 0.7097,
+        "sigma_field": 161.68,
+        "sigma_payload": 0.0,
+        "sigma_total": 161.68
+      },
+      {
+        "step": 100,
+        "x": 33.19,
+        "drift": 1.2,
+        "coherence": 0.7083,
+        "sigma_field": 645.6093,
+        "sigma_payload": 20.315257,
+        "sigma_total": 665.9245
+      },
+      {
+        "step": 200,
+        "x": 31.33,
+        "drift": 0.67,
+        "coherence": 0.709,
+        "sigma_field": 798.0174,
+        "sigma_payload": 15.557659,
+        "sigma_total": 813.5751
+      },
+      {
+        "step": 300,
+        "x": 29.08,
+        "drift": 2.93,
+        "coherence": 0.7096,
+        "sigma_field": 884.189,
+        "sigma_payload": 14.517278,
+        "sigma_total": 898.7063
+      },
+      {
+        "step": 400,
+        "x": 26.55,
+        "drift": 5.45,
+        "coherence": 0.709,
+        "sigma_field": 991.7607,
+        "sigma_payload": 14.161567,
+        "sigma_total": 1005.9223
+      },
+      {
+        "step": 500,
+        "x": 23.68,
+        "drift": 8.33,
+        "coherence": 0.7089,
+        "sigma_field": 1153.1844,
+        "sigma_payload": 15.248469,
+        "sigma_total": 1168.4328
+      },
+      {
+        "step": 600,
+        "x": 20.8,
+        "drift": 11.2,
+        "coherence": 0.703,
+        "sigma_field": 1398.0261,
+        "sigma_payload": 21.109015,
+        "sigma_total": 1419.1351
+      },
+      {
+        "step": 700,
+        "x": 17.7,
+        "drift": 14.3,
+        "coherence": 0.7021,
+        "sigma_field": 1776.3447,
+        "sigma_payload": 24.644227,
+        "sigma_total": 1800.9889
+      },
+      {
+        "step": 800,
+        "x": 15.76,
+        "drift": 16.24,
+        "coherence": 0.6663,
+        "sigma_field": 2227.7768,
+        "sigma_payload": 38.839634,
+        "sigma_total": 2266.6165
+      },
+      {
+        "step": 900,
+        "x": 14.68,
+        "drift": 17.33,
+        "coherence": 0.6819,
+        "sigma_field": 2824.5453,
+        "sigma_payload": 44.361878,
+        "sigma_total": 2868.9072
+      },
+      {
+        "step": 1000,
+        "x": 14.75,
+        "drift": 17.25,
+        "coherence": 0.6539,
+        "sigma_field": 3341.7921,
+        "sigma_payload": 49.94417,
+        "sigma_total": 3391.7362
+      },
+      {
+        "step": 1100,
+        "x": 14.83,
+        "drift": 17.17,
+        "coherence": 0.634,
+        "sigma_field": 3863.4799,
+        "sigma_payload": 44.584391,
+        "sigma_total": 3908.0642
+      },
+      {
+        "step": 1200,
+        "x": 14.98,
+        "drift": 17.02,
+        "coherence": 0.6088,
+        "sigma_field": 4245.6131,
+        "sigma_payload": 42.134493,
+        "sigma_total": 4287.7476
+      },
+      {
+        "step": 1300,
+        "x": 14.92,
+        "drift": 17.08,
+        "coherence": 0.6354,
+        "sigma_field": 4508.306,
+        "sigma_payload": 75.314468,
+        "sigma_total": 4583.6205
+      },
+      {
+        "step": 1400,
+        "x": 14.77,
+        "drift": 17.24,
+        "coherence": 0.625,
+        "sigma_field": 4723.9689,
+        "sigma_payload": 45.722148,
+        "sigma_total": 4769.6911
+      },
+      {
+        "step": 1500,
+        "x": 14.97,
+        "drift": 17.03,
+        "coherence": 0.6489,
+        "sigma_field": 4787.9462,
+        "sigma_payload": 75.064129,
+        "sigma_total": 4863.0103
+      },
+      {
+        "step": 1600,
+        "x": 14.76,
+        "drift": 17.25,
+        "coherence": 0.6455,
+        "sigma_field": 5063.3816,
+        "sigma_payload": 39.781772,
+        "sigma_total": 5103.1634
+      },
+      {
+        "step": 1700,
+        "x": 14.43,
+        "drift": 17.57,
+        "coherence": 0.6563,
+        "sigma_field": 5035.3118,
+        "sigma_payload": 81.012482,
+        "sigma_total": 5116.3243
+      },
+      {
+        "step": 1800,
+        "x": 14.86,
+        "drift": 17.15,
+        "coherence": 0.6375,
+        "sigma_field": 5182.5379,
+        "sigma_payload": 74.16279,
+        "sigma_total": 5256.7007
+      },
+      {
+        "step": 1900,
+        "x": 15.25,
+        "drift": 16.76,
+        "coherence": 0.6113,
+        "sigma_field": 5123.8986,
+        "sigma_payload": 102.645484,
+        "sigma_total": 5226.5441
+      },
+      {
+        "step": 2000,
+        "x": 14.74,
+        "drift": 17.26,
+        "coherence": 0.6483,
+        "sigma_field": 5384.4713,
+        "sigma_payload": 63.890882,
+        "sigma_total": 5448.3622
+      },
+      {
+        "step": 2100,
+        "x": 15.62,
+        "drift": 16.38,
+        "coherence": 0.5962,
+        "sigma_field": 5009.0401,
+        "sigma_payload": 147.948858,
+        "sigma_total": 5156.9889
+      },
+      {
+        "step": 2200,
+        "x": 14.65,
+        "drift": 17.35,
+        "coherence": 0.6682,
+        "sigma_field": 5430.5807,
+        "sigma_payload": 69.270952,
+        "sigma_total": 5499.8517
+      },
+      {
+        "step": 2300,
+        "x": 14.78,
+        "drift": 17.22,
+        "coherence": 0.6141,
+        "sigma_field": 5531.3322,
+        "sigma_payload": 70.335895,
+        "sigma_total": 5601.6681
+      },
+      {
+        "step": 2400,
+        "x": 14.8,
+        "drift": 17.2,
+        "coherence": 0.6492,
+        "sigma_field": 5578.929,
+        "sigma_payload": 62.947486,
+        "sigma_total": 5641.8765
+      },
+      {
+        "step": 2500,
+        "x": 15.06,
+        "drift": 16.94,
+        "coherence": 0.602,
+        "sigma_field": 5706.2406,
+        "sigma_payload": 45.369957,
+        "sigma_total": 5751.6106
+      },
+      {
+        "step": 2600,
+        "x": 14.83,
+        "drift": 17.18,
+        "coherence": 0.6449,
+        "sigma_field": 5615.0166,
+        "sigma_payload": 54.708472,
+        "sigma_total": 5669.7251
+      },
+      {
+        "step": 2700,
+        "x": 14.71,
+        "drift": 17.3,
+        "coherence": 0.6321,
+        "sigma_field": 5591.8384,
+        "sigma_payload": 59.171226,
+        "sigma_total": 5651.0097
+      },
+      {
+        "step": 2800,
+        "x": 14.95,
+        "drift": 17.05,
+        "coherence": 0.6391,
+        "sigma_field": 5550.0661,
+        "sigma_payload": 81.479123,
+        "sigma_total": 5631.5452
+      },
+      {
+        "step": 2900,
+        "x": 14.79,
+        "drift": 17.22,
+        "coherence": 0.6253,
+        "sigma_field": 5585.4738,
+        "sigma_payload": 72.092556,
+        "sigma_total": 5657.5663
+      }
+    ],
+    "3_zero": [
+      {
+        "step": 0,
+        "x": 32.0,
+        "drift": 0.0,
+        "coherence": 0.7084,
+        "sigma_field": 156.2943,
+        "sigma_payload": 0.0,
+        "sigma_total": 156.2943
+      },
+      {
+        "step": 100,
+        "x": 30.77,
+        "drift": 1.28,
+        "coherence": 0.5775,
+        "sigma_field": 10.0061,
+        "sigma_payload": 0.405348,
+        "sigma_total": 10.4114
+      },
+      {
+        "step": 200,
+        "x": 26.14,
+        "drift": 5.87,
+        "coherence": 0.6697,
+        "sigma_field": 0.971,
+        "sigma_payload": 0.023383,
+        "sigma_total": 0.9944
+      },
+      {
+        "step": 300,
+        "x": 22.37,
+        "drift": 9.64,
+        "coherence": 0.6681,
+        "sigma_field": 0.0842,
+        "sigma_payload": 0.001605,
+        "sigma_total": 0.0858
+      },
+      {
+        "step": 400,
+        "x": 18.7,
+        "drift": 13.31,
+        "coherence": 0.6566,
+        "sigma_field": 0.007,
+        "sigma_payload": 0.000127,
+        "sigma_total": 0.0072
+      },
+      {
+        "step": 500,
+        "x": 15.64,
+        "drift": 16.37,
+        "coherence": 0.6765,
+        "sigma_field": 0.0006,
+        "sigma_payload": 1.1e-05,
+        "sigma_total": 0.0006
+      },
+      {
+        "step": 600,
+        "x": 15.69,
+        "drift": 16.31,
+        "coherence": 0.6436,
+        "sigma_field": 0.0001,
+        "sigma_payload": 1e-06,
+        "sigma_total": 0.0001
+      },
+      {
+        "step": 700,
+        "x": 17.86,
+        "drift": 14.14,
+        "coherence": 0.5907,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 800,
+        "x": 22.7,
+        "drift": 9.3,
+        "coherence": 0.4562,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 900,
+        "x": 22.26,
+        "drift": 9.75,
+        "coherence": 0.6136,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1000,
+        "x": 21.96,
+        "drift": 10.04,
+        "coherence": 0.6091,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1100,
+        "x": 20.89,
+        "drift": 11.11,
+        "coherence": 0.6063,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1200,
+        "x": 19.8,
+        "drift": 12.2,
+        "coherence": 0.5935,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1300,
+        "x": 19.53,
+        "drift": 12.48,
+        "coherence": 0.6153,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1400,
+        "x": 19.97,
+        "drift": 12.04,
+        "coherence": 0.5659,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1500,
+        "x": 25.71,
+        "drift": 6.29,
+        "coherence": 0.4845,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      },
+      {
+        "step": 1600,
+        "x": 44.34,
+        "drift": 12.35,
+        "coherence": 0.3046,
+        "sigma_field": 0.0,
+        "sigma_payload": 0.0,
+        "sigma_total": 0.0
+      }
+    ],
+    "4_normal": [
+      {
+        "step": 0,
+        "x": 32.06,
+        "drift": 0.06,
+        "coherence": 0.7097,
+        "sigma_field": 161.44,
+        "sigma_payload": 0.0,
+        "sigma_total": 161.44
+      },
+      {
+        "step": 100,
+        "x": 35.41,
+        "drift": 3.41,
+        "coherence": 0.7189,
+        "sigma_field": 508.9847,
+        "sigma_payload": 17.210778,
+        "sigma_total": 526.1955
+      },
+      {
+        "step": 200,
+        "x": 36.0,
+        "drift": 4.0,
+        "coherence": 0.7136,
+        "sigma_field": 570.2367,
+        "sigma_payload": 12.372219,
+        "sigma_total": 582.6089
+      },
+      {
+        "step": 300,
+        "x": 36.6,
+        "drift": 4.6,
+        "coherence": 0.7257,
+        "sigma_field": 575.9942,
+        "sigma_payload": 10.979493,
+        "sigma_total": 586.9737
+      },
+      {
+        "step": 400,
+        "x": 37.25,
+        "drift": 5.26,
+        "coherence": 0.7221,
+        "sigma_field": 578.0211,
+        "sigma_payload": 10.074479,
+        "sigma_total": 588.0956
+      },
+      {
+        "step": 500,
+        "x": 37.97,
+        "drift": 5.98,
+        "coherence": 0.7239,
+        "sigma_field": 583.9753,
+        "sigma_payload": 9.823105,
+        "sigma_total": 593.7984
+      },
+      {
+        "step": 600,
+        "x": 38.82,
+        "drift": 6.82,
+        "coherence": 0.721,
+        "sigma_field": 577.2369,
+        "sigma_payload": 11.892203,
+        "sigma_total": 589.1291
+      },
+      {
+        "step": 700,
+        "x": 39.32,
+        "drift": 7.32,
+        "coherence": 0.7233,
+        "sigma_field": 574.8949,
+        "sigma_payload": 11.63706,
+        "sigma_total": 586.532
+      },
+      {
+        "step": 800,
+        "x": 40.17,
+        "drift": 8.17,
+        "coherence": 0.7079,
+        "sigma_field": 556.5892,
+        "sigma_payload": 13.479557,
+        "sigma_total": 570.0688
+      },
+      {
+        "step": 900,
+        "x": 40.68,
+        "drift": 8.69,
+        "coherence": 0.7257,
+        "sigma_field": 571.6386,
+        "sigma_payload": 12.667499,
+        "sigma_total": 584.3061
+      },
+      {
+        "step": 1000,
+        "x": 41.22,
+        "drift": 9.22,
+        "coherence": 0.7232,
+        "sigma_field": 571.6109,
+        "sigma_payload": 11.656065,
+        "sigma_total": 583.267
+      },
+      {
+        "step": 1100,
+        "x": 42.04,
+        "drift": 10.04,
+        "coherence": 0.7088,
+        "sigma_field": 573.9917,
+        "sigma_payload": 9.718063,
+        "sigma_total": 583.7097
+      },
+      {
+        "step": 1200,
+        "x": 42.44,
+        "drift": 10.44,
+        "coherence": 0.7101,
+        "sigma_field": 572.8906,
+        "sigma_payload": 10.078316,
+        "sigma_total": 582.9689
+      },
+      {
+        "step": 1300,
+        "x": 43.3,
+        "drift": 11.3,
+        "coherence": 0.7122,
+        "sigma_field": 575.084,
+        "sigma_payload": 12.828523,
+        "sigma_total": 587.9125
+      },
+      {
+        "step": 1400,
+        "x": 43.97,
+        "drift": 11.98,
+        "coherence": 0.7126,
+        "sigma_field": 574.6905,
+        "sigma_payload": 9.881508,
+        "sigma_total": 584.572
+      },
+      {
+        "step": 1500,
+        "x": 44.81,
+        "drift": 12.81,
+        "coherence": 0.7243,
+        "sigma_field": 577.3451,
+        "sigma_payload": 11.495729,
+        "sigma_total": 588.8408
+      },
+      {
+        "step": 1600,
+        "x": 45.5,
+        "drift": 13.5,
+        "coherence": 0.7275,
+        "sigma_field": 585.814,
+        "sigma_payload": 9.042462,
+        "sigma_total": 594.8564
+      },
+      {
+        "step": 1700,
+        "x": 46.31,
+        "drift": 14.32,
+        "coherence": 0.7202,
+        "sigma_field": 573.4472,
+        "sigma_payload": 11.796867,
+        "sigma_total": 585.244
+      },
+      {
+        "step": 1800,
+        "x": 47.07,
+        "drift": 15.08,
+        "coherence": 0.7192,
+        "sigma_field": 579.603,
+        "sigma_payload": 11.508466,
+        "sigma_total": 591.1114
+      },
+      {
+        "step": 1900,
+        "x": 47.9,
+        "drift": 15.91,
+        "coherence": 0.7173,
+        "sigma_field": 567.5393,
+        "sigma_payload": 12.724907,
+        "sigma_total": 580.2642
+      },
+      {
+        "step": 2000,
+        "x": 48.49,
+        "drift": 16.5,
+        "coherence": 0.7308,
+        "sigma_field": 580.6804,
+        "sigma_payload": 10.757936,
+        "sigma_total": 591.4383
+      },
+      {
+        "step": 2100,
+        "x": 49.48,
+        "drift": 17.49,
+        "coherence": 0.7287,
+        "sigma_field": 554.2707,
+        "sigma_payload": 16.902343,
+        "sigma_total": 571.1731
+      },
+      {
+        "step": 2200,
+        "x": 50.08,
+        "drift": 18.09,
+        "coherence": 0.719,
+        "sigma_field": 584.5108,
+        "sigma_payload": 10.854458,
+        "sigma_total": 595.3653
+      },
+      {
+        "step": 2300,
+        "x": 50.69,
+        "drift": 18.7,
+        "coherence": 0.7179,
+        "sigma_field": 575.8735,
+        "sigma_payload": 11.796988,
+        "sigma_total": 587.6705
+      },
+      {
+        "step": 2400,
+        "x": 51.52,
+        "drift": 19.53,
+        "coherence": 0.7229,
+        "sigma_field": 582.8219,
+        "sigma_payload": 11.273091,
+        "sigma_total": 594.095
+      },
+      {
+        "step": 2500,
+        "x": 52.07,
+        "drift": 20.08,
+        "coherence": 0.7159,
+        "sigma_field": 589.2098,
+        "sigma_payload": 9.959156,
+        "sigma_total": 599.1689
+      },
+      {
+        "step": 2600,
+        "x": 52.97,
+        "drift": 20.98,
+        "coherence": 0.7171,
+        "sigma_field": 596.2473,
+        "sigma_payload": 9.584349,
+        "sigma_total": 605.8316
+      },
+      {
+        "step": 2700,
+        "x": 53.93,
+        "drift": 21.94,
+        "coherence": 0.719,
+        "sigma_field": 594.6009,
+        "sigma_payload": 10.294642,
+        "sigma_total": 604.8955
+      },
+      {
+        "step": 2800,
+        "x": 54.89,
+        "drift": 22.9,
+        "coherence": 0.718,
+        "sigma_field": 592.9186,
+        "sigma_payload": 11.202164,
+        "sigma_total": 604.1208
+      },
+      {
+        "step": 2900,
+        "x": 55.85,
+        "drift": 23.86,
+        "coherence": 0.7085,
+        "sigma_field": 590.0401,
+        "sigma_payload": 11.585521,
+        "sigma_total": 601.6256
+      }
+    ]
+  }
+}

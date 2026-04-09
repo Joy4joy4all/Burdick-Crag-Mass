@@ -1,0 +1,527 @@
+{
+  "title": "BCM v16 Probe Bill of Materials & Tax Curve",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Probe weight classes, survival range, reactor cost",
+  "grid": 256,
+  "bubble_radius": 30.0,
+  "void_lambda": 0.1,
+  "dissolution_threshold": 0.01,
+  "tax_curve": [
+    {
+      "distance": 0,
+      "lambda": 0.02,
+      "zone": "FUNDED",
+      "tax_per_step": 0.001
+    },
+    {
+      "distance": 5,
+      "lambda": 0.021103,
+      "zone": "FUNDED",
+      "tax_per_step": 0.001055
+    },
+    {
+      "distance": 10,
+      "lambda": 0.024323,
+      "zone": "FUNDED",
+      "tax_per_step": 0.001216
+    },
+    {
+      "distance": 15,
+      "lambda": 0.0294,
+      "zone": "FUNDED",
+      "tax_per_step": 0.00147
+    },
+    {
+      "distance": 20,
+      "lambda": 0.035941,
+      "zone": "TRANSITION",
+      "tax_per_step": 0.001797
+    },
+    {
+      "distance": 25,
+      "lambda": 0.043468,
+      "zone": "TRANSITION",
+      "tax_per_step": 0.002173
+    },
+    {
+      "distance": 30,
+      "lambda": 0.051478,
+      "zone": "OPEN VOID",
+      "tax_per_step": 0.002574
+    },
+    {
+      "distance": 35,
+      "lambda": 0.059493,
+      "zone": "OPEN VOID",
+      "tax_per_step": 0.002975
+    },
+    {
+      "distance": 40,
+      "lambda": 0.067111,
+      "zone": "OPEN VOID",
+      "tax_per_step": 0.003356
+    },
+    {
+      "distance": 50,
+      "lambda": 0.080052,
+      "zone": "OPEN VOID",
+      "tax_per_step": 0.004003
+    },
+    {
+      "distance": 60,
+      "lambda": 0.089173,
+      "zone": "OPEN VOID",
+      "tax_per_step": 0.004459
+    },
+    {
+      "distance": 70,
+      "lambda": 0.094742,
+      "zone": "BASELINE",
+      "tax_per_step": 0.004737
+    },
+    {
+      "distance": 80,
+      "lambda": 0.097715,
+      "zone": "BASELINE",
+      "tax_per_step": 0.004886
+    },
+    {
+      "distance": 100,
+      "lambda": 0.099691,
+      "zone": "BASELINE",
+      "tax_per_step": 0.004985
+    },
+    {
+      "distance": 120,
+      "lambda": 0.099973,
+      "zone": "BASELINE",
+      "tax_per_step": 0.004999
+    }
+  ],
+  "weight_classes": [
+    {
+      "class": "MICRO",
+      "mass": 0.1,
+      "width": 2.0,
+      "initial_mass": 2.5133,
+      "max_distance": 122,
+      "alive_at_max": true,
+      "total_tax_paid": 0.03436,
+      "creation_cost": 2.5133,
+      "cycle_cost": 2.5476,
+      "fleet_cost_per_cycle": 30.5716,
+      "fleet_cost_54_cycles": 1650.867,
+      "trajectory_samples": [
+        {
+          "distance": 0,
+          "lambda": 0.02,
+          "peak": 0.099275,
+          "mass_fraction": 0.9928,
+          "tax_cumulative": 0.0001
+        },
+        {
+          "distance": 10,
+          "lambda": 0.024323,
+          "peak": 0.097525,
+          "mass_fraction": 0.9753,
+          "tax_cumulative": 0.001174
+        },
+        {
+          "distance": 20,
+          "lambda": 0.035941,
+          "peak": 0.095199,
+          "mass_fraction": 0.952,
+          "tax_cumulative": 0.00264
+        },
+        {
+          "distance": 30,
+          "lambda": 0.051478,
+          "peak": 0.091973,
+          "mass_fraction": 0.9197,
+          "tax_cumulative": 0.004727
+        },
+        {
+          "distance": 40,
+          "lambda": 0.067111,
+          "peak": 0.087905,
+          "mass_fraction": 0.8791,
+          "tax_cumulative": 0.007453
+        },
+        {
+          "distance": 50,
+          "lambda": 0.080052,
+          "peak": 0.083323,
+          "mass_fraction": 0.8332,
+          "tax_cumulative": 0.010665
+        },
+        {
+          "distance": 60,
+          "lambda": 0.089173,
+          "peak": 0.078612,
+          "mass_fraction": 0.7861,
+          "tax_cumulative": 0.014147
+        },
+        {
+          "distance": 70,
+          "lambda": 0.094742,
+          "peak": 0.074067,
+          "mass_fraction": 0.7407,
+          "tax_cumulative": 0.017704
+        },
+        {
+          "distance": 80,
+          "lambda": 0.097715,
+          "peak": 0.069848,
+          "mass_fraction": 0.6985,
+          "tax_cumulative": 0.021204
+        },
+        {
+          "distance": 90,
+          "lambda": 0.099111,
+          "peak": 0.066008,
+          "mass_fraction": 0.6601,
+          "tax_cumulative": 0.024578
+        },
+        {
+          "distance": 100,
+          "lambda": 0.099691,
+          "peak": 0.062538,
+          "mass_fraction": 0.6254,
+          "tax_cumulative": 0.027801
+        },
+        {
+          "distance": 110,
+          "lambda": 0.099904,
+          "peak": 0.059404,
+          "mass_fraction": 0.594,
+          "tax_cumulative": 0.03087
+        },
+        {
+          "distance": 120,
+          "lambda": 0.099973,
+          "peak": 0.056567,
+          "mass_fraction": 0.5657,
+          "tax_cumulative": 0.033792
+        }
+      ]
+    },
+    {
+      "class": "LIGHT",
+      "mass": 0.5,
+      "width": 3.0,
+      "initial_mass": 28.2743,
+      "max_distance": 122,
+      "alive_at_max": true,
+      "total_tax_paid": 0.165807,
+      "creation_cost": 28.2743,
+      "cycle_cost": 28.4401,
+      "fleet_cost_per_cycle": 341.2817,
+      "fleet_cost_54_cycles": 18429.2113,
+      "trajectory_samples": [
+        {
+          "distance": 0,
+          "lambda": 0.02,
+          "peak": 0.498111,
+          "mass_fraction": 0.9962,
+          "tax_cumulative": 0.0005
+        },
+        {
+          "distance": 10,
+          "lambda": 0.024323,
+          "peak": 0.488022,
+          "mass_fraction": 0.976,
+          "tax_cumulative": 0.00586
+        },
+        {
+          "distance": 20,
+          "lambda": 0.035941,
+          "peak": 0.474717,
+          "mass_fraction": 0.9494,
+          "tax_cumulative": 0.013156
+        },
+        {
+          "distance": 30,
+          "lambda": 0.051478,
+          "peak": 0.456408,
+          "mass_fraction": 0.9128,
+          "tax_cumulative": 0.023503
+        },
+        {
+          "distance": 40,
+          "lambda": 0.067111,
+          "peak": 0.433556,
+          "mass_fraction": 0.8671,
+          "tax_cumulative": 0.036937
+        },
+        {
+          "distance": 50,
+          "lambda": 0.080052,
+          "peak": 0.408127,
+          "mass_fraction": 0.8163,
+          "tax_cumulative": 0.052664
+        },
+        {
+          "distance": 60,
+          "lambda": 0.089173,
+          "peak": 0.382334,
+          "mass_fraction": 0.7647,
+          "tax_cumulative": 0.069591
+        },
+        {
+          "distance": 70,
+          "lambda": 0.094742,
+          "peak": 0.357784,
+          "mass_fraction": 0.7156,
+          "tax_cumulative": 0.086763
+        },
+        {
+          "distance": 80,
+          "lambda": 0.097715,
+          "peak": 0.335286,
+          "mass_fraction": 0.6706,
+          "tax_cumulative": 0.103553
+        },
+        {
+          "distance": 90,
+          "lambda": 0.099111,
+          "peak": 0.315049,
+          "mass_fraction": 0.6301,
+          "tax_cumulative": 0.119644
+        },
+        {
+          "distance": 100,
+          "lambda": 0.099691,
+          "peak": 0.29696,
+          "mass_fraction": 0.5939,
+          "tax_cumulative": 0.134928
+        },
+        {
+          "distance": 110,
+          "lambda": 0.099904,
+          "peak": 0.280783,
+          "mass_fraction": 0.5616,
+          "tax_cumulative": 0.149412
+        },
+        {
+          "distance": 120,
+          "lambda": 0.099973,
+          "peak": 0.266262,
+          "mass_fraction": 0.5325,
+          "tax_cumulative": 0.163145
+        }
+      ]
+    },
+    {
+      "class": "MEDIUM",
+      "mass": 1.0,
+      "width": 4.0,
+      "initial_mass": 100.531,
+      "max_distance": 122,
+      "alive_at_max": true,
+      "total_tax_paid": 0.32994,
+      "creation_cost": 100.531,
+      "cycle_cost": 100.8609,
+      "fleet_cost_per_cycle": 1210.3309,
+      "fleet_cost_54_cycles": 65357.8662,
+      "trajectory_samples": [
+        {
+          "distance": 0,
+          "lambda": 0.02,
+          "peak": 0.997438,
+          "mass_fraction": 0.9974,
+          "tax_cumulative": 0.001
+        },
+        {
+          "distance": 10,
+          "lambda": 0.024323,
+          "peak": 0.976851,
+          "mass_fraction": 0.9769,
+          "tax_cumulative": 0.011717
+        },
+        {
+          "distance": 20,
+          "lambda": 0.035941,
+          "peak": 0.949732,
+          "mass_fraction": 0.9497,
+          "tax_cumulative": 0.0263
+        },
+        {
+          "distance": 30,
+          "lambda": 0.051478,
+          "peak": 0.912457,
+          "mass_fraction": 0.9125,
+          "tax_cumulative": 0.046968
+        },
+        {
+          "distance": 40,
+          "lambda": 0.067111,
+          "peak": 0.866003,
+          "mass_fraction": 0.866,
+          "tax_cumulative": 0.073778
+        },
+        {
+          "distance": 50,
+          "lambda": 0.080052,
+          "peak": 0.814401,
+          "mass_fraction": 0.8144,
+          "tax_cumulative": 0.105136
+        },
+        {
+          "distance": 60,
+          "lambda": 0.089173,
+          "peak": 0.762162,
+          "mass_fraction": 0.7622,
+          "tax_cumulative": 0.138853
+        },
+        {
+          "distance": 70,
+          "lambda": 0.094742,
+          "peak": 0.712537,
+          "mass_fraction": 0.7125,
+          "tax_cumulative": 0.173025
+        },
+        {
+          "distance": 80,
+          "lambda": 0.097715,
+          "peak": 0.667142,
+          "mass_fraction": 0.6671,
+          "tax_cumulative": 0.206405
+        },
+        {
+          "distance": 90,
+          "lambda": 0.099111,
+          "peak": 0.626376,
+          "mass_fraction": 0.6264,
+          "tax_cumulative": 0.238369
+        },
+        {
+          "distance": 100,
+          "lambda": 0.099691,
+          "peak": 0.589993,
+          "mass_fraction": 0.59,
+          "tax_cumulative": 0.268709
+        },
+        {
+          "distance": 110,
+          "lambda": 0.099904,
+          "peak": 0.557499,
+          "mass_fraction": 0.5575,
+          "tax_cumulative": 0.297438
+        },
+        {
+          "distance": 120,
+          "lambda": 0.099973,
+          "peak": 0.528366,
+          "mass_fraction": 0.5284,
+          "tax_cumulative": 0.324664
+        }
+      ]
+    },
+    {
+      "class": "HEAVY",
+      "mass": 2.0,
+      "width": 5.0,
+      "initial_mass": 314.1593,
+      "max_distance": 122,
+      "alive_at_max": true,
+      "total_tax_paid": 0.658172,
+      "creation_cost": 314.1593,
+      "cycle_cost": 314.8174,
+      "fleet_cost_per_cycle": 3777.8093,
+      "fleet_cost_54_cycles": 204001.6995,
+      "trajectory_samples": [
+        {
+          "distance": 0,
+          "lambda": 0.02,
+          "peak": 1.996,
+          "mass_fraction": 0.998,
+          "tax_cumulative": 0.002
+        },
+        {
+          "distance": 10,
+          "lambda": 0.024323,
+          "peak": 1.954409,
+          "mass_fraction": 0.9772,
+          "tax_cumulative": 0.023431
+        },
+        {
+          "distance": 20,
+          "lambda": 0.035941,
+          "peak": 1.89965,
+          "mass_fraction": 0.9498,
+          "tax_cumulative": 0.052587
+        },
+        {
+          "distance": 30,
+          "lambda": 0.051478,
+          "peak": 1.824429,
+          "mass_fraction": 0.9122,
+          "tax_cumulative": 0.093895
+        },
+        {
+          "distance": 40,
+          "lambda": 0.067111,
+          "peak": 1.730758,
+          "mass_fraction": 0.8654,
+          "tax_cumulative": 0.147458
+        },
+        {
+          "distance": 50,
+          "lambda": 0.080052,
+          "peak": 1.626801,
+          "mass_fraction": 0.8134,
+          "tax_cumulative": 0.210076
+        },
+        {
+          "distance": 60,
+          "lambda": 0.089173,
+          "peak": 1.521665,
+          "mass_fraction": 0.7608,
+          "tax_cumulative": 0.277369
+        },
+        {
+          "distance": 70,
+          "lambda": 0.094742,
+          "peak": 1.421889,
+          "mass_fraction": 0.7109,
+          "tax_cumulative": 0.345536
+        },
+        {
+          "distance": 80,
+          "lambda": 0.097715,
+          "peak": 1.3307,
+          "mass_fraction": 0.6654,
+          "tax_cumulative": 0.412094
+        },
+        {
+          "distance": 90,
+          "lambda": 0.099111,
+          "peak": 1.248883,
+          "mass_fraction": 0.6244,
+          "tax_cumulative": 0.4758
+        },
+        {
+          "distance": 100,
+          "lambda": 0.099691,
+          "peak": 1.175916,
+          "mass_fraction": 0.588,
+          "tax_cumulative": 0.536245
+        },
+        {
+          "distance": 110,
+          "lambda": 0.099904,
+          "peak": 1.110793,
+          "mass_fraction": 0.5554,
+          "tax_cumulative": 0.593463
+        },
+        {
+          "distance": 120,
+          "lambda": 0.099973,
+          "peak": 1.052443,
+          "mass_fraction": 0.5262,
+          "tax_cumulative": 0.647669
+        }
+      ]
+    }
+  ]
+}

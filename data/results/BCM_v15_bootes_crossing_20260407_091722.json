@@ -1,0 +1,984 @@
+{
+  "title": "BCM v15 Bootes Void Maximum Feasibility Transit",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "330 Mly crossing with 60 dead galaxies",
+  "grid": "512x64",
+  "steps": 8000,
+  "scale_ly_per_px": 644531,
+  "parameters": {
+    "dt": 0.05,
+    "D": 0.5,
+    "void_lambda": 0.1,
+    "pump_A": 0.5,
+    "ratio": 0.25,
+    "alpha": 0.8,
+    "separation": 15.0,
+    "exhaust_coupling": 0.002
+  },
+  "departure": {
+    "x": 10,
+    "label": "Sun / Helion"
+  },
+  "target": {
+    "x": 502,
+    "label": "Far-side galaxy"
+  },
+  "graves": [
+    {
+      "id": 0,
+      "x": 127,
+      "y": 35,
+      "depth": 0.082,
+      "radius": 36.97,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 1,
+      "x": 127,
+      "y": 41,
+      "depth": 0.0112,
+      "radius": 11.06,
+      "type": "DWARF"
+    },
+    {
+      "id": 2,
+      "x": 124,
+      "y": 23,
+      "depth": 0.0306,
+      "radius": 24.61,
+      "type": "STANDARD"
+    },
+    {
+      "id": 3,
+      "x": 438,
+      "y": 21,
+      "depth": 0.0298,
+      "radius": 9.32,
+      "type": "DWARF"
+    },
+    {
+      "id": 4,
+      "x": 338,
+      "y": 37,
+      "depth": 0.0105,
+      "radius": 8.67,
+      "type": "DWARF"
+    },
+    {
+      "id": 5,
+      "x": 194,
+      "y": 47,
+      "depth": 0.0173,
+      "radius": 8.19,
+      "type": "DWARF"
+    },
+    {
+      "id": 6,
+      "x": 199,
+      "y": 45,
+      "depth": 0.0203,
+      "radius": 9.15,
+      "type": "DWARF"
+    },
+    {
+      "id": 7,
+      "x": 155,
+      "y": 20,
+      "depth": 0.0351,
+      "radius": 12.85,
+      "type": "STANDARD"
+    },
+    {
+      "id": 8,
+      "x": 412,
+      "y": 40,
+      "depth": 0.0843,
+      "radius": 31.09,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 9,
+      "x": 77,
+      "y": 17,
+      "depth": 0.0432,
+      "radius": 13.59,
+      "type": "STANDARD"
+    },
+    {
+      "id": 10,
+      "x": 288,
+      "y": 30,
+      "depth": 0.0178,
+      "radius": 6.28,
+      "type": "DWARF"
+    },
+    {
+      "id": 11,
+      "x": 412,
+      "y": 17,
+      "depth": 0.0142,
+      "radius": 8.97,
+      "type": "DWARF"
+    },
+    {
+      "id": 12,
+      "x": 215,
+      "y": 33,
+      "depth": 0.0582,
+      "radius": 23.63,
+      "type": "STANDARD"
+    },
+    {
+      "id": 13,
+      "x": 294,
+      "y": 46,
+      "depth": 0.0627,
+      "radius": 28.92,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 14,
+      "x": 214,
+      "y": 23,
+      "depth": 0.0524,
+      "radius": 19.02,
+      "type": "STANDARD"
+    },
+    {
+      "id": 15,
+      "x": 304,
+      "y": 41,
+      "depth": 0.0782,
+      "radius": 30.52,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 16,
+      "x": 181,
+      "y": 30,
+      "depth": 0.0103,
+      "radius": 7.96,
+      "type": "DWARF"
+    },
+    {
+      "id": 17,
+      "x": 153,
+      "y": 27,
+      "depth": 0.0103,
+      "radius": 6.39,
+      "type": "DWARF"
+    },
+    {
+      "id": 18,
+      "x": 416,
+      "y": 18,
+      "depth": 0.0482,
+      "radius": 24.04,
+      "type": "STANDARD"
+    },
+    {
+      "id": 19,
+      "x": 65,
+      "y": 43,
+      "depth": 0.0787,
+      "radius": 31.62,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 20,
+      "x": 72,
+      "y": 38,
+      "depth": 0.0165,
+      "radius": 10.11,
+      "type": "DWARF"
+    },
+    {
+      "id": 21,
+      "x": 384,
+      "y": 37,
+      "depth": 0.0742,
+      "radius": 27.39,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 22,
+      "x": 486,
+      "y": 18,
+      "depth": 0.0468,
+      "radius": 22.02,
+      "type": "STANDARD"
+    },
+    {
+      "id": 23,
+      "x": 383,
+      "y": 42,
+      "depth": 0.0428,
+      "radius": 12.33,
+      "type": "STANDARD"
+    },
+    {
+      "id": 24,
+      "x": 485,
+      "y": 34,
+      "depth": 0.0227,
+      "radius": 7.2,
+      "type": "DWARF"
+    },
+    {
+      "id": 25,
+      "x": 120,
+      "y": 19,
+      "depth": 0.0675,
+      "radius": 33.21,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 26,
+      "x": 195,
+      "y": 44,
+      "depth": 0.0115,
+      "radius": 7.03,
+      "type": "DWARF"
+    },
+    {
+      "id": 27,
+      "x": 110,
+      "y": 43,
+      "depth": 0.0842,
+      "radius": 37.67,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 28,
+      "x": 158,
+      "y": 43,
+      "depth": 0.0356,
+      "radius": 23.6,
+      "type": "STANDARD"
+    },
+    {
+      "id": 29,
+      "x": 355,
+      "y": 47,
+      "depth": 0.0569,
+      "radius": 16.13,
+      "type": "STANDARD"
+    },
+    {
+      "id": 30,
+      "x": 249,
+      "y": 16,
+      "depth": 0.0185,
+      "radius": 10.73,
+      "type": "DWARF"
+    },
+    {
+      "id": 31,
+      "x": 257,
+      "y": 18,
+      "depth": 0.0202,
+      "radius": 7.92,
+      "type": "DWARF"
+    },
+    {
+      "id": 32,
+      "x": 189,
+      "y": 16,
+      "depth": 0.0168,
+      "radius": 11.6,
+      "type": "DWARF"
+    },
+    {
+      "id": 33,
+      "x": 398,
+      "y": 47,
+      "depth": 0.0511,
+      "radius": 16.73,
+      "type": "STANDARD"
+    },
+    {
+      "id": 34,
+      "x": 466,
+      "y": 35,
+      "depth": 0.0239,
+      "radius": 9.99,
+      "type": "DWARF"
+    },
+    {
+      "id": 35,
+      "x": 125,
+      "y": 32,
+      "depth": 0.068,
+      "radius": 44.53,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 36,
+      "x": 244,
+      "y": 37,
+      "depth": 0.0169,
+      "radius": 9.44,
+      "type": "DWARF"
+    },
+    {
+      "id": 37,
+      "x": 150,
+      "y": 17,
+      "depth": 0.0434,
+      "radius": 19.19,
+      "type": "STANDARD"
+    },
+    {
+      "id": 38,
+      "x": 271,
+      "y": 19,
+      "depth": 0.0174,
+      "radius": 6.7,
+      "type": "DWARF"
+    },
+    {
+      "id": 39,
+      "x": 318,
+      "y": 39,
+      "depth": 0.0297,
+      "radius": 7.79,
+      "type": "DWARF"
+    },
+    {
+      "id": 40,
+      "x": 264,
+      "y": 31,
+      "depth": 0.0396,
+      "radius": 14.42,
+      "type": "STANDARD"
+    },
+    {
+      "id": 41,
+      "x": 373,
+      "y": 18,
+      "depth": 0.0503,
+      "radius": 12.22,
+      "type": "STANDARD"
+    },
+    {
+      "id": 42,
+      "x": 475,
+      "y": 46,
+      "depth": 0.0229,
+      "radius": 6.22,
+      "type": "DWARF"
+    },
+    {
+      "id": 43,
+      "x": 441,
+      "y": 23,
+      "depth": 0.0287,
+      "radius": 5.96,
+      "type": "DWARF"
+    },
+    {
+      "id": 44,
+      "x": 465,
+      "y": 40,
+      "depth": 0.0208,
+      "radius": 9.87,
+      "type": "DWARF"
+    },
+    {
+      "id": 45,
+      "x": 287,
+      "y": 43,
+      "depth": 0.0296,
+      "radius": 8.62,
+      "type": "DWARF"
+    },
+    {
+      "id": 46,
+      "x": 393,
+      "y": 17,
+      "depth": 0.089,
+      "radius": 36.17,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 47,
+      "x": 184,
+      "y": 42,
+      "depth": 0.0156,
+      "radius": 9.9,
+      "type": "DWARF"
+    },
+    {
+      "id": 48,
+      "x": 232,
+      "y": 18,
+      "depth": 0.0721,
+      "radius": 42.76,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 49,
+      "x": 140,
+      "y": 26,
+      "depth": 0.0836,
+      "radius": 38.38,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 50,
+      "x": 278,
+      "y": 18,
+      "depth": 0.0288,
+      "radius": 11.82,
+      "type": "DWARF"
+    },
+    {
+      "id": 51,
+      "x": 426,
+      "y": 47,
+      "depth": 0.0197,
+      "radius": 8.14,
+      "type": "DWARF"
+    },
+    {
+      "id": 52,
+      "x": 469,
+      "y": 24,
+      "depth": 0.0104,
+      "radius": 8.46,
+      "type": "DWARF"
+    },
+    {
+      "id": 53,
+      "x": 328,
+      "y": 35,
+      "depth": 0.0249,
+      "radius": 10.05,
+      "type": "DWARF"
+    },
+    {
+      "id": 54,
+      "x": 152,
+      "y": 16,
+      "depth": 0.0453,
+      "radius": 20.27,
+      "type": "STANDARD"
+    },
+    {
+      "id": 55,
+      "x": 46,
+      "y": 29,
+      "depth": 0.0594,
+      "radius": 18.33,
+      "type": "STANDARD"
+    },
+    {
+      "id": 56,
+      "x": 288,
+      "y": 42,
+      "depth": 0.017,
+      "radius": 9.52,
+      "type": "DWARF"
+    },
+    {
+      "id": 57,
+      "x": 391,
+      "y": 47,
+      "depth": 0.0669,
+      "radius": 34.98,
+      "type": "MASSIVE"
+    },
+    {
+      "id": 58,
+      "x": 28,
+      "y": 18,
+      "depth": 0.0313,
+      "radius": 24.93,
+      "type": "STANDARD"
+    },
+    {
+      "id": 59,
+      "x": 182,
+      "y": 44,
+      "depth": 0.0277,
+      "radius": 10.23,
+      "type": "DWARF"
+    }
+  ],
+  "grave_census": {
+    "total": 60,
+    "dwarf": 30,
+    "standard": 17,
+    "massive": 13
+  },
+  "result": {
+    "arrived": false,
+    "alive": true,
+    "distance_px": 87.72,
+    "distance_ly": 56537496,
+    "pct_crossed": 17.8,
+    "initial_mass": 147.378,
+    "final_mass": 5719.5912,
+    "mass_pickup": 38.809,
+    "peak_mass_ratio": 40.4683,
+    "final_coherence": 0.1457,
+    "min_coherence": 0.1357,
+    "cores_dropped": 10,
+    "core_mass_absorbed": 7691.87,
+    "graves_crossed": 11,
+    "risk": "STELLAR RISK \u2014 Ship approaching source-scale"
+  },
+  "timeline": [
+    {
+      "step": 0,
+      "phase": "DRIVE",
+      "x": 10.42,
+      "drift": 0.2,
+      "mass": 151.6794,
+      "pickup": 1.0292,
+      "coherence": 0.7244,
+      "local_lambda": 0.048351,
+      "graves_crossed": 1
+    },
+    {
+      "step": 200,
+      "phase": "DRIVE",
+      "x": 24.96,
+      "drift": 14.74,
+      "mass": 1905.5337,
+      "pickup": 12.9296,
+      "coherence": 0.5301,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 400,
+      "phase": "SHIFT",
+      "x": 27.78,
+      "drift": 17.56,
+      "mass": 3142.4254,
+      "pickup": 21.3222,
+      "coherence": 0.4115,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 600,
+      "phase": "DUMP",
+      "x": 30.43,
+      "drift": 20.21,
+      "mass": 3452.5541,
+      "pickup": 23.4265,
+      "coherence": 0.3544,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 800,
+      "phase": "DRIVE",
+      "x": 38.65,
+      "drift": 28.43,
+      "mass": 2389.4999,
+      "pickup": 16.2134,
+      "coherence": 0.3477,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 1000,
+      "phase": "DRIVE",
+      "x": 40.11,
+      "drift": 29.89,
+      "mass": 3771.5531,
+      "pickup": 25.591,
+      "coherence": 0.3384,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 1200,
+      "phase": "SHIFT",
+      "x": 41.44,
+      "drift": 31.22,
+      "mass": 4287.6539,
+      "pickup": 29.0929,
+      "coherence": 0.2867,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 1400,
+      "phase": "COLLECT",
+      "x": 44.05,
+      "drift": 33.84,
+      "mass": 4029.9367,
+      "pickup": 27.3442,
+      "coherence": 0.2631,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 1600,
+      "phase": "DRIVE",
+      "x": 49.67,
+      "drift": 39.45,
+      "mass": 3477.5362,
+      "pickup": 23.596,
+      "coherence": 0.2767,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 1800,
+      "phase": "DRIVE",
+      "x": 50.6,
+      "drift": 40.39,
+      "mass": 4593.1541,
+      "pickup": 31.1658,
+      "coherence": 0.2753,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 2000,
+      "phase": "DUMP",
+      "x": 51.64,
+      "drift": 41.42,
+      "mass": 4723.9172,
+      "pickup": 32.0531,
+      "coherence": 0.2254,
+      "local_lambda": 0.001,
+      "graves_crossed": 3
+    },
+    {
+      "step": 2200,
+      "phase": "COLLECT",
+      "x": 55.81,
+      "drift": 45.59,
+      "mass": 3692.4168,
+      "pickup": 25.0541,
+      "coherence": 0.2191,
+      "local_lambda": 0.001,
+      "graves_crossed": 4
+    },
+    {
+      "step": 2400,
+      "phase": "DRIVE",
+      "x": 58.17,
+      "drift": 47.95,
+      "mass": 4178.3693,
+      "pickup": 28.3514,
+      "coherence": 0.2371,
+      "local_lambda": 0.001,
+      "graves_crossed": 4
+    },
+    {
+      "step": 2600,
+      "phase": "DRIVE",
+      "x": 58.88,
+      "drift": 48.66,
+      "mass": 5135.0807,
+      "pickup": 34.8429,
+      "coherence": 0.2335,
+      "local_lambda": 0.001,
+      "graves_crossed": 6
+    },
+    {
+      "step": 2800,
+      "phase": "DUMP",
+      "x": 59.65,
+      "drift": 49.43,
+      "mass": 5107.4169,
+      "pickup": 34.6552,
+      "coherence": 0.2029,
+      "local_lambda": 0.001,
+      "graves_crossed": 6
+    },
+    {
+      "step": 3000,
+      "phase": "DRIVE",
+      "x": 64.53,
+      "drift": 54.31,
+      "mass": 3474.3552,
+      "pickup": 23.5745,
+      "coherence": 0.1893,
+      "local_lambda": 0.001,
+      "graves_crossed": 7
+    },
+    {
+      "step": 3200,
+      "phase": "DRIVE",
+      "x": 65.33,
+      "drift": 55.11,
+      "mass": 4703.6777,
+      "pickup": 31.9157,
+      "coherence": 0.2148,
+      "local_lambda": 0.001,
+      "graves_crossed": 7
+    },
+    {
+      "step": 3400,
+      "phase": "SHIFT",
+      "x": 65.96,
+      "drift": 55.74,
+      "mass": 5397.7312,
+      "pickup": 36.6251,
+      "coherence": 0.2036,
+      "local_lambda": 0.001,
+      "graves_crossed": 7
+    },
+    {
+      "step": 3600,
+      "phase": "DUMP",
+      "x": 66.52,
+      "drift": 56.3,
+      "mass": 5371.973,
+      "pickup": 36.4503,
+      "coherence": 0.1915,
+      "local_lambda": 0.001,
+      "graves_crossed": 7
+    },
+    {
+      "step": 3800,
+      "phase": "DRIVE",
+      "x": 71.11,
+      "drift": 60.88,
+      "mass": 4002.7699,
+      "pickup": 27.1599,
+      "coherence": 0.18,
+      "local_lambda": 0.001,
+      "graves_crossed": 7
+    },
+    {
+      "step": 4000,
+      "phase": "DRIVE",
+      "x": 71.7,
+      "drift": 61.48,
+      "mass": 5104.7614,
+      "pickup": 34.6372,
+      "coherence": 0.1997,
+      "local_lambda": 0.001,
+      "graves_crossed": 8
+    },
+    {
+      "step": 4200,
+      "phase": "SHIFT",
+      "x": 72.33,
+      "drift": 62.1,
+      "mass": 5459.7576,
+      "pickup": 37.046,
+      "coherence": 0.1828,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 4400,
+      "phase": "COLLECT",
+      "x": 73.91,
+      "drift": 63.69,
+      "mass": 5037.693,
+      "pickup": 34.1821,
+      "coherence": 0.1738,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 4600,
+      "phase": "DRIVE",
+      "x": 77.03,
+      "drift": 66.81,
+      "mass": 4458.4028,
+      "pickup": 30.2515,
+      "coherence": 0.1758,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 4800,
+      "phase": "DRIVE",
+      "x": 77.54,
+      "drift": 67.32,
+      "mass": 5423.8054,
+      "pickup": 36.802,
+      "coherence": 0.1935,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 5000,
+      "phase": "DUMP",
+      "x": 78.18,
+      "drift": 67.96,
+      "mass": 5471.3549,
+      "pickup": 37.1247,
+      "coherence": 0.1659,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 5200,
+      "phase": "COLLECT",
+      "x": 81.13,
+      "drift": 70.91,
+      "mass": 4419.8235,
+      "pickup": 29.9897,
+      "coherence": 0.1586,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 5400,
+      "phase": "DRIVE",
+      "x": 82.54,
+      "drift": 72.31,
+      "mass": 4832.497,
+      "pickup": 32.7898,
+      "coherence": 0.1786,
+      "local_lambda": 0.001,
+      "graves_crossed": 9
+    },
+    {
+      "step": 5600,
+      "phase": "DRIVE",
+      "x": 82.99,
+      "drift": 72.77,
+      "mass": 5714.6509,
+      "pickup": 38.7755,
+      "coherence": 0.1775,
+      "local_lambda": 0.001,
+      "graves_crossed": 10
+    },
+    {
+      "step": 5800,
+      "phase": "DUMP",
+      "x": 83.52,
+      "drift": 73.3,
+      "mass": 5610.0908,
+      "pickup": 38.066,
+      "coherence": 0.1652,
+      "local_lambda": 0.001,
+      "graves_crossed": 10
+    },
+    {
+      "step": 6000,
+      "phase": "DRIVE",
+      "x": 87.21,
+      "drift": 76.98,
+      "mass": 4003.5935,
+      "pickup": 27.1655,
+      "coherence": 0.1446,
+      "local_lambda": 0.001,
+      "graves_crossed": 10
+    },
+    {
+      "step": 6200,
+      "phase": "DRIVE",
+      "x": 87.73,
+      "drift": 77.5,
+      "mass": 5183.5274,
+      "pickup": 35.1717,
+      "coherence": 0.1714,
+      "local_lambda": 0.001,
+      "graves_crossed": 10
+    },
+    {
+      "step": 6400,
+      "phase": "SHIFT",
+      "x": 88.17,
+      "drift": 77.95,
+      "mass": 5821.7262,
+      "pickup": 39.502,
+      "coherence": 0.1692,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 6600,
+      "phase": "DUMP",
+      "x": 88.58,
+      "drift": 78.36,
+      "mass": 5762.0664,
+      "pickup": 39.0972,
+      "coherence": 0.1613,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 6800,
+      "phase": "DRIVE",
+      "x": 92.23,
+      "drift": 82.01,
+      "mass": 4387.2963,
+      "pickup": 29.769,
+      "coherence": 0.1503,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 7000,
+      "phase": "DRIVE",
+      "x": 92.67,
+      "drift": 82.45,
+      "mass": 5470.2864,
+      "pickup": 37.1174,
+      "coherence": 0.1693,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 7200,
+      "phase": "SHIFT",
+      "x": 93.15,
+      "drift": 82.93,
+      "mass": 5757.0128,
+      "pickup": 39.0629,
+      "coherence": 0.1562,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 7400,
+      "phase": "COLLECT",
+      "x": 94.48,
+      "drift": 84.26,
+      "mass": 5305.0685,
+      "pickup": 35.9964,
+      "coherence": 0.1572,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 7600,
+      "phase": "DRIVE",
+      "x": 97.02,
+      "drift": 86.8,
+      "mass": 4748.0749,
+      "pickup": 32.217,
+      "coherence": 0.1517,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 7800,
+      "phase": "DRIVE",
+      "x": 97.42,
+      "drift": 87.2,
+      "mass": 5692.3899,
+      "pickup": 38.6244,
+      "coherence": 0.1701,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    },
+    {
+      "step": 7999,
+      "phase": "SHIFT",
+      "x": 97.94,
+      "drift": 87.72,
+      "mass": 5719.5912,
+      "pickup": 38.809,
+      "coherence": 0.1457,
+      "local_lambda": 0.001,
+      "graves_crossed": 11
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "title": "BCM v15 Phase-Cycling Governor & Core-Drop",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Find navigable/no-go boundary with countermeasures",
+  "grid": 128,
+  "steps": 3000,
+  "parameters": {
+    "dt": 0.05,
+    "D": 0.5,
+    "void_lambda": 0.1,
+    "pump_A": 0.5,
+    "ratio": 0.25,
+    "alpha": 0.8,
+    "separation": 15.0,
+    "exhaust_coupling": 0.002,
+    "memory_radius": 30,
+    "cycle_length": 125
+  },
+  "depths_tested": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.05,
+    0.06,
+    0.07,
+    0.08,
+    0.09
+  ],
+  "results": [
+    {
+      "depth": 0.01,
+      "lambda_at_center": 0.09,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 0.2511,
+          "initial_mass": 147.4335,
+          "final_mass": 5086.2887,
+          "mass_pickup_ratio": 34.4989,
+          "peak_mass_ratio": 34.5611,
+          "mass_pickup_pct": 3349.9,
+          "final_coherence": 0.4305,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 24.6504,
+          "initial_mass": 147.4335,
+          "final_mass": 702.7743,
+          "mass_pickup_ratio": 4.7667,
+          "peak_mass_ratio": 14.1176,
+          "mass_pickup_pct": 376.7,
+          "final_coherence": 0.5807,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "CAUTION"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 75.2817,
+          "initial_mass": 147.4335,
+          "final_mass": 187.2639,
+          "mass_pickup_ratio": 1.2702,
+          "peak_mass_ratio": 5.8255,
+          "mass_pickup_pct": 27.0,
+          "final_coherence": 0.5033,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 160.4499,
+          "risk": "SAFE"
+        }
+      }
+    },
+    {
+      "depth": 0.02,
+      "lambda_at_center": 0.08,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 0.3933,
+          "initial_mass": 147.4335,
+          "final_mass": 5211.2082,
+          "mass_pickup_ratio": 35.3462,
+          "peak_mass_ratio": 35.3462,
+          "mass_pickup_pct": 3434.6,
+          "final_coherence": 0.4197,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 12.1068,
+          "initial_mass": 147.4335,
+          "final_mass": 906.0255,
+          "mass_pickup_ratio": 6.1453,
+          "peak_mass_ratio": 17.3011,
+          "mass_pickup_pct": 514.5,
+          "final_coherence": 0.537,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "DANGER"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 42.1629,
+          "initial_mass": 147.4335,
+          "final_mass": 608.1534,
+          "mass_pickup_ratio": 4.1249,
+          "peak_mass_ratio": 14.1851,
+          "mass_pickup_pct": 312.5,
+          "final_coherence": 0.5923,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 260.8002,
+          "risk": "CAUTION"
+        }
+      }
+    },
+    {
+      "depth": 0.03,
+      "lambda_at_center": 0.07,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 0.6935,
+          "initial_mass": 147.4335,
+          "final_mass": 5328.4412,
+          "mass_pickup_ratio": 36.1413,
+          "peak_mass_ratio": 36.1413,
+          "mass_pickup_pct": 3514.1,
+          "final_coherence": 0.4078,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 8.9877,
+          "initial_mass": 147.4335,
+          "final_mass": 959.6553,
+          "mass_pickup_ratio": 6.5091,
+          "peak_mass_ratio": 17.9354,
+          "mass_pickup_pct": 550.9,
+          "final_coherence": 0.517,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "DANGER"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 34.992,
+          "initial_mass": 147.4335,
+          "final_mass": 711.9299,
+          "mass_pickup_ratio": 4.8288,
+          "peak_mass_ratio": 16.1098,
+          "mass_pickup_pct": 382.9,
+          "final_coherence": 0.5536,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 311.1712,
+          "risk": "CAUTION"
+        }
+      }
+    },
+    {
+      "depth": 0.04,
+      "lambda_at_center": 0.06,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 1.1217,
+          "initial_mass": 147.4335,
+          "final_mass": 5409.0976,
+          "mass_pickup_ratio": 36.6884,
+          "peak_mass_ratio": 36.6884,
+          "mass_pickup_pct": 3568.8,
+          "final_coherence": 0.3962,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 8.3766,
+          "initial_mass": 147.4335,
+          "final_mass": 1052.4785,
+          "mass_pickup_ratio": 7.1387,
+          "peak_mass_ratio": 18.6361,
+          "mass_pickup_pct": 613.9,
+          "final_coherence": 0.5063,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "DANGER"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 32.3619,
+          "initial_mass": 147.4335,
+          "final_mass": 821.2039,
+          "mass_pickup_ratio": 5.57,
+          "peak_mass_ratio": 17.0586,
+          "mass_pickup_pct": 457.0,
+          "final_coherence": 0.5314,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 371.0006,
+          "risk": "DANGER"
+        }
+      }
+    },
+    {
+      "depth": 0.05,
+      "lambda_at_center": 0.05,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 1.7545,
+          "initial_mass": 147.4335,
+          "final_mass": 5559.7747,
+          "mass_pickup_ratio": 37.7104,
+          "peak_mass_ratio": 37.7104,
+          "mass_pickup_pct": 3671.0,
+          "final_coherence": 0.3834,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 8.7872,
+          "initial_mass": 147.4335,
+          "final_mass": 1163.2966,
+          "mass_pickup_ratio": 7.8903,
+          "peak_mass_ratio": 19.3716,
+          "mass_pickup_pct": 689.0,
+          "final_coherence": 0.4877,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "DANGER"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 31.6318,
+          "initial_mass": 147.4335,
+          "final_mass": 942.9673,
+          "mass_pickup_ratio": 6.3959,
+          "peak_mass_ratio": 18.2639,
+          "mass_pickup_pct": 539.6,
+          "final_coherence": 0.5022,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 456.2881,
+          "risk": "DANGER"
+        }
+      }
+    },
+    {
+      "depth": 0.06,
+      "lambda_at_center": 0.04,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 2.7441,
+          "initial_mass": 147.4335,
+          "final_mass": 5717.59,
+          "mass_pickup_ratio": 38.7808,
+          "peak_mass_ratio": 38.7808,
+          "mass_pickup_pct": 3778.1,
+          "final_coherence": 0.3714,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 9.9153,
+          "initial_mass": 147.4335,
+          "final_mass": 1290.5286,
+          "mass_pickup_ratio": 8.7533,
+          "peak_mass_ratio": 20.3701,
+          "mass_pickup_pct": 775.3,
+          "final_coherence": 0.4582,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "DANGER"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 33.2573,
+          "initial_mass": 147.4335,
+          "final_mass": 1102.0179,
+          "mass_pickup_ratio": 7.4747,
+          "peak_mass_ratio": 19.6146,
+          "mass_pickup_pct": 647.5,
+          "final_coherence": 0.4703,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 575.0153,
+          "risk": "DANGER"
+        }
+      }
+    },
+    {
+      "depth": 0.07,
+      "lambda_at_center": 0.03,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 4.3888,
+          "initial_mass": 147.4335,
+          "final_mass": 5912.634,
+          "mass_pickup_ratio": 40.1037,
+          "peak_mass_ratio": 40.1037,
+          "mass_pickup_pct": 3910.4,
+          "final_coherence": 0.3503,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 12.0991,
+          "initial_mass": 147.4335,
+          "final_mass": 1466.3011,
+          "mass_pickup_ratio": 9.9455,
+          "peak_mass_ratio": 21.4756,
+          "mass_pickup_pct": 894.6,
+          "final_coherence": 0.4217,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "DANGER"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 36.9626,
+          "initial_mass": 147.4335,
+          "final_mass": 1345.0896,
+          "mass_pickup_ratio": 9.1234,
+          "peak_mass_ratio": 21.466,
+          "mass_pickup_pct": 812.3,
+          "final_coherence": 0.4252,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 747.8971,
+          "risk": "DANGER"
+        }
+      }
+    },
+    {
+      "depth": 0.08,
+      "lambda_at_center": 0.02,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 7.3188,
+          "initial_mass": 147.4335,
+          "final_mass": 6107.1975,
+          "mass_pickup_ratio": 41.4234,
+          "peak_mass_ratio": 41.4234,
+          "mass_pickup_pct": 4042.3,
+          "final_coherence": 0.3251,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 16.7151,
+          "initial_mass": 147.4335,
+          "final_mass": 1755.3094,
+          "mass_pickup_ratio": 11.9058,
+          "peak_mass_ratio": 22.8621,
+          "mass_pickup_pct": 1090.6,
+          "final_coherence": 0.3712,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 41.7436,
+          "initial_mass": 147.4335,
+          "final_mass": 1781.0744,
+          "mass_pickup_ratio": 12.0805,
+          "peak_mass_ratio": 24.363,
+          "mass_pickup_pct": 1108.1,
+          "final_coherence": 0.3976,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 997.4019,
+          "risk": "STELLAR RISK"
+        }
+      }
+    },
+    {
+      "depth": 0.09,
+      "lambda_at_center": 0.01,
+      "results": {
+        "RAW": {
+          "mode": "RAW",
+          "alive": true,
+          "drift": 13.8748,
+          "initial_mass": 147.4335,
+          "final_mass": 6489.372,
+          "mass_pickup_ratio": 44.0156,
+          "peak_mass_ratio": 44.0156,
+          "mass_pickup_pct": 4301.6,
+          "final_coherence": 0.2808,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "CYCLING": {
+          "mode": "CYCLING",
+          "alive": true,
+          "drift": 26.8111,
+          "initial_mass": 147.4335,
+          "final_mass": 2852.0959,
+          "mass_pickup_ratio": 19.345,
+          "peak_mass_ratio": 28.4867,
+          "mass_pickup_pct": 1834.5,
+          "final_coherence": 0.2925,
+          "cores_dropped": 0,
+          "core_mass_absorbed": 0.0,
+          "risk": "STELLAR RISK"
+        },
+        "FULL": {
+          "mode": "FULL",
+          "alive": true,
+          "drift": 46.1351,
+          "initial_mass": 147.4335,
+          "final_mass": 2300.0408,
+          "mass_pickup_ratio": 15.6005,
+          "peak_mass_ratio": 27.8617,
+          "mass_pickup_pct": 1460.1,
+          "final_coherence": 0.3645,
+          "cores_dropped": 4,
+          "core_mass_absorbed": 1331.7704,
+          "risk": "STELLAR RISK"
+        }
+      }
+    }
+  ]
+}

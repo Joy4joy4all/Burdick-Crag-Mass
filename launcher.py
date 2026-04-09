@@ -106,6 +106,10 @@ class SolverGUI:
         tab5 = ttk.Frame(self.notebook, style="Dark.TFrame")
         self.notebook.add(tab5, text="  \u039B DRIVE  ")
 
+        # Tab 6 — TITS Probe Navigator
+        tab6 = ttk.Frame(self.notebook, style="Dark.TFrame")
+        self.notebook.add(tab6, text="  TITS PROBES  ")
+
         # Build planetary tab content
         self._build_planetary_tab(tab2)
 
@@ -117,6 +121,9 @@ class SolverGUI:
 
         # Build lambda drive tab content
         self._build_lambda_tab(tab5)
+
+        # Build TITS probe tab content
+        self._build_probe_tab(tab6)
 
         # Main split (Tab 1 content)
         main = tab1
@@ -1340,6 +1347,257 @@ class SolverGUI:
 
         threading.Thread(target=_run, daemon=True).start()
     # === END LAMBDA DRIVE TAB ===
+
+    # === TAB 6: TITS PROBE NAVIGATOR ===
+
+    def _build_probe_tab(self, parent):
+        """Tab 6 — TITS Tunnel Cycling Probe Navigator."""
+        style_bg  = "#0a0c10"
+        style_fg  = "#a0b0cc"
+        style_acc = "#ff9944"
+
+        scroll_canvas = tk.Canvas(parent, bg=style_bg, highlightthickness=0)
+        scroll_vbar = ttk.Scrollbar(parent, orient="vertical",
+                                     command=scroll_canvas.yview)
+        scroll_canvas.configure(yscrollcommand=scroll_vbar.set)
+        scroll_vbar.pack(side="right", fill="y")
+        scroll_canvas.pack(side="left", fill="both", expand=True)
+
+        sf = tk.Frame(scroll_canvas, bg=style_bg)
+        sf_id = scroll_canvas.create_window((0, 0), window=sf, anchor="nw")
+
+        def _sf_resize(event):
+            scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all"))
+        def _sc_resize(event):
+            scroll_canvas.itemconfig(sf_id, width=event.width)
+        sf.bind("<Configure>", _sf_resize)
+        scroll_canvas.bind("<Configure>", _sc_resize)
+
+        def _sf_wheel(event):
+            scroll_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        scroll_canvas.bind("<MouseWheel>", _sf_wheel)
+        sf.bind("<MouseWheel>", _sf_wheel)
+
+        parent = sf
+
+        # Header
+        hf = tk.Frame(parent, bg=style_bg)
+        hf.pack(fill="x", padx=12, pady=(10, 4))
+        tk.Label(hf, text="TITS PROBE NAVIGATOR",
+                 font=("Georgia", 16), fg=style_acc, bg=style_bg).pack(side="left")
+        tk.Label(hf, text="Tunnel Cycling Observer Perturbation Model",
+                 font=("Consolas", 10), fg="#6a7a90", bg=style_bg).pack(side="left", padx=(16, 0))
+
+        # Concept
+        concept_f = ttk.LabelFrame(parent, text="OBSERVER ARCHITECTURE")
+        concept_f.pack(fill="x", padx=12, pady=4)
+        concept_text = (
+            "12 probes cycle THROUGH the craft via L1 tunnel:\n"
+            "  B (weak pump) INGESTS \u2192 tunnel transit \u2192 A (strong pump) EJECTS\n"
+            "  \u2192 ride Alfven lines outward \u2192 polygonal arc \u2192 sample substrate\n"
+            "  \u2192 fall back to B collector vortex \u2192 repeat\n"
+            "\n"
+            "CRAFT GEOMETRY (dumbbell):\n"
+            "  B = funnel (wide vortex mouth, collects from any return angle)\n"
+            "  A = slit nozzle (focused ejection along Alfven lines)\n"
+            "  Tunnel = Venturi tube (wide at B, narrow at A, accelerates)\n"
+            "  Ratio 4:1 visible in pump sizes (A large, B small)\n"
+            "\n"
+            "Every probe exits forward (A pump). Every reading is\n"
+            "forward-biased. The geometry does the weighting.\n"
+            "\n"
+            "TITS: Tensor Imagery Trasference Sensory (Stephen, TM)\n"
+            "Origin: Genesis Brain interview model (TITS_GIBUSH_AISOS_SPINE)"
+        )
+        concept_box = tk.Text(concept_f, height=17, bg="#0c0e14", fg="#ff9944",
+                               font=("Consolas", 9), relief="flat")
+        concept_box.insert("1.0", concept_text)
+        concept_box.config(state="disabled")
+        concept_box.pack(fill="x", padx=6, pady=4)
+
+        # Parameters
+        pf = ttk.LabelFrame(parent, text="PROBE PARAMETERS")
+        pf.pack(fill="x", padx=12, pady=4)
+        ctrl_f = tk.Frame(pf, bg="#12151c")
+        ctrl_f.pack(fill="x", padx=6, pady=4)
+
+        self.probe_grid_var = tk.IntVar(value=256)
+        self.probe_steps_var = tk.IntVar(value=3000)
+
+        row1 = tk.Frame(ctrl_f, bg="#12151c")
+        row1.pack(fill="x", pady=2)
+        tk.Label(row1, text="Grid:", font=("Consolas", 9),
+                 fg=style_fg, bg="#12151c").pack(side="left", padx=(8, 2))
+        tk.Entry(row1, textvariable=self.probe_grid_var, width=5,
+                 font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                 insertbackground="#e0e8f0").pack(side="left")
+        tk.Label(row1, text="Steps:", font=("Consolas", 9),
+                 fg=style_fg, bg="#12151c").pack(side="left", padx=(16, 2))
+        tk.Entry(row1, textvariable=self.probe_steps_var, width=6,
+                 font=("Consolas", 10), bg="#1a1e2a", fg="#e0e8f0",
+                 insertbackground="#e0e8f0").pack(side="left")
+
+        # Buttons
+        bf = tk.Frame(parent, bg=style_bg)
+        bf.pack(fill="x", padx=12, pady=6)
+
+        ttk.Button(bf, text="\u2B24  Run Tunnel Cycling Probes",
+                   command=self._run_probe_tunnel).pack(fill="x", padx=4, pady=2)
+
+        ttk.Button(bf, text="\u25C6  Run Probe BoM & Tax Curve",
+                   command=self._run_probe_bom).pack(fill="x", padx=4, pady=2)
+
+        ttk.Button(bf, text="\u2726  Run Harpoon + Probes Integration",
+                   command=self._run_probe_harpoon).pack(fill="x", padx=4, pady=2)
+
+        ttk.Button(bf, text="\u25CE  Open Probe Renderer",
+                   command=self._launch_probe_renderer).pack(fill="x", padx=4, pady=2)
+
+        ttk.Button(bf, text="\u2605  Bootes Void Cinematic (10 slides)",
+                   command=self._run_bootes_cinematic).pack(fill="x", padx=4, pady=2)
+
+        # Log
+        log_f = ttk.LabelFrame(parent, text="PROBE LOG")
+        log_f.pack(fill="both", expand=True, padx=12, pady=4)
+        self._probe_log = tk.Text(log_f, height=20, bg="#06080c", fg="#ff9944",
+                                    font=("Consolas", 9), relief="flat",
+                                    wrap="word")
+        self._probe_log.pack(fill="both", expand=True, padx=4, pady=4)
+        self._probe_log_msg("TITS PROBE NAVIGATOR ready.")
+        self._probe_log_msg("12 tunnel-cycling probes. Bayesian navigator.")
+        self._probe_log_msg("Architecture: Genesis Brain interview model")
+        self._probe_log_msg("The ship thinks. The thinking keeps it alive.")
+
+    def _probe_log_msg(self, msg):
+        """Write to probe tab log."""
+        self._probe_log.insert("end", msg + "\n")
+        self._probe_log.see("end")
+
+    def _run_probe_tunnel(self):
+        """Run tunnel cycling probe test."""
+        grid = self.probe_grid_var.get()
+        steps = self.probe_steps_var.get()
+        self._probe_log_msg(f"\n{'='*50}")
+        self._probe_log_msg(f"  TUNNEL CYCLING PROBES")
+        self._probe_log_msg(f"  Grid: {grid}  Steps: {steps}")
+        self._probe_log_msg(f"{'='*50}")
+
+        def _run():
+            try:
+                import subprocess
+                result = subprocess.run(
+                    [sys.executable, "BCM_v16_tunnel_probes.py",
+                     "--grid", str(grid), "--steps", str(steps)],
+                    capture_output=True, text=True, timeout=300)
+                for line in result.stdout.split("\n"):
+                    if line.strip():
+                        self.root.after(0, lambda l=line: self._probe_log_msg(l))
+                if result.returncode != 0:
+                    self.root.after(0, lambda: self._probe_log_msg(
+                        f"ERROR: {result.stderr}"))
+            except FileNotFoundError:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    "ERROR: BCM_v16_tunnel_probes.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    f"  Error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _run_probe_bom(self):
+        """Run probe BoM and tax curve test."""
+        grid = self.probe_grid_var.get()
+        self._probe_log_msg(f"\n{'='*50}")
+        self._probe_log_msg(f"  PROBE BoM & TAX CURVE — Grid: {grid}")
+        self._probe_log_msg(f"{'='*50}")
+
+        def _run():
+            try:
+                import subprocess
+                result = subprocess.run(
+                    [sys.executable, "BCM_v16_probe_bom.py",
+                     "--grid", str(grid)],
+                    capture_output=True, text=True, timeout=300)
+                for line in result.stdout.split("\n"):
+                    if line.strip():
+                        self.root.after(0, lambda l=line: self._probe_log_msg(l))
+            except FileNotFoundError:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    "ERROR: BCM_v16_probe_bom.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    f"  Error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _run_probe_harpoon(self):
+        """Run harpoon + probe integration test."""
+        grid = self.probe_grid_var.get()
+        steps = self.probe_steps_var.get()
+        self._probe_log_msg(f"\n{'='*50}")
+        self._probe_log_msg(f"  HARPOON + PROBES — Grid: {grid} Steps: {steps}")
+        self._probe_log_msg(f"{'='*50}")
+
+        def _run():
+            try:
+                import subprocess
+                result = subprocess.run(
+                    [sys.executable, "BCM_v16_harpoon_probe.py",
+                     "--grid", str(grid), "--steps", str(steps)],
+                    capture_output=True, text=True, timeout=300)
+                for line in result.stdout.split("\n"):
+                    if line.strip():
+                        self.root.after(0, lambda l=line: self._probe_log_msg(l))
+            except FileNotFoundError:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    "ERROR: BCM_v16_harpoon_probe.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    f"  Error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _launch_probe_renderer(self):
+        """Launch standalone probe renderer."""
+        self._probe_log_msg("  Launching probe renderer...")
+
+        def _run():
+            try:
+                import subprocess
+                subprocess.Popen([sys.executable, "BCM_probe_renderer.py"])
+            except FileNotFoundError:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    "ERROR: BCM_probe_renderer.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    f"  Renderer error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    def _run_bootes_cinematic(self):
+        """Launch Bootes Void cinematic slide renderer."""
+        self._probe_log_msg(f"\n{'='*50}")
+        self._probe_log_msg(f"  BOOTES VOID CINEMATIC -- 10 slides")
+        self._probe_log_msg(f"  Saving to data/images/")
+        self._probe_log_msg(f"{'='*50}")
+
+        def _run():
+            try:
+                import subprocess
+                subprocess.Popen([sys.executable,
+                    "BCM_v16_bootes_cinematic.py", "--save"])
+                self.root.after(0, lambda: self._probe_log_msg(
+                    "  Cinematic launched. Check data/images/ for slides."))
+            except FileNotFoundError:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    "ERROR: BCM_v16_bootes_cinematic.py not found."))
+            except Exception as e:
+                self.root.after(0, lambda: self._probe_log_msg(
+                    f"  Cinematic error: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
+
+    # === END TITS PROBE TAB ===
 
     def _on_binary_resize(self, event):
         self._binary_cw = event.width

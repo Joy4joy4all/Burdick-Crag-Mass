@@ -1,0 +1,275 @@
+{
+  "title": "BCM v17 Brucetron Diagnostic",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Phase defect tracking with sigmoid transitions and brucetron feedback",
+  "grid": 256,
+  "steps": 3000,
+  "configs": [
+    {
+      "config": "A: Sharp (baseline)",
+      "velocity_spectrum": {
+        "entropy": 4.3998,
+        "ghost_count": 1,
+        "purity": 0.8872,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 1.0,
+            "class": "H1"
+          },
+          {
+            "freq": 0.2,
+            "power": 0.4652,
+            "class": "H10"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.2201,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.04,
+            "power": 0.1501,
+            "class": "H2"
+          },
+          {
+            "freq": 0.4,
+            "power": 0.1157,
+            "class": "H20"
+          }
+        ]
+      },
+      "sigma_spectrum": {
+        "entropy": 3.9957,
+        "ghost_count": 10,
+        "purity": 0.1993,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 0.2566,
+            "class": "H1"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.2147,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.002,
+            "power": 0.1464,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.007,
+            "power": 0.1446,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.013,
+            "power": 0.1271,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.008333,
+            "power": 0.0815,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.007667,
+            "power": 0.0702,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.001,
+            "power": 0.0691,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.017667,
+            "power": 0.0627,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.004333,
+            "power": 0.0606,
+            "class": "GHOST"
+          }
+        ]
+      },
+      "total_phase_energy": 38130.8936,
+      "brucetron_rms": 0.00956205,
+      "brucetron_early": 3.716334,
+      "brucetron_late": 9.014102,
+      "brucetron_trend": "GROWING"
+    },
+    {
+      "config": "B: Sigmoid only",
+      "velocity_spectrum": {
+        "entropy": 4.4233,
+        "ghost_count": 1,
+        "purity": 0.8867,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 1.0,
+            "class": "H1"
+          },
+          {
+            "freq": 0.2,
+            "power": 0.3535,
+            "class": "H10"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.2112,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.04,
+            "power": 0.1615,
+            "class": "H2"
+          },
+          {
+            "freq": 0.4,
+            "power": 0.1373,
+            "class": "H20"
+          }
+        ]
+      },
+      "sigma_spectrum": {
+        "entropy": 3.7819,
+        "ghost_count": 8,
+        "purity": 0.2492,
+        "peaks": [
+          {
+            "freq": 0.005333,
+            "power": 0.3306,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.02,
+            "power": 0.3139,
+            "class": "H1"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.1424,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.007667,
+            "power": 0.1097,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.002,
+            "power": 0.095,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.009333,
+            "power": 0.0909,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.003,
+            "power": 0.0684,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.014333,
+            "power": 0.0562,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.016333,
+            "power": 0.0526,
+            "class": "GHOST"
+          }
+        ]
+      },
+      "total_phase_energy": 31046.7177,
+      "brucetron_rms": 0.00845147,
+      "brucetron_early": 3.109677,
+      "brucetron_late": 6.636178,
+      "brucetron_trend": "GROWING"
+    },
+    {
+      "config": "C: Sigmoid + Brucetron",
+      "velocity_spectrum": {
+        "entropy": 4.4267,
+        "ghost_count": 1,
+        "purity": 0.888,
+        "peaks": [
+          {
+            "freq": 0.02,
+            "power": 1.0,
+            "class": "H1"
+          },
+          {
+            "freq": 0.2,
+            "power": 0.3467,
+            "class": "H10"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.207,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.04,
+            "power": 0.1591,
+            "class": "H2"
+          },
+          {
+            "freq": 0.4,
+            "power": 0.1358,
+            "class": "H20"
+          }
+        ]
+      },
+      "sigma_spectrum": {
+        "entropy": 3.6097,
+        "ghost_count": 5,
+        "purity": 0.2168,
+        "peaks": [
+          {
+            "freq": 0.005,
+            "power": 0.2361,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.01,
+            "power": 0.2282,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.02,
+            "power": 0.193,
+            "class": "H1"
+          },
+          {
+            "freq": 0.002,
+            "power": 0.0841,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.004333,
+            "power": 0.0771,
+            "class": "GHOST"
+          },
+          {
+            "freq": 0.008,
+            "power": 0.0719,
+            "class": "GHOST"
+          }
+        ]
+      },
+      "total_phase_energy": 31046.0337,
+      "brucetron_rms": 0.0085156,
+      "brucetron_early": 3.109121,
+      "brucetron_late": 7.660596,
+      "brucetron_trend": "GROWING"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "BCM v17 Chi Freeboard Diagnostic",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Chi freeboard (4D headspace) absorbs Brucetron phase debt",
+  "grid": 256,
+  "steps": 3000,
+  "results": {
+    "no_freeboard": {
+      "bruce_early": 6.79084,
+      "bruce_late": 9.014102,
+      "growth_rate": 0.00087533,
+      "power_exponent": 0.1312,
+      "final_bruce_rms": 0.00956205,
+      "final_sigma": 565.772
+    },
+    "chi_freeboard": {
+      "bruce_early": 1.77412,
+      "bruce_late": 1.695903,
+      "growth_rate": -6.39e-06,
+      "power_exponent": 0.0155,
+      "final_bruce_rms": 0.00451099,
+      "final_sigma": 158.2253,
+      "final_chi": 1989.5562
+    }
+  },
+  "comparison": {
+    "rate_reduction_pct": 100.73,
+    "energy_reduction_pct": 81.19
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "title": "BCM v15 Live Substrate + Finite Reactor Core",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Conservation law via finite reactor budget",
+  "grid": 128,
+  "steps": 2000,
+  "substrate_PDE": "d_lam/dt = D_lam*lap(lam) - beta*sigma + Gamma*(lam_void - lam)",
+  "conservation_law": "E_total = E_reactor + E_sigma + E_lambda",
+  "parameters": {
+    "dt": 0.05,
+    "D_sigma": 0.5,
+    "pump_A": 0.5,
+    "ratio": 0.25,
+    "separation": 15.0,
+    "alpha": 0.8,
+    "void_lambda": 0.1,
+    "D_lam": 0.2,
+    "beta": 0.005,
+    "Gamma": 0.01
+  },
+  "configs": [
+    {
+      "label": "INFINITE",
+      "budget": -1,
+      "burn": 0.0,
+      "desc": "No limit \u2014 baseline comparison"
+    },
+    {
+      "label": "LARGE_CORE",
+      "budget": 500.0,
+      "burn": 1.0,
+      "desc": "Enough fuel for ~full run"
+    },
+    {
+      "label": "MEDIUM_CORE",
+      "budget": 200.0,
+      "burn": 1.0,
+      "desc": "Fuel runs out mid-transit"
+    },
+    {
+      "label": "SMALL_CORE",
+      "budget": 50.0,
+      "burn": 1.0,
+      "desc": "Fuel runs out early"
+    },
+    {
+      "label": "MICRO_CORE",
+      "budget": 20.0,
+      "burn": 1.0,
+      "desc": "Minimal fuel \u2014 sprint start"
+    }
+  ],
+  "results": [
+    {
+      "label": "INFINITE",
+      "reactor_budget": -1,
+      "burn_rate": 0.0,
+      "alive": true,
+      "drift": 11.40343,
+      "coherence": 0.2748,
+      "reactor_remaining": 0,
+      "reactor_empty_step": null,
+      "E_sigma_initial": 157.0796,
+      "E_sigma_final": 13306.7094,
+      "E_lambda_initial": 1638.4,
+      "E_lambda_final": 1384.1455,
+      "E_total_initial": 1795.4796,
+      "E_total_final": 14690.855,
+      "conservation_error_pct": -1
+    },
+    {
+      "label": "LARGE_CORE",
+      "reactor_budget": 500.0,
+      "burn_rate": 1.0,
+      "alive": true,
+      "drift": 5.035146,
+      "coherence": 0.4016,
+      "reactor_remaining": 0,
+      "reactor_empty_step": 174,
+      "E_sigma_initial": 157.0796,
+      "E_sigma_final": 0.0,
+      "E_lambda_initial": 1638.4,
+      "E_lambda_final": 1618.605,
+      "E_total_initial": 2295.4796,
+      "E_total_final": 1618.605,
+      "conservation_error_pct": 29.4873
+    },
+    {
+      "label": "MEDIUM_CORE",
+      "reactor_budget": 200.0,
+      "burn_rate": 1.0,
+      "alive": false,
+      "drift": 0,
+      "coherence": 0,
+      "reactor_remaining": 0,
+      "reactor_empty_step": 69,
+      "E_sigma_initial": 157.0796,
+      "E_sigma_final": 0.0,
+      "E_lambda_initial": 1638.4,
+      "E_lambda_final": 1632.3494,
+      "E_total_initial": 1995.4796,
+      "E_total_final": 1632.3494,
+      "conservation_error_pct": 18.1976
+    },
+    {
+      "label": "SMALL_CORE",
+      "reactor_budget": 50.0,
+      "burn_rate": 1.0,
+      "alive": false,
+      "drift": 0,
+      "coherence": 0,
+      "reactor_remaining": 0,
+      "reactor_empty_step": 17,
+      "E_sigma_initial": 157.0796,
+      "E_sigma_final": 0.0,
+      "E_lambda_initial": 1638.4,
+      "E_lambda_final": 1636.3004,
+      "E_total_initial": 1845.4796,
+      "E_total_final": 1636.3004,
+      "conservation_error_pct": 11.3347
+    },
+    {
+      "label": "MICRO_CORE",
+      "reactor_budget": 20.0,
+      "burn_rate": 1.0,
+      "alive": false,
+      "drift": 0,
+      "coherence": 0,
+      "reactor_remaining": 0,
+      "reactor_empty_step": 6,
+      "E_sigma_initial": 157.0796,
+      "E_sigma_final": 0.0,
+      "E_lambda_initial": 1638.4,
+      "E_lambda_final": 1637.0771,
+      "E_total_initial": 1815.4796,
+      "E_total_final": 1637.0771,
+      "conservation_error_pct": 9.8267
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "title": "BCM v16 Diagnostic 3E+3F: Fidelity Suite",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Rotational fidelity + transport isotropy. Is the grid invisible to the physics?",
+  "grid": 256,
+  "steps_3E": 2000,
+  "steps_3F": 1000,
+  "diagnostic_3E_rotation": {
+    "results": [
+      {
+        "drive_angle_deg": 0.0,
+        "drift_mag": 15.8599,
+        "drift_angle_deg": -1.91,
+        "expected_angle_deg": 0.0,
+        "angle_error_deg": -1.91,
+        "total_scooped": 732.6223
+      },
+      {
+        "drive_angle_deg": 90.0,
+        "drift_mag": 15.7612,
+        "drift_angle_deg": 99.43,
+        "expected_angle_deg": 90.0,
+        "angle_error_deg": 9.43,
+        "total_scooped": 714.6658
+      },
+      {
+        "drive_angle_deg": 45.0,
+        "drift_mag": 16.9911,
+        "drift_angle_deg": 39.73,
+        "expected_angle_deg": 45.0,
+        "angle_error_deg": -5.27,
+        "total_scooped": 766.4677
+      }
+    ],
+    "base_magnitude": 15.8599,
+    "verdict": "PASS"
+  },
+  "diagnostic_3F_isotropy": {
+    "results": [
+      {
+        "direction": "E",
+        "angle_deg": 0.0,
+        "drift_mag": 9.095,
+        "drift_angle_deg": 0.98,
+        "angle_error_deg": 0.98,
+        "total_scooped": 377.8664
+      },
+      {
+        "direction": "NE",
+        "angle_deg": 45.0,
+        "drift_mag": 10.1179,
+        "drift_angle_deg": 41.85,
+        "angle_error_deg": -3.15,
+        "total_scooped": 391.9617
+      },
+      {
+        "direction": "N",
+        "angle_deg": 90.0,
+        "drift_mag": 9.2077,
+        "drift_angle_deg": 101.23,
+        "angle_error_deg": 11.23,
+        "total_scooped": 361.8547
+      },
+      {
+        "direction": "NW",
+        "angle_deg": 135.0,
+        "drift_mag": 9.8386,
+        "drift_angle_deg": 122.27,
+        "angle_error_deg": -12.73,
+        "total_scooped": 355.8127
+      },
+      {
+        "direction": "W",
+        "angle_deg": 180.0,
+        "drift_mag": 13.698,
+        "drift_angle_deg": -176.58,
+        "angle_error_deg": 3.42,
+        "total_scooped": 420.9559
+      },
+      {
+        "direction": "SW",
+        "angle_deg": 225.0,
+        "drift_mag": 11.2284,
+        "drift_angle_deg": -116.45,
+        "angle_error_deg": 18.55,
+        "total_scooped": 366.4787
+      },
+      {
+        "direction": "S",
+        "angle_deg": 270.0,
+        "drift_mag": 10.6826,
+        "drift_angle_deg": -97.21,
+        "angle_error_deg": -7.21,
+        "total_scooped": 355.4362
+      },
+      {
+        "direction": "SE",
+        "angle_deg": 315.0,
+        "drift_mag": 11.1858,
+        "drift_angle_deg": -41.18,
+        "angle_error_deg": 3.82,
+        "total_scooped": 383.8871
+      }
+    ],
+    "drift_cv": 0.1303,
+    "scoop_cv": 0.0552,
+    "max_angle_error": 18.55,
+    "verdict": "PASS"
+  },
+  "combined_verdict": "PASS"
+}
