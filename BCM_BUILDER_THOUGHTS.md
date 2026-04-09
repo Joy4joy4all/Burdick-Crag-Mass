@@ -1,6 +1,6 @@
 # BUILDER THOUGHTS — THE FOREMAN'S LOG
 ## Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems
-## Captured from BCM v15 session, 2026-04-07
+## Captured from BCM v15-v18 sessions, 2026-04-07 through 2026-04-09
 
 ---
 
@@ -383,7 +383,7 @@ Versions 1 through 53 require the Foreman.
 "The sensors are funded by the same reactor budget as
 the hull."
 
-TITS (Tensor Imagery Trasference Sensory) is not a
+TITS (Tensor Imagery Transference Sensory) is not a
 passive sensor array. It operates on craft-funded
 substrate. In deep void, sensors see only what the
 reactor pays to illuminate. Upon re-emergence into
@@ -682,6 +682,109 @@ governs design of submarines, helicopter cabins, and
 industrial control rooms. The human body is a resonant
 structure. The engineering must account for it or the
 engineering is incomplete.
+
+## On the Frastrate and the Lodge Book (v18 Session)
+
+Article XVIII of the Lodge Book says: "Drift is identified
+by increasing maintenance cost and instability at the
+boundaries of form. Correction requires re-pinning at the
+correct coordinate and dissolution of the drifted structure."
+
+I wrote that before BCM existed. The Frastrate discovery
+confirmed it in code. The Brucetron is exactly "increasing
+maintenance cost at the boundaries of form." The 55→50 lock
+is exactly "re-pinning at the correct coordinate." The chi
+freeboard is exactly "dissolution of the drifted structure."
+
+The Lodge Book described the physics before the physics was
+derived. TITS described the sensor architecture before the
+sensors were built. The name was the physics. The 1 stands
+before the 0.
+
+The Frastrate came from a thought I threw at the wall: "Not
+substrate but there must be not a layer but an internal
+silence between 2D markers. Infinite like aleph null. Fractals
+absorb the 2D vector line through transistence of absence."
+I wasn't sure if it was focus or engineering. I said "just
+throw." Claude and Gemini digested it independently. Both
+converged on the same structure: the silence has topology.
+
+Then we measured it. D_f = 1.59 at the probe trajectory
+boundary. D_f = 0.88 at the chi tank surface. The Frastrate
+is real — it lives at the observation boundary, not at the
+pressure relief surface. The probes write the fractal as
+they fly. The silence gets its shape from interaction.
+
+## On Failure as Evidence (v18 Session)
+
+v18 produced four failures and one success. The failures
+matter more than the success.
+
+Test 3 failed because the drain was in the wrong location.
+Test 4 failed because the math clamped the signal to zero.
+Test 6 failed because the mode re-locks after perturbation.
+Test 7 failed because phase shear can't break lockstep.
+
+Each failure eliminated a possibility. Each one taught a
+principle. The three failed sigma attempts proved sigma is
+not the carrier of phase debt. The two failed mode attacks
+proved the Brucetron is phase-rigid — a new invariance
+class we didn't know existed until we tried to break it.
+
+ChatGPT said it best: "You didn't just find something that
+works. You mapped what cannot work. That's far more valuable."
+
+Gemini said: "The Frastrate is the capacity of the universe
+to accept your debt." That sentence is worth more than the
+91.6% number because it tells you what the Frastrate IS,
+not just what it does.
+
+## On Three-Space Coupling (v18 Session)
+
+The biggest v18 insight was ChatGPT's: "You are draining
+the wrong variable in the wrong place. Three different
+spaces. No coupling."
+
+Sigma moves. Phi accumulates error. Gamma is where the
+probes have been. Three different things. You can't drain
+sigma through Gamma and expect phi to decrease. You have
+to connect phi to Gamma directly.
+
+This maps to industrial process control. You can't fix a
+temperature problem by adjusting pressure unless temperature
+and pressure are coupled in your system. If they're
+independent variables, you need to operate on the correct
+one. Obvious in hindsight. Not obvious when you're in the
+middle of it.
+
+The four-AI workflow caught this because each AI sees the
+system from a different angle. Claude runs the code and
+reports numbers. ChatGPT attacks the physics. Gemini
+formalizes the engineering. Grok checks the geometry.
+No single agent would have caught the domain mismatch.
+The cross-check is the safety net.
+
+## On Phase Rigidity and Breaking Time (v18 Session)
+
+The Brucetron mode survived everything we threw at it
+except chi bulk absorption. Spatial perturbation, phase
+shear, coherence sinks — the mode re-locks instantly.
+ChatGPT called it "Kuramoto above critical coupling."
+That's a known physics: when oscillators are coupled
+strongly enough, they synchronize and resist local
+disturbance. The only way to break them is to change
+their natural frequencies — detune the system.
+
+ChatGPT's direction for v19: "Stop modifying space.
+Start breaking time." That means: don't perturb the
+field spatially. Change the temporal structure. Break
+the integer ratio. Introduce irrational forcing. Make
+the 50-step cycle unable to support a clean harmonic
+ladder.
+
+That's v19. And it will require rethinking what time
+means in a substrate where space is already a
+maintenance cost.
 
 ---
 

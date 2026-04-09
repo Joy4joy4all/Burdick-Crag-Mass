@@ -1,0 +1,65 @@
+<svg width="100%" viewBox="0 0 680 860" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text x="340" y="28" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">FIG. 5 v2 — HYPERCUBE: CHI FREEBOARD + FRASTRATE</text>
+<text x="340" y="46" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">4D tesseract pressure relief with fractal boundary — Stephen Burdick Sr.</text>
+<!-- Tesseract outline (outer) -->
+<rect x="100" y="70" width="480" height="300" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+<text x="110" y="90" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Tesseract cell (4D)</text>
+<!-- Inner cube (3D projection) -->
+<rect x="160" y="120" width="360" height="200" rx="2" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="4 3"/>
+<text x="170" y="140" style="font-family:sans-serif;font-size:12px;fill:#555">3D observable volume</text>
+<!-- Depth lines (tesseract perspective) -->
+<line x1="100" y1="70" x2="160" y2="120" stroke="#333" stroke-width="0.5"/>
+<line x1="580" y1="70" x2="520" y2="120" stroke="#333" stroke-width="0.5"/>
+<line x1="100" y1="370" x2="160" y2="320" stroke="#333" stroke-width="0.5"/>
+<line x1="580" y1="370" x2="520" y2="320" stroke="#333" stroke-width="0.5"/>
+<!-- Chi zone (between ceiling and sigma) -->
+<rect x="160" y="120" width="360" height="60" fill="#f5f5f5" stroke="none"/>
+<line x1="160" y1="180" x2="520" y2="180" stroke="#333" stroke-width="1" stroke-dasharray="6 3"/>
+<text x="530" y="150" style="font-family:sans-serif;font-size:12px;fill:#555">χ headspace</text>
+<text x="530" y="165" style="font-family:sans-serif;font-size:12px;fill:#555">(4D freeboard)</text>
+<text x="530" y="184" style="font-family:sans-serif;font-size:12px;fill:#555">Fill line</text>
+<!-- Sigma surface (wavy) -->
+<path d="M160 240 Q220 210, 280 235 Q340 260, 380 225 Q420 200, 460 240 Q490 260, 520 235" fill="none" stroke="#333" stroke-width="2"/>
+<text x="530" y="244" style="font-family:sans-serif;font-size:12px;fill:#555">σ surface</text>
+<!-- Spill arrows -->
+<line x1="380" y1="218" x2="380" y2="185" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="355" y="203" style="font-family:sans-serif;font-size:10px;fill:#555">spill</text>
+<!-- Drain arrows -->
+<line x1="260" y1="185" x2="260" y2="228" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="235" y="210" style="font-family:sans-serif;font-size:10px;fill:#555">drain</text>
+<!-- Craft inside -->
+<ellipse cx="340" cy="240" rx="30" ry="15" fill="none" stroke="#333" stroke-width="1"/>
+<text x="340" y="244" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#333">craft</text>
+<!-- Fractal frontier wrapping around tesseract -->
+<path d="M100 380 Q120 375, 140 382 Q165 370, 190 378 Q210 368, 240 374 Q260 366, 290 372 Q310 364, 340 370 Q360 362, 390 368 Q410 360, 440 366 Q460 358, 490 364 Q510 360, 540 366 Q560 362, 580 370" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="340" y="398" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Frastrate boundary (fractal frontier wrapping cell, D_f = 1.59)</text>
+<!-- Grok confirmation box -->
+<rect x="60" y="420" width="560" height="80" rx="8" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="6 3"/>
+<text x="80" y="444" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Tesseract properties (Grok xAI confirmation)</text>
+<text x="80" y="464" style="font-family:sans-serif;font-size:12px;fill:#555">Exact Geometric Conservation Law cell-by-cell (no splitting error)</text>
+<text x="80" y="484" style="font-family:sans-serif;font-size:12px;fill:#555">Condition number = 1 (perfectly conditioned level-set reconstruction)</text>
+<!-- Chi results -->
+<rect x="60" y="516" width="260" height="100" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="190" y="536" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Chi freeboard (v17)</text>
+<text x="190" y="556" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Growth rate: NEGATIVE</text>
+<text x="190" y="576" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Reduction: 100.7%</text>
+<text x="190" y="596" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Mission clock: LIFTED</text>
+<rect x="360" y="516" width="260" height="100" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="490" y="536" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Phase projection (v18)</text>
+<text x="490" y="556" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Growth rate: 0.0000736</text>
+<text x="490" y="576" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Reduction: 91.6%</text>
+<text x="490" y="596" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">φ → Γ coupling: ACTIVE</text>
+<!-- Conservation -->
+<rect x="120" y="636" width="440" height="40" rx="8" fill="none" stroke="#333" stroke-width="1" stroke-dasharray="6 3"/>
+<text x="340" y="660" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">E_total = Σ(σ) + Σ(χ) + Σ(φ dissipated) = conserved</text>
+<!-- TITS architecture -->
+<rect x="60" y="696" width="560" height="80" rx="8" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="6 3"/>
+<text x="80" y="718" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">TITS: Tensor Imagery Transference Sensory</text>
+<text x="80" y="738" style="font-family:sans-serif;font-size:12px;fill:#555">Tensor: M_ij = ∂φ_i/∂σ_j | Imagery: fractal boundary D_f = 1.59</text>
+<text x="80" y="758" style="font-family:sans-serif;font-size:12px;fill:#555">Transference: φ bleeds passively | Sensory: SCI = ∫Ψ·dA (probes feel depth)</text>
+<!-- v2 note -->
+<rect x="60" y="790" width="560" height="30" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="340" y="810" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">v2: chi freeboard active, Frastrate fractal boundary, dual dissipation, TITS physics named</text>
+<text x="340" y="846" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems</text>
+</svg>

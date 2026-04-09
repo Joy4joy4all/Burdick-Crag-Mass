@@ -1,0 +1,70 @@
+{
+  "title": "BCM v18 Fractal Phase Shear",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Phase decorrelation via fractal curvature gradient \u2014 break eigenmode lockstep",
+  "grid": 256,
+  "steps": 3000,
+  "configs": [
+    {
+      "name": "A: No dissipation",
+      "mode": "none",
+      "bruce_early": 6.79084,
+      "bruce_late": 9.014102,
+      "growth_rate": 0.00087533,
+      "power_exp": 0.1312,
+      "final_bruce_rms": 0.00956205,
+      "final_phi_rms": 0.0066163,
+      "phi_early": 0.005071,
+      "phi_late": 0.004165,
+      "final_sigma": 565.772,
+      "total_dissipated": 0.0
+    },
+    {
+      "name": "B: Chi tank (v17)",
+      "mode": "chi_tank",
+      "bruce_early": 1.77412,
+      "bruce_late": 1.695903,
+      "growth_rate": -6.39e-06,
+      "power_exp": 0.0155,
+      "final_bruce_rms": 0.00451099,
+      "final_phi_rms": 0.00071198,
+      "phi_early": 0.00161,
+      "phi_late": 0.000931,
+      "final_sigma": 158.2253,
+      "total_dissipated": 6758.6378
+    },
+    {
+      "name": "C: Projection only (v18)",
+      "mode": "projection_only",
+      "bruce_early": 2.527174,
+      "bruce_late": 2.424942,
+      "growth_rate": 7.363e-05,
+      "power_exp": 0.0296,
+      "final_bruce_rms": 0.00561762,
+      "final_phi_rms": 0.00662132,
+      "phi_early": 0.005071,
+      "phi_late": 0.004166,
+      "final_sigma": 565.772,
+      "total_dissipated": 519.2903
+    },
+    {
+      "name": "D: Phase shear (v18 final)",
+      "mode": "phase_shear",
+      "bruce_early": 2.527174,
+      "bruce_late": 2.424942,
+      "growth_rate": 7.363e-05,
+      "power_exp": 0.0296,
+      "final_bruce_rms": 0.00561762,
+      "final_phi_rms": 0.0062336,
+      "phi_early": 0.005015,
+      "phi_late": 0.003959,
+      "final_sigma": 565.772,
+      "total_dissipated": 600.258
+    }
+  ],
+  "rate_reduction": {
+    "chi_tank": 100.73,
+    "projection_only": 91.59,
+    "phase_shear": 91.59
+  }
+}

@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 680 780" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<text x="340" y="28" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">FIG. 3 v2 — CMB NAVIGATOR WITH SENSORY COMFORT INDEX</text>
+<text x="340" y="46" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Bayesian navigator + fractal depth sensing — Stephen Burdick Sr.</text>
+<!-- Navigator core -->
+<rect x="200" y="70" width="280" height="60" rx="8" fill="none" stroke="#333" stroke-width="1.5"/>
+<text x="340" y="96" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">TITS BAYESIAN NAVIGATOR</text>
+<text x="340" y="116" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">10 state transitions, forward-weighted</text>
+<!-- Three inputs -->
+<rect x="60" y="160" width="160" height="50" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="140" y="182" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">CMB reference</text>
+<text x="140" y="198" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">160.2 GHz (2.725K)</text>
+<line x1="140" y1="210" x2="140" y2="240" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<rect x="260" y="160" width="160" height="50" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="340" y="182" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Probe readings</text>
+<text x="340" y="198" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">12 probes, 50-step cycle</text>
+<line x1="340" y1="210" x2="340" y2="240" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<rect x="460" y="160" width="160" height="50" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="540" y="182" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">SCI sensor (NEW)</text>
+<text x="540" y="198" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">∫Ψ·dA (fractal depth)</text>
+<line x1="540" y1="210" x2="540" y2="240" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<!-- Decision engine -->
+<rect x="100" y="244" width="480" height="50" rx="8" fill="none" stroke="#333" stroke-width="1"/>
+<text x="340" y="268" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Triple-lock decision engine</text>
+<text x="340" y="284" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">Lock 1: harmonic | Lock 2: bio safety | Lock 3: CMB coupling</text>
+<!-- Three outputs -->
+<line x1="220" y1="294" x2="220" y2="330" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="340" y1="294" x2="340" y2="330" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="460" y1="294" x2="460" y2="330" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
+<rect x="140" y="334" width="160" height="44" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="220" y="354" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">PROCEED</text>
+<text x="220" y="370" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">SCI high, all locks pass</text>
+<rect x="260" y="334" width="160" height="44" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="340" y="354" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">CAUTION</text>
+<text x="340" y="370" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">SCI declining</text>
+<rect x="380" y="334" width="160" height="44" rx="6" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="460" y="354" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">AVOID</text>
+<text x="460" y="370" text-anchor="middle" style="font-family:sans-serif;font-size:11px;fill:#555">SCI below threshold</text>
+<!-- SCI DETAIL -->
+<text x="340" y="416" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Sensory Comfort Index (SCI) — v18</text>
+<rect x="60" y="426" width="560" height="120" rx="8" fill="none" stroke="#333" stroke-width="0.5" stroke-dasharray="6 3"/>
+<text x="80" y="448" style="font-family:sans-serif;font-size:12px;fill:#555">Psi = (D_f - 1) · ln(∇σ²)  |  SCI = ∫ Psi · dA</text>
+<text x="80" y="470" style="font-family:sans-serif;font-size:12px;fill:#555">High SCI: deep silence, rich fractal (D_f→2), transference effortless</text>
+<text x="80" y="490" style="font-family:sans-serif;font-size:12px;fill:#555">Low SCI: thin silence, shallow D_f (→1), manifest law closing in</text>
+<text x="80" y="510" style="font-family:sans-serif;font-size:12px;fill:#555">The craft "tastes" the quality of the vacuum through probe arcs</text>
+<text x="80" y="530" style="font-family:sans-serif;font-size:12px;fill:#555">Navigator triggers AVOID when SCI drops below bio safety threshold</text>
+<!-- BIO HARM BANDS -->
+<text x="340" y="576" text-anchor="middle" style="font-family:sans-serif;font-size:14px;font-weight:500;fill:#1a1a1a">Biological harm bands (Lock 2)</text>
+<rect x="60" y="586" width="560" height="100" rx="8" fill="none" stroke="#333" stroke-width="0.5"/>
+<rect x="80" y="596" width="80" height="20" rx="3" fill="#f5f5f5" stroke="#333" stroke-width="0.5"/>
+<text x="120" y="610" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#555">Vestib 0.5-3</text>
+<rect x="170" y="596" width="80" height="20" rx="3" fill="#eee" stroke="#333" stroke-width="0.5"/>
+<text x="210" y="610" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#555">Organ 4-8</text>
+<rect x="260" y="596" width="80" height="20" rx="3" fill="#e8e8e8" stroke="#333" stroke-width="0.5"/>
+<text x="300" y="610" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#555">Spinal 8-12</text>
+<rect x="350" y="596" width="80" height="20" rx="3" fill="#f0f0f0" stroke="#333" stroke-width="0.5"/>
+<text x="390" y="610" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#555">Head 15-20</text>
+<rect x="440" y="596" width="80" height="20" rx="3" fill="#eaeaea" stroke="#333" stroke-width="0.5"/>
+<text x="480" y="610" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#555">Eye 20-80</text>
+<rect x="530" y="596" width="80" height="20" rx="3" fill="#e5e5e5" stroke="#333" stroke-width="0.5"/>
+<text x="570" y="610" text-anchor="middle" style="font-family:sans-serif;font-size:10px;fill:#555">Cell 100-200</text>
+<text x="340" y="646" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Each craft frequency → forbidden dt range. CMB lock dt = 1.25e-13 s/step: CLEAR</text>
+<text x="340" y="668" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Crew safety: Brucetron RMS 0.0045 (hemorrhage threshold not reached)</text>
+<!-- v2 note -->
+<rect x="60" y="696" width="560" height="30" rx="4" fill="none" stroke="#333" stroke-width="0.5"/>
+<text x="340" y="716" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">v2: SCI sensor added, bio harm bands mapped, triple-lock architecture, AVOID from D_f</text>
+<text x="340" y="762" text-anchor="middle" style="font-family:sans-serif;font-size:12px;fill:#555">Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems</text>
+</svg>

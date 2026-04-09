@@ -1,0 +1,46 @@
+{
+  "title": "BCM v18 Sensory Flux Dissipation",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Psi-weighted dissipation where fractal depth and sigma gradient overlap",
+  "grid": 256,
+  "steps": 3000,
+  "configs": [
+    {
+      "name": "A: No dissipation",
+      "mode": "none",
+      "bruce_early": 6.79084,
+      "bruce_late": 9.014102,
+      "growth_rate": 0.00087533,
+      "power_exp": 0.1312,
+      "final_bruce_rms": 0.00956205,
+      "final_sigma": 565.772,
+      "activation_pct": 12.41
+    },
+    {
+      "name": "B: Chi tank (v17)",
+      "mode": "chi_tank",
+      "bruce_early": 1.77412,
+      "bruce_late": 1.695903,
+      "growth_rate": -6.39e-06,
+      "power_exp": 0.0155,
+      "final_bruce_rms": 0.00451099,
+      "final_sigma": 158.2253,
+      "activation_pct": 13.28
+    },
+    {
+      "name": "C: Sensory flux (Psi)",
+      "mode": "sensory_flux",
+      "bruce_early": 6.79084,
+      "bruce_late": 9.014102,
+      "growth_rate": 0.00087533,
+      "power_exp": 0.1312,
+      "final_bruce_rms": 0.00956205,
+      "final_sigma": 565.772,
+      "activation_pct": 12.41
+    }
+  ],
+  "rate_reduction": {
+    "chi_tank_vs_baseline": 100.73,
+    "sensory_flux_vs_baseline": 0.0
+  }
+}

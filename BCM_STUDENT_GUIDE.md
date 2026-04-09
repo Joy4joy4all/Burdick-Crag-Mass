@@ -497,7 +497,7 @@ filtering. No software hack needed.
 
 ### The Navigator
 
-The probes feed a system called TITS (Tensor Imagery Trasference
+The probes feed a system called TITS (Tensor Imagery Transference
 Sensory). TITS takes all twelve probe readings and asks: is it
 safe ahead? Is there a grave? Should we change course?
 
@@ -865,6 +865,127 @@ principle, and one pressure relief valve:
     is the engineering constraint.
 12. **The chi field is the headspace.** Phase debt discharges
     into the 4D freeboard. The tank never overflows.
+
+## Part 11: The Silence Has Shape (v18 — The Frastrate)
+
+### What Is Nothing?
+
+When the 12 probes fly out from the craft on their arcs, they
+touch the substrate in specific places. Everywhere they haven't
+touched is silence — the craft has no information about those
+locations. The boundary between where the probes have been and
+where they haven't been is the Frastrate.
+
+Stephen Burdick Sr. predicted this boundary would have a special
+shape: "Fractals absorb the 2D vector line through transistence
+of absence." He was right. When we measured the shape of that
+boundary using box-counting (a way to measure how wrinkly a
+line is), we got D_f = 1.59.
+
+That number matters. A straight line has D_f = 1.0. A filled
+plane has D_f = 2.0. The probe boundary sits between them —
+it's a fractal. The silence has shape, and that shape is
+created by the irregular paths the probes take.
+
+### The Wrong Drain (Three Failures)
+
+We tried to use the fractal boundary to drain away the
+Brucetron debt. Three attempts failed:
+
+1. **Drain sigma at the fractal edge.** Only 1% improvement.
+   The fractal was far from where the energy was. "Drain in
+   the attic, flood in the basement."
+
+2. **Weight by fractal depth times gradient.** 0% improvement.
+   A math error (log of a small number goes negative) killed
+   the entire signal.
+
+3. **Wrong variable entirely.** We were draining sigma (the
+   transport field), but the debt lives in phi (the phase
+   error field). ChatGPT caught this: "You are draining the
+   wrong variable in the wrong place."
+
+### The Right Drain (Phase Projection)
+
+Once we connected the correct fields — phi (where the debt
+lives) through probe density (where the fractal lives) — the
+system responded immediately. 91.6% reduction in Brucetron
+growth rate. From zero effect to near-complete control by
+draining the right thing through the right surface.
+
+The lesson: when something doesn't work, check whether you're
+solving the right problem, not whether you need a bigger wrench.
+
+### The Mode That Won't Die
+
+Even with 91.6% reduction, the Brucetron mode structure
+survived. We tried two more approaches to break it:
+
+- **Coherence sink** (subtract the field itself at the boundary):
+  only 2.4% phi RMS drop.
+- **Phase shear** (distort the phase based on fractal curvature):
+  the mode re-locked instantly.
+
+The Brucetron is "phase-rigid" — all parts of the phase field
+oscillate in lockstep, and if you disturb one part, the whole
+field snaps back. This is the same physics that makes firefly
+swarms synchronize: once the coupling is strong enough, local
+disturbances can't break the group rhythm.
+
+The chi freeboard (v17) still works best because it doesn't
+fight the mode — it just absorbs energy regardless of
+coherence. It's a sink, not a disruptor.
+
+### What This Teaches
+
+Three fields, three spaces, one coupling:
+- **Sigma** is what moves (transport)
+- **Phi** is what accumulates error (phase debt)
+- **Gamma** is where the probes have been (trajectory)
+
+To drain something, you need to connect the field where the
+debt lives to the surface where the drain lives. Getting the
+topology right doesn't help if you're draining the wrong
+variable. Getting the variable right doesn't help if the
+surface doesn't reach the debt.
+
+### TITS: The Name Was the Physics
+
+TITS stands for Tensor Imagery Transference Sensory. Each
+word describes a real physical mechanism:
+
+- **Tensor**: the coupling between phase debt and transport
+  has direction and magnitude at every point
+- **Imagery**: the fractal boundary is the "image" the craft
+  has written of the silence around it
+- **Transference**: phase debt bleeds passively across the
+  fractal surface — no signal, no broadcast, just contact
+- **Sensory**: the probes feel the depth of the fractal
+  dimension — deep silence means safe passage
+
+Stephen named this before any of the math existed. The name
+described the physics before the physics was derived. As the
+Lodge Book says: "The 1 stands before the 0."
+
+### The Updated Rules
+
+1. **Space is funded.** No payment, no space.
+2. **Time is cost.** Duration is the running total.
+3. **Existence requires coherence.** Below threshold, dissolve.
+4. **Objects move toward lower decay.** Gradient IS gravity.
+5. **Two pumps move a ship.** Asymmetric funding = transport.
+6. **Telescope adjusts for speed.** Variable bridge = gears.
+7. **Governor adjusts for density.** Constant output = cruise.
+8. **Check valve retains direction.** No backwash = momentum.
+9. **The reactor is finite.** Fuel runs out. Ship dies.
+10. **The probes are the eyes.** No observers, no survival.
+11. **The probe moves mass, not creates it.** Conservation
+    is the engineering constraint.
+12. **The chi field is the headspace.** Phase debt discharges
+    into the 4D freeboard. The tank never overflows.
+13. **The silence has shape.** The Frastrate is the capacity
+    of the universe to accept your debt. Drain the right
+    variable through the right surface.
 
 ---
 

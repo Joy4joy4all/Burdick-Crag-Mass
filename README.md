@@ -32,7 +32,10 @@ lambda=0.1, kappa=2.0, grid=256, layers=8.
 | v12 | 10.5281/zenodo.19439000 | Lambda Drive, 8-test chain, flight architecture |
 | v13 | 10.5281/zenodo.19444169 | SPINE, Transport Law, Binary Geometric Propulsion |
 | v14 | 10.5281/zenodo.19452541 | Propulsion Regulator, Ratio Analysis, Ghost Diagnostic |
-| v15 | pending | External Frame, Medium Coupling, Live Substrate, Finite Reactor |
+| v15 | 10.5281/zenodo.19470974 | External Frame, Medium Coupling, Live Substrate, Finite Reactor |
+| v16 | 10.5281/zenodo.19470974 | TITS Probes, Adversarial Diagnostic Chain, Printer Bug, Energy Conservation |
+| v17 | pending | Frequency Lock, Brucetron Discovery, Chi Freeboard, Crew Safety |
+| v18 | pending | Frastrate Discovery, Phase Projection, Three-Space Coupling, Phase Rigidity |
 
 Base DOI (all versions): 10.5281/zenodo.19251192
 
@@ -495,6 +498,106 @@ python BCM_v17_reviewer_cinematic.py --grid 128 --speed 2
 python BCM_v17_brucetron_cinematic.py --grid 128 --speed 2
 ```
 
+## v18 — Frastrate Discovery, Phase Projection, Phase Rigidity
+
+### The Frastrate
+
+Stephen Burdick Sr.'s concept: "Not substrate but there must
+be not a layer but an internal silence between 2D markers.
+Fractals absorb the 2D vector line through transistence of
+absence." The silence between substrate markers has topology.
+
+Box-counting fractal dimension measured across four boundaries:
+
+| Boundary | D_f | Class |
+|----------|-----|-------|
+| Probe trajectory | 1.5881 | FRACTAL |
+| Causal frontier | 1.1061 | FRACTAL |
+| Chi boundary | 0.8766 | FLAT |
+| Sigma activation | 0.9405 | FLAT |
+
+The Frastrate exists at the observation boundary — where the
+probes have been — not at the chi tank surface. The 12 probe
+arcs trace irregular polygonal paths that create a fractal
+frontier between the known and the unknown.
+
+### Seven-Test Diagnostic Chain
+
+| Test | Method | Result |
+|------|--------|--------|
+| 1. Chi boundary D_f | Box-counting on chi contour | FLAT (0.88) |
+| 2. Causal frontier D_f | Box-counting on activation map | FRACTAL (1.59) |
+| 3. Fractal dissipation | grad_sigma^2 * binary mask | FAILED (1%) |
+| 4. Sensory flux | (D_f-1)*ln(grad_sigma^2) | FAILED (0%) |
+| 5. Phase projection | grad_phi^2 * probe_density^0.5 | SUCCESS (91.6%) |
+| 6. Coherence collapse | phi * weight (sink term) | PARTIAL (2.4%) |
+| 7. Phase shear | curvature-gradient disruption | MODE PERSISTS |
+
+### Three-Space Coupling (THE BREAKTHROUGH)
+
+ChatGPT identified the domain mismatch: sigma (transport),
+phi (phase debt), and Gamma (trajectory) are three different
+spaces. Tests 3-4 failed because they drained sigma through
+the fractal boundary. The debt lives in phi, not sigma.
+
+Test 5 connected the correct spaces: phi projected onto
+continuous probe density with fractal weighting (density^0.5).
+Result: 91.6% Brucetron growth reduction. From 0% to 91.6%
+by draining the correct variable through the correct surface.
+
+### Phase Rigidity (NEW INVARIANCE CLASS)
+
+Tests 6-7 attempted to destroy the Brucetron eigenmode
+structure. The mode survived both coherence sinks and
+spatially varying phase shear. The Brucetron exhibits
+global phase stiffness — equivalent to a Kuramoto system
+above critical coupling. All regions oscillate in lockstep
+and re-lock instantly after local perturbation.
+
+The system is invariant under: scalar amplitude dissipation,
+topology-weighted transport routing, spatially varying phase
+perturbation, and coherence sinks. Only chi bulk absorption
+achieves negative growth rate.
+
+### TITS Physics
+
+TITS (Tensor Imagery Transference Sensory) is the physics
+of how a craft writes its own fractal frontier into silence
+and uses that frontier to discharge accumulated phase error.
+
+Tensor: M_ij = d_phi_i / d_sigma_j (coupling tensor).
+Imagery: fractal boundary D_f = 1.59 written by probe arcs.
+Transference: phi bleeds passively through probe density.
+Sensory: SCI = integral of Psi * dA (probes feel depth).
+
+The name was the physics before the math existed to
+formalize it. "The 1 stands before the 0."
+
+### v18 Quick Start
+
+```bash
+# Frastrate measurement (chi boundary — FLAT)
+python BCM_v18_frastrate_diagnostic.py --steps 3000 --grid 256
+
+# Causal frontier (probe boundary — FRACTAL)
+python BCM_v18_frastrate_v2.py --steps 3000 --grid 256
+
+# Fractal dissipation (FAILED — wrong variable)
+python BCM_v18_fractal_dissipation.py --steps 3000 --grid 256
+
+# Sensory flux (FAILED — log clamp)
+python BCM_v18_sensory_flux.py --steps 3000 --grid 256
+
+# Phase projection (SUCCESS — 91.6%)
+python BCM_v18_phase_projection.py --steps 3000 --grid 256
+
+# Coherence collapse (PARTIAL — mode persists)
+python BCM_v18_coherence_collapse.py --steps 3000 --grid 256
+
+# Phase shear (MODE PERSISTS — phase rigid)
+python BCM_v18_phase_shear.py --steps 3000 --grid 256
+```
+
 ## Applications for Scientists
 
 ### What These Models Solve
@@ -592,6 +695,10 @@ cyclic agitation.
 4. Frequency coupling: apply harm band analysis to your domain
 5. Perturbation isolation: use the 4-run decomposition method
    on any observer-coupled measurement system
+6. Fractal dimension: run BCM_v18_frastrate_v2.py to measure
+   D_f of probe-written boundaries in your own system — any
+   cyclic sampling process writes a causal frontier with
+   measurable fractal dimension
 
 All code is open source. All data is on Zenodo with
 timestamped JSON evidence. Reproduce, challenge, extend.

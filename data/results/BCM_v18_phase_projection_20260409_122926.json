@@ -1,0 +1,55 @@
+{
+  "title": "BCM v18 Phase-Projected Fractal Dissipation",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Drain phi (phase debt) through continuous probe density, not sigma through binary mask",
+  "grid": 256,
+  "steps": 3000,
+  "configs": [
+    {
+      "name": "A: No dissipation",
+      "mode": "none",
+      "bruce_early": 6.79084,
+      "bruce_late": 9.014102,
+      "growth_rate": 0.00087533,
+      "power_exp": 0.1312,
+      "final_bruce_rms": 0.00956205,
+      "final_phi_rms": 0.0066163,
+      "final_sigma": 565.772,
+      "phi_early": 1.8647,
+      "phi_late": 1.2,
+      "total_dissipated": 0.0
+    },
+    {
+      "name": "B: Chi tank (v17)",
+      "mode": "chi_tank",
+      "bruce_early": 1.77412,
+      "bruce_late": 1.695903,
+      "growth_rate": -6.39e-06,
+      "power_exp": 0.0155,
+      "final_bruce_rms": 0.00451099,
+      "final_phi_rms": 0.00071198,
+      "final_sigma": 158.2253,
+      "phi_early": 0.1739,
+      "phi_late": 0.0579,
+      "total_dissipated": 6758.6378
+    },
+    {
+      "name": "C: Phase projection",
+      "mode": "phase_projection",
+      "bruce_early": 2.527174,
+      "bruce_late": 2.424942,
+      "growth_rate": 7.363e-05,
+      "power_exp": 0.0296,
+      "final_bruce_rms": 0.00561762,
+      "final_phi_rms": 0.00662132,
+      "final_sigma": 565.772,
+      "phi_early": 1.8645,
+      "phi_late": 1.2006,
+      "total_dissipated": 519.2903
+    }
+  ],
+  "rate_reduction": {
+    "chi_tank_vs_baseline": 100.73,
+    "phase_projection_vs_baseline": 91.59
+  }
+}
