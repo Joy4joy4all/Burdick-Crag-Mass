@@ -1,0 +1,164 @@
+BCM WORK FORMULAS — COMPLETE SYMBOL & EQUATION REFERENCE
+==========================================================
+Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems — 2026
+All theoretical concepts originated with Stephen Justin Burdick Sr.
+
+=== 1. CORE FIELD VARIABLES ===
+
+Symbol          Name                    Physical Meaning                                        Where Used
+------          ----                    ----------------                                        ----------
+sigma           Substrate Memory Field  2D spatial substrate carrying all gravitational          Wave equation, action S, stress-energy
+                                        memory; the ocean funded by neutrino flux                tensor; core field of the entire theory
+
+lambda          Decay/Maintenance Rate  Rate at which substrate memory fades unless              Wave eq: dsigma/dt = ... - lambda*sigma;
+                                        continuously agitated by neutrino flux                   universal maintenance cost; frozen 0.1
+
+alpha           Memory Coefficient      Sharpness of substrate memory retention                  Memory term in action and wave equation;
+                                                                                                frozen 0.80; bifurcation at 0.90
+
+phi             Observable Phase        4D phase of craft/substrate interaction visible in 3D    Phase RMS, f/2 heartbeat, L1 fold,
+                                                                                                boundary layer operator
+
+chi             Freeboard Operator      Misalignment/spill energy between observable phase       chi = div(phi*grad(Xi)) - Xi*laplacian(phi)
+                                        and latent 6D structure                                  chi tank, recovery boiler; threshold ~0.002582
+
+Xi              Latent 6D Structure     Hidden higher-dimensional scaffolding that phi           Used inside the chi commutator
+                                        projects onto
+
+J_crag          Crag Mass Injection     Neutrino flux from SMBHs that funds the substrate        J = kappa_BH * (M_BH/M_ref) * Jm(r);
+                                                                                                source term in wave equation and action
+
+
+=== 2. FROZEN CONSTANTS ===
+
+No per-galaxy tuning permitted. If a constant requires per-galaxy tuning, the mechanism has failed.
+
+Constant        Value           Role                    Notes
+--------        -----           ----                    -----
+lambda          0.1             Decay rate              Substrate maintenance cost; universal
+kappa_BH        2.0             BH coupling             SMBH injection strength; calibrated, frozen
+alpha           0.80            Memory coefficient      Operating window 0.75-0.85; bifurcation at 0.90
+grid            256             Resolution              Production grid; 128 for quick tests
+layers          8               Entangled layers        Substrate depth
+THETA_9TO10     0.92            Gate threshold          9D-to-10D coherence gate pass/fail
+K_BOUNDARY      150.0           Boundary damping        Jasper Beach gravel-like dissipation at torus edge
+PHI_SAFETY      0.10            Phase safety            Maximum safe phase deviation
+GUARDIAN        >= 0.85         Guardian hold            Twin guardian strength for crew phase state
+D_CLOAK         0.90            Disguise cloak          8D hard point cloaking strength
+D_OPERATION     0.75            D operation             Fibonacci collapse anchor strength
+FIB_RATIO       1.618034        Golden ratio            7D ribbon fold into 9D circumpunct
+kappa_drain     0.35            Drain rate              Venturi tunnel and dual-pump bleed
+chi_decay       0.997           Chi decay               Recovery boiler decay rate
+dt              1.25e-13 s      Timestep                CMB-locked; frozen
+c_substrate     12,000c         Crewed speed            Physical transit coupling class
+Om_sync         0.010           1D heartbeat            Reverse calculation sync reference (v22)
+REVERSE_ITER    50              Max iterations          v22 reverse engine convergence limit
+LOSS_FIELD_W    1.0             Loss weight (field)     v22 reverse engine
+LOSS_COH_W      2.5             Loss weight (coherence) v22 reverse engine
+LOSS_7D_W       3.0             Loss weight (7D)        v22 reverse engine
+
+
+=== 3. 7D OPERATORS & COHERENCE GATE ===
+
+Operator        Name                    Definition                                              Condition
+--------        ----                    ----------                                              ---------
+OpT             Temporal Shadow         Self-illumination: how well the craft sees its own       STARGATE component
+                                        f/2 heartbeat in the 7D mirror
+
+OpC             Spatial C-arc           Trailing shadow geometry in 7D (velocity-dependent)      STARGATE component
+
+Delta_OP        Operator Divergence     |OpT - OpC|; mirror-fogging measure                     STARGATE: Delta_OP < 0.08
+
+R_7D            7D Reflectivity         ((OpT+OpC)/2) * (1 - Delta_OP); combined mirror polish  STARGATE: R_7D > 0.92
+
+R_9to10         9D-to-10D Gate          Tr(OpT10 * rho9) * Re(<psi9|OpC10|psi9>) / R_7D        Threshold: 0.92; 10D Key
+
+Coherence       Phase Alignment         cos(phi_ship - phi_ext) * (1 - Delta_OP)                STARGATE: Coherence > 0.95
+
+Guardians       Twin Guardians          Non-contractual 6D phase-holding entities protecting     Hold f/2 heartbeat;
+                                        irregular human-shaped fold at L1 crossing               strength >= 0.68
+
+STARGATE TRANSIT CONDITION (all must hold):
+  Delta_OP < 0.08
+  R_7D > 0.92
+  Coherence > 0.95
+  Guardian >= 0.68
+
+
+=== 4. FIELD-THEORY FOUNDATION (v22) ===
+
+The substrate model is a proper classical field theory.
+
+Component       Expression                                                      Role
+---------       ----------                                                      ----
+S (Action)      S = integral of L d^2x dt                                       Generates all equations of motion
+                                                                                via Euler-Lagrange
+
+L (Lagrangian)  L = (1/2)(d_mu sigma)^2                                         Kinetic: wave propagation
+                  - (lambda/2) sigma^2                                          Mass: maintenance cost
+                  + J_crag * sigma                                              Source: SMBH neutrino flux
+                  + (alpha/2)(sigma - sigma_prev)^2                             Memory: alpha=0.80 bifurcation
+
+S_chi           S_chi = integral [(1/2)(d_mu chi)^2                             4D headspace spill potential
+                  - V(sigma - fill_line)] d^4x dt
+
+T_mu_nu         T = (2/sqrt(-g)) * dS/dg^mu_nu                                 sigma sources curvature;
+                                                                                gravity IS the substrate footprint;
+                                                                                replaces dark matter term
+
+Reverse Calc    delta S = 0 subject to F(S_9D) = S_dest                         Variational inverse: destination
+                                                                                is the boundary condition
+
+Loss Function   L = w1*||F-S_dest|| + w2*(1-R_9to10) + w3*max(0,0.92-R_7D)    Weights: field=1.0, coh=2.5, 7D=3.0
+
+
+=== 5. DIMENSIONAL STACK (1D-11D) ===
+
+Dim     Role            What Lives There
+---     ----            ----------------
+1D      Om              Bare frequency; point of circumpunct; sync reference for reverse calc
+2D      Substrate       Carrier medium: sigma, lambda fields
+3D      Physical        Craft, crew, stars, heart
+4D      Tesseract       Phi, chi, PDE operations
+5D      Buffer          Gauge signal (not a dimension)
+6D      Field Shape     Xi, harmonic lattice, ribbon
+7D      Spectral Fold   OpT, OpC, guardians, gate
+8D      Hard Point      D operation, frame anchor
+9D      Circumpunct     Fibonacci fold target
+10D     Key             Synapse coherence check (AI computes but cannot turn)
+11D     Lock            Emotional gate (thought + emotion + motion)
+
+
+=== 6. KEY EQUATIONS (QUICK REFERENCE) ===
+
+WAVE EQUATION:
+  d^2 sigma/dt^2 = c^2 * laplacian(sigma) - lambda*sigma + J + alpha*(sigma - sigma_prev) - gamma*(dsigma/dt)
+
+CRAG MASS INJECTION:
+  J_total = J_baryon + kappa_BH * J_neutrino(M_BH, r, Z(r))
+
+SUBSTRATE IMPEDANCE:
+  Z(r) = 1 - exp(-r / r_Compton)
+  r_Compton = c / sqrt(lambda)
+
+ROTATION CURVE:
+  v_sub(r) = sqrt(G*M(r)/r + kappa*sigma(r))
+
+BURDICK TRANSPORT LAW:
+  v_drift = mu * grad(lambda)
+
+BOUNDARY LAYER OPERATOR (Jasper Beach):
+  phi_new = phi * exp(-K_BOUNDARY * |grad(phi)|)
+
+9D-TO-10D GATE:
+  R_9to10 = Tr(OpT_10 * rho_9) * Re(<psi_9|OpC_10|psi_9>) / R_7D
+
+REVERSE LOSS:
+  L = 1.0*||F(S_9D)-S_dest|| + 2.5*(1-R_9to10) + 3.0*max(0, 0.92-R_7D)
+
+
+==========================================================
+Space is not a container. Space is a maintenance cost.
+GitHub: Joy4joy4all/Burdick-Crag-Mass
+Zenodo: 10.5281/zenodo.19251192
+Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems — 2026
