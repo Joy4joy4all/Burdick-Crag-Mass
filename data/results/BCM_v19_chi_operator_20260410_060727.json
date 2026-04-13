@@ -1,0 +1,79 @@
+{
+  "title": "BCM v19 Chi Operator Diagnostic",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Measure chi operator div(phi*grad(Xi)) - Xi*lap(phi) on existing mechanisms to find chi_c threshold",
+  "grid": 256,
+  "steps": 5000,
+  "chi_operator": "div(phi * grad(Xi_local)) - Xi_local * lap(phi)",
+  "xi_local_def": "phi^2 + |grad_phi|^2",
+  "configs": [
+    {
+      "name": "A: No dissipation",
+      "mode": "none",
+      "bruce_early": 6.79084,
+      "bruce_late": 8.417266,
+      "growth_rate": 0.00020628,
+      "power_exp": 0.0727,
+      "final_bruce_rms": 0.01194914,
+      "final_phi_rms": 0.00580574,
+      "final_sigma": 575.8809,
+      "phi_early": 1.8647,
+      "phi_late": 1.9703,
+      "xi_early": 2.7162,
+      "xi_late": 3.2992,
+      "chi_op_early": 0.0513,
+      "chi_op_late": 0.0948,
+      "total_dissipated": 0.0,
+      "chi_c_step": null,
+      "chi_c_mag": null
+    },
+    {
+      "name": "B: Chi tank (v17)",
+      "mode": "chi_tank",
+      "bruce_early": 1.77412,
+      "bruce_late": 2.212523,
+      "growth_rate": 3.571e-05,
+      "power_exp": 0.0392,
+      "final_bruce_rms": 0.00524674,
+      "final_phi_rms": 0.00068031,
+      "final_sigma": 155.6534,
+      "phi_early": 0.1739,
+      "phi_late": 0.0522,
+      "xi_early": 0.3044,
+      "xi_late": 0.117,
+      "chi_op_early": 0.0021,
+      "chi_op_late": 0.0007,
+      "total_dissipated": 11268.3198,
+      "chi_c_step": 201,
+      "chi_c_mag": 0.002582
+    },
+    {
+      "name": "C: Phase projection (v18)",
+      "mode": "phase_projection",
+      "bruce_early": 2.527174,
+      "bruce_late": 2.661813,
+      "growth_rate": 4.417e-05,
+      "power_exp": 0.0314,
+      "final_bruce_rms": 0.00670838,
+      "final_phi_rms": 0.00582016,
+      "final_sigma": 575.8809,
+      "phi_early": 1.8645,
+      "phi_late": 1.9718,
+      "xi_early": 2.716,
+      "xi_late": 3.3012,
+      "chi_op_early": 0.0513,
+      "chi_op_late": 0.0948,
+      "total_dissipated": 864.6957,
+      "chi_c_step": null,
+      "chi_c_mag": null
+    }
+  ],
+  "rate_reduction": {
+    "chi_tank_vs_baseline": 82.69,
+    "phase_projection_vs_baseline": 78.59
+  },
+  "chi_c": {
+    "step": 201,
+    "magnitude": 0.002582
+  }
+}

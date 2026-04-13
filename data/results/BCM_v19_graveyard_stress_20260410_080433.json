@@ -1,0 +1,738 @@
+{
+  "title": "BCM v19.7 Graveyard Stress Test",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "grid": 256,
+  "steps": 20000,
+  "graveyards_placed": 60,
+  "graveyards_encountered": 60,
+  "max_bruce_rms": 0.00948959,
+  "verdict": "PASS",
+  "abort_reason": "",
+  "total_bled": 3463.1771,
+  "final_sigma": 248.8887,
+  "final_chi": 847.4795,
+  "grave_events": [
+    {
+      "step": 259,
+      "lambda": 0.0061,
+      "bruce_rms": 0.007297,
+      "phi_rms": 0.00107,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 786,
+      "lambda": 0.0133,
+      "bruce_rms": 0.004444,
+      "phi_rms": 0.001624,
+      "zone": "GREEN"
+    },
+    {
+      "step": 982,
+      "lambda": 0.0083,
+      "bruce_rms": 0.004619,
+      "phi_rms": 0.002016,
+      "zone": "GREEN"
+    },
+    {
+      "step": 1049,
+      "lambda": 0.0083,
+      "bruce_rms": 0.005036,
+      "phi_rms": 0.001709,
+      "zone": "GREEN"
+    },
+    {
+      "step": 1272,
+      "lambda": 0.005,
+      "bruce_rms": 0.005667,
+      "phi_rms": 0.004239,
+      "zone": "GREEN"
+    },
+    {
+      "step": 1296,
+      "lambda": 0.005,
+      "bruce_rms": 0.00631,
+      "phi_rms": 0.002721,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 1653,
+      "lambda": 0.007,
+      "bruce_rms": 0.004293,
+      "phi_rms": 0.001781,
+      "zone": "GREEN"
+    },
+    {
+      "step": 2020,
+      "lambda": 0.0051,
+      "bruce_rms": 0.006197,
+      "phi_rms": 0.00169,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 2398,
+      "lambda": 0.0149,
+      "bruce_rms": 0.004655,
+      "phi_rms": 0.001836,
+      "zone": "GREEN"
+    },
+    {
+      "step": 2484,
+      "lambda": 0.0149,
+      "bruce_rms": 0.004538,
+      "phi_rms": 0.001442,
+      "zone": "GREEN"
+    },
+    {
+      "step": 2704,
+      "lambda": 0.0073,
+      "bruce_rms": 0.006236,
+      "phi_rms": 0.003171,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 3591,
+      "lambda": 0.0118,
+      "bruce_rms": 0.004398,
+      "phi_rms": 0.001203,
+      "zone": "GREEN"
+    },
+    {
+      "step": 3938,
+      "lambda": 0.0081,
+      "bruce_rms": 0.004819,
+      "phi_rms": 0.002128,
+      "zone": "GREEN"
+    },
+    {
+      "step": 5278,
+      "lambda": 0.0121,
+      "bruce_rms": 0.004194,
+      "phi_rms": 0.001623,
+      "zone": "GREEN"
+    },
+    {
+      "step": 5522,
+      "lambda": 0.0098,
+      "bruce_rms": 0.006661,
+      "phi_rms": 0.002602,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 5655,
+      "lambda": 0.0098,
+      "bruce_rms": 0.007153,
+      "phi_rms": 0.002398,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 6231,
+      "lambda": 0.0136,
+      "bruce_rms": 0.004906,
+      "phi_rms": 0.00176,
+      "zone": "GREEN"
+    },
+    {
+      "step": 6412,
+      "lambda": 0.0079,
+      "bruce_rms": 0.006676,
+      "phi_rms": 0.00221,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 7954,
+      "lambda": 0.0134,
+      "bruce_rms": 0.005875,
+      "phi_rms": 0.002486,
+      "zone": "GREEN"
+    },
+    {
+      "step": 7996,
+      "lambda": 0.0134,
+      "bruce_rms": 0.005353,
+      "phi_rms": 0.002583,
+      "zone": "GREEN"
+    },
+    {
+      "step": 8068,
+      "lambda": 0.0134,
+      "bruce_rms": 0.005489,
+      "phi_rms": 0.002438,
+      "zone": "GREEN"
+    },
+    {
+      "step": 8534,
+      "lambda": 0.0133,
+      "bruce_rms": 0.00497,
+      "phi_rms": 0.002708,
+      "zone": "GREEN"
+    },
+    {
+      "step": 8611,
+      "lambda": 0.0133,
+      "bruce_rms": 0.008037,
+      "phi_rms": 0.001994,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 9483,
+      "lambda": 0.0066,
+      "bruce_rms": 0.004438,
+      "phi_rms": 0.00211,
+      "zone": "GREEN"
+    },
+    {
+      "step": 9726,
+      "lambda": 0.0088,
+      "bruce_rms": 0.005537,
+      "phi_rms": 0.001828,
+      "zone": "GREEN"
+    },
+    {
+      "step": 10196,
+      "lambda": 0.0082,
+      "bruce_rms": 0.007427,
+      "phi_rms": 0.001965,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 10245,
+      "lambda": 0.0082,
+      "bruce_rms": 0.006312,
+      "phi_rms": 0.00175,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 10609,
+      "lambda": 0.0131,
+      "bruce_rms": 0.00764,
+      "phi_rms": 0.001794,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 10793,
+      "lambda": 0.0131,
+      "bruce_rms": 0.003683,
+      "phi_rms": 0.002567,
+      "zone": "GREEN"
+    },
+    {
+      "step": 11032,
+      "lambda": 0.0131,
+      "bruce_rms": 0.004532,
+      "phi_rms": 0.001976,
+      "zone": "GREEN"
+    },
+    {
+      "step": 11495,
+      "lambda": 0.0107,
+      "bruce_rms": 0.004737,
+      "phi_rms": 0.001542,
+      "zone": "GREEN"
+    },
+    {
+      "step": 11644,
+      "lambda": 0.0107,
+      "bruce_rms": 0.005317,
+      "phi_rms": 0.002459,
+      "zone": "GREEN"
+    },
+    {
+      "step": 11687,
+      "lambda": 0.0107,
+      "bruce_rms": 0.004759,
+      "phi_rms": 0.001938,
+      "zone": "GREEN"
+    },
+    {
+      "step": 12014,
+      "lambda": 0.0066,
+      "bruce_rms": 0.006626,
+      "phi_rms": 0.001676,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 12137,
+      "lambda": 0.0078,
+      "bruce_rms": 0.004755,
+      "phi_rms": 0.001922,
+      "zone": "GREEN"
+    },
+    {
+      "step": 12694,
+      "lambda": 0.0054,
+      "bruce_rms": 0.005349,
+      "phi_rms": 0.001599,
+      "zone": "GREEN"
+    },
+    {
+      "step": 12724,
+      "lambda": 0.0054,
+      "bruce_rms": 0.005175,
+      "phi_rms": 0.002223,
+      "zone": "GREEN"
+    },
+    {
+      "step": 13047,
+      "lambda": 0.006,
+      "bruce_rms": 0.004956,
+      "phi_rms": 0.001097,
+      "zone": "GREEN"
+    },
+    {
+      "step": 13520,
+      "lambda": 0.0074,
+      "bruce_rms": 0.006237,
+      "phi_rms": 0.001522,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 13776,
+      "lambda": 0.0146,
+      "bruce_rms": 0.005498,
+      "phi_rms": 0.002176,
+      "zone": "GREEN"
+    },
+    {
+      "step": 13970,
+      "lambda": 0.0146,
+      "bruce_rms": 0.006093,
+      "phi_rms": 0.002171,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 14425,
+      "lambda": 0.011,
+      "bruce_rms": 0.005891,
+      "phi_rms": 0.001175,
+      "zone": "GREEN"
+    },
+    {
+      "step": 14554,
+      "lambda": 0.011,
+      "bruce_rms": 0.005983,
+      "phi_rms": 0.002583,
+      "zone": "GREEN"
+    },
+    {
+      "step": 14561,
+      "lambda": 0.011,
+      "bruce_rms": 0.008129,
+      "phi_rms": 0.002597,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 15809,
+      "lambda": 0.0068,
+      "bruce_rms": 0.007497,
+      "phi_rms": 0.001129,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 15844,
+      "lambda": 0.0068,
+      "bruce_rms": 0.006131,
+      "phi_rms": 0.002176,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 16018,
+      "lambda": 0.0052,
+      "bruce_rms": 0.005726,
+      "phi_rms": 0.003221,
+      "zone": "GREEN"
+    },
+    {
+      "step": 16165,
+      "lambda": 0.0052,
+      "bruce_rms": 0.00699,
+      "phi_rms": 0.00259,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 16306,
+      "lambda": 0.0119,
+      "bruce_rms": 0.007693,
+      "phi_rms": 0.002107,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 16464,
+      "lambda": 0.0096,
+      "bruce_rms": 0.007581,
+      "phi_rms": 0.002501,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 16803,
+      "lambda": 0.0056,
+      "bruce_rms": 0.004225,
+      "phi_rms": 0.001726,
+      "zone": "GREEN"
+    },
+    {
+      "step": 17364,
+      "lambda": 0.0074,
+      "bruce_rms": 0.006125,
+      "phi_rms": 0.002279,
+      "zone": "YELLOW"
+    },
+    {
+      "step": 17527,
+      "lambda": 0.0074,
+      "bruce_rms": 0.004896,
+      "phi_rms": 0.002134,
+      "zone": "GREEN"
+    },
+    {
+      "step": 17839,
+      "lambda": 0.0053,
+      "bruce_rms": 0.005002,
+      "phi_rms": 0.0036,
+      "zone": "GREEN"
+    },
+    {
+      "step": 17850,
+      "lambda": 0.0053,
+      "bruce_rms": 0.00541,
+      "phi_rms": 0.002337,
+      "zone": "GREEN"
+    },
+    {
+      "step": 18126,
+      "lambda": 0.011,
+      "bruce_rms": 0.005738,
+      "phi_rms": 0.001984,
+      "zone": "GREEN"
+    },
+    {
+      "step": 18918,
+      "lambda": 0.0055,
+      "bruce_rms": 0.005469,
+      "phi_rms": 0.001371,
+      "zone": "GREEN"
+    },
+    {
+      "step": 19084,
+      "lambda": 0.0055,
+      "bruce_rms": 0.005606,
+      "phi_rms": 0.001565,
+      "zone": "GREEN"
+    },
+    {
+      "step": 19124,
+      "lambda": 0.0055,
+      "bruce_rms": 0.005134,
+      "phi_rms": 0.002068,
+      "zone": "GREEN"
+    },
+    {
+      "step": 19209,
+      "lambda": 0.007,
+      "bruce_rms": 0.00773,
+      "phi_rms": 0.001642,
+      "zone": "YELLOW"
+    }
+  ],
+  "graveyards": [
+    {
+      "start": 259,
+      "end": 353,
+      "lambda": 0.0061
+    },
+    {
+      "start": 786,
+      "end": 952,
+      "lambda": 0.0133
+    },
+    {
+      "start": 982,
+      "end": 1250,
+      "lambda": 0.0083
+    },
+    {
+      "start": 1049,
+      "end": 1141,
+      "lambda": 0.0123
+    },
+    {
+      "start": 1272,
+      "end": 1540,
+      "lambda": 0.005
+    },
+    {
+      "start": 1296,
+      "end": 1438,
+      "lambda": 0.0097
+    },
+    {
+      "start": 1653,
+      "end": 1903,
+      "lambda": 0.007
+    },
+    {
+      "start": 2020,
+      "end": 2234,
+      "lambda": 0.0051
+    },
+    {
+      "start": 2398,
+      "end": 2668,
+      "lambda": 0.0149
+    },
+    {
+      "start": 2484,
+      "end": 2624,
+      "lambda": 0.0083
+    },
+    {
+      "start": 2704,
+      "end": 2990,
+      "lambda": 0.0073
+    },
+    {
+      "start": 3591,
+      "end": 3721,
+      "lambda": 0.0118
+    },
+    {
+      "start": 3938,
+      "end": 4148,
+      "lambda": 0.0081
+    },
+    {
+      "start": 5278,
+      "end": 5438,
+      "lambda": 0.0121
+    },
+    {
+      "start": 5522,
+      "end": 5738,
+      "lambda": 0.0098
+    },
+    {
+      "start": 5655,
+      "end": 5895,
+      "lambda": 0.009
+    },
+    {
+      "start": 6231,
+      "end": 6337,
+      "lambda": 0.0136
+    },
+    {
+      "start": 6412,
+      "end": 6580,
+      "lambda": 0.0079
+    },
+    {
+      "start": 7954,
+      "end": 8224,
+      "lambda": 0.0134
+    },
+    {
+      "start": 7996,
+      "end": 8192,
+      "lambda": 0.0072
+    },
+    {
+      "start": 8068,
+      "end": 8352,
+      "lambda": 0.0135
+    },
+    {
+      "start": 8534,
+      "end": 8724,
+      "lambda": 0.0133
+    },
+    {
+      "start": 8611,
+      "end": 8731,
+      "lambda": 0.008
+    },
+    {
+      "start": 9483,
+      "end": 9665,
+      "lambda": 0.0066
+    },
+    {
+      "start": 9726,
+      "end": 9998,
+      "lambda": 0.0088
+    },
+    {
+      "start": 10196,
+      "end": 10350,
+      "lambda": 0.0082
+    },
+    {
+      "start": 10245,
+      "end": 10415,
+      "lambda": 0.0086
+    },
+    {
+      "start": 10609,
+      "end": 10701,
+      "lambda": 0.0131
+    },
+    {
+      "start": 10793,
+      "end": 11041,
+      "lambda": 0.0131
+    },
+    {
+      "start": 11032,
+      "end": 11200,
+      "lambda": 0.006
+    },
+    {
+      "start": 11495,
+      "end": 11773,
+      "lambda": 0.0107
+    },
+    {
+      "start": 11644,
+      "end": 11854,
+      "lambda": 0.008
+    },
+    {
+      "start": 11687,
+      "end": 11819,
+      "lambda": 0.0105
+    },
+    {
+      "start": 12014,
+      "end": 12114,
+      "lambda": 0.0066
+    },
+    {
+      "start": 12137,
+      "end": 12433,
+      "lambda": 0.0078
+    },
+    {
+      "start": 12694,
+      "end": 12876,
+      "lambda": 0.0054
+    },
+    {
+      "start": 12724,
+      "end": 12808,
+      "lambda": 0.0143
+    },
+    {
+      "start": 13047,
+      "end": 13287,
+      "lambda": 0.006
+    },
+    {
+      "start": 13520,
+      "end": 13770,
+      "lambda": 0.0074
+    },
+    {
+      "start": 13776,
+      "end": 14040,
+      "lambda": 0.0146
+    },
+    {
+      "start": 13970,
+      "end": 14092,
+      "lambda": 0.0092
+    },
+    {
+      "start": 14425,
+      "end": 14621,
+      "lambda": 0.011
+    },
+    {
+      "start": 14554,
+      "end": 14650,
+      "lambda": 0.0145
+    },
+    {
+      "start": 14561,
+      "end": 14721,
+      "lambda": 0.0076
+    },
+    {
+      "start": 15809,
+      "end": 15981,
+      "lambda": 0.0068
+    },
+    {
+      "start": 15844,
+      "end": 15930,
+      "lambda": 0.0053
+    },
+    {
+      "start": 16018,
+      "end": 16228,
+      "lambda": 0.0052
+    },
+    {
+      "start": 16165,
+      "end": 16431,
+      "lambda": 0.0119
+    },
+    {
+      "start": 16306,
+      "end": 16518,
+      "lambda": 0.0096
+    },
+    {
+      "start": 16464,
+      "end": 16632,
+      "lambda": 0.0149
+    },
+    {
+      "start": 16803,
+      "end": 17097,
+      "lambda": 0.0056
+    },
+    {
+      "start": 17364,
+      "end": 17660,
+      "lambda": 0.0074
+    },
+    {
+      "start": 17527,
+      "end": 17809,
+      "lambda": 0.0111
+    },
+    {
+      "start": 17839,
+      "end": 18097,
+      "lambda": 0.0053
+    },
+    {
+      "start": 17850,
+      "end": 18108,
+      "lambda": 0.0086
+    },
+    {
+      "start": 18126,
+      "end": 18356,
+      "lambda": 0.011
+    },
+    {
+      "start": 18918,
+      "end": 19166,
+      "lambda": 0.0055
+    },
+    {
+      "start": 19084,
+      "end": 19352,
+      "lambda": 0.007
+    },
+    {
+      "start": 19124,
+      "end": 19306,
+      "lambda": 0.0077
+    },
+    {
+      "start": 19209,
+      "end": 19339,
+      "lambda": 0.0106
+    }
+  ]
+}

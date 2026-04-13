@@ -1,0 +1,86 @@
+{
+  "title": "BCM v19 Incommensurate Memory (Temporal Attack A)",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Break Brucetron harmonic lock by modulating alpha at golden ratio frequency -- incommensurate with 50-step probe cycle",
+  "grid": 256,
+  "steps": 3000,
+  "epsilon": 0.05,
+  "golden_ratio": 1.6180339887,
+  "alpha_base": 0.8,
+  "alpha_clamp": [
+    0.7,
+    0.85
+  ],
+  "configs": [
+    {
+      "name": "A: No dissipation",
+      "mode": "none",
+      "bruce_early": 6.79084,
+      "bruce_late": 9.014102,
+      "growth_rate": 0.00087533,
+      "power_exp": 0.1312,
+      "final_bruce_rms": 0.00956205,
+      "final_phi_rms": 0.0066163,
+      "final_sigma": 565.772,
+      "phi_early": 1.8647,
+      "phi_late": 1.2,
+      "total_dissipated": 0.0
+    },
+    {
+      "name": "B: Chi tank (v17)",
+      "mode": "chi_tank",
+      "bruce_early": 1.77412,
+      "bruce_late": 1.695903,
+      "growth_rate": -6.39e-06,
+      "power_exp": 0.0155,
+      "final_bruce_rms": 0.00451099,
+      "final_phi_rms": 0.00071198,
+      "final_sigma": 158.2253,
+      "phi_early": 0.1739,
+      "phi_late": 0.0579,
+      "total_dissipated": 6758.6378
+    },
+    {
+      "name": "C: Phase projection (v18)",
+      "mode": "phase_projection",
+      "bruce_early": 2.527174,
+      "bruce_late": 2.424942,
+      "growth_rate": 7.363e-05,
+      "power_exp": 0.0296,
+      "final_bruce_rms": 0.00561762,
+      "final_phi_rms": 0.00662132,
+      "final_sigma": 565.772,
+      "phi_early": 1.8645,
+      "phi_late": 1.2006,
+      "total_dissipated": 519.2903
+    },
+    {
+      "name": "D: Incommensurate memory",
+      "mode": "incommensurate_memory",
+      "bruce_early": 6.7909,
+      "bruce_late": 8.97764,
+      "growth_rate": 0.00086851,
+      "power_exp": 0.1285,
+      "final_bruce_rms": 0.00957265,
+      "final_phi_rms": 0.0065043,
+      "final_sigma": 565.9868,
+      "phi_early": 1.8347,
+      "phi_late": 1.2212,
+      "total_dissipated": 0.0,
+      "alpha_stats": {
+        "alpha_min": 0.76,
+        "alpha_max": 0.84,
+        "alpha_mean": 0.8,
+        "alpha_std": 0.028288
+      }
+    }
+  ],
+  "rate_reduction": {
+    "chi_tank_vs_baseline": 100.73,
+    "phase_projection_vs_baseline": 91.59,
+    "incommensurate_vs_baseline": 0.78
+  },
+  "verdict": "INVARIANT",
+  "heartbeat_status": "PRESERVED",
+  "chatgpt_directive": "Stop modifying space. Start breaking time."
+}

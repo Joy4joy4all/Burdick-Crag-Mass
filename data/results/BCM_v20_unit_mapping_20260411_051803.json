@@ -1,0 +1,138 @@
+{
+  "title": "BCM v20 Physical Unit Mapping",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Map solver units to SI. The spec sheet.",
+  "time_anchor": {
+    "dt_s": 1.25e-13,
+    "source": "CMB-locked (v17)",
+    "crew_safe": true
+  },
+  "galactic_scale": {
+    "regime": "GALACTIC",
+    "grid": 256,
+    "galaxy_radius_kpc": 35.0,
+    "dx_m": 8.43828125e+18,
+    "dx_kpc": 0.2734375,
+    "dt_s": 1.25e-13,
+    "c_wave_ms": 6.750625000000001e+31,
+    "lambda_baseline_per_s": 800000000000.0
+  },
+  "craft_scale": {
+    "regime": "CRAFT",
+    "grid": 256,
+    "dx_m": 3.7475e-07,
+    "dx_au": 2.5050133689839572e-18,
+    "dt_s": 1.25e-13,
+    "c_substrate_ms": 2998000.0,
+    "field_extent_m": 9.5936e-05,
+    "field_extent_au": 6.41283422459893e-16,
+    "probe_cycle_s": 6.25e-12,
+    "pump_separation_m": 5.62125e-06
+  },
+  "frozen_constants_physical": {
+    "kappa_drain": {
+      "value": 0.35,
+      "unit": "dimensionless (fraction per deposit)"
+    },
+    "chi_decay_rate": {
+      "value": 0.997,
+      "unit": "per step",
+      "tau_s": 4.160413536970238e-11,
+      "halflife_s": 2.88377891311435e-11
+    },
+    "chi_c": {
+      "value_solver": 0.002582,
+      "note": "Requires field amplitude calibration for SI conversion"
+    },
+    "alpha": {
+      "value": 0.8,
+      "unit": "dimensionless (memory retention per step)"
+    },
+    "probe_cycle": {
+      "steps": 50,
+      "period_s": 6.25e-12,
+      "frequency_hz": 160000000000.0
+    },
+    "heartbeat_f2": {
+      "steps": 100,
+      "period_s": 1.25e-11,
+      "frequency_hz": 80000000000.0
+    },
+    "pump_frequency": {
+      "steps": 5,
+      "period_s": 6.25e-13,
+      "frequency_hz": 1600000000000.0
+    },
+    "bruce_hemorrhage_threshold": {
+      "value_solver": 0.012,
+      "note": "Acceleration mapping requires substrate-to-inertia coupling factor"
+    },
+    "green_corridor": {
+      "lambda_low_solver": 0.02,
+      "lambda_high_solver": 0.08,
+      "decay_rate_low_per_s": 160000000000.0,
+      "decay_rate_high_per_s": 640000000000.0
+    }
+  },
+  "biological_check": {
+    "frequencies": {
+      "probe_fundamental": {
+        "frequency_hz": 160000000000.0,
+        "status": "CLEAR"
+      },
+      "pump_mode": {
+        "frequency_hz": 1600000000000.0,
+        "status": "CLEAR"
+      },
+      "heartbeat_f2": {
+        "frequency_hz": 80000000000.0,
+        "status": "CLEAR"
+      }
+    },
+    "all_clear": true,
+    "harm_bands": {
+      "vestibular": [
+        0.5,
+        3.0
+      ],
+      "organ_resonance": [
+        4.0,
+        8.0
+      ],
+      "spinal": [
+        8.0,
+        12.0
+      ],
+      "head_neck": [
+        15.0,
+        20.0
+      ],
+      "eyeball": [
+        20.0,
+        80.0
+      ],
+      "cellular_membrane": [
+        100.0,
+        200.0
+      ]
+    }
+  },
+  "flight_metrics": {
+    "flight_duration": {
+      "steps": 20000,
+      "seconds": 2.5e-09,
+      "hours": 6.944444444444444e-13,
+      "note": "At CMB-locked dt, 20k steps is extremely short in human time. Physical transit requires ~10^18+ steps for interstellar distances."
+    },
+    "total_bled_solver": 3122.52,
+    "system_total_solver": 1088.55,
+    "max_bruce_rms": 0.00665,
+    "phi_rms_heartbeat": 0.00142
+  },
+  "open_calibrations": [
+    "c_substrate (assumed 0.01c)",
+    "sigma to kg (M/L calibration)",
+    "BruceRMS to acceleration (SMSD test)",
+    "chi_c in SI (depends on sigma calibration)"
+  ]
+}

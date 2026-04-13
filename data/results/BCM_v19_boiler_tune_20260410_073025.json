@@ -1,0 +1,133 @@
+{
+  "title": "BCM v19.5 Recovery Boiler Tuning",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Sweep chi_decay_rate at lambda=0.10 to recover GREEN window lost in v19.4 combined system",
+  "grid": 256,
+  "steps": 5000,
+  "kappa_drain": 0.35,
+  "sweep_lambda": 0.1,
+  "decay_sweep": [
+    {
+      "chi_decay": 0.99,
+      "growth_rate": 2.247e-05,
+      "bruce_rms": 0.00554233,
+      "phi_rms": 0.0012382,
+      "final_sigma": 136.7499,
+      "final_chi": 214.1858,
+      "total_system": 350.9357,
+      "total_bled": 517.6531,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.993,
+      "growth_rate": 5.224e-05,
+      "bruce_rms": 0.00635655,
+      "phi_rms": 0.00087473,
+      "final_sigma": 143.6132,
+      "final_chi": 318.3742,
+      "total_system": 461.9874,
+      "total_bled": 546.9972,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.995,
+      "growth_rate": 4.825e-05,
+      "bruce_rms": 0.00616082,
+      "phi_rms": 0.00087465,
+      "final_sigma": 178.655,
+      "final_chi": 485.3416,
+      "total_system": 663.9965,
+      "total_bled": 572.4473,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.997,
+      "growth_rate": 1.075e-05,
+      "bruce_rms": 0.00615192,
+      "phi_rms": 0.00105251,
+      "final_sigma": 241.4693,
+      "final_chi": 767.131,
+      "total_system": 1008.6003,
+      "total_bled": 558.1188,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.999,
+      "growth_rate": 3.455e-05,
+      "bruce_rms": 0.00521426,
+      "phi_rms": 0.00065161,
+      "final_sigma": 154.3949,
+      "final_chi": 2082.916,
+      "total_system": 2237.3109,
+      "total_bled": 510.6283,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.9993,
+      "growth_rate": 2.077e-05,
+      "bruce_rms": 0.00538435,
+      "phi_rms": 0.00076642,
+      "final_sigma": 150.3781,
+      "final_chi": 2904.8583,
+      "total_system": 3055.2363,
+      "total_bled": 510.4027,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.9995,
+      "growth_rate": 2.325e-05,
+      "bruce_rms": 0.00523149,
+      "phi_rms": 0.00071095,
+      "final_sigma": 151.9194,
+      "final_chi": 3848.3024,
+      "total_system": 4000.2218,
+      "total_bled": 510.543,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.9997,
+      "growth_rate": 2.547e-05,
+      "bruce_rms": 0.00508789,
+      "phi_rms": 0.00071893,
+      "final_sigma": 151.8006,
+      "final_chi": 5429.0783,
+      "total_system": 5580.879,
+      "total_bled": 511.0128,
+      "zone": "RED"
+    },
+    {
+      "chi_decay": 0.9999,
+      "growth_rate": 2.905e-05,
+      "bruce_rms": 0.00524043,
+      "phi_rms": 0.00070262,
+      "final_sigma": 151.7627,
+      "final_chi": 8253.8968,
+      "total_system": 8405.6594,
+      "total_bled": 511.3604,
+      "zone": "RED"
+    }
+  ],
+  "best_decay": 0.997,
+  "verification": {
+    "lambda_006": {
+      "growth_rate": -2.301e-05,
+      "bruce_rms": 0.00604831,
+      "phi_rms": 0.00160919,
+      "final_sigma": 318.6285,
+      "final_chi": 808.8509,
+      "total_system": 1127.4793,
+      "total_bled": 656.6714,
+      "zone": "GREEN"
+    },
+    "lambda_004": {
+      "growth_rate": -1.486e-05,
+      "bruce_rms": 0.00652131,
+      "phi_rms": 0.00156461,
+      "final_sigma": 326.065,
+      "final_chi": 833.0305,
+      "total_system": 1159.0955,
+      "total_bled": 720.2123,
+      "zone": "GREEN"
+    }
+  }
+}

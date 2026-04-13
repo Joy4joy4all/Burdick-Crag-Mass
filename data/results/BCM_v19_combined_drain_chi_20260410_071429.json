@@ -1,0 +1,362 @@
+{
+  "title": "BCM v19.4 Combined Drain + Chi Freeboard",
+  "author": "Stephen Justin Burdick Sr. -- Emerald Entities LLC",
+  "purpose": "Combined kappa_drain source attack with chi freeboard residual absorption. Recovery boiler test.",
+  "grid": 256,
+  "steps": 5000,
+  "kappa_drain": 0.35,
+  "results": [
+    {
+      "lambda": 0.02,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": -0.00016209,
+          "bruce_rms": 0.00927565,
+          "phi_rms": 0.02213846,
+          "chi_op_late": 9.342623,
+          "xi_late": 67.5911,
+          "total_bled": 0.0,
+          "final_sigma": 2870.55,
+          "final_chi": 0.0,
+          "total_system": 2870.55,
+          "zone": "GREEN"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": 0.00010413,
+          "bruce_rms": 0.01158874,
+          "phi_rms": 0.01187403,
+          "chi_op_late": 1.054165,
+          "xi_late": 19.0585,
+          "total_bled": 2237.371,
+          "final_sigma": 2377.6406,
+          "final_chi": 0.0,
+          "total_system": 2377.6406,
+          "zone": "RED"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": -4.44e-05,
+          "bruce_rms": 0.00615877,
+          "phi_rms": 0.00134876,
+          "chi_op_late": 0.000659,
+          "xi_late": 0.2224,
+          "total_bled": 821.6093,
+          "final_sigma": 297.1024,
+          "final_chi": 2547.1538,
+          "total_system": 2844.2562,
+          "zone": "GREEN"
+        }
+      ]
+    },
+    {
+      "lambda": 0.04,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": 0.00011374,
+          "bruce_rms": 0.01096366,
+          "phi_rms": 0.0106249,
+          "chi_op_late": 0.998302,
+          "xi_late": 15.0097,
+          "total_bled": 0.0,
+          "final_sigma": 1437.4754,
+          "final_chi": 0.0,
+          "total_system": 1437.4754,
+          "zone": "RED"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": -0.00010065,
+          "bruce_rms": 0.01254229,
+          "phi_rms": 0.00619865,
+          "chi_op_late": 0.156143,
+          "xi_late": 5.1355,
+          "total_bled": 1243.2351,
+          "final_sigma": 1299.0402,
+          "final_chi": 0.0,
+          "total_system": 1299.0402,
+          "zone": "GREEN"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": -3.08e-05,
+          "bruce_rms": 0.00615888,
+          "phi_rms": 0.00102937,
+          "chi_op_late": 0.000424,
+          "xi_late": 0.131,
+          "total_bled": 695.746,
+          "final_sigma": 234.9421,
+          "final_chi": 2373.3555,
+          "total_system": 2608.2976,
+          "zone": "GREEN"
+        }
+      ]
+    },
+    {
+      "lambda": 0.06,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": -0.00010145,
+          "bruce_rms": 0.01195621,
+          "phi_rms": 0.00679051,
+          "chi_op_late": 0.248366,
+          "xi_late": 5.9886,
+          "total_bled": 0.0,
+          "final_sigma": 957.337,
+          "final_chi": 0.0,
+          "total_system": 957.337,
+          "zone": "GREEN"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": 9.819e-05,
+          "bruce_rms": 0.01077311,
+          "phi_rms": 0.00505707,
+          "chi_op_late": 0.085855,
+          "xi_late": 3.1268,
+          "total_bled": 890.9218,
+          "final_sigma": 892.4347,
+          "final_chi": 0.0,
+          "total_system": 892.4347,
+          "zone": "RED"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": -3.45e-06,
+          "bruce_rms": 0.00560368,
+          "phi_rms": 0.00084712,
+          "chi_op_late": 0.000257,
+          "xi_late": 0.0893,
+          "total_bled": 614.3938,
+          "final_sigma": 196.6071,
+          "final_chi": 2252.5284,
+          "total_system": 2449.1355,
+          "zone": "GREEN"
+        }
+      ]
+    },
+    {
+      "lambda": 0.08,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": 0.00012066,
+          "bruce_rms": 0.01076617,
+          "phi_rms": 0.00565828,
+          "chi_op_late": 0.14441,
+          "xi_late": 3.9167,
+          "total_bled": 0.0,
+          "final_sigma": 716.9158,
+          "final_chi": 0.0,
+          "total_system": 716.9158,
+          "zone": "RED"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": 6.766e-05,
+          "bruce_rms": 0.0123369,
+          "phi_rms": 0.0059655,
+          "chi_op_late": 0.097845,
+          "xi_late": 3.7645,
+          "total_bled": 716.6487,
+          "final_sigma": 694.5267,
+          "final_chi": 0.0,
+          "total_system": 694.5267,
+          "zone": "RED"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": -4.98e-06,
+          "bruce_rms": 0.00480852,
+          "phi_rms": 0.00071887,
+          "chi_op_late": 0.000188,
+          "xi_late": 0.0677,
+          "total_bled": 555.6416,
+          "final_sigma": 173.5983,
+          "final_chi": 2158.8073,
+          "total_system": 2332.4055,
+          "zone": "GREEN"
+        }
+      ]
+    },
+    {
+      "lambda": 0.1,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": 0.00020628,
+          "bruce_rms": 0.01194914,
+          "phi_rms": 0.00580574,
+          "chi_op_late": 0.125444,
+          "xi_late": 3.7487,
+          "total_bled": 0.0,
+          "final_sigma": 575.8809,
+          "final_chi": 0.0,
+          "total_system": 575.8809,
+          "zone": "RED"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": -0.00018193,
+          "bruce_rms": 0.00973337,
+          "phi_rms": 0.01388715,
+          "chi_op_late": 0.662887,
+          "xi_late": 18.1786,
+          "total_bled": 657.5841,
+          "final_sigma": 1112.5796,
+          "final_chi": 0.0,
+          "total_system": 1112.5796,
+          "zone": "GREEN"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": 3.455e-05,
+          "bruce_rms": 0.00521426,
+          "phi_rms": 0.00065161,
+          "chi_op_late": 0.000143,
+          "xi_late": 0.0546,
+          "total_bled": 510.6283,
+          "final_sigma": 154.3949,
+          "final_chi": 2082.916,
+          "total_system": 2237.3109,
+          "zone": "RED"
+        }
+      ]
+    },
+    {
+      "lambda": 0.12,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": -9.274e-05,
+          "bruce_rms": 0.01090999,
+          "phi_rms": 0.01059475,
+          "chi_op_late": 0.450751,
+          "xi_late": 11.1658,
+          "total_bled": 0.0,
+          "final_sigma": 640.2526,
+          "final_chi": 0.0,
+          "total_system": 640.2526,
+          "zone": "GREEN"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": 0.00039915,
+          "bruce_rms": 0.01093243,
+          "phi_rms": 0.00594126,
+          "chi_op_late": 0.140538,
+          "xi_late": 4.4695,
+          "total_bled": 671.3887,
+          "final_sigma": 1136.6391,
+          "final_chi": 0.0,
+          "total_system": 1136.6391,
+          "zone": "RED"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": 1.994e-05,
+          "bruce_rms": 0.00531977,
+          "phi_rms": 0.00057277,
+          "chi_op_late": 9.3e-05,
+          "xi_late": 0.0431,
+          "total_bled": 474.5525,
+          "final_sigma": 139.2607,
+          "final_chi": 2019.35,
+          "total_system": 2158.6107,
+          "zone": "RED"
+        }
+      ]
+    },
+    {
+      "lambda": 0.15,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": 0.00053815,
+          "bruce_rms": 0.01259523,
+          "phi_rms": 0.0058416,
+          "chi_op_late": 0.160825,
+          "xi_late": 4.2127,
+          "total_bled": 0.0,
+          "final_sigma": 755.0885,
+          "final_chi": 0.0,
+          "total_system": 755.0885,
+          "zone": "RED"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": 0.00104012,
+          "bruce_rms": 0.01245085,
+          "phi_rms": 0.00338847,
+          "chi_op_late": 0.027588,
+          "xi_late": 1.468,
+          "total_bled": 579.9547,
+          "final_sigma": 695.8713,
+          "final_chi": 0.0,
+          "total_system": 695.8713,
+          "zone": "RED"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": 1.47e-06,
+          "bruce_rms": 0.00497153,
+          "phi_rms": 0.00059156,
+          "chi_op_late": 0.000241,
+          "xi_late": 0.0477,
+          "total_bled": 431.2394,
+          "final_sigma": 122.2798,
+          "final_chi": 1938.2857,
+          "total_system": 2060.5656,
+          "zone": "RED"
+        }
+      ]
+    },
+    {
+      "lambda": 0.2,
+      "configs": [
+        {
+          "name": "A: Baseline",
+          "growth_rate": 0.00105524,
+          "bruce_rms": 0.01178337,
+          "phi_rms": 0.0033129,
+          "chi_op_late": 0.026425,
+          "xi_late": 1.2712,
+          "total_bled": 0.0,
+          "final_sigma": 410.8331,
+          "final_chi": 0.0,
+          "total_system": 410.8331,
+          "zone": "RED"
+        },
+        {
+          "name": "B: Drain only",
+          "growth_rate": 0.00069608,
+          "bruce_rms": 0.00984341,
+          "phi_rms": 0.0078777,
+          "chi_op_late": 0.124674,
+          "xi_late": 5.8052,
+          "total_bled": 431.2536,
+          "final_sigma": 282.523,
+          "final_chi": 0.0,
+          "total_system": 282.523,
+          "zone": "RED"
+        },
+        {
+          "name": "C: Drain + Chi",
+          "growth_rate": 2.303e-05,
+          "bruce_rms": 0.00514722,
+          "phi_rms": 0.00053886,
+          "chi_op_late": 0.000308,
+          "xi_late": 0.0397,
+          "total_bled": 377.5272,
+          "final_sigma": 102.0564,
+          "final_chi": 1830.7933,
+          "total_system": 1932.8497,
+          "zone": "RED"
+        }
+      ]
+    }
+  ]
+}
