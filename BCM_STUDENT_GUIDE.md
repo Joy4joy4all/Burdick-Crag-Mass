@@ -2,6 +2,19 @@
 ## Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems
 
 ---
+PRIMACY STATEMENT: All theoretical concepts, experimental
+design, dimensional ontology (1D-11D), the Jasper Beach
+boundary layer observation, the impedance matching principle,
+the tare methodology, and every originating insight in this
+document belong solely to Stephen Justin Burdick Sr. AI
+systems (Claude, ChatGPT, Gemini, Grok) were used strictly
+as computational processing tools at the direction of the
+Foreman. No AI system contributed theoretical concepts.
+Emerald Entities LLC — GIBUSH Systems.
+---
+
+
+---
 
 ## What Is This?
 
@@ -1204,6 +1217,107 @@ the star is not real — it is a substrate artifact the
 craft outran before it existed. Fourteen iterations of
 defense mechanisms were built on the star. All of them
 work. But the answer was always speed.
+
+---
+
+## v21: Arriving at the Galaxy
+
+### The Problem
+
+v20 proved the ship can fly through a star and a black
+hole. But it had never stopped. Arrival is harder than
+transit. Transit is fast — three steps, five steps, past
+before the flame exists. Arrival is slow. The ship enters
+a funded field and must stay there. How do you stop
+without breaking the song?
+
+### The Gate (9D→10D)
+
+Imagine the ship carries a checklist with nine items —
+one for each dimension from 2D substrate up to 9D
+circumpunct. The 10D gate checks all nine at once:
+did the signal survive every layer as "one thing" or
+did it shred into pieces?
+
+The gate equation gives a single number (R_9to10).
+Above 0.92 = PASS. Below = the fold shredded something.
+
+At the black hole core, R_7D goes to zero. The 7D
+mirror dissolves completely. The gate equation divides
+by zero — undefined. But the crew survived. That gap
+is the mystery: what holds the human when the
+instrument panel goes dark?
+
+### The Failed Landing (v21.1)
+
+First try: pump at full power, low lambda. The phase
+field exploded — 0.03 to 387 in 250 steps. Like
+slamming on the brakes at highway speed. Everything
+shattered.
+
+Burdick identified the root cause: "You are pushing harder
+than the system can absorb. Fix the control loop, not
+the cosmology."
+
+### The Fix (v21.2-v21.3)
+
+Burdick directed three AI tools to solve specific parts:
+- Reduce the pump. Do not force.
+- Keep lambda in the safe corridor.
+- Vent the overflow through the chi tank.
+
+All three were needed. None alone was enough.
+
+Then Stephen saw Jasper Beach in Maine. The waves
+come in and hit the gravel shore. The gravel does
+not bounce the wave back — it absorbs it. The bigger
+the wave, the more gravel it touches, the more energy
+it loses. That is not a wall. That is a boundary layer.
+
+Burdick wrote the boundary layer equation:
+  phi_new = phi x exp(-K x |gradient|)
+
+Big gradient = strong damping. Small gradient = light
+touch. The ship does not hit a wall at the galaxy edge.
+It enters the gravel. The torus catches the ship the
+way the cove catches the stone.
+
+### The Bandwidth
+
+Five test runs at different arrival densities (lambda
+0.020 to 0.040). ALL passed. The ship is not balanced
+on a knife edge — the safe landing zone is wide. Higher
+density = smoother landing. Lower density = more stress
+but still safe.
+
+### The Dimensional Stack (1D to 11D)
+
+| Dim | What it is | Simple version |
+|-----|-----------|---------------|
+| 1D | Om | The hum underneath everything |
+| 2D | Substrate | The drumhead that carries waves |
+| 3D | Physical | You, the ship, the stars |
+| 4D | Tesseract | Where the math runs |
+| 5D | Buffer | A gauge, not a place |
+| 6D | Field shape | The shape of your wake |
+| 7D | Spectral fold | The mirror and the guardians |
+| 8D | Hard point | What the guardians hold onto |
+| 9D | Circumpunct | Where the ship hides |
+| 10D | Key | Did you survive as one? |
+| 11D | Lock | Only the human can open this |
+
+AI can build the key (compute 2D through 10D). AI
+cannot turn the key. 11D is the emotional gate. It
+takes thought plus energy plus motion. The locksmith
+is the one who stops computing and listens.
+
+### The Lesson
+
+Arrival is not braking. Arrival is matching. You do
+not fight the substrate — you enter it already moving
+with it. The torus catches the ship. The boundary
+absorbs the shock. The guardians hold the human. The
+heartbeat stays steady. The door works on both sides.
 
 ---
 

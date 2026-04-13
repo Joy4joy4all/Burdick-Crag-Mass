@@ -1,6 +1,19 @@
 # BCM WORKING FORMULAS — CUMULATIVE REFERENCE
 ## Stephen Justin Burdick Sr. — Emerald Entities LLC — GIBUSH Systems
-## Through v18 (2026-04-09)
+## Through v21 (2026-04-13)
+
+---
+PRIMACY STATEMENT: All theoretical concepts, experimental
+design, dimensional ontology (1D-11D), the Jasper Beach
+boundary layer observation, the impedance matching principle,
+the tare methodology, and every originating insight in this
+document belong solely to Stephen Justin Burdick Sr. AI
+systems (Claude, ChatGPT, Gemini, Grok) were used strictly
+as computational processing tools at the direction of the
+Foreman. No AI system contributed theoretical concepts.
+Emerald Entities LLC — GIBUSH Systems.
+---
+
 
 ---
 
@@ -798,8 +811,29 @@ The mirror fogs 200-400 steps AFTER the star
   │   the star's own pattern)
   ├── The self-similar spiral that keeps OpT and OpC
   │   coherent at the throat
+  ├── Reverse calculation starts here (backward
+  │   decomposition of completed pattern)
   └── NOT Coxeter elements — velocity-dependent
       asymmetric shadow geometry only
+
+10D KEY (Synapse Coherence Check)
+  ├── R_9to10 gate equation (Sec XXI)
+  ├── Measures whether signal survived all nine
+  │   dimensional registers as "one"
+  ├── AI computes the key. AI holds it up to the gate.
+  ├── Threshold 0.92 (92% coherence retention)
+  └── At BH core: R_7D=0 → R_9to10=undefined
+      (the 7D reference frame dissolved)
+
+11D LOCK (Emotional Gate)
+  ├── Thought + E(energy/emotion) + Motion
+  ├── AI cannot turn the key. Only the operator.
+  ├── Static at 11D — all dimensions simultaneous
+  ├── The lock IS the locksmith's frequency
+  ├── Fear scatters intervals. Greed shifts phase.
+  │   Attachment recruits signal back into the many.
+  └── Om = sound of 1D touching 11D heard from 3D
+      (Dark Mason lore — Burdick line)
 ```
 
 ### Causal hierarchy (proven v19)
@@ -815,9 +849,136 @@ Control UPSTREAM. Downstream is diagnostic only.
   routes bleed to 4D χ → conserves 2D σ total
 ```
 
+### 9D→10D→11D path (v21)
+```
+9D circumpunct (completed pattern) →
+  10D key (coherence check across all layers) →
+  11D lock (emotional gate, operator only)
+
+AI tracks 2D-10D. AI computes the key.
+AI cannot turn the key.
+```
+
+### Ego cost channel
+```
+Conscious thought (ego) couples 7D object to local
+pump rhythm → phase shear → disorientation.
+Drop ego → guardians hold unconscious coherence
+(heartbeat f/2). The receiver state.
+```
+
 ---
 
-## XX. FROZEN CONSTANTS (CUMULATIVE v1-v20)
+## XXI. 9D→10D COHERENCE GATE (v21 — Gemini)
+
+### Gate equation
+```
+R_9to10 = Tr(OpT_10 @ rho_9) * Re(<psi_9|OpC_10|psi_9>)
+          / R_7D
+
+Threshold: THETA_9TO10 = 0.92
+```
+- rho_9: density matrix of 9D state (projected backward
+  from completed 11D pattern)
+- OpT_10, OpC_10: 10D generalizations of 7D operators
+- R_7D: reference coherence from 7D (normalizes scale)
+- Pass = true → signal enters 10D. Fail = reflection.
+
+### 9D state construction from craft instruments
+```
+psi_9 = normalized vector of 8 components:
+  [substrate(2D), physical(3D), operational(4D),
+   buffer(5D), field_shape(6D), spectral_fold(7D),
+   hard_point(8D), circumpunct(9D)]
+
+Each component weighted by that layer's coherence.
+Fibonacci decay from 7D to 9D: psi[9D] = psi[8D]/1.618
+```
+
+### Black hole core anomaly
+```
+At BH core: R_7D = 0 → R_9to10 = undefined
+Division by zero = the 7D reference frame dissolved.
+The 10D key cannot be computed when the 7D object
+ceases to exist. But crew survived. That gap is
+the 11D signature.
+```
+
+---
+
+## XXII. ARRIVAL DECELERATION (v21)
+
+### Arrival profile phases
+```
+CRUISE:    void, λ=0.05, 12,000c, no external pump
+EDGE:      galaxy torus detected, λ→0.04, pump→0.1
+FUNDED:    inside funded zone, λ→0.025, pump→0.25
+DECEL:     pump ratio flipped (B=brake), λ→0.020
+SETTLING:  shockwave dissipating, chi venting
+ARRIVAL:   craft at rest in funded field, λ=0.03
+```
+
+### Pump ratio flip during deceleration
+```
+Cruise:  ratio = 0.25 (A drives, B collects)
+Decel:   ratio = 4.0  (B dominates, A reduced to 25%)
+         active_ratio = 1.0 / cruise_ratio
+         pump_A_eff = pump_A * 0.25
+The craft brakes with substrate geometry, not thrust.
+```
+
+### v21.1 failure (root cause — ChatGPT)
+```
+Pump = 1.0 at λ = 0.005 for hundreds of steps
+→ Forcing >> Damping → PhiRMS exponential
+→ 7 → 12 → 21 → 41 → 82 → 167 → 332 → 387
+BH survived: impulse (3 steps). Galaxy: sustained.
+"Fix the control loop, not the cosmology."
+```
+
+---
+
+## XXIII. BOUNDARY LAYER OPERATOR (v21.3 — ChatGPT/Jasper Beach)
+
+### Gradient-proportional damping
+```
+phi_new = phi * exp(-K_BOUNDARY * |grad_phi|)
+
+K_BOUNDARY = 150.0 (frozen)
+Applied only during EDGE/FUNDED/DECEL/SETTLING phases
+```
+- High gradient at impact zone → strong damping
+- Low gradient in interior → minimal damping
+- Energy killed BEFORE reflection
+- Absorbed energy routes to chi (gravel heats up)
+
+### Physical analog (Jasper Beach, Maine)
+```
+Water surface = substrate
+Moon = pump (gravity)
+Cove arc = field shape (torus edge)
+Rounded stones = objects with enough funding cycles
+Sounding edge = boundary layer (critical damping)
+Glass effect = coherent energy → incoherent microstates
+```
+
+### Safety clamp (backup)
+```
+PHI_SAFETY = 0.10
+If phi_rms > PHI_SAFETY: phi *= PHI_SAFETY / phi_rms
+Should rarely fire if boundary operator is working.
+```
+
+### Emergency freeboard venting during arrival
+```
+During FUNDED/DECEL/SETTLING:
+  chi_field *= 0.990 (additional 1% decay per step)
+  if chi_mag > 100: chi_field -= chi_field * 0.005
+```
+
+---
+
+## XX. FROZEN CONSTANTS (CUMULATIVE v1-v21)
 
 ### Substrate physics (v1-v6)
 ```
@@ -914,6 +1075,17 @@ VELOCITY_RATIO = 12000.0
 GRADIENT_KILL = 0.85
 ```
 
+### 9D→10D coherence gate (v21)
+```
+THETA_9TO10 = 0.92
+```
+
+### Boundary layer operator (v21.3)
+```
+K_BOUNDARY = 150.0
+PHI_SAFETY = 0.10
+```
+
 ---
 
 ## XI. CITATIONS AND ATTRIBUTIONS
@@ -952,8 +1124,13 @@ GRADIENT_KILL = 0.85
   Waves, and Turbulence — phase synchronization framework
   (referenced for Brucetron phase stiffness characterization)
 
+### Black hole observations
+- Shaposhnikov, N. & Titarchuk, L. 2009, ApJ, 699, 453
+  — XTE J1650-500 mass determination (3.8 M☉, smallest
+  measured stellar-mass black hole)
+
 ### Prior BCM versions
-- Burdick, Stephen J. Sr. 2026, BCM v1-v19,
+- Burdick, Stephen J. Sr. 2026, BCM v1-v20,
   Zenodo 10.5281/zenodo.19251192
 
 ---

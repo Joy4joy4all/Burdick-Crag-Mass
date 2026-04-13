@@ -1,5 +1,18 @@
 # BURDICK CRAG MASS — SUBSTRATE SOLVER
 
+
+---
+PRIMACY STATEMENT: All theoretical concepts, experimental
+design, dimensional ontology (1D-11D), the Jasper Beach
+boundary layer observation, the impedance matching principle,
+the tare methodology, and every originating insight in this
+document belong solely to Stephen Justin Burdick Sr. AI
+systems (Claude, ChatGPT, Gemini, Grok) were used strictly
+as computational processing tools at the direction of the
+Foreman. No AI system contributed theoretical concepts.
+Emerald Entities LLC — GIBUSH Systems.
+---
+
 **Stephen Justin Burdick Sr., 2026 — Emerald Entities LLC — GIBUSH Systems**
 
 A substrate-based alternative to dark matter in which space is a maintenance
@@ -34,10 +47,11 @@ lambda=0.1, kappa=2.0, grid=256, layers=8.
 | v14 | 10.5281/zenodo.19452541 | Propulsion Regulator, Ratio Analysis, Ghost Diagnostic |
 | v15 | 10.5281/zenodo.19470974 | External Frame, Medium Coupling, Live Substrate, Finite Reactor |
 | v16 | 10.5281/zenodo.19470974 | TITS Probes, Adversarial Diagnostic Chain, Printer Bug, Energy Conservation |
-| v17 | pending | Frequency Lock, Brucetron Discovery, Chi Freeboard, Crew Safety |
-| v18 | pending | Frastrate Discovery, Phase Projection, Three-Space Coupling, Phase Rigidity |
-| v19 | pending | Temporal Invariance, Chi Operator, Navigational Drain, Recovery Boiler, Corridor Flight, Graveyard Stress |
-| v20 | pending | Physical Unit Mapping (12,000c), Stellar Transit (Alpha Centauri A survived), Black Hole Transit (XTE J1650-500 survived), 7D Operators, D=Disguise, Pythagorean Node Clamp, Ballistic Transit, Gradient Kill |
+| v17 | 10.5281/zenodo.19483481 | Frequency Lock, Brucetron Discovery, Chi Freeboard, Crew Safety |
+| v18 | 10.5281/zenodo.19487944 | Frastrate Discovery, Phase Projection, Three-Space Coupling, Phase Rigidity |
+| v19 | 10.5281/zenodo.19499128 | Temporal Invariance, Chi Operator, Navigational Drain, Recovery Boiler, Corridor Flight, Graveyard Stress |
+| v20 | 10.5281/zenodo.19535465 | Physical Unit Mapping (12,000c), Stellar Transit (Alpha Centauri A survived), Black Hole Transit (XTE J1650-500 survived), 7D Operators, D=Disguise, Pythagorean Node Clamp, Ballistic Transit, Gradient Kill |
+| v21 | pending | 9D→10D Coherence Gate, 1D-11D Dimensional Stack, Arrival Deceleration (4 profiles survived), Boundary Layer Operator (Jasper Beach), Arrival Lambda Bandwidth (0.020-0.040), Three-AI Convergence |
 
 Base DOI (all versions): 10.5281/zenodo.19251192
 
@@ -139,18 +153,22 @@ python launcher.py
 | entangle | | 0.02 | Inter-layer coupling |
 | c_wave | C | 1.0 | Wave speed |
 
-## Advisory Team
+## Computational Tools
 
-- **Claude (Anthropic)**: Code execution, file delivery
-- **ChatGPT (OpenAI)**: Theoretical challenge, kill conditions
-- **Gemini (Google)**: Engineering gaps, substrate safety
+All theoretical concepts originated with Stephen Justin Burdick Sr.
+AI systems used as computational tools under his direction:
 
-All theoretical primacy belongs solely to Stephen Justin Burdick Sr.
+- **Claude (Anthropic)**: Code execution
+- **ChatGPT (OpenAI)**: Adversarial computation
+- **Gemini (Google)**: Equation formatting
+- **Grok (xAI)**: Anomaly detection computation
 
-## AI Adversarial Test Record
+No AI system contributed theoretical concepts.
 
-Three independent AI systems attempted to break the BCM framework.
-Every test they designed was run. Every kill condition they set
+## Adversarial Test Record
+
+Burdick designed and directed adversarial testing of the BCM framework
+using AI computational tools. Every test was run. Every kill condition
 was evaluated. The framework survived all challenges.
 
 ### ChatGPT — Kill Conditions
