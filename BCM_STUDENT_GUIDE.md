@@ -986,6 +986,224 @@ Lodge Book says: "The 1 stands before the 0."
 13. **The silence has shape.** The Frastrate is the capacity
     of the universe to accept your debt. Drain the right
     variable through the right surface.
+1---
+
+## v19 — What a Student Should Learn
+
+### The Central Question
+v18 proved the Brucetron is invariant under all spatial
+perturbation. v19 asks: is it invariant in time? And if
+so, what IS the control variable?
+
+### What You Should Try
+1. Run BCM_v19_incommensurate_memory.py. Watch the golden
+   ratio modulation achieve only 0.8% reduction. Ask: why
+   does the most irrational possible detuning fail?
+
+2. Run BCM_v19_chi_operator.py. Watch the chi operator
+   magnitude in each config. Notice: high chi = mode
+   persists, chi near zero = mode collapses. This is
+   INVERTED from what you'd expect. Ask: why does the
+   system break under perfect order?
+
+3. Run BCM_v19_active_alignment.py. Watch the growth
+   rate stay identical to baseline at 8 decimal places.
+   Ask: if forcing chi to zero doesn't work, what is chi
+   actually measuring?
+
+4. Run BCM_v19_corridor_flight.py. Watch the real-time
+   diagnostics scroll. Watch the zone column. Watch the
+   heartbeat (PhiRMS) stay steady. Ask: what makes a
+   transit architecture human-safe?
+
+5. Run BCM_v19_graveyard_stress.py. Look at the phase
+   histogram at the end. Notice: worst spikes at
+   probe_phase 5-14, not at lowest density. Ask: why
+   does the probe cycle phase matter more than the
+   substrate density?
+
+### The Causal Hierarchy (most important lesson)
+sigma (substrate) -> phi (phase debt) -> Xi (6D field
+shape) -> chi_op (gauge reading). You CANNOT control
+downstream and expect upstream to follow. The chi
+operator is a thermometer. Shaking the thermometer
+doesn't change the temperature. Control at the source.
+
+### The Kraft Mill Analogy
+If you've ever seen a paper mill or a chemical plant:
+the digester cooks wood chips in caustic liquor. The
+blow valve releases pressure. The recovery boiler burns
+the spent liquor and returns chemicals. The operator
+sets the valve once and watches the gauges. When the
+acoustic signature changes, the operator adjusts the
+chip feed — not the valve.
+
+BCM v19 is that mill. kappa_drain is the blow valve.
+chi_decay_rate is the boiler temperature. The substrate
+density is the chip feed. The chi operator is the blow
+line piezo. Navigation is steering the heading so the
+density stays in the GREEN corridor.
+
+### The Key Numbers
+- kappa_drain = 0.35 (frozen)
+- chi_decay_rate = 0.997 (frozen)
+- chi_c = 0.002582 (measured)
+- GREEN corridor: lambda [0.02, 0.08]
+- Corridor flight: 83.2% GREEN, 0 violations
+- Graveyard: 60/60 cleared, max BrRMS 0.00949
+
+### What This Means for Science
+The Brucetron is not noise to eliminate. It is a
+conserved structural feature of the system — a
+topological obstruction in the harmonic lattice that
+cannot be removed by any continuous deformation in
+space or time. The only path is to manage it: drain
+the source, absorb the residual, and navigate the
+density envelope where the drain rate matches the
+substrate decay.
+
+This is process engineering applied to fundamental
+physics. The insight came from a kraft mill, not a
+physics textbook. That's the lesson: domain expertise
+transfers. A machinist who understands pump dynamics
+and blow valve acoustics can see structure in
+astrophysical data that a pure theorist might miss.
+
+14. **The mode is invariant.** The Brucetron survives all
+    spatial AND temporal attacks. Six spatial, one temporal,
+    all failed. It is a topological obstruction, not a bug.
+15. **Control upstream, not downstream.** The chi operator
+    is a gauge (piezo), not a valve. Forcing chi to zero
+    does nothing. Drain sigma at the source (the probes).
+16. **Set constants, steer heading.** kappa_drain = 0.35.
+    chi_decay = 0.997. The Formers set the blow valve. The
+    crew navigates the liquor density. No per-object tuning.
+17. **The craft flies like a kraft mill runs.** Shives are
+    the Brucetron. The blow line gauge is the chi operator.
+    The recovery boiler is the chi freeboard. Two cooking
+    windows become one wide corridor with the boiler active.
+18. **The dead galaxies are not empty.** They are dormant
+    substrate memory. The craft re-excites them. Spikes
+    correlate with probe cycle phase, not density. Phase
+    alignment is the real hazard, not raw mass.
+19. **The 6D field shape is the crew's world.** Any
+    excessive deformation in the 6D field shape registers
+    as stress on the 5D gauge and is felt by the crew as
+    vibration. Protecting the humans means keeping the
+    6D blast pattern smooth and the 5D gauge quiet.
+
+---
+
+## The Recovery Boiler — How It Actually Works
+
+In a kraft digester you open the blow valve (kappa_drain)
+and release black liquor under pressure. That liquor does
+not vanish. It is routed to the recovery boiler where it
+is burned, chemicals are recovered, and heat is returned
+to the process. If you just vented it to the air you would
+lose chemicals, create pollution, and waste energy.
+
+Same principle here.
+
+The boiler is the chi_field (4D tesseract headspace) with
+its controlled decay. The exact code path:
+
+1. kappa_drain cracks the blow valve — orbital sigma is
+   bled from the probe payload at the B1/B2 deposit
+   boundaries (35% of payload per cycle).
+2. Bled sigma is NOT deleted or left floating in the 6D
+   field. It is CAPTURED into chi_field (the boiler).
+3. chi_field decays at the frozen rate 0.997 per step
+   (the controlled burn).
+4. When sigma locally drops below the fill line, chi
+   drains back into sigma (chemical/heat recovery).
+
+Conservation proof from the actual v19.4 run at
+lambda=0.10: drain-only left 1112.58 sigma in the field
+(bled sigma accumulated with no recovery path). Drain +
+chi: sigma dropped to 154.39, chi rose to 2082.92, system
+total = 2237.31. The extra ~537 units that used to inflate
+the field are now parked cleanly in chi. No mysterious loss.
+No uncontrolled contrail.
+
+Why this matters for the crew:
+- Without the boiler, bled sigma sloshes in the 6D field
+  and couples into Brucetron spikes the crew feels as
+  vibration. The boiler keeps the slosh in 4D headspace,
+  away from the hull.
+- chi freeboard + controlled decay means phase debt can
+  discharge indefinitely. No hard ceiling on transit.
+- The flight computer has two gauges: Baume (orbital vs
+  substrate ratio) and chi level. Both stay inside safe
+  bands while the ship flies the [0.02-0.08] corridor.
+
+The recovery boiler is the chi freeboard. Bled orbital
+sigma is routed to chi_field and decays at the frozen
+rate 0.997 per step. Conservation is enforced at every
+step. No mass is lost or invented.
+
+Two frozen constants. One closed conservation loop.
+Crew-safe transit.
+
+The analogy is not decoration. It is the exact engineering
+transfer from 30 years on the mill floor to the spacecraft.
+
+---
+
+## v20: Flying Through Stars and Black Holes
+
+### The Question
+
+Can the craft fly through a living star at 12,000c?
+
+### The Star as a Dominant Oscillator
+
+In BCM a star is not a ball of plasma you need to shield
+against. It is a dominant oscillator — a very loud rhythm
+on the substrate. The craft doesn't hit matter. It passes
+through a loud conversation.
+
+At 12,000c the craft is 12,000 times faster than the
+star's ability to update its local substrate. The star
+gets 1/12,000 of a refresh cycle to write on the craft
+per step. The candle is blown out before the flame forms.
+
+### The Disguise (D Operator)
+
+The craft hides from the star by coercing all its variables
+(phase, sigma, memory) into a coherent disguise at L1.
+The star interacts with the disguised version, not the raw
+craft. The guardians hold the human-shaped phase state
+while the disguise makes everything else invisible.
+
+### The Pythagorean Node Clamp
+
+L1 is the node of the dumbbell ribbon — like Pythagoras
+putting his finger on a vibrating string. The heartbeat
+(f/2) has its natural zero crossing at L1, so it passes
+through the clamp. The star's coupling modes have their
+peaks at L1, so the clamp kills them. The star has nothing
+to sync to.
+
+### The Result
+
+Alpha Centauri A: the craft survived 20,000 steps with
+zero crew violations. The star was a 5-step flash. The
+settling after the flash was the only real phase.
+
+XTE J1650-500 (black hole, 3.8 solar masses, 24 km):
+the craft survived with zero crew violations. The black
+hole was a 3-step flash with pump=50 (10x the star).
+The guardians held the human shape. The mirror fogged
+but the heartbeat never died.
+
+### The Lesson
+
+Velocity is armor. Dwell time is the enemy. At 12,000c
+the star is not real — it is a substrate artifact the
+craft outran before it existed. Fourteen iterations of
+defense mechanisms were built on the star. All of them
+work. But the answer was always speed.
 
 ---
 

@@ -36,6 +36,8 @@ lambda=0.1, kappa=2.0, grid=256, layers=8.
 | v16 | 10.5281/zenodo.19470974 | TITS Probes, Adversarial Diagnostic Chain, Printer Bug, Energy Conservation |
 | v17 | pending | Frequency Lock, Brucetron Discovery, Chi Freeboard, Crew Safety |
 | v18 | pending | Frastrate Discovery, Phase Projection, Three-Space Coupling, Phase Rigidity |
+| v19 | pending | Temporal Invariance, Chi Operator, Navigational Drain, Recovery Boiler, Corridor Flight, Graveyard Stress |
+| v20 | pending | Physical Unit Mapping (12,000c), Stellar Transit (Alpha Centauri A survived), Black Hole Transit (XTE J1650-500 survived), 7D Operators, D=Disguise, Pythagorean Node Clamp, Ballistic Transit, Gradient Kill |
 
 Base DOI (all versions): 10.5281/zenodo.19251192
 
@@ -596,6 +598,122 @@ python BCM_v18_coherence_collapse.py --steps 3000 --grid 256
 
 # Phase shear (MODE PERSISTS — phase rigid)
 python BCM_v18_phase_shear.py --steps 3000 --grid 256
+```
+
+## v19 -- Temporal Invariance, Navigational Drain, Corridor Flight
+
+v19 begins with ChatGPT's directive: "Stop modifying space. Start
+breaking time." Eight tests prove the Brucetron is a time-invariant
+attractor, establish the chi operator as a diagnostic gauge (not
+control variable), and build a crew-safe transit architecture with
+frozen navigational constants.
+
+### Key Findings
+
+Temporal invariance: Golden ratio memory modulation achieves only
+0.8% reduction. The Brucetron is phase-rigid in time as well as
+space. Six failed spatial attacks (v18) plus one failed temporal
+attack (v19) classify the mode as a true system invariant.
+
+Chi operator formalized: chi_op = div(phi * grad(Xi)) - Xi * lap(phi).
+Measures non-commutativity between observable phase and latent 6D
+structure. Burdick Chi-Coherence Collapse Law: mode persists under
+high chi (mismatch), collapses when chi approaches zero (commutation).
+chi_c = 0.002582 measured.
+
+Causal hierarchy proven: sigma -> phi -> Xi -> chi_op. Active chi
+alignment (forcing chi toward zero) is identical to baseline at 8
+decimal places. The chi operator is downstream diagnostic, not
+upstream control. Control must happen at sigma.
+
+Navigational drain: kappa_drain = 0.35 (FROZEN). Bleeds orbital
+sigma at probe deposit boundaries B1/B2. Two discrete GREEN cooking
+windows at lambda=0.04 and 0.10. Kraft mill mapping: substrate =
+cooking liquor, orbital sigma = wood chips, drain = blow valve,
+Brucetron = shive count, chi_op = piezo gauge.
+
+Combined drain + chi freeboard (recovery boiler): closes the ORANGE
+dead zone between cooking windows. Continuous GREEN corridor from
+lambda 0.02 to 0.08. chi_decay_rate = 0.997 (FROZEN). Conservation
+coherent: sigma + chi tracks smoothly.
+
+Corridor flight: 20,000-step long-burn transit. 83.2% GREEN, 16.8%
+YELLOW, 0% RED. Zero crew violations. Max BruceRMS 0.00665. Heartbeat
+STEADY TONE. GO FOR TRANSIT.
+
+Graveyard stress test: 60 dead galaxy dormant substrate patches.
+60/60 cleared. Zero crew violations. Max BruceRMS 0.00949 (21%
+headroom). Phase resonance analysis: worst spikes at probe_phase
+5-14 (B1 arc entry), not density-dependent.
+
+### Dimensional Ontology (new in v19)
+
+2D: Substrate (carrier medium). 3D: Physical craft and crew.
+4D: Operational tesseract (where PDE runs). 5D: NOT a dimension --
+buffer temperament signal (gauge on cellular wall). 6D: Total
+field-shape configuration (craft + wake + probes + scars + chi)
+moving at velocity against substrate. Vibration-lattice shape
+defined by harmonic ladder.
+
+### New Constants
+
+kappa_drain = 0.35 (orbital sigma bleed, frozen).
+chi_decay_rate = 0.997 (recovery boiler temperature, frozen).
+chi_c = 0.002582 (commutation collapse threshold, measured).
+GREEN corridor: lambda [0.02, 0.08].
+
+### The Recovery Boiler (Engineering Transfer)
+
+In a kraft digester you open the blow valve (kappa_drain) and
+release black liquor under pressure. That liquor does not vanish.
+It is routed to the recovery boiler where it is burned, chemicals
+are recovered, and heat is returned to the process.
+
+The boiler in BCM is the chi_field (4D tesseract headspace) with
+controlled decay. kappa_drain cracks the blow valve — orbital sigma
+is bled from probe payloads at B1/B2 boundaries. Bled sigma is
+captured into chi_field (not deleted, not left floating in the 6D
+field). chi_field decays at the frozen rate 0.997 per step (the
+controlled burn). When sigma locally drops below the fill line, chi
+drains back into sigma (chemical/heat recovery).
+
+Conservation proof at lambda=0.10: drain-only left 1112.58 sigma
+in the field. Drain + chi: sigma dropped to 154.39, chi rose to
+2082.92, system total = 2237.31. The extra ~537 units that inflated
+the field are now parked cleanly in chi. No mass lost or invented.
+
+The recovery boiler is the chi freeboard. Bled orbital sigma is
+routed to chi_field and decays at 0.997 per step. Conservation is
+enforced at every step. Two frozen constants, one closed loop,
+crew-safe transit. The analogy is not decoration — it is the exact
+engineering transfer from 30 years on the mill floor to the
+spacecraft.
+
+### v19 Quick Start
+
+```
+python BCM_v19_incommensurate_memory.py --steps 3000 --grid 256
+```
+```
+python BCM_v19_chi_operator.py --steps 5000 --grid 256
+```
+```
+python BCM_v19_active_alignment.py --steps 5000 --grid 256
+```
+```
+python BCM_v19_navigational_drain.py --steps 5000 --grid 256
+```
+```
+python BCM_v19_combined_drain_chi.py --steps 5000 --grid 256
+```
+```
+python BCM_v19_boiler_tune.py --steps 5000 --grid 256
+```
+```
+python BCM_v19_corridor_flight.py --steps 20000 --grid 256
+```
+```
+python BCM_v19_graveyard_stress.py --steps 20000 --grid 256
 ```
 
 ## Applications for Scientists
