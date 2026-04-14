@@ -1,0 +1,353 @@
+[
+  {
+    "interview_num": 1,
+    "person": "Jerry Keck",
+    "position": [
+      -0.39683275719427213,
+      0.07432120507228607,
+      -0.22947050732508747
+    ],
+    "volume": 17.512922972001803,
+    "resonance": 0.32200735634791583,
+    "faces": {
+      "authority": 0.5,
+      "specificity": 0.18,
+      "pain": 0.0,
+      "validation": 1.0198204882501176,
+      "actionability": 0.4,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      5,
+      11,
+      2
+    ],
+    "attractors": [
+      "manual_detection_fails",
+      "modern_equipment_fails",
+      "topic_2",
+      "topic_3"
+    ]
+  },
+  {
+    "interview_num": 2,
+    "person": "Ryan Thorton",
+    "position": [
+      0.3574211140524562,
+      -0.18763497332977536,
+      0.11946039657331597
+    ],
+    "volume": 16.88636039551528,
+    "resonance": 0.9582844790275227,
+    "faces": {
+      "authority": 0.9,
+      "specificity": 0.17333333333333334,
+      "pain": 0.0,
+      "validation": 0.8825695012088633,
+      "actionability": 0.34,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      3,
+      2,
+      11
+    ],
+    "attractors": [
+      "CTS_damage",
+      "topic_8",
+      "topic_2"
+    ]
+  },
+  {
+    "interview_num": 3,
+    "person": "Kevin Lozier",
+    "position": [
+      0.07832361478711514,
+      -0.0331733393314117,
+      0.12244302853805282
+    ],
+    "volume": 15.682308731303218,
+    "resonance": 0.956155976550418,
+    "faces": {
+      "authority": 0.9,
+      "specificity": 0.13333333333333333,
+      "pain": 0.2,
+      "validation": 0.9153564981979357,
+      "actionability": 0.26,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      11,
+      3,
+      9
+    ],
+    "attractors": [
+      "blind_spot",
+      "topic_4",
+      "topic_10"
+    ]
+  },
+  {
+    "interview_num": 4,
+    "person": "Derrek Howard",
+    "position": [
+      0.288637341744951,
+      0.0372045646446455,
+      0.20107492779893013
+    ],
+    "volume": 17.391627045121034,
+    "resonance": 0.32638371406186145,
+    "faces": {
+      "authority": 0.5,
+      "specificity": 0.3466666666666667,
+      "pain": 0.8,
+      "validation": 0.9393943737454655,
+      "actionability": 0.3,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      2,
+      1,
+      11
+    ],
+    "attractors": [
+      "CTS_damage",
+      "cost_quantification",
+      "topic_3",
+      "topic_4"
+    ]
+  },
+  {
+    "interview_num": 5,
+    "person": "Rocky Smith",
+    "position": [
+      0.14799179924185898,
+      -0.29304261093471606,
+      0.4385963245337354
+    ],
+    "volume": 16.810449087971776,
+    "resonance": 0.47532871080112515,
+    "faces": {
+      "authority": 0.7,
+      "specificity": 0.31666666666666665,
+      "pain": 0.2,
+      "validation": 0.9235966592474066,
+      "actionability": 0.27,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      9,
+      6,
+      1
+    ],
+    "attractors": [
+      "cost_quantification",
+      "topic_7",
+      "topic_6"
+    ]
+  },
+  {
+    "interview_num": 6,
+    "person": "Nancy James",
+    "position": [
+      -0.4091810229915557,
+      -0.029345369548928635,
+      0.1720844851474469
+    ],
+    "volume": 17.024443950774906,
+    "resonance": 0.49306416608950987,
+    "faces": {
+      "authority": 0.7,
+      "specificity": 0.3066666666666667,
+      "pain": 0.2,
+      "validation": 1.081581500936822,
+      "actionability": 0.22,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      0,
+      8,
+      9
+    ],
+    "attractors": [
+      "CTS_damage",
+      "cost_quantification",
+      "reactive_maintenance",
+      "topic_0",
+      "topic_9"
+    ]
+  },
+  {
+    "interview_num": 7,
+    "person": "Kevin Bailey",
+    "position": [
+      0.007367448734068249,
+      -0.24869944461593796,
+      0.21411480054446985
+    ],
+    "volume": 14.762137988296985,
+    "resonance": 0.49794089048665946,
+    "faces": {
+      "authority": 0.7,
+      "specificity": 0.2833333333333333,
+      "pain": 0.2,
+      "validation": 1.1393418789584797,
+      "actionability": 0.2,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      9,
+      2,
+      4
+    ],
+    "attractors": [
+      "cost_quantification",
+      "topic_6",
+      "topic_7"
+    ]
+  },
+  {
+    "interview_num": 8,
+    "person": "David Furge",
+    "position": [
+      -0.2983194157415752,
+      0.6364046675274831,
+      0.34258435229121775
+    ],
+    "volume": 14.35554163256773,
+    "resonance": 0.4913511137813515,
+    "faces": {
+      "authority": 0.7,
+      "specificity": 0.09,
+      "pain": 0.0,
+      "validation": 0.7983621521929933,
+      "actionability": 0.17,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      5,
+      8,
+      2
+    ],
+    "attractors": [
+      "CTS_damage",
+      "cost_quantification",
+      "topic_10",
+      "topic_8"
+    ]
+  },
+  {
+    "interview_num": 9,
+    "person": "Colin Leeman",
+    "position": [
+      -0.3133672609569355,
+      -0.07585407589410098,
+      0.6172162586654202
+    ],
+    "volume": 16.013550310680568,
+    "resonance": 0.50381356583197,
+    "faces": {
+      "authority": 0.7,
+      "specificity": 0.13,
+      "pain": 0.0,
+      "validation": 0.5030234892794041,
+      "actionability": 0.34,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      5,
+      9,
+      4
+    ],
+    "attractors": [
+      "CTS_damage",
+      "topic_9",
+      "topic_0"
+    ]
+  },
+  {
+    "interview_num": 10,
+    "person": "Target: IP Buyer",
+    "position": [
+      0.013638255983711323,
+      -0.2076844630441691,
+      0.2747147411592893
+    ],
+    "volume": 13.113290681617153,
+    "resonance": 0.32978911833307306,
+    "faces": {
+      "authority": 0.5,
+      "specificity": 0.056666666666666664,
+      "pain": 0.0,
+      "validation": 1.4261885681324185,
+      "actionability": 0.13,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      6,
+      4,
+      2
+    ],
+    "attractors": [
+      "blind_spot",
+      "topic_1",
+      "topic_11"
+    ]
+  },
+  {
+    "interview_num": 11,
+    "person": "Target: GP Regional",
+    "position": [
+      0.49420849844789577,
+      0.5936412840652849,
+      0.18595133603554315
+    ],
+    "volume": 12.890986099954915,
+    "resonance": 0.32244607514705304,
+    "faces": {
+      "authority": 0.5,
+      "specificity": 0.04666666666666667,
+      "pain": 0.0,
+      "validation": 0.9878497259985966,
+      "actionability": 0.14,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      3,
+      2,
+      11
+    ],
+    "attractors": [
+      "topic_4",
+      "topic_1"
+    ]
+  },
+  {
+    "interview_num": 12,
+    "person": "Target: Area Supt",
+    "position": [
+      0.06573651064382013,
+      -0.04348260434390905,
+      0.03818491295112497
+    ],
+    "volume": 12.890986099954914,
+    "resonance": 0.484758683259115,
+    "faces": {
+      "authority": 0.7,
+      "specificity": 0.05,
+      "pain": 0.0,
+      "validation": 1.0756792117385248,
+      "actionability": 0.13,
+      "completeness": 1.0
+    },
+    "neighbors": [
+      2,
+      6,
+      3
+    ],
+    "attractors": [
+      "topic_4",
+      "topic_5"
+    ]
+  }
+]

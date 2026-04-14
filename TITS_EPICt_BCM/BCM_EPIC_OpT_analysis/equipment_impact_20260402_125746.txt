@@ -1,0 +1,9 @@
+EQUIPMENT IMPACT ANALYSIS
+Project: CHIP_BLOW_LINE
+Generated: 2026-04-02 12:57
+Sparks Baseline: $0
+Fusion Validated: $0
+Total Annual Impact: $0
+
+Equipment                                Sparks Repair Fusion Repair   Production     Annual $  Sources
+--------------------------------------------------------------------------------------------------------------

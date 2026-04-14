@@ -1,0 +1,412 @@
+{
+  "config_name": "BCM_SUBSTRATE_MAINTENANCE",
+  "version": "v23.0",
+  "author": "Stephen Justin Burdick Sr.",
+  "entity": "Emerald Entities LLC — GIBUSH Systems",
+  "description": "Substrate maintenance cost configuration. Each category maps to a process stage in the substrate chain. Components within each category are the items paying the tax. Keywords link to test JSON output fields. Baselines are frozen constants or theoretical values. Pain thresholds flag when the budget is exceeded.",
+
+  "process_chain": [
+    "SMBH Pump → Substrate Field → Torus Edge → Boundary Layer → Dimensional Gate → Crew Envelope → Navigation"
+  ],
+
+  "module_categories": {
+
+    "smbh_pump": {
+      "name": "SMBH Pump System",
+      "description": "The funding source. Neutrino flux from the black hole that pays the substrate maintenance cost. Upstream origin — everything downstream depends on this budget.",
+      "mill_analog": "Wood Yard — raw material intake",
+      "modules": {
+        "kappa_bh": {
+          "display_name": "BH Coupling (κ_BH)",
+          "keywords": ["kappa", "crag_kappa", "kappa_BH", "BH coupling"],
+          "baseline_value": 2.0,
+          "unit": "dimensionless",
+          "frozen": true,
+          "pain_threshold": null,
+          "notes": "Frozen after calibration on NGC2841/NGC7331/NGC3521. If this needs per-galaxy tuning, the mechanism fails."
+        },
+        "j_crag": {
+          "display_name": "Crag Mass Injection (J_crag)",
+          "keywords": ["J_crag", "nu_fraction", "J_bar_peak", "J_nu_peak", "crag_mass"],
+          "baseline_value": null,
+          "unit": "field amplitude",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "Scales with M_BH. Neutrino source kernel normalized to J_baryon peak."
+        },
+        "mbh_catalog": {
+          "display_name": "BH Mass Catalog",
+          "keywords": ["M_bh", "M_bh_solar", "mbh_source", "estimated", "catalog"],
+          "baseline_value": null,
+          "unit": "M_sun",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "Catalog values from Kormendy & Ho 2013. Estimated via M-sigma relation when no catalog entry."
+        },
+        "l_nu": {
+          "display_name": "Maintenance Luminosity (L_ν)",
+          "keywords": ["L_nu", "L_nu_erg_s", "L_nu_Lsun", "maintenance_luminosity"],
+          "baseline_value": null,
+          "unit": "erg/s",
+          "frozen": false,
+          "pain_threshold_key": "L_nu_L_edd",
+          "pain_threshold": 1.0,
+          "pain_direction": "above",
+          "notes": "Must stay sub-Eddington. L_nu/L_edd > 1.0 = physically impossible = model failure."
+        },
+        "nu_b": {
+          "display_name": "Burdick Constant (ν_b)",
+          "keywords": ["nu_b", "burdick_constant"],
+          "baseline_value": 2.75e12,
+          "unit": "erg s^-1 / (cm/s)^4",
+          "frozen": false,
+          "pain_threshold_cv": 50.0,
+          "notes": "L_nu / v_max^4. Should be approximately constant across Class I galaxies. CV > 50% = investigate."
+        }
+      }
+    },
+
+    "substrate_field": {
+      "name": "Substrate Field",
+      "description": "The medium being maintained. Sigma is the memory field, lambda is the decay rate (the electric bill). This is the product the pump is funding.",
+      "mill_analog": "Chip Processing — the material being transported and refined",
+      "modules": {
+        "lambda_decay": {
+          "display_name": "Decay Rate (λ)",
+          "keywords": ["lambda", "lam", "decay_rate", "maintenance_cost"],
+          "baseline_value": 0.1,
+          "unit": "per timestep",
+          "frozen": true,
+          "pain_threshold": null,
+          "notes": "Universal maintenance cost of space. Frozen at 0.1."
+        },
+        "alpha_memory": {
+          "display_name": "Memory Coefficient (α)",
+          "keywords": ["alpha", "memory", "ALPHA"],
+          "baseline_value": 0.80,
+          "unit": "dimensionless",
+          "frozen": true,
+          "pain_threshold": 0.90,
+          "pain_direction": "above",
+          "notes": "Operating window 0.75-0.85. Bifurcation blowup at 0.90."
+        },
+        "sigma_field": {
+          "display_name": "Substrate Memory (σ)",
+          "keywords": ["sigma", "rho_max", "sigma_avg", "substrate_excess"],
+          "baseline_value": null,
+          "unit": "field amplitude",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "Core field. Cumulative memory of substrate agitation."
+        },
+        "u_sub": {
+          "display_name": "Substrate Usage (U_sub)",
+          "keywords": ["U_sub", "substrate_usage", "decoupling_ratio"],
+          "baseline_value": null,
+          "unit": "1/ν_b",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "Reciprocal of Burdick Constant. Higher = more drag tax per unit velocity."
+        },
+        "cos_delta_phi": {
+          "display_name": "Phase Alignment (cos Δφ)",
+          "keywords": ["cos_delta_phi", "phase_sigma", "phase_forcing", "delta_phi"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless [-1,+1]",
+          "frozen": false,
+          "pain_threshold": 0.0,
+          "pain_direction": "below",
+          "notes": "+1 = coupled (funded). 0 = decoupled. -1 = anti-phase (destructive)."
+        },
+        "layer_coherence": {
+          "display_name": "Layer Coherence",
+          "keywords": ["layer_coherence", "entangle", "avg_layer_corr"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless [0,1]",
+          "frozen": false,
+          "pain_threshold": 0.5,
+          "pain_direction": "below",
+          "notes": "Inter-layer coupling quality. Below 0.5 = substrate layers decoupled."
+        }
+      }
+    },
+
+    "boundary_layer": {
+      "name": "Boundary Layer & Torus Edge",
+      "description": "Where the substrate meets the edge. Jasper Beach gravel — energy killed before reflection. This is the impact zone.",
+      "mill_analog": "Blow Line — where material hits the wall and the physics of impact matters",
+      "modules": {
+        "k_boundary": {
+          "display_name": "Boundary Damping (K_BOUNDARY)",
+          "keywords": ["K_BOUNDARY", "boundary", "gradient_kill"],
+          "baseline_value": 150.0,
+          "unit": "dimensionless",
+          "frozen": true,
+          "pain_threshold": null,
+          "notes": "Jasper Beach analog. Gradient-proportional dissipation at torus edge."
+        },
+        "phi_safety": {
+          "display_name": "Phase Safety (φ_safety)",
+          "keywords": ["PHI_SAFETY", "phi_rms", "PhiRMS", "phase_safety"],
+          "baseline_value": 0.10,
+          "unit": "dimensionless",
+          "frozen": true,
+          "pain_threshold": 0.10,
+          "pain_direction": "above",
+          "notes": "Maximum safe phase deviation. Above this = crew risk."
+        },
+        "gradient_ratio": {
+          "display_name": "Gradient Ratio (inner/outer)",
+          "keywords": ["gradient_ratio", "v_excess_inner", "v_excess_outer", "lambda_gradient"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "Ratio > 1 = inner-funded, outer-depleted (Class IV). INF = outer dead. ~1 = uniform (Class I)."
+        },
+        "snap_back": {
+          "display_name": "Snap-Back Torque (τ_snap)",
+          "keywords": ["snap_back", "tau_snap", "r_arc", "snap"],
+          "baseline_value": 0.0,
+          "unit": "torque proxy",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "V-vector arc-back at torus edge. High = strong restoring torque = spectroscopic imprint."
+        }
+      }
+    },
+
+    "dimensional_gate": {
+      "name": "Dimensional Operators & Gate",
+      "description": "The 7D instrument panel. OpT and OpC measure how well the craft sees itself. R_9to10 is the key check. These are the gauges.",
+      "mill_analog": "Pulping & Washing — the quality check where you measure what you have",
+      "modules": {
+        "opt": {
+          "display_name": "Temporal Shadow (OpT)",
+          "keywords": ["OpT", "temporal_shadow"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless [0,1]",
+          "frozen": false,
+          "pain_threshold": 0.5,
+          "pain_direction": "below",
+          "notes": "How well the craft sees its own f/2 heartbeat in the 7D mirror."
+        },
+        "opc": {
+          "display_name": "Spatial C-arc (OpC)",
+          "keywords": ["OpC", "spatial_arc"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless [0,1]",
+          "frozen": false,
+          "pain_threshold": 0.5,
+          "pain_direction": "below",
+          "notes": "Trailing shadow geometry in 7D. Velocity-dependent reflectivity."
+        },
+        "delta_op": {
+          "display_name": "Operator Divergence (Δ_OP)",
+          "keywords": ["opacity_div", "Delta_OP", "delta_op"],
+          "baseline_value": 0.0,
+          "unit": "dimensionless",
+          "frozen": false,
+          "pain_threshold": 0.08,
+          "pain_direction": "above",
+          "notes": "|OpT - OpC|. Mirror fogging. STARGATE condition: < 0.08."
+        },
+        "r_7d": {
+          "display_name": "7D Reflectivity (R_7D)",
+          "keywords": ["R_7D", "r_7d", "reflectivity"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless [0,1]",
+          "frozen": false,
+          "pain_threshold": 0.92,
+          "pain_direction": "below",
+          "notes": "Combined mirror polish. STARGATE condition: > 0.92."
+        },
+        "r_9to10": {
+          "display_name": "9D-to-10D Gate (R_9→10)",
+          "keywords": ["R_9to10", "gate_pass", "THETA_9TO10"],
+          "baseline_value": null,
+          "unit": "dimensionless",
+          "frozen": false,
+          "pain_threshold": 0.92,
+          "pain_direction": "below",
+          "notes": "10D Key check. Threshold 0.92. Below = NO-GO."
+        },
+        "coherence": {
+          "display_name": "Phase Coherence",
+          "keywords": ["Coherence", "coherence", "min_coh"],
+          "baseline_value": 1.0,
+          "unit": "dimensionless [0,1]",
+          "frozen": false,
+          "pain_threshold": 0.95,
+          "pain_direction": "below",
+          "notes": "cos(φ_ship - φ_ext) × (1 - Δ_OP). STARGATE condition: > 0.95."
+        }
+      }
+    },
+
+    "crew_safety": {
+      "name": "Crew Safety Envelope",
+      "description": "What protects the humans. Guardians hold the phase state. Chi freeboard absorbs the overflow. Brucetron is the persistent defect that must be governed.",
+      "mill_analog": "Recovery Boiler — where the energy is recycled and the people must be protected",
+      "modules": {
+        "guardian_strength": {
+          "display_name": "Guardian Hold (G)",
+          "keywords": ["GUARDIAN", "guardian", "guardian_strength"],
+          "baseline_value": 0.85,
+          "unit": "dimensionless",
+          "frozen": true,
+          "pain_threshold": 0.68,
+          "pain_direction": "below",
+          "notes": "Twin guardians holding crew phase state at L1. STARGATE: >= 0.68."
+        },
+        "chi_freeboard": {
+          "display_name": "Chi Freeboard (χ)",
+          "keywords": ["chi", "chi_field", "chi_freeboard", "chi_decay"],
+          "baseline_value": null,
+          "unit": "field amplitude",
+          "frozen": false,
+          "pain_threshold_key": "chi_c",
+          "pain_threshold": 0.002582,
+          "notes": "4D headspace pressure relief. Decay rate 0.997. Threshold χ_c ≈ 0.002582."
+        },
+        "brucetron_rms": {
+          "display_name": "Brucetron RMS",
+          "keywords": ["bruce_rms", "brucetron", "BruceRMS"],
+          "baseline_value": 0.0,
+          "unit": "dimensionless",
+          "frozen": false,
+          "pain_threshold": 0.00949,
+          "pain_direction": "above",
+          "notes": "Persistent phase defect. Growth bound t^0.14. Above 0.00949 = 21% headroom gone."
+        },
+        "kappa_drain": {
+          "display_name": "Orbital Bleed (κ_drain)",
+          "keywords": ["kappa_drain", "KAPPA_DRAIN", "drain", "bleed"],
+          "baseline_value": 0.35,
+          "unit": "dimensionless",
+          "frozen": true,
+          "pain_threshold": null,
+          "notes": "Venturi tunnel and dual-pump bleed rate. Recovery boiler blow valve."
+        }
+      }
+    },
+
+    "navigation": {
+      "name": "Navigation & Transit",
+      "description": "The route and the cost of traveling it. Probe cycles, corridor zones, graveyard hazards, arrival profiles. Every leg has a different tax.",
+      "mill_analog": "Logistics & Shipping — the cost of moving product through the system",
+      "modules": {
+        "probe_cycles": {
+          "display_name": "Probe Cycles",
+          "keywords": ["cycles", "probe", "tunnel", "readings"],
+          "baseline_value": null,
+          "unit": "cycles",
+          "frozen": false,
+          "pain_threshold": null,
+          "notes": "12 tunnel-cycling probes. Each cycle is an interview with the substrate."
+        },
+        "corridor_zone": {
+          "display_name": "Corridor Zone",
+          "keywords": ["zone", "GREEN", "YELLOW", "RED", "ORANGE"],
+          "baseline_value": "GREEN",
+          "unit": "zone classification",
+          "frozen": false,
+          "pain_threshold": "RED",
+          "pain_direction": "equals",
+          "notes": "GREEN < 0.02, YELLOW 0.02-0.03, ORANGE 0.04-0.07, RED > 0.07."
+        },
+        "arrival_profile": {
+          "display_name": "Arrival Profile",
+          "keywords": ["arrival_profile", "gentle", "standard", "hot", "deep", "NO-GO"],
+          "baseline_value": "standard",
+          "unit": "profile classification",
+          "frozen": false,
+          "pain_threshold": "NO-GO",
+          "pain_direction": "equals",
+          "notes": "Recommended by v22 reverse engine based on destination class."
+        },
+        "go_nogo": {
+          "display_name": "Go / No-Go",
+          "keywords": ["go_nogo", "GO", "NO-GO"],
+          "baseline_value": "GO",
+          "unit": "boolean",
+          "frozen": false,
+          "pain_threshold": "NO-GO",
+          "pain_direction": "equals",
+          "notes": "Navigation pre-check. If NO-GO, the fold does not open."
+        }
+      }
+    }
+  },
+
+  "pain_indicators": {
+    "eddington_exceeded": {
+      "description": "Maintenance luminosity exceeds Eddington limit",
+      "severity": "CRITICAL",
+      "action": "Model failure — SMBH cannot provide required power"
+    },
+    "alpha_bifurcation": {
+      "description": "Memory coefficient exceeds 0.90 stability boundary",
+      "severity": "CRITICAL",
+      "action": "System divergence — reduce alpha immediately"
+    },
+    "gate_fail": {
+      "description": "R_9to10 below 0.92 threshold",
+      "severity": "HIGH",
+      "action": "NO-GO — destination cannot support coherent arrival"
+    },
+    "phase_violation": {
+      "description": "PhiRMS exceeds PHI_SAFETY",
+      "severity": "HIGH",
+      "action": "Crew risk — emergency freeboard vent"
+    },
+    "mirror_fog": {
+      "description": "Δ_OP exceeds 0.08",
+      "severity": "MEDIUM",
+      "action": "STARGATE condition compromised — D operation needed"
+    },
+    "brucetron_headroom": {
+      "description": "BruceRMS approaching pain threshold",
+      "severity": "MEDIUM",
+      "action": "Chi freeboard discharge recommended"
+    },
+    "red_zone": {
+      "description": "Lambda in RED corridor (> 0.07)",
+      "severity": "HIGH",
+      "action": "Exclusion zone — do not transit"
+    }
+  },
+
+  "hypothesis_templates": {
+    "H1_kappa_correct": {
+      "description": "κ_BH = 2.0 is the correct global coupling constant",
+      "evidence_for": ["chi2_bcm < chi2_nfw", "winner_chi2 == BCM"],
+      "evidence_against": ["chi2_bcm > chi2_nfw * 2", "winner_chi2 == NFW"],
+      "prior": 0.6
+    },
+    "H2_tully_fisher": {
+      "description": "Maintenance luminosity scales as v_max^4 (Tully-Fisher)",
+      "evidence_for": ["L_nu_scaling_exponent > 3.5 and < 4.5"],
+      "evidence_against": ["L_nu_scaling_exponent < 3.0 or > 5.0"],
+      "prior": 0.5
+    },
+    "H3_class_boundaries": {
+      "description": "Six substrate classes are physically real boundaries",
+      "evidence_for": ["classification stable under parameter sweep"],
+      "evidence_against": ["reclassification under ±10% sweep"],
+      "prior": 0.7
+    },
+    "H4_boundary_layer": {
+      "description": "Jasper Beach boundary operator works at all arrival profiles",
+      "evidence_for": ["all profiles STARGATE COMPLETE", "zero crew violations"],
+      "evidence_against": ["any profile ABORT", "crew violation detected"],
+      "prior": 0.8
+    },
+    "H5_sub_eddington": {
+      "description": "All galaxies maintainable below Eddington luminosity",
+      "evidence_for": ["all L_nu_L_edd < 1.0"],
+      "evidence_against": ["any L_nu_L_edd >= 1.0"],
+      "prior": 0.7
+    }
+  }
+}

@@ -1,0 +1,4404 @@
+{
+  "deck_name": "BCM_SPARKS_TEST_DECK",
+  "version": "v23.0",
+  "author": "Stephen Justin Burdick Sr.",
+  "entity": "Emerald Entities LLC — GIBUSH Systems",
+  "generated": "2026-04-14 08:27:12",
+  "n_tests": 216,
+  "categories": {
+    "galactic": 28,
+    "propulsion": 16,
+    "stellar": 71,
+    "navigation": 25,
+    "planetary": 18,
+    "arrival": 15,
+    "merger": 1,
+    "other": 25,
+    "crew_safety": 11,
+    "neutrino": 3,
+    "transit": 2,
+    "gate": 1
+  },
+  "versions": {
+    "v1-v6": 11,
+    "v7": 1,
+    "v0": 108,
+    "v22": 3,
+    "v14": 1,
+    "v15": 13,
+    "v16": 10,
+    "v17": 5,
+    "v18": 10,
+    "v19": 10,
+    "v20": 29,
+    "v21": 13,
+    "v23": 2
+  },
+  "q_layers": {
+    "L1": 31,
+    "L6": 41,
+    "L2": 115,
+    "L3": 15,
+    "L5": 11,
+    "L4": 3
+  },
+  "tests": [
+    {
+      "test_num": 1,
+      "date": "2026-03-25 09:09",
+      "script": "batch_20260325_090911.py",
+      "source_json": "batch_20260325_090911.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=175  sample_galaxy=CamB",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 175,
+        "sample_galaxy": "CamB"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 2,
+      "date": "2026-03-25 09:34",
+      "script": "batch_20260325_093406.py",
+      "source_json": "batch_20260325_093406.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=175  sample_galaxy=CamB",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 175,
+        "sample_galaxy": "CamB"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 3,
+      "date": "2026-03-25 10:45",
+      "script": "batch_20260325_104510.py",
+      "source_json": "batch_20260325_104510.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=175  sample_galaxy=CamB",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 175,
+        "sample_galaxy": "CamB"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 4,
+      "date": "2026-03-25 12:24",
+      "script": "batch_20260325_122443.py",
+      "source_json": "batch_20260325_122443.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=175  sample_galaxy=CamB",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 175,
+        "sample_galaxy": "CamB"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 5,
+      "date": "2026-03-26 15:08",
+      "script": "batch_20260326_150853.py",
+      "source_json": "batch_20260326_150853.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=31  sample_galaxy=ESO563-G021",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 31,
+        "sample_galaxy": "ESO563-G021"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 6,
+      "date": "2026-03-26 16:28",
+      "script": "batch_20260326_162850.py",
+      "source_json": "batch_20260326_162850.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=31  sample_galaxy=ESO563-G021",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 31,
+        "sample_galaxy": "ESO563-G021"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 7,
+      "date": "2026-03-26 17:07",
+      "script": "batch_20260326_170731.py",
+      "source_json": "batch_20260326_170731.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=31  sample_galaxy=ESO563-G021",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 31,
+        "sample_galaxy": "ESO563-G021"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 8,
+      "date": "2026-03-26 17:44",
+      "script": "batch_20260326_174442.py",
+      "source_json": "batch_20260326_174442.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=31  sample_galaxy=ESO563-G021",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 31,
+        "sample_galaxy": "ESO563-G021"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 9,
+      "date": "2026-03-26 18:09",
+      "script": "batch_20260326_180906.py",
+      "source_json": "batch_20260326_180906.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=31  sample_galaxy=ESO563-G021",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 31,
+        "sample_galaxy": "ESO563-G021"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 10,
+      "date": "2026-03-26 19:54",
+      "script": "batch_20260326_195458.py",
+      "source_json": "batch_20260326_195458.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=31  sample_galaxy=ESO563-G021",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 31,
+        "sample_galaxy": "ESO563-G021"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 11,
+      "date": "2026-03-27 14:03",
+      "script": "batch_20260327_140314.py",
+      "source_json": "batch_20260327_140314.json",
+      "version": "v1-v6",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=175  sample_galaxy=CamB",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 175,
+        "sample_galaxy": "CamB"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 12,
+      "date": "unknown",
+      "script": "batch_v7_rho2_poisson_g128_lam01_reconstructed.py",
+      "source_json": "batch_v7_rho2_poisson_g128_lam01_reconstructed.json",
+      "version": "v7",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_galaxies=175  sample_galaxy=CamB",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_galaxies": 175,
+        "sample_galaxy": "CamB"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 13,
+      "date": "2026-04-06 06:51",
+      "script": "BCM_alignment_test_20260406_065110.py",
+      "source_json": "BCM_alignment_test_20260406_065110.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 14,
+      "date": "2026-04-06 13:22",
+      "script": "BCM_alpha_cen_20260406_132212.py",
+      "source_json": "BCM_alpha_cen_20260406_132212.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 15,
+      "date": "2026-04-03 10:37",
+      "script": "BCM_binary_Alpha_Cen_20260403_103738.py",
+      "source_json": "BCM_binary_Alpha_Cen_20260403_103738.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 16,
+      "date": "2026-04-03 11:01",
+      "script": "BCM_binary_Alpha_Cen_20260403_110114.py",
+      "source_json": "BCM_binary_Alpha_Cen_20260403_110114.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 17,
+      "date": "2026-04-03 11:15",
+      "script": "BCM_binary_Alpha_Cen_20260403_111558.py",
+      "source_json": "BCM_binary_Alpha_Cen_20260403_111558.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 18,
+      "date": "2026-04-03 11:49",
+      "script": "BCM_binary_Alpha_Cen_20260403_114915.py",
+      "source_json": "BCM_binary_Alpha_Cen_20260403_114915.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 19,
+      "date": "2026-04-06 15:25",
+      "script": "BCM_binary_drive_20260406_152502.py",
+      "source_json": "BCM_binary_drive_20260406_152502.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 20,
+      "date": "2026-04-03 11:06",
+      "script": "BCM_binary_HR_1099_20260403_110615.py",
+      "source_json": "BCM_binary_HR_1099_20260403_110615.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 21,
+      "date": "2026-04-03 12:08",
+      "script": "BCM_binary_HR_1099_20260403_120843.py",
+      "source_json": "BCM_binary_HR_1099_20260403_120843.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 22,
+      "date": "2026-04-03 10:45",
+      "script": "BCM_binary_Spica_20260403_104554.py",
+      "source_json": "BCM_binary_Spica_20260403_104554.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 23,
+      "date": "2026-04-03 10:53",
+      "script": "BCM_binary_Spica_20260403_105353.py",
+      "source_json": "BCM_binary_Spica_20260403_105353.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 24,
+      "date": "2026-04-03 10:54",
+      "script": "BCM_binary_Spica_20260403_105423.py",
+      "source_json": "BCM_binary_Spica_20260403_105423.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 25,
+      "date": "2026-04-03 11:39",
+      "script": "BCM_binary_Spica_20260403_113915.py",
+      "source_json": "BCM_binary_Spica_20260403_113915.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 26,
+      "date": "2026-04-03 11:57",
+      "script": "BCM_binary_Spica_20260403_115740.py",
+      "source_json": "BCM_binary_Spica_20260403_115740.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 27,
+      "date": "2026-04-03 15:03",
+      "script": "BCM_binary_Spica_20260403_150359.py",
+      "source_json": "BCM_binary_Spica_20260403_150359.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 28,
+      "date": "2026-04-03 15:11",
+      "script": "BCM_binary_Spica_20260403_151149.py",
+      "source_json": "BCM_binary_Spica_20260403_151149.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 29,
+      "date": "2026-04-03 15:35",
+      "script": "BCM_binary_Spica_20260403_153508.py",
+      "source_json": "BCM_binary_Spica_20260403_153508.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 30,
+      "date": "2026-04-03 15:41",
+      "script": "BCM_binary_Spica_20260403_154156.py",
+      "source_json": "BCM_binary_Spica_20260403_154156.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 31,
+      "date": "2026-04-04 09:05",
+      "script": "BCM_cavitation_Spica_20260404_090544.py",
+      "source_json": "BCM_cavitation_Spica_20260404_090544.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 32,
+      "date": "2026-04-04 10:27",
+      "script": "BCM_cavitation_Spica_20260404_102738.py",
+      "source_json": "BCM_cavitation_Spica_20260404_102738.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 33,
+      "date": "2026-04-04 11:31",
+      "script": "BCM_cavitation_Spica_20260404_113157.py",
+      "source_json": "BCM_cavitation_Spica_20260404_113157.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 34,
+      "date": "2026-04-05 07:41",
+      "script": "BCM_cavitation_Spica_20260405_074132.py",
+      "source_json": "BCM_cavitation_Spica_20260405_074132.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 35,
+      "date": "2026-04-13 13:31",
+      "script": "BCM_chi2_engine_20260413_133126.py",
+      "source_json": "BCM_chi2_engine_20260413_133126.json",
+      "version": "v22",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H1_kappa",
+        "H3_classes"
+      ],
+      "results": "n_galaxies=29  bcm_wins=7  nfw_wins=16  avg_chi2_bcm=68.78  avg_chi2_nfw=92.12  grid=128  config_grid=128  config_layers=8",
+      "substrate_impacts": [
+        {
+          "component": "Substrate Field (sigma)",
+          "metric": 68.78426165701738,
+          "metric_name": "avg_chi2_bcm",
+          "notes": "BCM wins 7/29 at grid=128",
+          "impact_type": "validation"
+        }
+      ],
+      "metrics": {
+        "n_galaxies": 29,
+        "bcm_wins": 7,
+        "nfw_wins": 16,
+        "avg_chi2_bcm": 68.78426165701738,
+        "avg_chi2_nfw": 92.12152871036511,
+        "grid": 128,
+        "config_grid": 128,
+        "config_layers": 8
+      },
+      "synergy_score": 0.5
+    },
+    {
+      "test_num": 36,
+      "date": "2026-04-13 17:03",
+      "script": "BCM_chi2_engine_20260413_170327.py",
+      "source_json": "BCM_chi2_engine_20260413_170327.json",
+      "version": "v22",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H1_kappa",
+        "H3_classes"
+      ],
+      "results": "n_galaxies=29  bcm_wins=13  nfw_wins=12  avg_chi2_bcm=42.1  avg_chi2_nfw=92.12  grid=256  config_grid=256  config_layers=8",
+      "substrate_impacts": [
+        {
+          "component": "Substrate Field (sigma)",
+          "metric": 42.098066356606886,
+          "metric_name": "avg_chi2_bcm",
+          "notes": "BCM wins 13/29 at grid=256",
+          "impact_type": "validation"
+        }
+      ],
+      "metrics": {
+        "n_galaxies": 29,
+        "bcm_wins": 13,
+        "nfw_wins": 12,
+        "avg_chi2_bcm": 42.098066356606886,
+        "avg_chi2_nfw": 92.12152871036511,
+        "grid": 256,
+        "config_grid": 256,
+        "config_layers": 8
+      },
+      "synergy_score": 0.9
+    },
+    {
+      "test_num": 37,
+      "date": "2026-04-03 17:02",
+      "script": "BCM_colonization_Spica_20260403_170257.py",
+      "source_json": "BCM_colonization_Spica_20260403_170257.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 38,
+      "date": "2026-04-04 15:33",
+      "script": "BCM_colonization_Spica_forward_20260404_153318.py",
+      "source_json": "BCM_colonization_Spica_forward_20260404_153318.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 39,
+      "date": "2026-04-05 06:18",
+      "script": "BCM_colonization_Spica_forward_20260405_061857.py",
+      "source_json": "BCM_colonization_Spica_forward_20260405_061857.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 40,
+      "date": "2026-04-03 18:52",
+      "script": "BCM_colonization_Spica_reverse_20260403_185214.py",
+      "source_json": "BCM_colonization_Spica_reverse_20260403_185214.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 41,
+      "date": "2026-04-06 06:25",
+      "script": "BCM_drift_test_20260406_062508.py",
+      "source_json": "BCM_drift_test_20260406_062508.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 42,
+      "date": "2026-04-06 06:28",
+      "script": "BCM_drift_test_20260406_062839.py",
+      "source_json": "BCM_drift_test_20260406_062839.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 43,
+      "date": "2026-04-06 06:28",
+      "script": "BCM_drift_test_20260406_062841.py",
+      "source_json": "BCM_drift_test_20260406_062841.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 44,
+      "date": "2026-04-06 06:28",
+      "script": "BCM_drift_test_20260406_062843.py",
+      "source_json": "BCM_drift_test_20260406_062843.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 45,
+      "date": "2026-04-06 06:40",
+      "script": "BCM_drift_test_20260406_064046.py",
+      "source_json": "BCM_drift_test_20260406_064046.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 46,
+      "date": "2026-04-07 05:50",
+      "script": "BCM_dual_pump_20260407_055037.py",
+      "source_json": "BCM_dual_pump_20260407_055037.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 47,
+      "date": "unknown",
+      "script": "BCM_Earth_planetary_wave.py",
+      "source_json": "BCM_Earth_planetary_wave.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 48,
+      "date": "2026-04-06 14:43",
+      "script": "BCM_energy_audit_20260406_144306.py",
+      "source_json": "BCM_energy_audit_20260406_144306.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 49,
+      "date": "2026-04-06 07:38",
+      "script": "BCM_flight_sim_20260406_073824.py",
+      "source_json": "BCM_flight_sim_20260406_073824.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 50,
+      "date": "2026-04-06 11:37",
+      "script": "BCM_flight_sim_20260406_113754.py",
+      "source_json": "BCM_flight_sim_20260406_113754.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 51,
+      "date": "2026-04-06 11:38",
+      "script": "BCM_flight_sim_20260406_113811.py",
+      "source_json": "BCM_flight_sim_20260406_113811.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 52,
+      "date": "2026-04-06 11:38",
+      "script": "BCM_flight_sim_20260406_113842.py",
+      "source_json": "BCM_flight_sim_20260406_113842.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 53,
+      "date": "2026-04-06 14:51",
+      "script": "BCM_freeze_sweep_20260406_145154.py",
+      "source_json": "BCM_freeze_sweep_20260406_145154.json",
+      "version": "v0",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 54,
+      "date": "2026-04-06 14:08",
+      "script": "BCM_funded_corridors_20260406_140851.py",
+      "source_json": "BCM_funded_corridors_20260406_140851.json",
+      "version": "v0",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 55,
+      "date": "2026-04-06 13:14",
+      "script": "BCM_galactic_current_20260406_131405.py",
+      "source_json": "BCM_galactic_current_20260406_131405.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 56,
+      "date": "unknown",
+      "script": "BCM_Gap7_phase_boundary.py",
+      "source_json": "BCM_Gap7_phase_boundary.json",
+      "version": "v0",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 57,
+      "date": "2026-04-07 06:22",
+      "script": "BCM_ghost_packet_20260407_062254.py",
+      "source_json": "BCM_ghost_packet_20260407_062254.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 58,
+      "date": "unknown",
+      "script": "BCM_HR_1099_stellar_wave.py",
+      "source_json": "BCM_HR_1099_stellar_wave.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 59,
+      "date": "2026-04-05 08:24",
+      "script": "BCM_inspiral_20260405_082448.py",
+      "source_json": "BCM_inspiral_20260405_082448.json",
+      "version": "v0",
+      "category": "merger",
+      "test_type": "Merger",
+      "q_layer": "L2",
+      "q_object": "OJ",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 60,
+      "date": "unknown",
+      "script": "BCM_Jupiter_planetary_wave.py",
+      "source_json": "BCM_Jupiter_planetary_wave.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 61,
+      "date": "2026-04-07 05:35",
+      "script": "BCM_lagrange_20260407_053512.py",
+      "source_json": "BCM_lagrange_20260407_053512.json",
+      "version": "v0",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 62,
+      "date": "2026-04-06 04:27",
+      "script": "BCM_lambda_drive_20260406_042743.py",
+      "source_json": "BCM_lambda_drive_20260406_042743.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 63,
+      "date": "2026-04-06 11:36",
+      "script": "BCM_lambda_drive_20260406_113648.py",
+      "source_json": "BCM_lambda_drive_20260406_113648.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 64,
+      "date": "unknown",
+      "script": "BCM_Mercury_planetary_wave.py",
+      "source_json": "BCM_Mercury_planetary_wave.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 65,
+      "date": "unknown",
+      "script": "BCM_Neptune_planetary_wave.py",
+      "source_json": "BCM_Neptune_planetary_wave.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 66,
+      "date": "2026-03-30 10:10",
+      "script": "BCM_NGC0801_20260330_101001.py",
+      "source_json": "BCM_NGC0801_20260330_101001.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC0801",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC0801"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 67,
+      "date": "2026-03-30 11:18",
+      "script": "BCM_NGC0801_20260330_111823.py",
+      "source_json": "BCM_NGC0801_20260330_111823.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC0801",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC0801"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 68,
+      "date": "2026-03-30 09:33",
+      "script": "BCM_NGC2841_20260330_093358.py",
+      "source_json": "BCM_NGC2841_20260330_093358.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2841",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2841"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 69,
+      "date": "2026-03-30 10:08",
+      "script": "BCM_NGC2841_20260330_100813.py",
+      "source_json": "BCM_NGC2841_20260330_100813.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2841",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2841"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 70,
+      "date": "2026-03-30 11:43",
+      "script": "BCM_NGC2841_20260330_114357.py",
+      "source_json": "BCM_NGC2841_20260330_114357.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2841",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2841"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 71,
+      "date": "2026-03-30 14:31",
+      "script": "BCM_NGC2841_20260330_143136.py",
+      "source_json": "BCM_NGC2841_20260330_143136.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2841",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2841"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 72,
+      "date": "unknown",
+      "script": "BCM_NGC2841_ClassI_Control_Baseline.py",
+      "source_json": "BCM_NGC2841_ClassI_Control_Baseline.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2841",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2841"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 73,
+      "date": "2026-03-30 10:14",
+      "script": "BCM_NGC2976_20260330_101431.py",
+      "source_json": "BCM_NGC2976_20260330_101431.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2976",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2976"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 74,
+      "date": "2026-03-30 10:49",
+      "script": "BCM_NGC2976_20260330_104947.py",
+      "source_json": "BCM_NGC2976_20260330_104947.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC2976",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC2976"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 75,
+      "date": "2026-03-30 10:01",
+      "script": "BCM_NGC3953_20260330_100106.py",
+      "source_json": "BCM_NGC3953_20260330_100106.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC3953",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC3953"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 76,
+      "date": "unknown",
+      "script": "BCM_NGC3953_ClassVI_BarDipole_Confirmed.py",
+      "source_json": "BCM_NGC3953_ClassVI_BarDipole_Confirmed.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC3953",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC3953"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 77,
+      "date": "2026-03-30 09:55",
+      "script": "BCM_NGC7793_20260330_095522.py",
+      "source_json": "BCM_NGC7793_20260330_095522.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC7793",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC7793"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 78,
+      "date": "unknown",
+      "script": "BCM_NGC7793_ClassVB_SubstrateTheft_Confirmed.py",
+      "source_json": "BCM_NGC7793_ClassVB_SubstrateTheft_Confirmed.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=NGC7793",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "NGC7793"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 79,
+      "date": "2026-04-06 07:02",
+      "script": "BCM_phase_lag_20260406_070257.py",
+      "source_json": "BCM_phase_lag_20260406_070257.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 80,
+      "date": "2026-04-05 05:09",
+      "script": "BCM_phaselock_Alpha_Cen_20260405_050909.py",
+      "source_json": "BCM_phaselock_Alpha_Cen_20260405_050909.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 81,
+      "date": "2026-04-05 05:13",
+      "script": "BCM_phaselock_HR_1099_20260405_051344.py",
+      "source_json": "BCM_phaselock_HR_1099_20260405_051344.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 82,
+      "date": "2026-04-05 05:20",
+      "script": "BCM_phaselock_HR_1099_20260405_052033.py",
+      "source_json": "BCM_phaselock_HR_1099_20260405_052033.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 83,
+      "date": "2026-04-05 04:50",
+      "script": "BCM_phaselock_Spica_20260405_045023.py",
+      "source_json": "BCM_phaselock_Spica_20260405_045023.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 84,
+      "date": "2026-04-05 05:00",
+      "script": "BCM_phaselock_Spica_20260405_050009.py",
+      "source_json": "BCM_phaselock_Spica_20260405_050009.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 85,
+      "date": "2026-04-05 05:04",
+      "script": "BCM_phaselock_Spica_20260405_050432.py",
+      "source_json": "BCM_phaselock_Spica_20260405_050432.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 86,
+      "date": "unknown",
+      "script": "BCM_planetary_last_run.py",
+      "source_json": "BCM_planetary_last_run.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 87,
+      "date": "2026-04-07 06:05",
+      "script": "BCM_propulsion_reg_20260407_060548.py",
+      "source_json": "BCM_propulsion_reg_20260407_060548.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 88,
+      "date": "2026-04-06 15:02",
+      "script": "BCM_pure_gradient_20260406_150213.py",
+      "source_json": "BCM_pure_gradient_20260406_150213.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 89,
+      "date": "2026-04-06 15:16",
+      "script": "BCM_rigid_body_20260406_151621.py",
+      "source_json": "BCM_rigid_body_20260406_151621.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 90,
+      "date": "2026-04-06 06:56",
+      "script": "BCM_saddle_test_20260406_065639.py",
+      "source_json": "BCM_saddle_test_20260406_065639.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 91,
+      "date": "2026-04-06 04:42",
+      "script": "BCM_saturn_mission_20260406_044201.py",
+      "source_json": "BCM_saturn_mission_20260406_044201.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 92,
+      "date": "2026-04-06 04:51",
+      "script": "BCM_saturn_mission_20260406_045111.py",
+      "source_json": "BCM_saturn_mission_20260406_045111.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 93,
+      "date": "2026-04-06 04:52",
+      "script": "BCM_saturn_mission_20260406_045255.py",
+      "source_json": "BCM_saturn_mission_20260406_045255.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 94,
+      "date": "2026-04-06 04:54",
+      "script": "BCM_saturn_mission_20260406_045458.py",
+      "source_json": "BCM_saturn_mission_20260406_045458.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 95,
+      "date": "2026-04-06 05:01",
+      "script": "BCM_saturn_mission_20260406_050152.py",
+      "source_json": "BCM_saturn_mission_20260406_050152.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 96,
+      "date": "2026-04-06 05:09",
+      "script": "BCM_saturn_mission_20260406_050944.py",
+      "source_json": "BCM_saturn_mission_20260406_050944.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 97,
+      "date": "2026-04-06 05:15",
+      "script": "BCM_saturn_mission_20260406_051518.py",
+      "source_json": "BCM_saturn_mission_20260406_051518.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 98,
+      "date": "2026-04-06 05:18",
+      "script": "BCM_saturn_mission_20260406_051820.py",
+      "source_json": "BCM_saturn_mission_20260406_051820.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 99,
+      "date": "2026-04-06 05:24",
+      "script": "BCM_saturn_mission_20260406_052417.py",
+      "source_json": "BCM_saturn_mission_20260406_052417.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 100,
+      "date": "2026-04-06 05:41",
+      "script": "BCM_saturn_mission_20260406_054123.py",
+      "source_json": "BCM_saturn_mission_20260406_054123.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 101,
+      "date": "2026-04-06 11:23",
+      "script": "BCM_saturn_mission_20260406_112346.py",
+      "source_json": "BCM_saturn_mission_20260406_112346.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 102,
+      "date": "unknown",
+      "script": "BCM_Saturn_planetary_wave.py",
+      "source_json": "BCM_Saturn_planetary_wave.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 103,
+      "date": "2026-04-06 13:57",
+      "script": "BCM_self_funded_20260406_135701.py",
+      "source_json": "BCM_self_funded_20260406_135701.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 104,
+      "date": "2026-04-06 13:36",
+      "script": "BCM_sirius_20260406_133652.py",
+      "source_json": "BCM_sirius_20260406_133652.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 105,
+      "date": "unknown",
+      "script": "BCM_solar_system_batch.py",
+      "source_json": "BCM_solar_system_batch.json",
+      "version": "v0",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 106,
+      "date": "unknown",
+      "script": "BCM_solar_system_registry.py",
+      "source_json": "BCM_solar_system_registry.json",
+      "version": "v0",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 107,
+      "date": "unknown",
+      "script": "BCM_Spica_A_stellar_wave.py",
+      "source_json": "BCM_Spica_A_stellar_wave.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 108,
+      "date": "2026-04-06 12:53",
+      "script": "BCM_spine_20260406_125357.py",
+      "source_json": "BCM_spine_20260406_125357.json",
+      "version": "v0",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 109,
+      "date": "unknown",
+      "script": "BCM_stellar_batch.py",
+      "source_json": "BCM_stellar_batch.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 110,
+      "date": "unknown",
+      "script": "BCM_stellar_last_run.py",
+      "source_json": "BCM_stellar_last_run.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 111,
+      "date": "unknown",
+      "script": "BCM_stellar_overrides_batch.py",
+      "source_json": "BCM_stellar_overrides_batch.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 112,
+      "date": "unknown",
+      "script": "BCM_stellar_registry.py",
+      "source_json": "BCM_stellar_registry.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 113,
+      "date": "unknown",
+      "script": "BCM_Sun_stellar_wave.py",
+      "source_json": "BCM_Sun_stellar_wave.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 114,
+      "date": "2026-04-07 05:05",
+      "script": "BCM_tao_analysis_20260407_050552.py",
+      "source_json": "BCM_tao_analysis_20260407_050552.json",
+      "version": "v0",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 115,
+      "date": "2026-04-07 05:16",
+      "script": "BCM_tao_analysis_20260407_051613.py",
+      "source_json": "BCM_tao_analysis_20260407_051613.json",
+      "version": "v0",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 116,
+      "date": "2026-04-04 06:52",
+      "script": "BCM_tunnel_Alpha_Cen_20260404_065235.py",
+      "source_json": "BCM_tunnel_Alpha_Cen_20260404_065235.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 117,
+      "date": "2026-04-04 07:07",
+      "script": "BCM_tunnel_HR_1099_20260404_070721.py",
+      "source_json": "BCM_tunnel_HR_1099_20260404_070721.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 118,
+      "date": "2026-04-04 07:28",
+      "script": "BCM_tunnel_HR_1099_20260404_072835.py",
+      "source_json": "BCM_tunnel_HR_1099_20260404_072835.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 119,
+      "date": "2026-04-04 06:39",
+      "script": "BCM_tunnel_Spica_20260404_063957.py",
+      "source_json": "BCM_tunnel_Spica_20260404_063957.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 120,
+      "date": "2026-04-04 07:17",
+      "script": "BCM_tunnel_Spica_20260404_071757.py",
+      "source_json": "BCM_tunnel_Spica_20260404_071757.json",
+      "version": "v0",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 121,
+      "date": "2026-03-30 10:11",
+      "script": "BCM_UGC04305_20260330_101155.py",
+      "source_json": "BCM_UGC04305_20260330_101155.json",
+      "version": "v0",
+      "category": "galactic",
+      "test_type": "Galactic",
+      "q_layer": "L1",
+      "q_object": "OA",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "galaxy=UGC04305",
+      "substrate_impacts": [],
+      "metrics": {
+        "galaxy": "UGC04305"
+      },
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 122,
+      "date": "unknown",
+      "script": "BCM_Uranus_planetary_wave.py",
+      "source_json": "BCM_Uranus_planetary_wave.json",
+      "version": "v0",
+      "category": "planetary",
+      "test_type": "Planetary",
+      "q_layer": "L2",
+      "q_object": "OD",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 123,
+      "date": "2026-04-07 05:16",
+      "script": "BCM_v14_kill_20260407_051643.py",
+      "source_json": "BCM_v14_kill_20260407_051643.json",
+      "version": "v14",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 124,
+      "date": "2026-04-07 09:17",
+      "script": "BCM_v15_bootes_crossing_20260407_091722.py",
+      "source_json": "BCM_v15_bootes_crossing_20260407_091722.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 125,
+      "date": "2026-04-07 07:59",
+      "script": "BCM_v15_external_frame_20260407_075951.py",
+      "source_json": "BCM_v15_external_frame_20260407_075951.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 126,
+      "date": "2026-04-07 08:00",
+      "script": "BCM_v15_external_frame_20260407_080019.py",
+      "source_json": "BCM_v15_external_frame_20260407_080019.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 127,
+      "date": "2026-04-07 08:14",
+      "script": "BCM_v15_external_frame_20260407_081453.py",
+      "source_json": "BCM_v15_external_frame_20260407_081453.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 128,
+      "date": "2026-04-07 08:42",
+      "script": "BCM_v15_graveyard_20260407_084207.py",
+      "source_json": "BCM_v15_graveyard_20260407_084207.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 129,
+      "date": "2026-04-07 11:40",
+      "script": "BCM_v15_live_substrate_20260407_114002.py",
+      "source_json": "BCM_v15_live_substrate_20260407_114002.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 130,
+      "date": "2026-04-07 09:08",
+      "script": "BCM_v15_phase_governor_20260407_090840.py",
+      "source_json": "BCM_v15_phase_governor_20260407_090840.json",
+      "version": "v15",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 131,
+      "date": "2026-04-07 09:45",
+      "script": "BCM_v15_reactor_core_20260407_094544.py",
+      "source_json": "BCM_v15_reactor_core_20260407_094544.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 132,
+      "date": "2026-04-07 09:59",
+      "script": "BCM_v15_reactor_core_20260407_095945.py",
+      "source_json": "BCM_v15_reactor_core_20260407_095945.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 133,
+      "date": "2026-04-07 08:15",
+      "script": "BCM_v15_test_E_raw_20260407_081525.py",
+      "source_json": "BCM_v15_test_E_raw_20260407_081525.json",
+      "version": "v15",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 134,
+      "date": "2026-04-07 08:00",
+      "script": "BCM_v15_wake_20260407_080023.py",
+      "source_json": "BCM_v15_wake_20260407_080023.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 135,
+      "date": "2026-04-07 08:14",
+      "script": "BCM_v15_wake_20260407_081437.py",
+      "source_json": "BCM_v15_wake_20260407_081437.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 136,
+      "date": "2026-04-07 08:14",
+      "script": "BCM_v15_wake_20260407_081457.py",
+      "source_json": "BCM_v15_wake_20260407_081457.json",
+      "version": "v15",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 137,
+      "date": "2026-04-08 07:46",
+      "script": "BCM_v16_diag_decomposition_20260408_074631.py",
+      "source_json": "BCM_v16_diag_decomposition_20260408_074631.json",
+      "version": "v16",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 138,
+      "date": "2026-04-08 08:30",
+      "script": "BCM_v16_diag_fidelity_20260408_083004.py",
+      "source_json": "BCM_v16_diag_fidelity_20260408_083004.json",
+      "version": "v16",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 139,
+      "date": "2026-04-08 07:25",
+      "script": "BCM_v16_diag_fuel_coherence_20260408_072521.py",
+      "source_json": "BCM_v16_diag_fuel_coherence_20260408_072521.json",
+      "version": "v16",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 140,
+      "date": "2026-04-08 08:00",
+      "script": "BCM_v16_diag_neutrality_20260408_080054.py",
+      "source_json": "BCM_v16_diag_neutrality_20260408_080054.json",
+      "version": "v16",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 141,
+      "date": "2026-04-08 07:26",
+      "script": "BCM_v16_diag_perturbation_20260408_072620.py",
+      "source_json": "BCM_v16_diag_perturbation_20260408_072620.json",
+      "version": "v16",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 142,
+      "date": "2026-04-08 08:10",
+      "script": "BCM_v16_diag_transport_20260408_081045.py",
+      "source_json": "BCM_v16_diag_transport_20260408_081045.json",
+      "version": "v16",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 143,
+      "date": "2026-04-08 06:14",
+      "script": "BCM_v16_probe_bom_20260408_061458.py",
+      "source_json": "BCM_v16_probe_bom_20260408_061458.json",
+      "version": "v16",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 144,
+      "date": "2026-04-08 05:51",
+      "script": "BCM_v16_tunnel_probes_20260408_055136.py",
+      "source_json": "BCM_v16_tunnel_probes_20260408_055136.json",
+      "version": "v16",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 145,
+      "date": "2026-04-08 06:38",
+      "script": "BCM_v16_tunnel_probes_20260408_063844.py",
+      "source_json": "BCM_v16_tunnel_probes_20260408_063844.json",
+      "version": "v16",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 146,
+      "date": "2026-04-14 07:15",
+      "script": "BCM_v16_tunnel_probes_20260414_071550.py",
+      "source_json": "BCM_v16_tunnel_probes_20260414_071550.json",
+      "version": "v16",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 147,
+      "date": "2026-04-09 07:48",
+      "script": "BCM_v17_brucetron_20260409_074833.py",
+      "source_json": "BCM_v17_brucetron_20260409_074833.json",
+      "version": "v17",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 148,
+      "date": "2026-04-09 07:49",
+      "script": "BCM_v17_brucetron_growth_20260409_074901.py",
+      "source_json": "BCM_v17_brucetron_growth_20260409_074901.json",
+      "version": "v17",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 149,
+      "date": "2026-04-09 08:15",
+      "script": "BCM_v17_chi_freeboard_20260409_081527.py",
+      "source_json": "BCM_v17_chi_freeboard_20260409_081527.json",
+      "version": "v17",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 150,
+      "date": "2026-04-09 06:24",
+      "script": "BCM_v17_diag_frequency_20260409_062435.py",
+      "source_json": "BCM_v17_diag_frequency_20260409_062435.json",
+      "version": "v17",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 151,
+      "date": "2026-04-09 06:47",
+      "script": "BCM_v17_diag_geometry_20260409_064715.py",
+      "source_json": "BCM_v17_diag_geometry_20260409_064715.json",
+      "version": "v17",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 152,
+      "date": "2026-04-09 12:49",
+      "script": "BCM_v18_coherence_collapse_20260409_124920.py",
+      "source_json": "BCM_v18_coherence_collapse_20260409_124920.json",
+      "version": "v18",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 153,
+      "date": "2026-04-09 12:03",
+      "script": "BCM_v18_fractal_dissipation_20260409_120336.py",
+      "source_json": "BCM_v18_fractal_dissipation_20260409_120336.json",
+      "version": "v18",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 154,
+      "date": "2026-04-09 12:19",
+      "script": "BCM_v18_fractal_dissipation_20260409_121933.py",
+      "source_json": "BCM_v18_fractal_dissipation_20260409_121933.json",
+      "version": "v18",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 155,
+      "date": "2026-04-09 11:46",
+      "script": "BCM_v18_frastrate_20260409_114649.py",
+      "source_json": "BCM_v18_frastrate_20260409_114649.json",
+      "version": "v18",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 156,
+      "date": "2026-04-09 12:02",
+      "script": "BCM_v18_frastrate_20260409_120227.py",
+      "source_json": "BCM_v18_frastrate_20260409_120227.json",
+      "version": "v18",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 157,
+      "date": "2026-04-09 11:53",
+      "script": "BCM_v18_frastrate_v2_20260409_115342.py",
+      "source_json": "BCM_v18_frastrate_v2_20260409_115342.json",
+      "version": "v18",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 158,
+      "date": "2026-04-09 12:02",
+      "script": "BCM_v18_frastrate_v2_20260409_120250.py",
+      "source_json": "BCM_v18_frastrate_v2_20260409_120250.json",
+      "version": "v18",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 159,
+      "date": "2026-04-09 12:29",
+      "script": "BCM_v18_phase_projection_20260409_122926.py",
+      "source_json": "BCM_v18_phase_projection_20260409_122926.json",
+      "version": "v18",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 160,
+      "date": "2026-04-09 13:02",
+      "script": "BCM_v18_phase_shear_20260409_130231.py",
+      "source_json": "BCM_v18_phase_shear_20260409_130231.json",
+      "version": "v18",
+      "category": "crew_safety",
+      "test_type": "Crew Safety",
+      "q_layer": "L5",
+      "q_object": "OG",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 161,
+      "date": "2026-04-09 12:15",
+      "script": "BCM_v18_sensory_flux_20260409_121546.py",
+      "source_json": "BCM_v18_sensory_flux_20260409_121546.json",
+      "version": "v18",
+      "category": "neutrino",
+      "test_type": "Neutrino",
+      "q_layer": "L1",
+      "q_object": "OB",
+      "q_stack": [
+        "H2_tully_fisher",
+        "H5_eddington"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 162,
+      "date": "2026-04-10 06:26",
+      "script": "BCM_v19_active_alignment_20260410_062642.py",
+      "source_json": "BCM_v19_active_alignment_20260410_062642.json",
+      "version": "v19",
+      "category": "propulsion",
+      "test_type": "Propulsion",
+      "q_layer": "L6",
+      "q_object": "OK",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 163,
+      "date": "2026-04-10 07:30",
+      "script": "BCM_v19_boiler_tune_20260410_073025.py",
+      "source_json": "BCM_v19_boiler_tune_20260410_073025.json",
+      "version": "v19",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 164,
+      "date": "2026-04-10 06:07",
+      "script": "BCM_v19_chi_operator_20260410_060727.py",
+      "source_json": "BCM_v19_chi_operator_20260410_060727.json",
+      "version": "v19",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 165,
+      "date": "2026-04-10 07:14",
+      "script": "BCM_v19_combined_drain_chi_20260410_071429.py",
+      "source_json": "BCM_v19_combined_drain_chi_20260410_071429.json",
+      "version": "v19",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 166,
+      "date": "2026-04-10 07:51",
+      "script": "BCM_v19_corridor_flight_20260410_075124.py",
+      "source_json": "BCM_v19_corridor_flight_20260410_075124.json",
+      "version": "v19",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_steps=101  min_R_7D=1  min_coherence=1  verdict=",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 101,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": ""
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 167,
+      "date": "2026-04-10 08:04",
+      "script": "BCM_v19_graveyard_stress_20260410_080433.py",
+      "source_json": "BCM_v19_graveyard_stress_20260410_080433.json",
+      "version": "v19",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 168,
+      "date": "2026-04-10 08:47",
+      "script": "BCM_v19_graveyard_stress_20260410_084734.py",
+      "source_json": "BCM_v19_graveyard_stress_20260410_084734.json",
+      "version": "v19",
+      "category": "navigation",
+      "test_type": "Navigation",
+      "q_layer": "L6",
+      "q_object": "OH",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 169,
+      "date": "2026-04-09 15:53",
+      "script": "BCM_v19_incommensurate_memory_20260409_155349.py",
+      "source_json": "BCM_v19_incommensurate_memory_20260409_155349.json",
+      "version": "v19",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 170,
+      "date": "2026-04-10 05:43",
+      "script": "BCM_v19_incommensurate_memory_20260410_054356.py",
+      "source_json": "BCM_v19_incommensurate_memory_20260410_054356.json",
+      "version": "v19",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 171,
+      "date": "2026-04-10 06:48",
+      "script": "BCM_v19_navigational_drain_20260410_064837.py",
+      "source_json": "BCM_v19_navigational_drain_20260410_064837.json",
+      "version": "v19",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 172,
+      "date": "2026-04-12 05:01",
+      "script": "BCM_v20_blackhole_transit_20260412_050143.py",
+      "source_json": "BCM_v20_blackhole_transit_20260412_050143.json",
+      "version": "v20",
+      "category": "transit",
+      "test_type": "Transit",
+      "q_layer": "L4",
+      "q_object": "OI",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_steps=100  min_R_7D=0  min_coherence=0  verdict=PARTIAL",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.0,
+        "min_coherence": 0.0,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 173,
+      "date": "2026-04-12 05:10",
+      "script": "BCM_v20_blackhole_v2_20260412_051027.py",
+      "source_json": "BCM_v20_blackhole_v2_20260412_051027.json",
+      "version": "v20",
+      "category": "transit",
+      "test_type": "Transit",
+      "q_layer": "L4",
+      "q_object": "OI",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_steps=100  min_R_7D=0  min_coherence=0  verdict=PARTIAL",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.0,
+        "min_coherence": 0.0,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 174,
+      "date": "2026-04-11 05:54",
+      "script": "BCM_v20_stellar_gate_20260411_055448.py",
+      "source_json": "BCM_v20_stellar_gate_20260411_055448.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=17  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 17,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 175,
+      "date": "2026-04-11 08:48",
+      "script": "BCM_v20_stellar_gate_v10_20260411_084854.py",
+      "source_json": "BCM_v20_stellar_gate_v10_20260411_084854.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8195  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8195,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 176,
+      "date": "2026-04-11 08:54",
+      "script": "BCM_v20_stellar_gate_v11_20260411_085447.py",
+      "source_json": "BCM_v20_stellar_gate_v11_20260411_085447.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8196  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8196,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 177,
+      "date": "2026-04-11 08:59",
+      "script": "BCM_v20_stellar_gate_v12_20260411_085912.py",
+      "source_json": "BCM_v20_stellar_gate_v12_20260411_085912.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8198  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8198,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 178,
+      "date": "2026-04-11 09:10",
+      "script": "BCM_v20_stellar_gate_v13_20260411_091057.py",
+      "source_json": "BCM_v20_stellar_gate_v13_20260411_091057.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8199  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8199,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 179,
+      "date": "2026-04-11 09:11",
+      "script": "BCM_v20_stellar_gate_v13_20260411_091156.py",
+      "source_json": "BCM_v20_stellar_gate_v13_20260411_091156.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8199  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8199,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 180,
+      "date": "2026-04-11 09:18",
+      "script": "BCM_v20_stellar_gate_v14_20260411_091836.py",
+      "source_json": "BCM_v20_stellar_gate_v14_20260411_091836.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8145  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8145,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 181,
+      "date": "2026-04-11 09:26",
+      "script": "BCM_v20_stellar_gate_v15_20260411_092653.py",
+      "source_json": "BCM_v20_stellar_gate_v15_20260411_092653.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.8123  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.8123,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 182,
+      "date": "2026-04-11 09:37",
+      "script": "BCM_v20_stellar_gate_v16_20260411_093754.py",
+      "source_json": "BCM_v20_stellar_gate_v16_20260411_093754.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=95  min_R_7D=0.9482  min_coherence=0.7907  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 95,
+        "min_R_7D": 0.9482,
+        "min_coherence": 0.7907,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 183,
+      "date": "2026-04-11 09:46",
+      "script": "BCM_v20_stellar_gate_v17_20260411_094628.py",
+      "source_json": "BCM_v20_stellar_gate_v17_20260411_094628.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=51  min_R_7D=0.9988  min_coherence=0.7907  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 51,
+        "min_R_7D": 0.9988,
+        "min_coherence": 0.7907,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 184,
+      "date": "2026-04-12 04:40",
+      "script": "BCM_v20_stellar_gate_v18_20260412_044034.py",
+      "source_json": "BCM_v20_stellar_gate_v18_20260412_044034.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.6836  min_coherence=0.7486  verdict=PARTIAL",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.6836,
+        "min_coherence": 0.7486,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 185,
+      "date": "2026-04-12 04:49",
+      "script": "BCM_v20_stellar_gate_v19_20260412_044930.py",
+      "source_json": "BCM_v20_stellar_gate_v19_20260412_044930.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9887  min_coherence=0.7486  verdict=PARTIAL",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9887,
+        "min_coherence": 0.7486,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 186,
+      "date": "2026-04-12 04:52",
+      "script": "BCM_v20_stellar_gate_v19_20260412_045216.py",
+      "source_json": "BCM_v20_stellar_gate_v19_20260412_045216.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9887  min_coherence=0.7486  verdict=PARTIAL",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9887,
+        "min_coherence": 0.7486,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 187,
+      "date": "2026-04-11 06:24",
+      "script": "BCM_v20_stellar_gate_v2_20260411_062423.py",
+      "source_json": "BCM_v20_stellar_gate_v2_20260411_062423.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=17  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 17,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 188,
+      "date": "2026-04-11 06:43",
+      "script": "BCM_v20_stellar_gate_v3_20260411_064310.py",
+      "source_json": "BCM_v20_stellar_gate_v3_20260411_064310.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=17  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 17,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 189,
+      "date": "2026-04-11 07:03",
+      "script": "BCM_v20_stellar_gate_v4_20260411_070306.py",
+      "source_json": "BCM_v20_stellar_gate_v4_20260411_070306.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=17  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 17,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 190,
+      "date": "2026-04-11 07:19",
+      "script": "BCM_v20_stellar_gate_v5_20260411_071900.py",
+      "source_json": "BCM_v20_stellar_gate_v5_20260411_071900.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=17  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 17,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 191,
+      "date": "2026-04-11 07:38",
+      "script": "BCM_v20_stellar_gate_v6_20260411_073804.py",
+      "source_json": "BCM_v20_stellar_gate_v6_20260411_073804.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=2  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 2,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 192,
+      "date": "2026-04-11 07:43",
+      "script": "BCM_v20_stellar_gate_v7_20260411_074357.py",
+      "source_json": "BCM_v20_stellar_gate_v7_20260411_074357.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=19  min_R_7D=0.8737  min_coherence=0.8801  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 19,
+        "min_R_7D": 0.8737,
+        "min_coherence": 0.8801,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 193,
+      "date": "2026-04-11 08:03",
+      "script": "BCM_v20_stellar_gate_v7_20260411_080339.py",
+      "source_json": "BCM_v20_stellar_gate_v7_20260411_080339.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=20  min_R_7D=0.9026  min_coherence=0.6532  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 20,
+        "min_R_7D": 0.9026,
+        "min_coherence": 0.6532,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 194,
+      "date": "2026-04-11 08:12",
+      "script": "BCM_v20_stellar_gate_v8_20260411_081255.py",
+      "source_json": "BCM_v20_stellar_gate_v8_20260411_081255.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.882  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.882,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 195,
+      "date": "2026-04-11 08:20",
+      "script": "BCM_v20_stellar_gate_v8_20260411_082010.py",
+      "source_json": "BCM_v20_stellar_gate_v8_20260411_082010.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9549  min_coherence=0.7125  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9549,
+        "min_coherence": 0.7125,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 196,
+      "date": "2026-04-11 08:35",
+      "script": "BCM_v20_stellar_gate_v8_20260411_083527.py",
+      "source_json": "BCM_v20_stellar_gate_v8_20260411_083527.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9588  min_coherence=0.7167  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9588,
+        "min_coherence": 0.7167,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 197,
+      "date": "2026-04-11 08:42",
+      "script": "BCM_v20_stellar_gate_v8_20260411_084244.py",
+      "source_json": "BCM_v20_stellar_gate_v8_20260411_084244.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=18  min_R_7D=0.9992  min_coherence=0.7861  verdict=FAILED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 18,
+        "min_R_7D": 0.9992,
+        "min_coherence": 0.7861,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 198,
+      "date": "2026-04-11 05:35",
+      "script": "BCM_v20_stellar_transit_20260411_053515.py",
+      "source_json": "BCM_v20_stellar_transit_20260411_053515.json",
+      "version": "v20",
+      "category": "stellar",
+      "test_type": "Stellar",
+      "q_layer": "L2",
+      "q_object": "OC",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "n_steps=17  min_R_7D=1  min_coherence=1  verdict=BLOCKED",
+      "substrate_impacts": [],
+      "metrics": {
+        "n_steps": 17,
+        "min_R_7D": 1,
+        "min_coherence": 1,
+        "verdict": "BLOCKED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 199,
+      "date": "2026-04-11 05:18",
+      "script": "BCM_v20_unit_mapping_20260411_051803.py",
+      "source_json": "BCM_v20_unit_mapping_20260411_051803.json",
+      "version": "v20",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 200,
+      "date": "2026-04-11 05:35",
+      "script": "BCM_v20_unit_mapping_20260411_053501.py",
+      "source_json": "BCM_v20_unit_mapping_20260411_053501.json",
+      "version": "v20",
+      "category": "other",
+      "test_type": "Other",
+      "q_layer": "L2",
+      "q_object": "OX",
+      "q_stack": [
+        "H3_classes"
+      ],
+      "results": "",
+      "substrate_impacts": [],
+      "metrics": {},
+      "synergy_score": 0.3
+    },
+    {
+      "test_num": 201,
+      "date": "2026-04-13 09:10",
+      "script": "BCM_v21_arrival_sweep_lam0.020_20260413_091011.py",
+      "source_json": "BCM_v21_arrival_sweep_lam0.020_20260413_091011.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.994  min_coherence=0.9959  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.994,
+        "min_coherence": 0.9959,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 202,
+      "date": "2026-04-13 09:13",
+      "script": "BCM_v21_arrival_sweep_lam0.025_20260413_091352.py",
+      "source_json": "BCM_v21_arrival_sweep_lam0.025_20260413_091352.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9944  min_coherence=0.9962  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9944,
+        "min_coherence": 0.9962,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 203,
+      "date": "2026-04-13 09:17",
+      "script": "BCM_v21_arrival_sweep_lam0.030_20260413_091735.py",
+      "source_json": "BCM_v21_arrival_sweep_lam0.030_20260413_091735.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9948  min_coherence=0.9965  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9948,
+        "min_coherence": 0.9965,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 204,
+      "date": "2026-04-13 09:21",
+      "script": "BCM_v21_arrival_sweep_lam0.035_20260413_092119.py",
+      "source_json": "BCM_v21_arrival_sweep_lam0.035_20260413_092119.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9952  min_coherence=0.9967  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9952,
+        "min_coherence": 0.9967,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 205,
+      "date": "2026-04-13 09:25",
+      "script": "BCM_v21_arrival_sweep_lam0.040_20260413_092549.py",
+      "source_json": "BCM_v21_arrival_sweep_lam0.040_20260413_092549.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9955  min_coherence=0.997  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9955,
+        "min_coherence": 0.997,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 206,
+      "date": "2026-04-13 06:39",
+      "script": "BCM_v21_gate_transit_20260413_063934.py",
+      "source_json": "BCM_v21_gate_transit_20260413_063934.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.6836  min_coherence=0.7486  verdict=PARTIAL",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: PARTIAL",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.6836,
+        "min_coherence": 0.7486,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 207,
+      "date": "2026-04-13 06:48",
+      "script": "BCM_v21_gate_transit_20260413_064858.py",
+      "source_json": "BCM_v21_gate_transit_20260413_064858.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0  min_coherence=0  verdict=PARTIAL",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: PARTIAL",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.0,
+        "min_coherence": 0.0,
+        "verdict": "PARTIAL"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 208,
+      "date": "2026-04-13 07:13",
+      "script": "BCM_v21_gate_transit_20260413_071315.py",
+      "source_json": "BCM_v21_gate_transit_20260413_071315.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=57  min_R_7D=0  min_coherence=-0.1377  verdict=FAILED",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: FAILED",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 57,
+        "min_R_7D": 0.0,
+        "min_coherence": -0.1377,
+        "verdict": "FAILED"
+      },
+      "synergy_score": 0.4
+    },
+    {
+      "test_num": 209,
+      "date": "2026-04-13 07:37",
+      "script": "BCM_v21_gate_transit_20260413_073725.py",
+      "source_json": "BCM_v21_gate_transit_20260413_073725.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9843  min_coherence=0.9889  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9843,
+        "min_coherence": 0.9889,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 210,
+      "date": "2026-04-13 08:08",
+      "script": "BCM_v21_gate_transit_20260413_080852.py",
+      "source_json": "BCM_v21_gate_transit_20260413_080852.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9577  min_coherence=0.9671  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9577,
+        "min_coherence": 0.9671,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 211,
+      "date": "2026-04-13 08:11",
+      "script": "BCM_v21_gate_transit_20260413_081152.py",
+      "source_json": "BCM_v21_gate_transit_20260413_081152.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9577  min_coherence=0.9671  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9577,
+        "min_coherence": 0.9671,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 212,
+      "date": "2026-04-13 08:14",
+      "script": "BCM_v21_gate_transit_20260413_081437.py",
+      "source_json": "BCM_v21_gate_transit_20260413_081437.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9577  min_coherence=0.9671  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9577,
+        "min_coherence": 0.9671,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 213,
+      "date": "2026-04-13 08:18",
+      "script": "BCM_v21_gate_transit_20260413_081837.py",
+      "source_json": "BCM_v21_gate_transit_20260413_081837.json",
+      "version": "v21",
+      "category": "arrival",
+      "test_type": "Arrival",
+      "q_layer": "L3",
+      "q_object": "OE",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_steps=100  min_R_7D=0.9962  min_coherence=0.9974  verdict=STARGATE",
+      "substrate_impacts": [
+        {
+          "component": "Boundary Layer (K_BOUNDARY)",
+          "metric": 150.0,
+          "metric_name": "K_BOUNDARY",
+          "notes": "Verdict: STARGATE",
+          "impact_type": "transit_check"
+        }
+      ],
+      "metrics": {
+        "n_steps": 100,
+        "min_R_7D": 0.9962,
+        "min_coherence": 0.9974,
+        "verdict": "STARGATE"
+      },
+      "synergy_score": 0.7
+    },
+    {
+      "test_num": 214,
+      "date": "2026-04-13 15:51",
+      "script": "BCM_v22_reverse_20260413_155156.py",
+      "source_json": "BCM_v22_reverse_20260413_155156.json",
+      "version": "v22",
+      "category": "gate",
+      "test_type": "Gate",
+      "q_layer": "L4",
+      "q_object": "OF",
+      "q_stack": [
+        "H4_boundary"
+      ],
+      "results": "n_destinations=29  GO=29  NO_GO=0  R_9to10_mean=1.115  config_grid=128  config_layers=8",
+      "substrate_impacts": [
+        {
+          "component": "9D-to-10D Gate (R_9to10)",
+          "metric": 1.114874896551724,
+          "metric_name": "R_9to10_mean",
+          "notes": "GO: 29 / NO-GO: 0",
+          "impact_type": "gate_check"
+        }
+      ],
+      "metrics": {
+        "n_destinations": 29,
+        "GO": 29,
+        "NO_GO": 0,
+        "R_9to10_mean": 1.114874896551724,
+        "config_grid": 128,
+        "config_layers": 8
+      },
+      "synergy_score": 0.8
+    },
+    {
+      "test_num": 215,
+      "date": "2026-04-14 06:39",
+      "script": "BCM_v23_neutrino_20260414_063936.py",
+      "source_json": "BCM_v23_neutrino_20260414_063936.json",
+      "version": "v23",
+      "category": "neutrino",
+      "test_type": "Neutrino",
+      "q_layer": "L1",
+      "q_object": "OB",
+      "q_stack": [
+        "H2_tully_fisher",
+        "H5_eddington"
+      ],
+      "results": "n_galaxies=29  L_nu_mean=3.779e+63  detect_icecube=28  nu_b_mean=2.213e+34  nu_b_cv=127.5",
+      "substrate_impacts": [
+        {
+          "component": "SMBH Pump (L_nu)",
+          "metric": 3.779237540667433e+63,
+          "metric_name": "L_nu_mean_erg_s",
+          "notes": "Detectable by IceCube: 28/29",
+          "impact_type": "prediction"
+        },
+        {
+          "component": "Burdick Constant (nu_b)",
+          "metric": 2.212930602771353e+34,
+          "metric_name": "nu_b_massive_mean",
+          "notes": "CV = 127.5%",
+          "impact_type": "measurement"
+        }
+      ],
+      "metrics": {
+        "n_galaxies": 29,
+        "L_nu_mean": 3.779237540667433e+63,
+        "detect_icecube": 28,
+        "nu_b_mean": 2.212930602771353e+34,
+        "nu_b_cv": 127.49647879042338
+      },
+      "synergy_score": 0.85
+    },
+    {
+      "test_num": 216,
+      "date": "2026-04-14 06:45",
+      "script": "BCM_v23_neutrino_20260414_064559.py",
+      "source_json": "BCM_v23_neutrino_20260414_064559.json",
+      "version": "v23",
+      "category": "neutrino",
+      "test_type": "Neutrino",
+      "q_layer": "L1",
+      "q_object": "OB",
+      "q_stack": [
+        "H2_tully_fisher",
+        "H5_eddington"
+      ],
+      "results": "n_galaxies=29  L_nu_mean=5.483e+41  detect_icecube=28  nu_b_mean=2.75e+12  nu_b_cv=84.17",
+      "substrate_impacts": [
+        {
+          "component": "SMBH Pump (L_nu)",
+          "metric": 5.4827669034820526e+41,
+          "metric_name": "L_nu_mean_erg_s",
+          "notes": "Detectable by IceCube: 28/29",
+          "impact_type": "prediction"
+        },
+        {
+          "component": "Burdick Constant (nu_b)",
+          "metric": 2749828840460.5166,
+          "metric_name": "nu_b_massive_mean",
+          "notes": "CV = 84.2%",
+          "impact_type": "measurement"
+        }
+      ],
+      "metrics": {
+        "n_galaxies": 29,
+        "L_nu_mean": 5.4827669034820526e+41,
+        "detect_icecube": 28,
+        "nu_b_mean": 2749828840460.5166,
+        "nu_b_cv": 84.16925100536382
+      },
+      "synergy_score": 0.85
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "hypotheses": {
+    "manual_detection_fails": {
+      "name": "Manual Detection is Industry-Wide Failure",
+      "prior": 0.5,
+      "posterior": 0.5,
+      "confidence_interval": [
+        0.4,
+        0.6
+      ],
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    "cost_understated": {
+      "name": "True Cost Impact is Understated",
+      "prior": 0.6,
+      "posterior": 0.6,
+      "confidence_interval": [
+        0.5,
+        0.7
+      ],
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    "modern_equipment_insufficient": {
+      "name": "Capital Investment Alone Doesn't Solve Contamination",
+      "prior": 0.5,
+      "posterior": 0.5,
+      "confidence_interval": [
+        0.4,
+        0.6
+      ],
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    "operator_knowledge_gap": {
+      "name": "Operators Sense Problems Instruments Miss",
+      "prior": 0.7,
+      "posterior": 0.7936875103245126,
+      "confidence_interval": [
+        0.6436875103245125,
+        0.9436875103245126
+      ],
+      "evidence_for": [],
+      "evidence_against": []
+    },
+    "blow_line_blind_spot": {
+      "name": "Blow Line Entry Point is Critical Blind Spot",
+      "prior": 0.6,
+      "posterior": 0.7321317263014413,
+      "confidence_interval": [
+        0.5821317263014413,
+        0.8821317263014413
+      ],
+      "evidence_for": [],
+      "evidence_against": []
+    }
+  },
+  "patterns": [
+    {
+      "type": "equipment_hotspot",
+      "description": "Critical equipment identified: Blow Line Piping (mentioned 27x)",
+      "confidence": 0.85,
+      "equipment_list": [
+        "Blow Line Piping",
+        "CTS Rollers",
+        "Feeders"
+      ],
+      "strategic_implication": "Focus detection deployment on these equipment types."
+    },
+    {
+      "type": "synergy_cluster",
+      "description": "Strong validation cluster: 11 interviews reinforce each other",
+      "confidence": 0.9,
+      "interview_ids": [
+        "Jerry Keck",
+        "Kevin Lozier",
+        "Chuck Sherman",
+        "Nicholas Laymon",
+        "Jerry St. Clair",
+        "Jeff Custer",
+        "Forrest Costalles",
+        "Sean Hart",
+        "Tanner White",
+        "Rocky Smith",
+        "Jason Worden"
+      ],
+      "strategic_implication": "Primary customer segment validated by multiple independent sources."
+    }
+  ],
+  "gaps": [
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L2, OC, Sa]",
+      "priority": 0.95,
+      "suggested_profile": {
+        "cube_position": "[L2, OC, Sa]"
+      },
+      "expected_info_gain": 0.85
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L2, OC, Sb]",
+      "priority": 0.95,
+      "suggested_profile": {
+        "cube_position": "[L2, OC, Sb]"
+      },
+      "expected_info_gain": 0.85
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L2, OC, Sg]",
+      "priority": 0.95,
+      "suggested_profile": {
+        "cube_position": "[L2, OC, Sg]"
+      },
+      "expected_info_gain": 0.85
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L2, OC, Sd]",
+      "priority": 0.95,
+      "suggested_profile": {
+        "cube_position": "[L2, OC, Sd]"
+      },
+      "expected_info_gain": 0.85
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L1, OC, Sa]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L1, OC, Sa]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L1, OC, Sb]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L1, OC, Sb]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L1, OC, Sg]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L1, OC, Sg]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L1, OC, Sd]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L1, OC, Sd]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L3, OC, Sa]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L3, OC, Sa]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L3, OC, Sb]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L3, OC, Sb]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L3, OC, Sg]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L3, OC, Sg]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "cube_position",
+      "description": "Missing interviews from [L3, OC, Sd]",
+      "priority": 0.65,
+      "suggested_profile": {
+        "cube_position": "[L3, OC, Sd]"
+      },
+      "expected_info_gain": 0.55
+    },
+    {
+      "type": "equipment_detail",
+      "description": "Equipment mentioned but costs not quantified",
+      "priority": 0.8,
+      "suggested_profile": {
+        "should_ask_about": "equipment damage costs"
+      },
+      "expected_info_gain": 0.7
+    }
+  ],
+  "next_best_interview": {
+    "recommendation": "Missing interviews from [L2, OC, Sa]",
+    "gap_type": "cube_position",
+    "priority": 0.95,
+    "expected_information_gain": 0.85,
+    "suggested_profile": {
+      "cube_position": "[L2, OC, Sa]"
+    },
+    "rationale": "This fills a high-priority gap (cube_position) with 85% expected information gain"
+  },
+  "insights": [
+    {
+      "type": "validated_hypothesis",
+      "title": "VALIDATED: Operators Sense Problems Instruments Miss",
+      "description": "Confidence: 79% (was 70%)",
+      "confidence": 0.7936875103245126,
+      "recommendation": "Design MV buttons for operator control. Emphasize 'operators know first' in value prop."
+    },
+    {
+      "type": "risk",
+      "title": "CRITICAL: 24 High-Severity Contradictions Detected",
+      "description": "Conflicting claims need resolution",
+      "confidence": 0.9,
+      "recommendation": "Schedule follow-up interviews to resolve contradictions before proceeding"
+    }
+  ],
+  "customer_segments": [
+    {
+      "name": "Segment from Community_0",
+      "cube_position": "[L2, OC, ]",
+      "interview_count": 11,
+      "confidence": 0.9166666666666666,
+      "representative_companies": [
+        "Georgia Pacific, Toledo",
+        "Roseburg Forest Products, Oregon",
+        "Resource Optimization LLC",
+        "Bechtel Corporation (formerly Georgia-Pacific Toledo, OR)",
+        "Southern Chips LLC, Georgia",
+        "International Paper",
+        "Wren Hill Lumber, Wren, Oregon",
+        "Voith Paper (servicing Woodland Pulp LLC)",
+        "Woodland Pulp LLC"
+      ],
+      "validation_strength": 0.45454545454545453
+    },
+    {
+      "name": "Segment from Community_1",
+      "cube_position": "[L2, OC, ]",
+      "interview_count": 9,
+      "confidence": 0.75,
+      "representative_companies": [
+        "Coastal Fiber L.L.C., Oregon",
+        "Georgia-Pacific",
+        "Woodland Pulp LLC",
+        "Bettendorf Trucking, Roseburg, Oregon",
+        "LumberScan (Sweden)",
+        "Woodland Pulp LLC (Consultant)"
+      ],
+      "validation_strength": 0.4444444444444444
+    }
+  ],
+  "market_opportunity": {
+    "average_damage_per_mill": "$185,875",
+    "damage_std_dev": "$147,034",
+    "estimated_addressable_mills": 170,
+    "total_annual_industry_damage": "$31,598,750",
+    "gibush_30_percent_capture": "$9,479,625",
+    "risk_adjusted_opportunity": "$5,926,319",
+    "confidence": 0.6251638473251908,
+    "confidence_interval": [
+      "$4,148,423",
+      "$7,704,214"
+    ]
+  }
+}

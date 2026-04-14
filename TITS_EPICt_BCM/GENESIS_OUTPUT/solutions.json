@@ -1,0 +1,265 @@
+{
+  "generated": "2026-01-31T12:18:22.009345",
+  "hotspot_hint": "Critical equipment identified: CTS Rollers (mentioned 8x)",
+  "validated_hypotheses": [
+    {
+      "name": "True Cost Impact is Understated",
+      "posterior": 0.96,
+      "prior": 0.6,
+      "confidence_interval": [
+        0.9099999999999999,
+        1.0
+      ],
+      "evidence_for": [
+        "Average cost across 14 mentions: $215,786"
+      ]
+    }
+  ],
+  "solution_candidates": [
+    {
+      "solution_id": "SOL-001",
+      "title": "Real-Time Contamination Early Warning + Proof Packet",
+      "type": "real-time detection + evidence artifact + operator playbook",
+      "why_now": "Interview synthesis indicates hidden costs, operator-sensed onset before instruments, and the need for proof to resolve contradictions.",
+      "rank_score": 0.86,
+      "requirements": [
+        "Deploy sensor fusion at/near critical entry/transfer point (start minimal, expand as validated).",
+        "Event capture with confidence gating (avoid alarm fatigue).",
+        "Proof packet per event: timestamps, top features, short raw snippet pointer (optional), operator notes, recommended response.",
+        "Operator-first response playbook integrated into workflow."
+      ],
+      "mvp_spec": {
+        "objective": "Detect abnormal contamination onset earlier than current signals, with evidence and low false positives.",
+        "deployment_zone": {
+          "primary": "blow line entry / transfer point (closest recurring blind spot)",
+          "secondary": "Critical equipment identified: CTS Rollers (mentioned 8x)"
+        },
+        "sensors_minimum": [
+          {
+            "type": "acoustic",
+            "signal": "impact/transient energy",
+            "sampling_rate": ">= 8 kHz"
+          },
+          {
+            "type": "vibration",
+            "signal": "RMS/peaks/band-energy",
+            "sampling_rate": ">= 1 kHz"
+          }
+        ],
+        "signals_optional": [
+          {
+            "type": "ultrasonic",
+            "signal": "high-frequency impact signature"
+          },
+          {
+            "type": "optical/NIR",
+            "signal": "material anomaly / brightness variance"
+          }
+        ],
+        "feature_stack": [
+          "transient_count_per_sec",
+          "spectral_band_energy_delta",
+          "kurtosis_or_crest_factor",
+          "baseline_deviation_score",
+          "event_burst_score"
+        ],
+        "detection_logic": {
+          "windowing": "sliding window 1–5s; evaluate per window + burst aggregation",
+          "gating": {
+            "trigger": "confidence >= 0.85 for >= 2 consecutive windows",
+            "debounce": "cooldown 30–120s",
+            "baseline_update": "only update baseline in stable steady-state"
+          }
+        },
+        "outputs": {
+          "event_packet_fields": [
+            "event_id",
+            "timestamp_start",
+            "timestamp_end",
+            "confidence",
+            "top_features",
+            "recommended_response",
+            "operator_ack",
+            "operator_notes"
+          ],
+          "artifact_files": [
+            "events.jsonl (append-only)",
+            "event_summary.csv (optional)",
+            "proof_packets/ (optional folder for future PDFs)"
+          ]
+        },
+        "ui_mvp": {
+          "operator_panel": [
+            "status light (green/yellow/red)",
+            "confidence + reason",
+            "one-button acknowledge",
+            "playbook prompt"
+          ],
+          "engineer_panel": [
+            "baseline trend",
+            "feature trends",
+            "event timeline"
+          ]
+        },
+        "nonnegotiables": [
+          "must not require daily recalibration",
+          "must not spam alarms",
+          "must log evidence for every alarm",
+          "must degrade safely (fail to 'monitoring only' not spam)"
+        ]
+      },
+      "pilot_plan": {
+        "duration_days": 30,
+        "success_metrics": [
+          "lead time gained vs current detection (seconds/minutes)",
+          "false positives per shift below threshold",
+          "operator acknowledgment rate",
+          "reduction in severity/cascade damage when triggers occur"
+        ],
+        "acceptance_thresholds": {
+          "false_positives_per_shift": "<= 1",
+          "detection_latency_gain": ">= 30 seconds earlier (or operator-confirmed usable lead time)",
+          "uptime": ">= 95%"
+        }
+      },
+      "ops_playbook": [
+        "On RED: slow feed / divert if possible; inspect transfer point; verify contamination; log outcome.",
+        "On repeated YELLOW: schedule micro-inspection; check magnets/screens; log conditions (weather, yard, supplier).",
+        "Always: record whether contamination was confirmed and what action prevented damage."
+      ],
+      "risk_controls": [
+        "confidence gating + debounce",
+        "alarm fatigue guardrails",
+        "operator override (requires reason, logs it)",
+        "maintenance: weekly health check; monthly baseline verification"
+      ],
+      "evidence": {
+        "validated_hypotheses": [
+          "True Cost Impact is Understated"
+        ],
+        "top_patterns": [
+          "Critical equipment identified: CTS Rollers (mentioned 8x)"
+        ],
+        "gaps_top": [
+          "Missing interviews from [L3, OC, Sb]",
+          "Missing interviews from [L2, OC, Sg]",
+          "Missing interviews from [L3, OC, Sd]"
+        ]
+      }
+    },
+    {
+      "solution_id": "SOL-002",
+      "title": "True Cost Discovery + ROI Engine",
+      "type": "economic intelligence + executive proof",
+      "why_now": "Synthesis indicates true cost impact is often understated; ROI must be evidence-backed to unlock pilots.",
+      "rank_score": 0.668,
+      "requirements": [
+        "Incident cost worksheet (10 minutes to fill)",
+        "Standard categories: downtime, labor, cleanup, quality, repairs",
+        "Auto-generate conservative/expected/worst-case ROI",
+        "Tie costs to events and equipment hotspots"
+      ],
+      "mvp_spec": {
+        "objective": "Turn hidden costs into repeatable evidence per event and per year.",
+        "inputs": [
+          "event timestamps",
+          "downtime minutes",
+          "crew count + hours",
+          "repair invoice estimate",
+          "quality loss estimate",
+          "production rate"
+        ],
+        "outputs": [
+          "cost_per_event",
+          "cost_distribution",
+          "annualized_damage_estimate",
+          "ROI_by_deployment_zone"
+        ],
+        "ui_mvp": [
+          "one-page worksheet",
+          "auto summary",
+          "exportable exec memo (txt/json)"
+        ],
+        "nonnegotiables": [
+          "fast to fill",
+          "does not require finance involvement to start",
+          "auditable assumptions"
+        ]
+      },
+      "pilot_plan": {
+        "duration_days": 14,
+        "success_metrics": [
+          "worksheet completion rate",
+          "variance reduction across estimates",
+          "exec acceptance of cost model"
+        ]
+      },
+      "risk_controls": [
+        "keep repair costs and total costs separately reported",
+        "require uncertainty ranges when estimates are guessed",
+        "log source interview numbers for major assumptions"
+      ],
+      "evidence": {
+        "validated_hypotheses": [
+          "True Cost Impact is Understated"
+        ],
+        "hotspot_hint": "Critical equipment identified: CTS Rollers (mentioned 8x)"
+      }
+    },
+    {
+      "solution_id": "SOL-003",
+      "title": "Interview Targeting Engine (Gap Closure)",
+      "type": "discovery optimizer + convergence driver",
+      "why_now": "Information gaps identify missing cube positions. Targeted interviews increase info gain and accelerate convergence.",
+      "rank_score": 0.5700000000000001,
+      "requirements": [
+        "Convert gaps into role-target recommendations",
+        "Generate question sets tied to uncertain hypotheses",
+        "Track convergence over time (circumpunct readiness)"
+      ],
+      "mvp_spec": {
+        "objective": "Ask the next best interviews to reduce uncertainty fastest.",
+        "inputs": [
+          "synthesis.gaps",
+          "synthesis.hypotheses",
+          "graph.contradictions"
+        ],
+        "outputs": [
+          "recommended_target_role",
+          "question_guide",
+          "expected_information_gain"
+        ],
+        "ui_mvp": [
+          "printable interview sheet",
+          "JSON export matching interview_database schema"
+        ]
+      },
+      "pilot_plan": {
+        "duration_days": 21,
+        "success_metrics": [
+          "gap closure rate",
+          "confidence interval tightening",
+          "contradiction reduction"
+        ]
+      },
+      "risk_controls": [
+        "avoid leading questions",
+        "require evidence-for and evidence-against fields",
+        "tag each question to a hypothesis id"
+      ],
+      "gap_plan": {
+        "recommendation": "Missing interviews from [L3, OC, Sb]",
+        "expected_information_gain": 0.8,
+        "priority": 0.9,
+        "rationale": "This fills a high-priority gap (cube_position) with 80% expected information gain"
+      }
+    }
+  ],
+  "gap_plan": {
+    "recommendation": "Missing interviews from [L3, OC, Sb]",
+    "expected_information_gain": 0.8,
+    "priority": 0.9,
+    "rationale": "This fills a high-priority gap (cube_position) with 80% expected information gain"
+  },
+  "notes": "Deterministic solution synthesis grounded in interviews/graph/synthesis; grows with every interview update."
+}

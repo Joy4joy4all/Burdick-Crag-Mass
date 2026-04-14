@@ -1,0 +1,170 @@
+{
+  "next_interview": {
+    "interview_num": 13,
+    "person": "[Next Interview]",
+    "company": "[Target Company]",
+    "cube_position": "[L2, OC, Sb]"
+  },
+  "high_amplitude_keywords": [
+    {
+      "keyword": "accepted damage",
+      "amplitude": 11.05
+    },
+    {
+      "keyword": "next steps",
+      "amplitude": 8.783333333333335
+    },
+    {
+      "keyword": "rock damage",
+      "amplitude": 7.800000000000001
+    },
+    {
+      "keyword": "time visibility",
+      "amplitude": 7.5
+    },
+    {
+      "keyword": "external suppliers",
+      "amplitude": 6.0
+    },
+    {
+      "keyword": "zero detection",
+      "amplitude": 6.0
+    },
+    {
+      "keyword": "bark blow",
+      "amplitude": 6.0
+    },
+    {
+      "keyword": "blow lines",
+      "amplitude": 6.0
+    },
+    {
+      "keyword": "bark blow lines",
+      "amplitude": 6.0
+    },
+    {
+      "keyword": "technical expertise",
+      "amplitude": 6.0
+    }
+  ],
+  "validation_questions": [
+    {
+      "type": "validation",
+      "question": "Previous interviews mentioned accepted damage as a significant issue. At [Target Company], can you break down where those costs hit you? Does that figure match your experience?",
+      "priority": 1.0,
+      "info_gain": 0.15785714285714286,
+      "targets": "accepted damage"
+    },
+    {
+      "type": "validation",
+      "question": "6 previous interviews mentioned 'next steps' as a recurring theme. Does this resonate with your experience? Can you elaborate on how this affects your operations?",
+      "priority": 0.7948717948717949,
+      "info_gain": 0.1254761904761905,
+      "targets": "next steps"
+    },
+    {
+      "type": "validation",
+      "question": "Previous interviews mentioned rock damage as a significant issue. At [Target Company], can you break down where those costs hit you? Does that figure match your experience?",
+      "priority": 0.7058823529411765,
+      "info_gain": 0.156,
+      "targets": "rock damage"
+    },
+    {
+      "type": "validation",
+      "question": "3 previous interviews mentioned 'time visibility' as a recurring theme. Does this resonate with your experience? Can you elaborate on how this affects your operations?",
+      "priority": 0.6787330316742081,
+      "info_gain": 0.1875,
+      "targets": "time visibility"
+    },
+    {
+      "type": "validation",
+      "question": "2 previous interviews mentioned 'external suppliers' as a recurring theme. Does this resonate with your experience? Can you elaborate on how this affects your operations?",
+      "priority": 0.5429864253393665,
+      "info_gain": 0.2,
+      "targets": "external suppliers"
+    }
+  ],
+  "exploration_questions": [
+    {
+      "type": "exploration",
+      "question": "As someone in [L2, OC, Sb], what does contamination actually cost you annually? Can you break it down by equipment type?",
+      "priority": 0.9,
+      "info_gain": 0.8,
+      "explores": "cost_quantification"
+    },
+    {
+      "type": "exploration",
+      "question": "What equipment or systems have you invested in that were supposed to solve contamination but didn't? What's still not working despite the capital spend?",
+      "priority": 0.8,
+      "info_gain": 0.75,
+      "explores": "investment_failure"
+    },
+    {
+      "type": "exploration",
+      "question": "When you commission new equipment or start up after maintenance, what baseline contamination data do you wish you had from day one? How would that protect your investment?",
+      "priority": 0.75,
+      "info_gain": 0.7,
+      "explores": "baseline_data"
+    }
+  ],
+  "priority_order": [
+    {
+      "type": "validation",
+      "question": "Previous interviews mentioned accepted damage as a significant issue. At [Target Company], can you break down where those costs hit you? Does that figure match your experience?",
+      "priority": 1.0,
+      "info_gain": 0.15785714285714286,
+      "targets": "accepted damage"
+    },
+    {
+      "type": "exploration",
+      "question": "As someone in [L2, OC, Sb], what does contamination actually cost you annually? Can you break it down by equipment type?",
+      "priority": 0.9,
+      "info_gain": 0.8,
+      "explores": "cost_quantification"
+    },
+    {
+      "type": "exploration",
+      "question": "What equipment or systems have you invested in that were supposed to solve contamination but didn't? What's still not working despite the capital spend?",
+      "priority": 0.8,
+      "info_gain": 0.75,
+      "explores": "investment_failure"
+    },
+    {
+      "type": "validation",
+      "question": "6 previous interviews mentioned 'next steps' as a recurring theme. Does this resonate with your experience? Can you elaborate on how this affects your operations?",
+      "priority": 0.7948717948717949,
+      "info_gain": 0.1254761904761905,
+      "targets": "next steps"
+    },
+    {
+      "type": "exploration",
+      "question": "When you commission new equipment or start up after maintenance, what baseline contamination data do you wish you had from day one? How would that protect your investment?",
+      "priority": 0.75,
+      "info_gain": 0.7,
+      "explores": "baseline_data"
+    },
+    {
+      "type": "validation",
+      "question": "Previous interviews mentioned rock damage as a significant issue. At [Target Company], can you break down where those costs hit you? Does that figure match your experience?",
+      "priority": 0.7058823529411765,
+      "info_gain": 0.156,
+      "targets": "rock damage"
+    },
+    {
+      "type": "validation",
+      "question": "3 previous interviews mentioned 'time visibility' as a recurring theme. Does this resonate with your experience? Can you elaborate on how this affects your operations?",
+      "priority": 0.6787330316742081,
+      "info_gain": 0.1875,
+      "targets": "time visibility"
+    },
+    {
+      "type": "validation",
+      "question": "2 previous interviews mentioned 'external suppliers' as a recurring theme. Does this resonate with your experience? Can you elaborate on how this affects your operations?",
+      "priority": 0.5429864253393665,
+      "info_gain": 0.2,
+      "targets": "external suppliers"
+    }
+  ],
+  "expected_total_info_gain": 2.4485720031602387,
+  "recommended_focus": "MEDIUM PRIORITY: Explore 'accepted damage' further with this segment"
+}

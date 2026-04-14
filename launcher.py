@@ -110,6 +110,10 @@ class SolverGUI:
         tab6 = ttk.Frame(self.notebook, style="Dark.TFrame")
         self.notebook.add(tab6, text="  TITS PROBES  ")
 
+        # Tab 7 — Test Runner (all versions)
+        tab7 = ttk.Frame(self.notebook, style="Dark.TFrame")
+        self.notebook.add(tab7, text="  TEST RUNNER  ")
+
         # Build planetary tab content
         self._build_planetary_tab(tab2)
 
@@ -124,6 +128,9 @@ class SolverGUI:
 
         # Build TITS probe tab content
         self._build_probe_tab(tab6)
+
+        # Build test runner tab content
+        self._build_test_runner_tab(tab7)
 
         # Main split (Tab 1 content)
         main = tab1
@@ -2869,6 +2876,272 @@ class SolverGUI:
         if p:
             with open(p,'w') as f: json.dump(self.results_history, f, indent=2)
             self.log(f"  Exported: {p}")
+
+    # ═══════════════════════════════════════════════════════
+    # TAB 7 — TEST RUNNER (all versions, one-click)
+    # ═══════════════════════════════════════════════════════
+    # To add tests for a new version: append entries to
+    # TEST_REGISTRY below. One change, one verify.
+    # ═══════════════════════════════════════════════════════
+
+    TEST_REGISTRY = [
+        # ── v7-v14: Foundation ──
+        ("v7-v14", "Crag Calibration", "test_crag_calibration.py", []),
+        ("v7-v14", "Edge Coupling", "test_edge_coupling.py", []),
+        ("v7-v14", "Observables", "test_observables.py", []),
+        ("v7-v14", "Kill Tests (v14)", "BCM_v14_kill_tests.py", []),
+        # ── v15: External Frame ──
+        ("v15", "External Frame", "BCM_v15_external_frame.py", ["--steps", "2000", "--grid", "128"]),
+        ("v15", "Test E Raw (Oar)", "BCM_v15_test_E_raw.py", ["--steps", "2000", "--grid", "128"]),
+        ("v15", "Wake Persistence", "BCM_v15_wake_persistence.py", ["--steps", "3000", "--grid", "128"]),
+        ("v15", "Graveyard Transit", "BCM_v15_graveyard_transit.py", ["--steps", "3000", "--grid", "128"]),
+        ("v15", "Phase Governor", "BCM_v15_phase_governor.py", ["--steps", "3000", "--grid", "128"]),
+        ("v15", "Bootes Crossing", "BCM_v15_bootes_crossing.py", ["--steps", "8000"]),
+        ("v15", "Live Substrate", "BCM_v15_live_substrate.py", ["--steps", "2000", "--grid", "128"]),
+        ("v15", "Reactor Core", "BCM_v15_reactor_core.py", ["--steps", "2000", "--grid", "128"]),
+        # ── v16: TITS Probes ──
+        ("v16", "Tunnel Probes", "BCM_v16_tunnel_probes.py", ["--steps", "3000", "--grid", "256"]),
+        ("v16", "Probe BoM", "BCM_v16_probe_bom.py", ["--grid", "256"]),
+        ("v16", "Diag: Fuel+Coherence", "BCM_v16_diag_fuel_coherence.py", ["--steps", "3000", "--grid", "256"]),
+        ("v16", "Diag: Decomposition", "BCM_v16_diag_decomposition.py", ["--steps", "3000", "--grid", "256"]),
+        ("v16", "Diag: Neutrality", "BCM_v16_diag_neutrality.py", ["--steps", "3000", "--grid", "256"]),
+        ("v16", "Diag: Transport", "BCM_v16_diag_transport.py", ["--steps", "3000", "--grid", "256"]),
+        ("v16", "Diag: Fidelity", "BCM_v16_diag_fidelity.py", ["--steps", "2000", "--grid", "256"]),
+        # ── v17: Frequency & Brucetron ──
+        ("v17", "Frequency Diag", "BCM_v17_diag_frequency.py", ["--steps", "3000", "--grid", "256"]),
+        ("v17", "Frequency Locked", "BCM_v17_diag_frequency_locked.py", ["--steps", "3000", "--grid", "256"]),
+        ("v17", "Geometry Sweep", "BCM_v17_diag_geometry.py", ["--steps", "3000", "--grid", "256"]),
+        ("v17", "Brucetron Diag", "BCM_v17_brucetron_diagnostic.py", ["--steps", "3000", "--grid", "256"]),
+        ("v17", "Brucetron Growth", "BCM_v17_brucetron_growth.py", ["--steps", "5000", "--grid", "256"]),
+        ("v17", "Chi Freeboard", "BCM_v17_chi_freeboard.py", ["--steps", "3000", "--grid", "256"]),
+        # ── v18: Frastrate & Phase ──
+        ("v18", "Frastrate Diag", "BCM_v18_frastrate_diagnostic.py", ["--steps", "3000", "--grid", "256"]),
+        ("v18", "Frastrate v2", "BCM_v18_frastrate_v2.py", ["--steps", "3000", "--grid", "256"]),
+        ("v18", "Phase Projection", "BCM_v18_phase_projection.py", ["--steps", "3000", "--grid", "256"]),
+        ("v18", "Coherence Collapse", "BCM_v18_coherence_collapse.py", ["--steps", "3000", "--grid", "256"]),
+        ("v18", "Phase Shear", "BCM_v18_phase_shear.py", ["--steps", "3000", "--grid", "256"]),
+        # ── v19: Chi Operator & Corridor ──
+        ("v19", "Incommensurate Mem", "BCM_v19_incommensurate_memory.py", ["--steps", "3000", "--grid", "256"]),
+        ("v19", "Chi Operator", "BCM_v19_chi_operator.py", ["--steps", "5000", "--grid", "256"]),
+        ("v19", "Active Alignment", "BCM_v19_active_alignment.py", ["--steps", "5000", "--grid", "256"]),
+        ("v19", "Nav Drain", "BCM_v19_navigational_drain.py", ["--steps", "5000", "--grid", "256"]),
+        ("v19", "Drain + Chi", "BCM_v19_combined_drain_chi.py", ["--steps", "5000", "--grid", "256"]),
+        ("v19", "Boiler Tune", "BCM_v19_boiler_tune.py", ["--steps", "5000", "--grid", "256"]),
+        ("v19", "Corridor Flight", "BCM_v19_corridor_flight.py", ["--steps", "20000", "--grid", "256"]),
+        ("v19", "Graveyard Stress", "BCM_v19_graveyard_stress.py", ["--steps", "20000", "--grid", "256"]),
+        # ── v20: Stellar & BH Transit ──
+        ("v20", "Unit Mapping", "BCM_v20_unit_mapping.py", []),
+        ("v20", "Stellar Transit", "BCM_v20_stellar_transit.py", []),
+        ("v20", "BH Transit", "BCM_v20_blackhole_transit.py", []),
+        ("v20", "BH Transit v2", "BCM_v20_blackhole_v2.py", []),
+        # ── v21: Arrival & Gate ──
+        ("v21", "Gate Transit (star)", "BCM_v21_gate_transit_test.py", ["--target", "star"]),
+        ("v21", "Gate Transit (bh)", "BCM_v21_gate_transit_test.py", ["--target", "bh"]),
+        ("v21", "Arrival Decel", "BCM_v21_arrival_decel.py", []),
+        ("v21", "Arrival Sweep", "BCM_v21_arrival_sweep.py", []),
+        # ── v22: Reverse Engine & Chi2 ──
+        ("v22", "Chi-Squared (quick)", "BCM_chi_squared_engine.py", ["--quick"]),
+        ("v22", "Chi-Squared (full)", "BCM_chi_squared_engine.py", []),
+        ("v22", "Reverse Engine (quick)", "BCM_v22_reverse_engine.py", ["--quick"]),
+        ("v22", "Reverse Engine (full)", "BCM_v22_reverse_engine.py", []),
+        # ── v23: Neutrino Flux ──
+        ("v23", "Neutrino Flux", "BCM_v23_neutrino_flux.py", []),
+    ]
+
+    def _build_test_runner_tab(self, parent):
+        """Tab 7 — Test Runner. Left 1/3 buttons, right 2/3 output."""
+        style_bg  = "#0a0c10"
+        style_fg  = "#a0b0cc"
+        style_acc = "#44ddff"
+
+        # ── Header ──
+        hf = tk.Frame(parent, bg=style_bg)
+        hf.pack(fill="x", padx=12, pady=(10, 4))
+        tk.Label(hf, text="TEST RUNNER",
+                 font=("Georgia", 16), fg=style_acc, bg=style_bg
+                 ).pack(side="left")
+        tk.Label(hf, text="All Versions \u2014 One Click",
+                 font=("Consolas", 10), fg="#6a7a90", bg=style_bg
+                 ).pack(side="left", padx=(16, 0))
+
+        # ── PanedWindow: left=buttons, right=log ──
+        pw = tk.PanedWindow(parent, orient="horizontal",
+                            bg=style_bg, sashwidth=4,
+                            sashrelief="flat")
+        pw.pack(fill="both", expand=True, padx=12, pady=4)
+
+        # ── LEFT PANEL: scrollable test buttons ──
+        left_frame = tk.Frame(pw, bg=style_bg)
+        pw.add(left_frame, width=380, minsize=250)
+
+        left_canvas = tk.Canvas(left_frame, bg=style_bg,
+                                highlightthickness=0)
+        left_vbar = ttk.Scrollbar(left_frame, orient="vertical",
+                                   command=left_canvas.yview)
+        left_canvas.configure(yscrollcommand=left_vbar.set)
+        left_vbar.pack(side="right", fill="y")
+        left_canvas.pack(side="left", fill="both", expand=True)
+
+        btn_frame = tk.Frame(left_canvas, bg=style_bg)
+        btn_id = left_canvas.create_window((0, 0), window=btn_frame,
+                                            anchor="nw")
+
+        def _bf_resize(event):
+            left_canvas.configure(
+                scrollregion=left_canvas.bbox("all"))
+        def _lc_resize(event):
+            left_canvas.itemconfig(btn_id, width=event.width)
+        btn_frame.bind("<Configure>", _bf_resize)
+        left_canvas.bind("<Configure>", _lc_resize)
+
+        def _lc_wheel(event):
+            left_canvas.yview_scroll(
+                int(-1 * (event.delta / 120)), "units")
+        left_canvas.bind("<MouseWheel>", _lc_wheel)
+        btn_frame.bind("<MouseWheel>", _lc_wheel)
+
+        # ── RIGHT PANEL: output log ──
+        right_frame = tk.Frame(pw, bg=style_bg)
+        pw.add(right_frame, minsize=400)
+
+        log_header = tk.Frame(right_frame, bg=style_bg)
+        log_header.pack(fill="x", padx=4, pady=(4, 2))
+        tk.Label(log_header, text="OUTPUT",
+                 font=("Consolas", 11, "bold"),
+                 fg=style_acc, bg=style_bg).pack(side="left")
+        tk.Button(log_header, text="Clear",
+                  font=("Consolas", 9), bg="#1a1e2a",
+                  fg="#a0b0cc", relief="flat",
+                  command=lambda: self._test_log.delete(
+                      "1.0", "end")
+                  ).pack(side="right", padx=4)
+
+        self._test_log = tk.Text(
+            right_frame, bg="#06080c", fg="#44ddff",
+            font=("Consolas", 9), relief="flat", wrap="word")
+        test_scroll = ttk.Scrollbar(
+            right_frame, orient="vertical",
+            command=self._test_log.yview)
+        self._test_log.configure(
+            yscrollcommand=test_scroll.set)
+        test_scroll.pack(side="right", fill="y")
+        self._test_log.pack(fill="both", expand=True,
+                            padx=4, pady=4)
+
+        self._test_log_msg(
+            "TEST RUNNER ready. Select a test from the left panel.")
+        self._test_log_msg(
+            "Each button runs the script and streams output here.")
+        self._test_log_msg(
+            "Stephen Justin Burdick Sr. \u2014 GIBUSH Systems")
+        self._test_log_msg("\u2500" * 50)
+
+        # ── Populate buttons by version ──
+        current_version = None
+        for version, name, script, args in self.TEST_REGISTRY:
+            if version != current_version:
+                current_version = version
+                # Version header
+                vf = tk.Frame(btn_frame, bg=style_bg)
+                vf.pack(fill="x", padx=4, pady=(10, 2))
+                tk.Label(vf, text=f"\u2501\u2501 {version} \u2501\u2501",
+                         font=("Consolas", 10, "bold"),
+                         fg="#ff9944", bg=style_bg
+                         ).pack(anchor="w")
+
+            # Check if script exists
+            _root = os.path.dirname(os.path.abspath(__file__))
+            _tdir = os.path.join(_root,
+                "TITS_EPICt_BCM", "BCM_EPIC_OpT_tests")
+            exists = (os.path.exists(
+                          os.path.join(_tdir, script))
+                      or os.path.exists(
+                          os.path.join(_root, script)))
+            fg_color = "#a0b0cc" if exists else "#555555"
+
+            btn = tk.Button(
+                btn_frame,
+                text=f"  \u25B6  {name}",
+                font=("Consolas", 9),
+                bg="#12151c", fg=fg_color,
+                activebackground="#1a2030",
+                activeforeground=style_acc,
+                relief="flat", anchor="w",
+                command=lambda s=script, a=args, n=name:
+                    self._run_test_script(s, a, n))
+            btn.pack(fill="x", padx=8, pady=1)
+
+            # Bind mousewheel to buttons too
+            btn.bind("<MouseWheel>", _lc_wheel)
+
+    def _test_log_msg(self, msg):
+        """Write to test runner log."""
+        self._test_log.insert("end", msg + "\n")
+        self._test_log.see("end")
+
+    def _run_test_script(self, script, extra_args, name):
+        """Run any test script as subprocess, stream to log."""
+        import subprocess
+
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        test_dir = os.path.join(root_dir,
+            "TITS_EPICt_BCM", "BCM_EPIC_OpT_tests")
+
+        # Check EPIC test folder first, fall back to root
+        script_path = os.path.join(test_dir, script)
+        if not os.path.exists(script_path):
+            script_path = os.path.join(root_dir, script)
+
+        if not os.path.exists(script_path):
+            self._test_log_msg(f"\n  ERROR: {script} not found.")
+            self._test_log_msg(
+                f"  Checked: {test_dir}")
+            self._test_log_msg(
+                f"  Checked: {root_dir}")
+            return
+
+        self._test_log_msg(f"\n{'='*50}")
+        self._test_log_msg(f"  RUNNING: {name}")
+        self._test_log_msg(f"  Script:  {script}")
+        if extra_args:
+            self._test_log_msg(
+                f"  Args:    {' '.join(extra_args)}")
+        self._test_log_msg(f"{'='*50}")
+
+        args = [sys.executable, script_path] + extra_args
+
+        def _run():
+            try:
+                env = os.environ.copy()
+                env["PYTHONIOENCODING"] = "utf-8"
+                proc = subprocess.Popen(
+                    args,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    cwd=root_dir,
+                    env=env,
+                    bufsize=1)
+                for line in iter(proc.stdout.readline, ''):
+                    if line.strip():
+                        self.root.after(
+                            0,
+                            lambda l=line.rstrip():
+                                self._test_log_msg(l))
+                proc.wait()
+                rc = proc.returncode
+                self.root.after(0, lambda: self._test_log_msg(
+                    f"\n  EXIT CODE: {rc}"
+                    f" {'(OK)' if rc == 0 else '(FAILED)'}"))
+                self.root.after(0, lambda: self._test_log_msg(
+                    "\u2500" * 50))
+            except Exception as e:
+                self.root.after(0, lambda: self._test_log_msg(
+                    f"  ERROR: {e}"))
+
+        threading.Thread(target=_run, daemon=True).start()
 
 if __name__ == "__main__":
     root = tk.Tk()

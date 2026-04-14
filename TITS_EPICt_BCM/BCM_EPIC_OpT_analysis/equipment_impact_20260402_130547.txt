@@ -1,0 +1,62 @@
+EQUIPMENT IMPACT ANALYSIS
+Project: CHIP_BLOW_LINE
+Generated: 2026-04-02 13:05
+Sparks Baseline: $29,051,497
+Fusion Validated: $9,716,034
+Total Annual Impact: $38,767,531
+
+Equipment                                Sparks Repair Fusion Repair   Production     Annual $  Sources
+--------------------------------------------------------------------------------------------------------------
+Processor Heads (Harvester)              $         0 $         0 $         0 $         0  Brandon Gregory, Gol, Christoffer Eldskott
+Feller Buncher Saw                       $         0 $         0 $         0 $         0  Christoffer Eldskott
+Log Truck Frame & Chassis                $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Log Trailer (Pole/Bunk)                  $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Log Bunks & Stakes                       $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Wrappers, Binders & Chains               $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Tires (Drive/Steer/Trailer)              $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Truck Hydraulic System (Loader/Boom)     $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Log Loader / Grapple                     $         0 $         0 $         0 $         0  Brandon Gregory, Gol, Jeff Custer
+Scale House / Weigh System               $         0 $         0 $         0 $         0  Brandon Gregory, Gol
+Debarker (Ring/Drum)                     $   340,000 $         0 $         0 $   340,000  Brent Bailey, Ferrel Fowler, Jeff Custer, Jerry St. Clair, Ray "Sweet Baby Not
+Log Deck Conveyor                        $         0 $   197,100 $   197,100 $   197,100  Christoffer Eldskott, Ferrel Fowler, Jerry St. Clair
+Metal Detector (Log Line)                $         0 $   297,900 $    72,900 $   297,900  Christoffer Eldskott, Ferrel Fowler, Jeff Custer, Jerry St. Clair, Nicholas Laymon, Sean Hart
+Disc Chipper                             $ 1,611,912 $ 1,157,520 $   845,520 $ 2,769,432  Brent Bailey, Jerry Keck, Ferrel Fowler, Jeff Custer, Jerry St. Clair, Ray "Sweet Baby Not, Sean Hart
+Chipper Knives                           $ 8,095,600 $ 2,601,920 $ 1,933,920 $10,697,520  Brent Bailey, David Furge, Jerry Keck, Ferrel Fowler, Jeff Custer
+Chip Screens (Overthick/Fines)           $         0 $         0 $         0 $         0  Jeff Custer, Sean Hart
+Rechipper                                $         0 $    20,000 $         0 $    20,000  Ferrel Fowler, Jeff Custer, Jerry St. Clair
+Chip Van - Walking Floor Trailer         $         0 $         0 $         0 $         0  Sean Hart
+Tarps & Covers (Chip Vans)               $         0 $         0 $         0 $         0  Sean Hart
+Chip Pile Reclaimer                      $    75,000 $   393,540 $   393,540 $   468,540  Kevin Lozier, Christoffer Eldskott, Jerry St. Clair, Ray "Sweet Baby Not
+Chip Conveyors                           $   734,560 $         0 $         0 $   734,560  Jerry Keck, Kevin Lozier, Christoffer Eldskott, Ferrel Fowler, Ray "Sweet Baby Not
+Rotary Feeder/Airlock                    $   105,120 $   600,000 $   600,000 $   705,120  David Furge, Stephan Edelhuber
+Blow Line Entry Point                    $ 1,100,000 $         0 $         0 $ 1,100,000  David Furge, Kevin Bailey, Nancy James, Ryan Thorton, Jerry St. Clair
+Blow Line Piping                         $ 2,207,500 $   200,000 $         0 $ 2,407,500  Kevin Bailey, Ryan Thorton, Christoffer Eldskott, Nicholas Laymon, Stephan Edelhuber
+Cyclone Separator                        $         0 $         0 $         0 $         0  Jerry St. Clair
+CTS Rollers (Chip Thickness Screening)   $ 7,533,416 $         0 $         0 $ 7,533,416  Brent Bailey, Colin Leeman, David Furge, Jason Worden, Kevin Bailey, Nancy James
+Screen Baskets                           $   423,125 $         0 $         0 $   423,125  Derrek Howard, Jason Worden, Nancy James
+Digester                                 $ 3,800,000 $         0 $         0 $ 3,800,000  Derrek Howard, Jason Worden, Rocky Smith, Christoffer Eldskott
+Brown Stock Washers                      $   489,800 $         0 $         0 $   489,800  Colin Leeman, Derrek Howard, Jason Worden, Kevin Lozier, Rocky Smith
+Knotters                                 $   160,000 $         0 $         0 $   160,000  Derrek Howard, Jason Worden
+Refiners                                 $   850,800 $   240,000 $         0 $ 1,090,800  Derrek Howard, Jason Worden, Nicholas Laymon, Sean Hart
+Stock Pumps                              $ 1,386,086 $         0 $         0 $ 1,386,086  Colin Leeman, Jason Worden, Nancy James
+Recovery Boiler Grates / Pre-Tube Pipes  $   114,928 $         0 $         0 $   114,928  Brent Bailey, Kevin Bailey, Rocky Smith
+Fourdrinier Wire                         $         0 $         0 $         0 $         0  Tanner White
+Wire Pit                                 $         0 $         0 $         0 $         0  Tanner White
+Press Felts                              $    18,250 $    40,000 $         0 $    58,250  Kevin Lozier, Tanner White
+Uhle Boxes (Suction Boxes)               $         0 $         0 $         0 $         0  Tanner White
+White Water Recirculation System         $         0 $         0 $         0 $         0  Chuck Sherman, Nicholas Laymon, Tanner White
+6-Stage ClO2 Washing System              $     5,400 $         0 $         0 $     5,400  Rocky Smith
+Saveall / Fiber Recovery                 $         0 $         0 $         0 $         0  Nicholas Laymon
+Bale Intake / Receiving                  $         0 $         0 $         0 $         0  Chuck Sherman
+Tub / Pulper System                      $         0 $   400,000 $         0 $   400,000  Chuck Sherman, Nicholas Laymon
+Trash Tower (Centrifugal)                $         0 $       693 $       693 $       693  Chuck Sherman
+Hydra-Cleaner Cones                      $         0 $         0 $         0 $         0  Chuck Sherman
+Primary Forward Cleaners (4-Stage)       $         0 $         0 $         0 $         0  Chuck Sherman
+Sand Filters                             $         0 $    64,605 $         0 $    64,605  Chuck Sherman
+OCC Screens (Multi-Stage)                $         0 $     6,156 $         0 $     6,156  Chuck Sherman
+Rotoflex Fiber Recovery (Kadant)         $         0 $         0 $         0 $         0  Chuck Sherman
+Autoclave System (Experimental/Abandoned) $         0 $ 1,000,000 $         0 $ 1,000,000  Chuck Sherman, Nicholas Laymon
+Metal Detector (OCC Line) - NOT INSTALLED $         0 $         0 $         0 $         0  Chuck Sherman
+Thickener                                $         0 $ 2,496,600 $ 2,496,600 $ 2,496,600  Chuck Sherman
+Ventilation & Scrubber Systems           $         0 $         0 $         0 $         0  Kevin Bailey
+DCS Safety Interlocks & SIS              $         0 $         0 $         0 $         0  Kevin Bailey, Jerry St. Clair

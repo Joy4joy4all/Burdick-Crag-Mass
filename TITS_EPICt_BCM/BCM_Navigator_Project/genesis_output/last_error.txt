@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\TITS\TITS_GIBUSH_AISOS_SPINE\TITS_GIBUSH_AISOS_SPINE_ICORPS\fusion_interview_collector.py", line 6031, in run
+    result = orchestrator.run_full_analysis(self.interviews)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\TITS\TITS_GIBUSH_AISOS_SPINE\TITS_GIBUSH_AISOS_SPINE_ICORPS\genesis_brain\orchestrator.py", line 56, in run_full_analysis
+    extractor = KnowledgeExtractor(project=self.project)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: KnowledgeExtractor.__init__() got an unexpected keyword argument 'project'

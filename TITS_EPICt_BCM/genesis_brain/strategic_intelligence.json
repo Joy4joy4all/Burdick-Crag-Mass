@@ -1,0 +1,411 @@
+{
+  "hypotheses": {
+    "manual_detection_fails": {
+      "name": "Manual Detection is Industry-Wide Failure",
+      "prior": 0.5,
+      "posterior": 0.953,
+      "confidence_interval": [
+        0.909,
+        0.996
+      ],
+      "evidence_for": [
+        "[IV#1] Explicit validation of detection failure",
+        "[IV#1] Pain point implies detection gap: Reactive Maintenance",
+        "[IV#2] Pain point implies detection gap: No Detection Capability",
+        "[IV#3] Pain point implies detection gap: Knowledge Gap",
+        "[IV#4] High cost ($315,000) implies detection isn't preventing damage",
+        "[IV#5] High cost ($70,000) implies detection isn't preventing damage",
+        "[IV#6] High cost ($300,000) implies detection isn't preventing damage",
+        "[IV#6] Pain point implies detection gap: Reactive Maintenance",
+        "[IV#7] High cost ($300,000) implies detection isn't preventing damage",
+        "[IV#7] Pain point implies detection gap: Reactive Maintenance",
+        "[IV#10] Pain point implies detection gap: Lack of Visibility"
+      ],
+      "evidence_against": [
+        "[IV#4] Pivot signal: INVALIDATED: Hypothesis requires pivot"
+      ],
+      "source_interviews_for": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10
+      ],
+      "source_interviews_against": [
+        4
+      ],
+      "total_evidence_pieces": 12,
+      "moved": 0.453
+    },
+    "cost_understated": {
+      "name": "True Cost Impact is Understated",
+      "prior": 0.5,
+      "posterior": 0.905,
+      "confidence_interval": [
+        0.852,
+        0.958
+      ],
+      "evidence_for": [
+        "[IV#4] Cost data point: $315,000",
+        "[IV#5] Cost data point: $500,000",
+        "[IV#6] Cost data point: $300,000",
+        "[IV#6] Frequency metric: 20/year",
+        "[IV#7] Cost data point: $300,000",
+        "[IV#8] Frequency metric: 50/year",
+        "[IV#9] Frequency metric: 3/year"
+      ],
+      "evidence_against": [
+        "[IV#4] Pivot signal: INVALIDATED: Hypothesis requires pivot"
+      ],
+      "source_interviews_for": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_interviews_against": [
+        4
+      ],
+      "total_evidence_pieces": 8,
+      "moved": 0.405
+    },
+    "modern_equipment_insufficient": {
+      "name": "Capital Investment Alone Doesn't Solve Contamination",
+      "prior": 0.5,
+      "posterior": 0.98,
+      "confidence_interval": [
+        0.94,
+        1.0
+      ],
+      "evidence_for": [
+        "[IV#2] Equipment damage despite investment: Accelerated Wear",
+        "[IV#3] Equipment damage despite investment: Equipment Failure",
+        "[IV#4] Equipment damage despite investment: Equipment Damage",
+        "[IV#5] Equipment damage despite investment: Equipment Damage",
+        "[IV#6] Equipment damage despite investment: Equipment Damage",
+        "[IV#7] Equipment damage despite investment: Equipment Damage",
+        "[IV#9] Equipment damage despite investment: Equipment Damage",
+        "[IV#10] Equipment damage despite investment: Equipment Damage",
+        "[IV#12] Equipment damage despite investment: Equipment Damage",
+        "[IV#2] 5 different equipment types damaged",
+        "[IV#4] 8 different equipment types damaged",
+        "[IV#5] 4 different equipment types damaged",
+        "[IV#8] 3 different equipment types damaged",
+        "[IV#9] 4 different equipment types damaged"
+      ],
+      "evidence_against": [],
+      "source_interviews_for": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        8
+      ],
+      "source_interviews_against": [],
+      "total_evidence_pieces": 14,
+      "moved": 0.48
+    },
+    "operator_knowledge_gap": {
+      "name": "Operators Sense Problems Instruments Miss",
+      "prior": 0.5,
+      "posterior": 0.98,
+      "confidence_interval": [
+        0.935,
+        1.0
+      ],
+      "evidence_for": [
+        "[IV#1] Operator quote: 'Certified clean'",
+        "[IV#2] Operator quote: 'Reloading not much'",
+        "[IV#3] Operator quote: 'Not enough well-trained electricians'",
+        "[IV#4] Operator quote: 't scan truck if rate is important'",
+        "[IV#6] Operator quote: 'Keep it out the Kraft!!'",
+        "[IV#7] Operator quote: 'Equipment is not built for any rock. All Wear'",
+        "[IV#8] Operator quote: 'Go look!'",
+        "[IV#9] Operator quote: 'Bing, crushing an issue'",
+        "[IV#10] Operator quote: 'Verification at purchase point'",
+        "[IV#11] Operator quote: 'Digital Chain of Custody for Contamination'",
+        "[IV#12] Operator quote: 'peace of mind'"
+      ],
+      "evidence_against": [],
+      "source_interviews_for": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "source_interviews_against": [],
+      "total_evidence_pieces": 11,
+      "moved": 0.48
+    },
+    "blow_line_blind_spot": {
+      "name": "Blow Line Entry Point is Critical Blind Spot",
+      "prior": 0.5,
+      "posterior": 0.741,
+      "confidence_interval": [
+        0.635,
+        0.847
+      ],
+      "evidence_for": [
+        "[IV#2] Visibility pain: No Detection Capability",
+        "[IV#10] Visibility pain: Lack of Visibility"
+      ],
+      "evidence_against": [],
+      "source_interviews_for": [
+        2,
+        10
+      ],
+      "source_interviews_against": [],
+      "total_evidence_pieces": 2,
+      "moved": 0.241
+    }
+  },
+  "patterns": [
+    {
+      "type": "equipment_hotspot",
+      "description": "Most mentioned: CTS Rollers (7x)",
+      "top_equipment": [
+        {
+          "name": "CTS Rollers",
+          "count": 7
+        },
+        {
+          "name": "Magnets",
+          "count": 3
+        },
+        {
+          "name": "Blow Line",
+          "count": 3
+        },
+        {
+          "name": "ClO2 Detection",
+          "count": 3
+        },
+        {
+          "name": "Screen Baskets",
+          "count": 2
+        }
+      ],
+      "strategic_implication": "Focus product deployment on these equipment types."
+    },
+    {
+      "type": "pain_convergence",
+      "description": "Top pain: Equipment Damage (16x across interviews)",
+      "top_pains": [
+        {
+          "name": "Equipment Damage",
+          "count": 16
+        },
+        {
+          "name": "Contamination",
+          "count": 8
+        },
+        {
+          "name": "Accepted Damage Culture",
+          "count": 5
+        },
+        {
+          "name": "Reactive Maintenance",
+          "count": 3
+        },
+        {
+          "name": "No Detection Capability",
+          "count": 3
+        }
+      ],
+      "strategic_implication": "Lead with this pain point in customer conversations."
+    },
+    {
+      "type": "cost_divergence",
+      "description": "Cost spread: $213,067 ± $179,686 (CV=0.84). Wide variance.",
+      "confidence": 0.5,
+      "strategic_implication": "Need more cost data points to narrow range."
+    }
+  ],
+  "gaps": [
+    {
+      "type": "cube_position",
+      "description": "No interviews from [L3, OB]: Executive at partner/supplier",
+      "priority": 0.85,
+      "suggested_profile": {
+        "q_layer": "L3",
+        "q_object": "OB"
+      },
+      "expected_info_gain": 0.7
+    }
+  ],
+  "next_best_interview": {
+    "recommendation": "No interviews from [L3, OB]: Executive at partner/supplier",
+    "gap_type": "cube_position",
+    "priority": 0.85,
+    "expected_info_gain": 0.7,
+    "suggested_profile": {
+      "q_layer": "L3",
+      "q_object": "OB"
+    }
+  },
+  "insights": [
+    {
+      "type": "validated_hypothesis",
+      "title": "VALIDATED: Manual Detection is Industry-Wide Failure",
+      "description": "Confidence: 95% (was 50%). Based on 11 supporting evidence from 8 interviews.",
+      "confidence": 0.9525741234804438,
+      "recommendation": "Position product as replacement for failed manual detection. Use validated failure rate in pitch.",
+      "supporting_interviews": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10
+      ]
+    },
+    {
+      "type": "validated_hypothesis",
+      "title": "VALIDATED: True Cost Impact is Understated",
+      "description": "Confidence: 90% (was 50%). Based on 7 supporting evidence from 6 interviews.",
+      "confidence": 0.9046505328793439,
+      "recommendation": "Use validated cost figures in ROI modeling. Lead with 'true cost discovery' in customer conversations.",
+      "supporting_interviews": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "type": "validated_hypothesis",
+      "title": "VALIDATED: Capital Investment Alone Doesn't Solve Contamination",
+      "description": "Confidence: 98% (was 50%). Based on 14 supporting evidence from 10 interviews.",
+      "confidence": 0.98,
+      "recommendation": "Target mills with recent capital investments. Message: 'You invested in equipment but the contamination problem persists.'",
+      "supporting_interviews": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        8
+      ]
+    },
+    {
+      "type": "validated_hypothesis",
+      "title": "VALIDATED: Operators Sense Problems Instruments Miss",
+      "description": "Confidence: 98% (was 50%). Based on 11 supporting evidence from 11 interviews.",
+      "confidence": 0.98,
+      "recommendation": "Design interface for operator input. Emphasize 'operators know first' in value proposition.",
+      "supporting_interviews": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "type": "validated_hypothesis",
+      "title": "VALIDATED: Blow Line Entry Point is Critical Blind Spot",
+      "description": "Confidence: 74% (was 50%). Based on 2 supporting evidence from 2 interviews.",
+      "confidence": 0.7407748985870795,
+      "recommendation": "Focus product positioning on blow line entry point. 'Last chance detection before the digester.'",
+      "supporting_interviews": [
+        2,
+        10
+      ]
+    },
+    {
+      "type": "pattern",
+      "title": "Strong Cross-Validation (53 validation links)",
+      "description": "Multiple independent interviews corroborate each other's claims.",
+      "confidence": 0.95,
+      "recommendation": "Evidence base is strengthening. Continue to diversify sources.",
+      "supporting_interviews": []
+    }
+  ],
+  "customer_segments": [
+    {
+      "name": "Segment: Community_0",
+      "interview_count": 12,
+      "companies": [
+        "Woodland Pulp LLC (Consultant)",
+        "Woodland Pulp LLC",
+        "International Paper (Springfield OR)",
+        "Georgia Pacific",
+        "Resource Optimization LLC"
+      ],
+      "dominant_q_layer": "L2",
+      "dominant_q_object": "OA",
+      "source_mix": {
+        "": 12
+      },
+      "confidence": 1.0
+    }
+  ],
+  "market_opportunity": {
+    "status": "estimated",
+    "cost_data_sources": 4,
+    "avg_annual_damage_per_source": "$353,750",
+    "std_dev": "$97,756",
+    "coefficient_of_variation": 0.28,
+    "unique_companies_sampled": 5,
+    "estimated_addressable_mills": 100,
+    "estimated_addressable_mills_note": "= 5 companies × 20 (assumes ~5% sample)",
+    "total_annual_industry_damage": "$35,375,000",
+    "capture_10pct": "$3,537,500",
+    "hypothesis_confidence_avg": 0.912,
+    "risk_adjusted_opportunity": "$3,224,785",
+    "confidence_range": [
+      "$1,612,392",
+      "$6,449,569"
+    ],
+    "caveat": "Market sizing is rough. Based on interview cost extracts only. Refine with additional interviews and published industry data."
+  },
+  "summary": {
+    "total_interviews": 12,
+    "by_source": {
+      "unknown": 12
+    },
+    "unique_companies": 5,
+    "company_names": [
+      "Georgia Pacific",
+      "International Paper (Springfield OR)",
+      "Resource Optimization LLC",
+      "Woodland Pulp LLC",
+      "Woodland Pulp LLC (Consultant)"
+    ],
+    "hypotheses_with_movement": 5,
+    "hypotheses_total": 5,
+    "total_gaps": 1,
+    "total_insights": 6
+  }
+}
