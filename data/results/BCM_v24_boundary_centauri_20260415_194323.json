@@ -1,0 +1,110 @@
+{
+  "test": "boundary_centauri_phase",
+  "version": "v24",
+  "grid": 128,
+  "system": "Alpha Centauri",
+  "angles_tested": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "sigma_crits": [
+    10.0,
+    5.0
+  ],
+  "configs_tested": 8,
+  "stable_count": 8,
+  "timestamp": "20260415_194323",
+  "elapsed_total": 956.1430690288544,
+  "results": [
+    {
+      "angle_deg": 0,
+      "side": "A-SIDE (dominant)",
+      "sigma_crit": 10.0,
+      "n_pixels": 402,
+      "baseline": 1.3074611290582585,
+      "final": 1.9414294688520768,
+      "ratio": 1.4848850384182777,
+      "stable": true,
+      "elapsed": 126.7188127040863
+    },
+    {
+      "angle_deg": 90,
+      "side": "THROAT (perpendicular)",
+      "sigma_crit": 10.0,
+      "n_pixels": 402,
+      "baseline": 1.3201336666752823,
+      "final": 1.9414395457769753,
+      "ratio": 1.470638613941597,
+      "stable": true,
+      "elapsed": 116.95011568069458
+    },
+    {
+      "angle_deg": 180,
+      "side": "B-SIDE (secondary)",
+      "sigma_crit": 10.0,
+      "n_pixels": 402,
+      "baseline": 1.3421825194179382,
+      "final": 1.9414641973558087,
+      "ratio": 1.4464979011928718,
+      "stable": true,
+      "elapsed": 120.72406363487244
+    },
+    {
+      "angle_deg": 270,
+      "side": "ANTI-THROAT (270\u00b0)",
+      "sigma_crit": 10.0,
+      "n_pixels": 408,
+      "baseline": 1.4002832005495518,
+      "final": 2.059997937072233,
+      "ratio": 1.4711295088477612,
+      "stable": true,
+      "elapsed": 127.25994324684143
+    },
+    {
+      "angle_deg": 0,
+      "side": "A-SIDE (dominant)",
+      "sigma_crit": 5.0,
+      "n_pixels": 402,
+      "baseline": 1.3074611290582585,
+      "final": 0.9712802151207335,
+      "ratio": 0.7428750220821706,
+      "stable": true,
+      "elapsed": 116.62952089309692
+    },
+    {
+      "angle_deg": 90,
+      "side": "THROAT (perpendicular)",
+      "sigma_crit": 5.0,
+      "n_pixels": 402,
+      "baseline": 1.3201336666752823,
+      "final": 0.9712902920456319,
+      "ratio": 0.7357514746910423,
+      "stable": true,
+      "elapsed": 118.7647032737732
+    },
+    {
+      "angle_deg": 180,
+      "side": "B-SIDE (secondary)",
+      "sigma_crit": 5.0,
+      "n_pixels": 402,
+      "baseline": 1.3421825194179382,
+      "final": 0.9713149436244651,
+      "ratio": 0.7236832022262467,
+      "stable": true,
+      "elapsed": 116.93478775024414
+    },
+    {
+      "angle_deg": 270,
+      "side": "ANTI-THROAT (270\u00b0)",
+      "sigma_crit": 5.0,
+      "n_pixels": 408,
+      "baseline": 1.4002832005495518,
+      "final": 1.0305861723663508,
+      "ratio": 0.735984100903224,
+      "stable": true,
+      "elapsed": 112.15455293655396
+    }
+  ]
+}

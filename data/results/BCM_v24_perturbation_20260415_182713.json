@@ -1,0 +1,24 @@
+{
+  "test": "edge_perturbation_snapback",
+  "version": "v24",
+  "grid": 128,
+  "timestamp": "20260415_182713",
+  "elapsed_total": 261.2513630390167,
+  "results": {
+    "system": "HR 1099",
+    "grid": 128,
+    "shear_step": 15000,
+    "ring_baseline": 4.525648463099208,
+    "ring_sheared": 115.27341532418505,
+    "core_baseline": 174.78778970430125,
+    "core_sheared": 174.78778970390783,
+    "recovery_ratio": 25.471137730667817,
+    "core_stability": 0.9999999999977492,
+    "torque_signal": 260.7351299521296,
+    "snap_detected": true,
+    "verdict": "FULL SNAP-BACK",
+    "shear_applied": true,
+    "elapsed_baseline": 133.8560085296631,
+    "elapsed_sheared": 127.39535450935364
+  }
+}

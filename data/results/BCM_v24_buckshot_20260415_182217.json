@@ -1,0 +1,37 @@
+{
+  "test": "binary_buckshot_swiss_cheese",
+  "version": "v24",
+  "grid": 128,
+  "systems_tested": 2,
+  "timestamp": "20260415_182217",
+  "elapsed_total": 602.2391016483307,
+  "results": [
+    {
+      "system": "Alpha Centauri",
+      "grid": 128,
+      "coherence": 0.9999658402263603,
+      "throat_coherence": 0.9599133864108013,
+      "dissipation": 3.415977363974143e-05,
+      "spike_ratio": 1.000552752952753,
+      "throat_survival": 1.0054301725496002,
+      "bill_laminar": 39497.59414220999,
+      "bill_perforated": 39519.42655399874,
+      "elapsed_laminar": 158.35846042633057,
+      "elapsed_perforated": 141.66318607330322
+    },
+    {
+      "system": "HR 1099",
+      "grid": 128,
+      "coherence": 0.9998718420151717,
+      "throat_coherence": 0.9861327114081962,
+      "dissipation": 0.00012815798482834762,
+      "spike_ratio": 1.000164030636145,
+      "throat_survival": 1.0051448141656607,
+      "bill_laminar": 46001.71121146132,
+      "bill_perforated": 46009.256901415094,
+      "elapsed_laminar": 150.53784584999084,
+      "elapsed_perforated": 151.67283630371094
+    }
+  ],
+  "foreman_note": "The torus acts as a grinder. Neutrinos are the buckshot."
+}

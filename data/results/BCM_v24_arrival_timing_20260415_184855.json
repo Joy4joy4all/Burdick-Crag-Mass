@@ -1,0 +1,97 @@
+{
+  "test": "arrival_timing_ringdown",
+  "version": "v24",
+  "grid": 128,
+  "timestamp": "20260415_184855",
+  "elapsed": 154.11678671836853,
+  "results": {
+    "system": "HR 1099",
+    "grid": 128,
+    "shear_step": 15000,
+    "elapsed": 154.11678671836853,
+    "n_samples": 11,
+    "analysis": {
+      "baseline_ring": 3.1762262716602723,
+      "baseline_core": 121.46749802343112,
+      "baseline_gradient": 1.2520808679371902,
+      "peak_overshoot_ratio": 38.47751090045093,
+      "peak_step": 23000,
+      "steps_to_peak": 8000,
+      "safe_fraction": 0.0,
+      "safe_count": 0,
+      "total_samples": 9,
+      "opt_first_drop_step": 15000,
+      "opt_recovery_step": null,
+      "opt_lead_time_steps": 8000,
+      "final_ring_sigma": 122.21328099010675,
+      "final_overshoot": 38.47751090045093,
+      "final_opt": 0.0,
+      "profile": [
+        {
+          "step": 15000,
+          "ring_sigma": 0.0,
+          "overshoot_ratio": 0.0,
+          "opt_proxy": 0.0,
+          "delta_op": 0.5121789085640701
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 50.28559455954462,
+          "overshoot_ratio": 15.831867838955759,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 78.78101737555816,
+          "overshoot_ratio": 24.803339131874214,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 98.67499037155565,
+          "overshoot_ratio": 31.06673830261356,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 113.37448711543291,
+          "overshoot_ratio": 35.69471360620979,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 120.1880793267549,
+          "overshoot_ratio": 37.83989837220582,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 121.35817132432048,
+          "overshoot_ratio": 38.20828900230849,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 122.09889547892655,
+          "overshoot_ratio": 38.441497877008366,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 122.21328099010675,
+          "overshoot_ratio": 38.47751090045093,
+          "opt_proxy": 0.0,
+          "delta_op": 1.0
+        }
+      ],
+      "verdict": "NO SAFE WINDOW \u2014 gentle arrival only"
+    }
+  }
+}

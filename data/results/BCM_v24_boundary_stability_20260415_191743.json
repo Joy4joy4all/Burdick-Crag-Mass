@@ -1,0 +1,506 @@
+{
+  "test": "boundary_stability_sweep",
+  "version": "v24",
+  "grid": 128,
+  "configs_tested": 8,
+  "stable_count": 2,
+  "oscillation_count": 0,
+  "timestamp": "20260415_191743",
+  "elapsed_total": 701.7744526863098,
+  "results": [
+    {
+      "config": "BASELINE (no treatment)",
+      "treatment": "none",
+      "params": {},
+      "baseline": 3.1762403587763504,
+      "final_ring": 122.05206105761954,
+      "final_core": 204.5508639010995,
+      "final_ratio": 38.42658214463348,
+      "peak_ratio": 38.42658214463348,
+      "oscillated": false,
+      "stable": false,
+      "verdict": "BULK FLOOD \u2014 edge dissolved",
+      "elapsed": 117.65179657936096,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 50.221734694713
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 78.68409490451155
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 98.55478899369967
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 113.23070730571074
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 120.03241715191815
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 121.199921746901
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 121.93806272917098
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 122.05206105761954
+        }
+      ]
+    },
+    {
+      "config": "HIGH DECAY (K\u00d75)",
+      "treatment": "high_decay",
+      "params": {
+        "k_mult": 5.0
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 118.04456493912758,
+      "final_core": 204.5508639010995,
+      "final_ratio": 37.164871547883855,
+      "peak_ratio": 37.31035049726753,
+      "oscillated": false,
+      "stable": false,
+      "verdict": "BULK FLOOD \u2014 edge dissolved",
+      "elapsed": 93.83288240432739,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 49.970626021239426
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 78.04206745067556
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 97.42638385476822
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 111.54739047429892
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 117.7657084395691
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 118.3497957280135
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 118.5066410495124
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 118.04456493912758
+        }
+      ]
+    },
+    {
+      "config": "HIGH DECAY (K\u00d710)",
+      "treatment": "high_decay",
+      "params": {
+        "k_mult": 10.0
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 114.1558222100731,
+      "final_core": 204.5508639010995,
+      "final_ratio": 35.94054898731019,
+      "peak_ratio": 36.382031385531135,
+      "oscillated": false,
+      "stable": false,
+      "verdict": "BULK FLOOD \u2014 edge dissolved",
+      "elapsed": 81.49692726135254,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 49.719517347765866
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 77.40253855944574
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 96.30682820897513
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 109.88401871713216
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 115.53539608109648
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 115.55807642099185
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 115.16111273144416
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 114.1558222100731
+        }
+      ]
+    },
+    {
+      "config": "HIGH DECAY (K\u00d750)",
+      "treatment": "high_decay",
+      "params": {
+        "k_mult": 50.0
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 86.96383575839766,
+      "final_core": 204.5508639010995,
+      "final_ratio": 27.37948830544442,
+      "peak_ratio": 31.15270009645478,
+      "oscillated": false,
+      "stable": false,
+      "verdict": "BULK FLOOD \u2014 edge dissolved",
+      "elapsed": 80.13572525978088,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 47.71064795997734
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 72.37625568342916
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 87.66448981391481
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 97.27498766237657
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 98.94846333121558
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 95.21006860447477
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 91.27394310115938
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 86.96383575839766
+        }
+      ]
+    },
+    {
+      "config": "CLAMP (\u03c3_crit=10)",
+      "treatment": "clamp",
+      "params": {
+        "sigma_crit": 10.0
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 2.0624693648579413,
+      "final_core": 204.5508639010995,
+      "final_ratio": 0.6493429753069788,
+      "peak_ratio": 0.6493429753069788,
+      "oscillated": false,
+      "stable": true,
+      "verdict": "DAMPED STABLE \u2014 thin edge maintained",
+      "elapsed": 79.08650135993958,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 2.0603216392484343
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 2.0611437663885774
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 2.061673031301658
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 2.0620915044191053
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 2.0623304472461674
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 2.0624132767827916
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 2.0624524841429417
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 2.0624693648579413
+        }
+      ]
+    },
+    {
+      "config": "CLAMP (\u03c3_crit=5)",
+      "treatment": "clamp",
+      "params": {
+        "sigma_crit": 5.0
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 1.0330576001520593,
+      "final_core": 204.5508639010995,
+      "final_ratio": 0.3252454107566487,
+      "peak_ratio": 0.3252454107566487,
+      "oscillated": false,
+      "stable": true,
+      "verdict": "DAMPED STABLE \u2014 thin edge maintained",
+      "elapsed": 79.20911026000977,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 1.030909874542552
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 1.0317320016826954
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 1.0322612665957758
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 1.032679739713223
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 1.0329186825402852
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 1.0330015120769092
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 1.0330407194370592
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 1.0330576001520593
+        }
+      ]
+    },
+    {
+      "config": "EDGE INJECTION (J=0.5)",
+      "treatment": "injection",
+      "params": {
+        "j_edge": 0.5
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 508.1492923341064,
+      "final_core": 204.6394171108177,
+      "final_ratio": 159.98452098564462,
+      "peak_ratio": 159.98452098564462,
+      "oscillated": false,
+      "stable": false,
+      "verdict": "BULK FLOOD \u2014 edge dissolved",
+      "elapsed": 88.32752346992493,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 48.5228785914801
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 127.0897264843258
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 186.6430036039402
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 248.86840072808437
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 317.68564260625004
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 380.46362150158996
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 443.91290802684625
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 508.1492923341064
+        }
+      ]
+    },
+    {
+      "config": "EDGE INJECTION (J=2.0)",
+      "treatment": "injection",
+      "params": {
+        "j_edge": 2.0
+      },
+      "baseline": 3.1762403587763504,
+      "final_ring": 2128.6708374402574,
+      "final_core": 204.90507673997263,
+      "final_ratio": 670.1856903110223,
+      "peak_ratio": 670.1856903110223,
+      "oscillated": false,
+      "stable": false,
+      "verdict": "BULK FLOOD \u2014 edge dissolved",
+      "elapsed": 82.02992725372314,
+      "profile": [
+        {
+          "step": 13000,
+          "ring_sigma": 3.0594531372341316
+        },
+        {
+          "step": 14000,
+          "ring_sigma": 3.293027580318569
+        },
+        {
+          "step": 15000,
+          "ring_sigma": 0.0
+        },
+        {
+          "step": 16000,
+          "ring_sigma": 341.5509072294822
+        },
+        {
+          "step": 17000,
+          "ring_sigma": 603.4413113156038
+        },
+        {
+          "step": 18000,
+          "ring_sigma": 828.8035972758615
+        },
+        {
+          "step": 19000,
+          "ring_sigma": 1110.015036448236
+        },
+        {
+          "step": 20000,
+          "ring_sigma": 1366.8582847460445
+        },
+        {
+          "step": 21000,
+          "ring_sigma": 1616.9987488508075
+        },
+        {
+          "step": 22000,
+          "ring_sigma": 1873.4398725857432
+        },
+        {
+          "step": 23000,
+          "ring_sigma": 2128.6708374402574
+        }
+      ]
+    }
+  ]
+}

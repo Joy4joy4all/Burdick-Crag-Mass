@@ -114,6 +114,10 @@ class SolverGUI:
         tab7 = ttk.Frame(self.notebook, style="Dark.TFrame")
         self.notebook.add(tab7, text="  TEST RUNNER  ")
 
+        # Tab 8 — EPIC Collector (substrate test ingestion)
+        tab8 = ttk.Frame(self.notebook, style="Dark.TFrame")
+        self.notebook.add(tab8, text="  EPIC COLLECTOR  ")
+
         # Build planetary tab content
         self._build_planetary_tab(tab2)
 
@@ -131,6 +135,9 @@ class SolverGUI:
 
         # Build test runner tab content
         self._build_test_runner_tab(tab7)
+
+        # Build EPIC collector tab content
+        self._build_epic_tab(tab8)
 
         # Main split (Tab 1 content)
         main = tab1
@@ -2878,91 +2885,141 @@ class SolverGUI:
             self.log(f"  Exported: {p}")
 
     # ═══════════════════════════════════════════════════════
-    # TAB 7 — TEST RUNNER (all versions, one-click)
+    # TAB 7 — TEST RUNNER (directory-scanned, date-sorted)
     # ═══════════════════════════════════════════════════════
-    # To add tests for a new version: append entries to
-    # TEST_REGISTRY below. One change, one verify.
+    # Drop a .py in BCM_EPIC_OpT_tests/ → hit Refresh → run.
+    # No hardcoded registry. The directory IS the registry.
     # ═══════════════════════════════════════════════════════
 
-    TEST_REGISTRY = [
-        # ── v7-v14: Foundation ──
-        ("v7-v14", "Crag Calibration", "test_crag_calibration.py", []),
-        ("v7-v14", "Edge Coupling", "test_edge_coupling.py", []),
-        ("v7-v14", "Observables", "test_observables.py", []),
-        ("v7-v14", "Kill Tests (v14)", "BCM_v14_kill_tests.py", []),
-        # ── v15: External Frame ──
-        ("v15", "External Frame", "BCM_v15_external_frame.py", ["--steps", "2000", "--grid", "128"]),
-        ("v15", "Test E Raw (Oar)", "BCM_v15_test_E_raw.py", ["--steps", "2000", "--grid", "128"]),
-        ("v15", "Wake Persistence", "BCM_v15_wake_persistence.py", ["--steps", "3000", "--grid", "128"]),
-        ("v15", "Graveyard Transit", "BCM_v15_graveyard_transit.py", ["--steps", "3000", "--grid", "128"]),
-        ("v15", "Phase Governor", "BCM_v15_phase_governor.py", ["--steps", "3000", "--grid", "128"]),
-        ("v15", "Bootes Crossing", "BCM_v15_bootes_crossing.py", ["--steps", "8000"]),
-        ("v15", "Live Substrate", "BCM_v15_live_substrate.py", ["--steps", "2000", "--grid", "128"]),
-        ("v15", "Reactor Core", "BCM_v15_reactor_core.py", ["--steps", "2000", "--grid", "128"]),
-        # ── v16: TITS Probes ──
-        ("v16", "Tunnel Probes", "BCM_v16_tunnel_probes.py", ["--steps", "3000", "--grid", "256"]),
-        ("v16", "Probe BoM", "BCM_v16_probe_bom.py", ["--grid", "256"]),
-        ("v16", "Diag: Fuel+Coherence", "BCM_v16_diag_fuel_coherence.py", ["--steps", "3000", "--grid", "256"]),
-        ("v16", "Diag: Decomposition", "BCM_v16_diag_decomposition.py", ["--steps", "3000", "--grid", "256"]),
-        ("v16", "Diag: Neutrality", "BCM_v16_diag_neutrality.py", ["--steps", "3000", "--grid", "256"]),
-        ("v16", "Diag: Transport", "BCM_v16_diag_transport.py", ["--steps", "3000", "--grid", "256"]),
-        ("v16", "Diag: Fidelity", "BCM_v16_diag_fidelity.py", ["--steps", "2000", "--grid", "256"]),
-        # ── v17: Frequency & Brucetron ──
-        ("v17", "Frequency Diag", "BCM_v17_diag_frequency.py", ["--steps", "3000", "--grid", "256"]),
-        ("v17", "Frequency Locked", "BCM_v17_diag_frequency_locked.py", ["--steps", "3000", "--grid", "256"]),
-        ("v17", "Geometry Sweep", "BCM_v17_diag_geometry.py", ["--steps", "3000", "--grid", "256"]),
-        ("v17", "Brucetron Diag", "BCM_v17_brucetron_diagnostic.py", ["--steps", "3000", "--grid", "256"]),
-        ("v17", "Brucetron Growth", "BCM_v17_brucetron_growth.py", ["--steps", "5000", "--grid", "256"]),
-        ("v17", "Chi Freeboard", "BCM_v17_chi_freeboard.py", ["--steps", "3000", "--grid", "256"]),
-        # ── v18: Frastrate & Phase ──
-        ("v18", "Frastrate Diag", "BCM_v18_frastrate_diagnostic.py", ["--steps", "3000", "--grid", "256"]),
-        ("v18", "Frastrate v2", "BCM_v18_frastrate_v2.py", ["--steps", "3000", "--grid", "256"]),
-        ("v18", "Phase Projection", "BCM_v18_phase_projection.py", ["--steps", "3000", "--grid", "256"]),
-        ("v18", "Coherence Collapse", "BCM_v18_coherence_collapse.py", ["--steps", "3000", "--grid", "256"]),
-        ("v18", "Phase Shear", "BCM_v18_phase_shear.py", ["--steps", "3000", "--grid", "256"]),
-        # ── v19: Chi Operator & Corridor ──
-        ("v19", "Incommensurate Mem", "BCM_v19_incommensurate_memory.py", ["--steps", "3000", "--grid", "256"]),
-        ("v19", "Chi Operator", "BCM_v19_chi_operator.py", ["--steps", "5000", "--grid", "256"]),
-        ("v19", "Active Alignment", "BCM_v19_active_alignment.py", ["--steps", "5000", "--grid", "256"]),
-        ("v19", "Nav Drain", "BCM_v19_navigational_drain.py", ["--steps", "5000", "--grid", "256"]),
-        ("v19", "Drain + Chi", "BCM_v19_combined_drain_chi.py", ["--steps", "5000", "--grid", "256"]),
-        ("v19", "Boiler Tune", "BCM_v19_boiler_tune.py", ["--steps", "5000", "--grid", "256"]),
-        ("v19", "Corridor Flight", "BCM_v19_corridor_flight.py", ["--steps", "20000", "--grid", "256"]),
-        ("v19", "Graveyard Stress", "BCM_v19_graveyard_stress.py", ["--steps", "20000", "--grid", "256"]),
-        # ── v20: Stellar & BH Transit ──
-        ("v20", "Unit Mapping", "BCM_v20_unit_mapping.py", []),
-        ("v20", "Stellar Transit", "BCM_v20_stellar_transit.py", []),
-        ("v20", "BH Transit", "BCM_v20_blackhole_transit.py", []),
-        ("v20", "BH Transit v2", "BCM_v20_blackhole_v2.py", []),
-        # ── v21: Arrival & Gate ──
-        ("v21", "Gate Transit (star)", "BCM_v21_gate_transit_test.py", ["--target", "star"]),
-        ("v21", "Gate Transit (bh)", "BCM_v21_gate_transit_test.py", ["--target", "bh"]),
-        ("v21", "Arrival Decel", "BCM_v21_arrival_decel.py", []),
-        ("v21", "Arrival Sweep", "BCM_v21_arrival_sweep.py", []),
-        # ── v22: Reverse Engine & Chi2 ──
-        ("v22", "Chi-Squared (quick)", "BCM_chi_squared_engine.py", ["--quick"]),
-        ("v22", "Chi-Squared (full)", "BCM_chi_squared_engine.py", []),
-        ("v22", "Reverse Engine (quick)", "BCM_v22_reverse_engine.py", ["--quick"]),
-        ("v22", "Reverse Engine (full)", "BCM_v22_reverse_engine.py", []),
-        # ── v23: Neutrino Flux ──
-        ("v23", "Neutrino Flux", "BCM_v23_neutrino_flux.py", []),
-    ]
+    @staticmethod
+    def _parse_test_info(filename):
+        """Extract version and display name from filename."""
+        import re
+        base = filename.replace(".py", "")
+
+        # BCM_v{N}_name or BCM_V{N}_name pattern
+        m = re.match(r"BCM_[vV](\d+)_(.+)", base)
+        if m:
+            return f"v{m.group(1)}", m.group(2).replace("_", " ").title()
+
+        # test_name pattern (foundation tests)
+        m = re.match(r"test_(.+)", base)
+        if m:
+            return "foundation", m.group(1).replace("_", " ").title()
+
+        # Known pre-v14 scripts (no version in filename)
+        LEGACY_MAP = {
+            "BCM_phase_lock": "v10",
+            "BCM_3d_renderer": "v7",
+            "BCM_tcf_analyzer": "v9",
+            "BCM_tunnel_timeseries": "v8",
+            "BCM_colonization_sweep_reverse": "v8",
+            "BCM_colonization_sweep": "v8",
+            "BCM_stellar_wave": "v4",
+            "BCM_stellar_renderer": "v4",
+            "BCM_planetary_wave": "v2",
+            "BCM_phase_sweep": "v3",
+            "BCM_planetary_renderer": "v2",
+            "BCM_fetch_hi_maps": "v1",
+            "BCM_drift_test": "v12",
+            "BCM_lambda_drive": "v12",
+            "BCM_solar_navigator": "v12",
+            "BCM_inspiral_sweep": "v11",
+            "BCM_inspiral_renderer": "v11",
+            "BCM_cavitation_sweep": "v6",
+            "BCM_dual_pump_matrix": "v13",
+            "BCM_binary_drive": "v13",
+            "BCM_alpha_centauri": "v7",
+            "BCM_spine": "v13",
+            "BCM_ghost_packet": "v14",
+            "BCM_propulsion_regulator": "v14",
+            "BCM_lagrange_scan": "v14",
+            "BCM_freeze_sweep": "v13",
+            "BCM_rigid_body": "v13",
+            "BCM_pure_gradient": "v12",
+            "BCM_saddle_field_test": "v12",
+            "BCM_phase_lag_test": "v12",
+            "BCM_phase_block": "v10",
+            "BCM_self_funded_ship": "v13",
+            "BCM_funded_corridors": "v13",
+            "BCM_galactic_current": "v6",
+            "BCM_energy_audit": "v15",
+            "BCM_navigator": "v12",
+            "BCM_flight_computer": "v12",
+            "BCM_flight_computer_gui": "v12",
+            "BCM_substrate_model": "v5",
+            "BCM_tao_analysis": "v5",
+            "BCM_ai_engine": "v12",
+            "BCM_vector_alignment_test": "v12",
+            "BCM_chi_squared_engine": "v22",
+            "BCM_EPIC_OpT_test_deck": "tools",
+        }
+        if base in LEGACY_MAP:
+            ver = LEGACY_MAP[base]
+            name = base.replace("BCM_", "").replace("_", " ").title()
+            return ver, name
+
+        # Fallback: BCM_name → "other"
+        m = re.match(r"BCM_(.+)", base)
+        if m:
+            return "other", m.group(1).replace("_", " ").title()
+
+        return "other", base.replace("_", " ").title()
+
+    def _scan_test_scripts(self):
+        """Scan BCM_EPIC_OpT_tests/ for .py files, sorted by version then date."""
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        test_dir = os.path.join(root_dir,
+            "TITS_EPICt_BCM", "BCM_EPIC_OpT_tests")
+        if not os.path.isdir(test_dir):
+            return [], test_dir
+        scripts = []
+        for fname in os.listdir(test_dir):
+            if not fname.endswith(".py") or fname.startswith("__"):
+                continue
+            fpath = os.path.join(test_dir, fname)
+            mtime = os.path.getmtime(fpath)
+            version, display_name = self._parse_test_info(fname)
+            scripts.append((version, display_name, fname, mtime))
+        # Version sort order
+        def _vkey(v):
+            if v == "foundation": return 0
+            if v == "tools": return 1
+            if v.startswith("v"):
+                try: return int(v[1:]) + 10
+                except ValueError: return 999
+            return 1000
+        scripts.sort(key=lambda x: (_vkey(x[0]), x[1].lower()))
+        return scripts, test_dir
 
     def _build_test_runner_tab(self, parent):
-        """Tab 7 — Test Runner. Left 1/3 buttons, right 2/3 output."""
+        """Tab 7 — Test Runner. Scans directory, Refresh button, --quick toggle."""
         style_bg  = "#0a0c10"
-        style_fg  = "#a0b0cc"
         style_acc = "#44ddff"
 
-        # ── Header ──
+        # ── Header with Refresh + --quick ──
         hf = tk.Frame(parent, bg=style_bg)
         hf.pack(fill="x", padx=12, pady=(10, 4))
         tk.Label(hf, text="TEST RUNNER",
                  font=("Georgia", 16), fg=style_acc, bg=style_bg
                  ).pack(side="left")
-        tk.Label(hf, text="All Versions \u2014 One Click",
+        tk.Label(hf, text="Directory Scan \u2014 One Click",
                  font=("Consolas", 10), fg="#6a7a90", bg=style_bg
                  ).pack(side="left", padx=(16, 0))
+
+        self._test_quick_var = tk.BooleanVar(value=False)
+        ttk.Checkbutton(hf, text="--quick",
+                        variable=self._test_quick_var
+                        ).pack(side="right", padx=8)
+        tk.Button(hf, text="Refresh",
+                  font=("Consolas", 9), bg="#1a1e2a",
+                  fg="#a0b0cc", relief="flat",
+                  command=self._refresh_test_buttons
+                  ).pack(side="right", padx=4)
+        self._test_count_var = tk.StringVar(value="")
+        tk.Label(hf, textvariable=self._test_count_var,
+                 font=("Consolas", 9), fg="#6a7a90",
+                 bg=style_bg).pack(side="right", padx=4)
 
         # ── PanedWindow: left=buttons, right=log ──
         pw = tk.PanedWindow(parent, orient="horizontal",
@@ -2974,31 +3031,40 @@ class SolverGUI:
         left_frame = tk.Frame(pw, bg=style_bg)
         pw.add(left_frame, width=380, minsize=250)
 
-        left_canvas = tk.Canvas(left_frame, bg=style_bg,
-                                highlightthickness=0)
-        left_vbar = ttk.Scrollbar(left_frame, orient="vertical",
-                                   command=left_canvas.yview)
-        left_canvas.configure(yscrollcommand=left_vbar.set)
+        self._test_canvas = tk.Canvas(
+            left_frame, bg=style_bg, highlightthickness=0)
+        left_vbar = ttk.Scrollbar(
+            left_frame, orient="vertical",
+            command=self._test_canvas.yview)
+        self._test_canvas.configure(
+            yscrollcommand=left_vbar.set)
         left_vbar.pack(side="right", fill="y")
-        left_canvas.pack(side="left", fill="both", expand=True)
+        self._test_canvas.pack(
+            side="left", fill="both", expand=True)
 
-        btn_frame = tk.Frame(left_canvas, bg=style_bg)
-        btn_id = left_canvas.create_window((0, 0), window=btn_frame,
-                                            anchor="nw")
+        self._test_btn_frame = tk.Frame(
+            self._test_canvas, bg=style_bg)
+        self._test_btn_id = self._test_canvas.create_window(
+            (0, 0), window=self._test_btn_frame, anchor="nw")
 
         def _bf_resize(event):
-            left_canvas.configure(
-                scrollregion=left_canvas.bbox("all"))
+            self._test_canvas.configure(
+                scrollregion=self._test_canvas.bbox("all"))
         def _lc_resize(event):
-            left_canvas.itemconfig(btn_id, width=event.width)
-        btn_frame.bind("<Configure>", _bf_resize)
-        left_canvas.bind("<Configure>", _lc_resize)
+            self._test_canvas.itemconfig(
+                self._test_btn_id, width=event.width)
+        self._test_btn_frame.bind("<Configure>", _bf_resize)
+        self._test_canvas.bind("<Configure>", _lc_resize)
 
-        def _lc_wheel(event):
-            left_canvas.yview_scroll(
-                int(-1 * (event.delta / 120)), "units")
-        left_canvas.bind("<MouseWheel>", _lc_wheel)
-        btn_frame.bind("<MouseWheel>", _lc_wheel)
+        # Robust scroll: bind globally when mouse enters canvas area
+        def _on_enter(event):
+            self._test_canvas.bind_all("<MouseWheel>",
+                lambda e: self._test_canvas.yview_scroll(
+                    int(-1 * (e.delta / 120)), "units"))
+        def _on_leave(event):
+            self._test_canvas.unbind_all("<MouseWheel>")
+        left_frame.bind("<Enter>", _on_enter)
+        left_frame.bind("<Leave>", _on_leave)
 
         # ── RIGHT PANEL: output log ──
         right_frame = tk.Frame(pw, bg=style_bg)
@@ -3036,43 +3102,51 @@ class SolverGUI:
             "Stephen Justin Burdick Sr. \u2014 GIBUSH Systems")
         self._test_log_msg("\u2500" * 50)
 
-        # ── Populate buttons by version ──
+        # ── Initial scan ──
+        self.root.after(300, self._refresh_test_buttons)
+
+    def _refresh_test_buttons(self):
+        """Scan test directory and rebuild button list."""
+        style_bg = "#0a0c10"
+        style_acc = "#44ddff"
+
+        # Clear existing buttons
+        for widget in self._test_btn_frame.winfo_children():
+            widget.destroy()
+
+        scripts, test_dir = self._scan_test_scripts()
+        self._test_count_var.set(f"{len(scripts)} tests")
+
+        if not scripts:
+            tk.Label(self._test_btn_frame,
+                     text=f"No .py files found in\n{test_dir}",
+                     font=("Consolas", 9), fg="#555555",
+                     bg=style_bg).pack(padx=10, pady=20)
+            return
+
         current_version = None
-        for version, name, script, args in self.TEST_REGISTRY:
+        for version, name, script, mtime in scripts:
             if version != current_version:
                 current_version = version
-                # Version header
-                vf = tk.Frame(btn_frame, bg=style_bg)
+                vf = tk.Frame(self._test_btn_frame, bg=style_bg)
                 vf.pack(fill="x", padx=4, pady=(10, 2))
-                tk.Label(vf, text=f"\u2501\u2501 {version} \u2501\u2501",
+                tk.Label(vf,
+                         text=f"\u2501\u2501 {version} \u2501\u2501",
                          font=("Consolas", 10, "bold"),
                          fg="#ff9944", bg=style_bg
                          ).pack(anchor="w")
 
-            # Check if script exists
-            _root = os.path.dirname(os.path.abspath(__file__))
-            _tdir = os.path.join(_root,
-                "TITS_EPICt_BCM", "BCM_EPIC_OpT_tests")
-            exists = (os.path.exists(
-                          os.path.join(_tdir, script))
-                      or os.path.exists(
-                          os.path.join(_root, script)))
-            fg_color = "#a0b0cc" if exists else "#555555"
-
             btn = tk.Button(
-                btn_frame,
+                self._test_btn_frame,
                 text=f"  \u25B6  {name}",
                 font=("Consolas", 9),
-                bg="#12151c", fg=fg_color,
+                bg="#12151c", fg="#a0b0cc",
                 activebackground="#1a2030",
                 activeforeground=style_acc,
                 relief="flat", anchor="w",
-                command=lambda s=script, a=args, n=name:
-                    self._run_test_script(s, a, n))
+                command=lambda s=script, n=name:
+                    self._run_test_script(s, [], n))
             btn.pack(fill="x", padx=8, pady=1)
-
-            # Bind mousewheel to buttons too
-            btn.bind("<MouseWheel>", _lc_wheel)
 
     def _test_log_msg(self, msg):
         """Write to test runner log."""
@@ -3100,15 +3174,21 @@ class SolverGUI:
                 f"  Checked: {root_dir}")
             return
 
+        # Build args — add --quick if checkbox is checked
+        run_args = list(extra_args)
+        if hasattr(self, '_test_quick_var') and self._test_quick_var.get():
+            if "--quick" not in run_args:
+                run_args.append("--quick")
+
         self._test_log_msg(f"\n{'='*50}")
         self._test_log_msg(f"  RUNNING: {name}")
         self._test_log_msg(f"  Script:  {script}")
-        if extra_args:
+        if run_args:
             self._test_log_msg(
-                f"  Args:    {' '.join(extra_args)}")
+                f"  Args:    {' '.join(run_args)}")
         self._test_log_msg(f"{'='*50}")
 
-        args = [sys.executable, script_path] + extra_args
+        args = [sys.executable, script_path] + run_args
 
         def _run():
             try:
@@ -3142,6 +3222,499 @@ class SolverGUI:
                     f"  ERROR: {e}"))
 
         threading.Thread(target=_run, daemon=True).start()
+
+    # ═══════════════════════════════════════════════════════
+    # TAB 8 — EPIC COLLECTOR (substrate test ingestion)
+    # ═══════════════════════════════════════════════════════
+    # Ingestion hub: list JSON results, auto-tag Q-Cube,
+    # show coverage, launch full PySide6 collector.
+    # ═══════════════════════════════════════════════════════
+
+    # Q-Cube axes (mirrors qcube_config.py substrate_physics_config)
+    _QCUBE_SCALES = {"L1": "Galactic", "L2": "Stellar",
+                     "L3": "Planetary", "L4": "Craft"}
+    _QCUBE_CATS   = {"OA": "SMBH Pump", "OB": "Substrate Field",
+                     "OC": "Boundary Layer", "OD": "Dimensional Gate",
+                     "OE": "Crew Safety", "OF": "Navigation"}
+    _QCUBE_CLASS  = {"\u03b1": "I-Massive", "\u03b2": "II-Residual",
+                     "\u03b3": "III-Mid", "\u03b4": "IV-Decline",
+                     "\u03b5": "V-Environ", "\u03b6": "VI-Barred"}
+
+    # Lightweight auto-tag keywords (no PySide6 needed)
+    _TAG_SCALE = {
+        "L1": ["galaxy","galactic","chi2","batch","reverse","neutrino",
+               "NGC","UGC","ESO","DDO","rms_newton","winner"],
+        "L2": ["stellar","binary","tachocline","star","spectrum",
+               "HR_1099","Spica","Alpha_Cen","Sirius"],
+        "L3": ["planetary","planet","Saturn","hexagon","Jupiter",
+               "Earth","Neptune","solar_system"],
+        "L4": ["tunnel","probe","gate","transit","corridor",
+               "flight","arrival","bootes","graveyard","brucetron",
+               "chi_freeboard","kill","inspiral","craft"],
+    }
+    _TAG_CAT = {
+        "OA": ["kappa","crag","neutrino","L_nu","nu_b","pump","eddington"],
+        "OB": ["sigma","lambda","lam","alpha","memory","coherence",
+               "wave","substrate","phase","cos_delta_phi","corr_full"],
+        "OC": ["boundary","gradient","snap","torus","Jasper","phi_safety"],
+        "OD": ["OpT","OpC","R_7D","R_9to10","STARGATE","gate","7D","9D"],
+        "OE": ["guardian","chi","freeboard","brucetron","safety","crew"],
+        "OF": ["probe","corridor","flight","navigator","arrival",
+               "graveyard","tunnel","GO","NO-GO","zone"],
+    }
+
+    def _auto_tag_file(self, filepath):
+        """Lightweight auto-tag from JSON filename + keys (including nested)."""
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except Exception:
+            return {"scale": "", "category": "", "class": ""}
+
+        # Collect keys — including one level of nesting
+        keys = set()
+        if isinstance(data, list) and data:
+            for entry in data[:5]:
+                if isinstance(entry, dict):
+                    keys.update(entry.keys())
+        elif isinstance(data, dict):
+            keys.update(data.keys())
+            # Nested: check "results", "info", "config" etc.
+            for v in data.values():
+                if isinstance(v, dict):
+                    keys.update(v.keys())
+                elif isinstance(v, list) and v:
+                    for item in v[:3]:
+                        if isinstance(item, dict):
+                            keys.update(item.keys())
+
+        # Also collect string values (galaxy names, test types)
+        vals = set()
+        if isinstance(data, dict):
+            for v in data.values():
+                if isinstance(v, str) and len(v) < 40:
+                    vals.add(v)
+            # Galaxy names from nested results
+            for item in data.get("results", [])[:5]:
+                if isinstance(item, dict):
+                    g = item.get("galaxy", "")
+                    if g:
+                        vals.add(g)
+
+        all_text = " ".join(keys) + " " + " ".join(vals) + " " + os.path.basename(filepath)
+        text_lower = all_text.lower()
+
+        # Score each tag
+        def _best(tag_dict):
+            scores = {k: sum(1 for kw in kws if kw.lower() in text_lower)
+                      for k, kws in tag_dict.items()}
+            return max(scores, key=scores.get) if any(scores.values()) else ""
+        return {
+            "scale": _best(self._TAG_SCALE),
+            "category": _best(self._TAG_CAT),
+            "class": "\u03b1",  # default — refine when galaxy detected
+        }
+
+    def _build_epic_tab(self, parent):
+        """Tab 8 — EPIC Collector: persistent ingestion + Q-Cube coverage."""
+        style_bg  = "#0a0c10"
+        style_acc = "#9933ee"
+
+        # ── Persistence: load saved ingestion state ──
+        self._epic_ingested = {}       # {fname: {tags, ingested_at}}
+        self._epic_qcube_positions = {} # {pos_key: [fnames]}
+        self._epic_state_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            "data", "results", "_epic_ingestion_state.json")
+        self._load_epic_state()
+
+        # ── Header ──
+        hf = tk.Frame(parent, bg=style_bg)
+        hf.pack(fill="x", padx=12, pady=(10, 4))
+        tk.Label(hf, text="EPIC COLLECTOR",
+                 font=("Georgia", 16), fg=style_acc, bg=style_bg
+                 ).pack(side="left")
+        tk.Label(hf, text="Substrate Test Ingestion \u2014 Q-Cube Coverage",
+                 font=("Consolas", 10), fg="#6a7a90", bg=style_bg
+                 ).pack(side="left", padx=(16, 0))
+
+        # ── Three-column PanedWindow ──
+        pw = tk.PanedWindow(parent, orient="horizontal",
+                            bg=style_bg, sashwidth=4,
+                            sashrelief="flat")
+        pw.pack(fill="both", expand=True, padx=12, pady=4)
+
+        # ══ COLUMN 1: Source Pool (all JSON, date-sorted) ══
+        col1 = tk.Frame(pw, bg=style_bg)
+        pw.add(col1, width=340, minsize=220)
+
+        c1h = tk.Frame(col1, bg=style_bg)
+        c1h.pack(fill="x", padx=4, pady=(4, 2))
+        tk.Label(c1h, text="SOURCE POOL",
+                 font=("Consolas", 10, "bold"),
+                 fg="#44ddff", bg=style_bg).pack(side="left")
+        self._epic_count_var = tk.StringVar(value="")
+        tk.Label(c1h, textvariable=self._epic_count_var,
+                 font=("Consolas", 8), fg="#6a7a90",
+                 bg=style_bg).pack(side="left", padx=6)
+        tk.Button(c1h, text="Refresh", font=("Consolas", 8),
+                  bg="#1a1e2a", fg="#a0b0cc", relief="flat",
+                  command=self._refresh_epic_results
+                  ).pack(side="right")
+
+        self._epic_results_list = tk.Listbox(
+            col1, bg="#0c0e14", fg="#44ddff",
+            font=("Consolas", 8), relief="flat",
+            selectbackground="#9933ee",
+            selectforeground="#ffd700",
+            activestyle="none")
+        s1 = ttk.Scrollbar(col1, orient="vertical",
+                           command=self._epic_results_list.yview)
+        self._epic_results_list.configure(yscrollcommand=s1.set)
+        s1.pack(side="right", fill="y")
+        self._epic_results_list.pack(fill="both", expand=True,
+                                      padx=4, pady=4)
+        self._epic_results_list.bind(
+            "<<ListboxSelect>>", self._on_epic_select)
+
+        # Auto-tag + ingest buttons below source list
+        tag_f = tk.Frame(col1, bg=style_bg)
+        tag_f.pack(fill="x", padx=4, pady=2)
+        self._epic_tag_var = tk.StringVar(value="Select file \u2192 auto-tag")
+        tk.Label(tag_f, textvariable=self._epic_tag_var,
+                 font=("Consolas", 9), fg="#cc88ff",
+                 bg="#0c0e14", justify="left",
+                 anchor="w").pack(fill="x", padx=2, pady=2)
+        tk.Button(tag_f,
+                  text="\u25B6  INGEST SELECTED \u2192",
+                  font=("Consolas", 10, "bold"),
+                  bg="#1a3020", fg="#40ee70",
+                  activebackground="#2a4838",
+                  relief="flat", pady=4,
+                  command=self._ingest_selected
+                  ).pack(fill="x", pady=2)
+
+        # ══ COLUMN 2: Ingested (persistent, survives restart) ══
+        col2 = tk.Frame(pw, bg=style_bg)
+        pw.add(col2, width=340, minsize=220)
+
+        c2h = tk.Frame(col2, bg=style_bg)
+        c2h.pack(fill="x", padx=4, pady=(4, 2))
+        self._epic_ingested_count = tk.StringVar(value="0 ingested")
+        tk.Label(c2h, text="INGESTED",
+                 font=("Consolas", 10, "bold"),
+                 fg="#40ee70", bg=style_bg).pack(side="left")
+        tk.Label(c2h, textvariable=self._epic_ingested_count,
+                 font=("Consolas", 8), fg="#6a7a90",
+                 bg=style_bg).pack(side="left", padx=6)
+
+        self._epic_ingested_list = tk.Listbox(
+            col2, bg="#0c0e14", fg="#40ee70",
+            font=("Consolas", 8), relief="flat",
+            selectbackground="#cc3333",
+            selectforeground="#ffffff",
+            activestyle="none")
+        s2 = ttk.Scrollbar(col2, orient="vertical",
+                           command=self._epic_ingested_list.yview)
+        self._epic_ingested_list.configure(yscrollcommand=s2.set)
+        s2.pack(side="right", fill="y")
+        self._epic_ingested_list.pack(fill="both", expand=True,
+                                       padx=4, pady=4)
+
+        # Delete + rebuild buttons
+        del_f = tk.Frame(col2, bg=style_bg)
+        del_f.pack(fill="x", padx=4, pady=2)
+        tk.Button(del_f,
+                  text="\u2716  DELETE SELECTED",
+                  font=("Consolas", 10),
+                  bg="#2a1010", fg="#ff4444",
+                  activebackground="#3a1818",
+                  relief="flat", pady=4,
+                  command=self._delete_ingested
+                  ).pack(fill="x", pady=2)
+        tk.Button(del_f,
+                  text="\u21bb  REFRESH Q-CUBE",
+                  font=("Consolas", 9),
+                  bg="#1a1e2a", fg="#a0b0cc",
+                  relief="flat", pady=3,
+                  command=self._rebuild_qcube
+                  ).pack(fill="x", pady=2)
+        tk.Button(del_f,
+                  text="\u2699  LAUNCH FULL COLLECTOR",
+                  font=("Consolas", 9),
+                  bg="#1a1030", fg="#cc88ff",
+                  relief="flat", pady=3,
+                  command=self._launch_epic_collector
+                  ).pack(fill="x", pady=2)
+
+        # ══ COLUMN 3: Q-Cube Coverage ══
+        col3 = tk.Frame(pw, bg=style_bg)
+        pw.add(col3, minsize=300)
+
+        tk.Label(col3, text="Q-CUBE COVERAGE (144 positions)",
+                 font=("Consolas", 10, "bold"),
+                 fg="#44ddff", bg=style_bg
+                 ).pack(fill="x", padx=4, pady=(4, 2))
+
+        self._epic_coverage_text = tk.Text(
+            col3, bg="#0c0e14", fg="#44ddff",
+            font=("Consolas", 9), relief="flat",
+            wrap="word")
+        s3 = ttk.Scrollbar(col3, orient="vertical",
+                           command=self._epic_coverage_text.yview)
+        self._epic_coverage_text.configure(yscrollcommand=s3.set)
+        s3.pack(side="right", fill="y")
+        self._epic_coverage_text.pack(fill="both", expand=True,
+                                       padx=4, pady=4)
+
+        # ── EPIC Log (bottom) ──
+        lf = ttk.LabelFrame(parent, text="EPIC LOG")
+        lf.pack(fill="x", padx=12, pady=(0, 4))
+        self._epic_log = tk.Text(
+            lf, height=3, bg="#0c0e14", fg="#cc88ff",
+            font=("Consolas", 9), relief="flat", wrap="word")
+        self._epic_log.pack(fill="x", padx=4, pady=4)
+
+        self._epic_log_msg("EPIC COLLECTOR ready. "
+                           "Every test run is an interview "
+                           "with the substrate.")
+        self._epic_log_msg("\u2500" * 50)
+
+        # ── Initial load ──
+        self.root.after(500, self._refresh_epic_results)
+        self.root.after(600, self._populate_ingested_list)
+        self.root.after(700, self._update_coverage_display)
+
+    # ── Persistence ──
+
+    def _save_epic_state(self):
+        """Save ingestion state to JSON for persistence."""
+        try:
+            os.makedirs(os.path.dirname(self._epic_state_path),
+                        exist_ok=True)
+            state = {
+                "ingested": {k: v for k, v in
+                             self._epic_ingested.items()},
+                "qcube_positions": self._epic_qcube_positions,
+            }
+            with open(self._epic_state_path, 'w',
+                       encoding='utf-8') as f:
+                json.dump(state, f, indent=2)
+        except Exception as e:
+            self._epic_log_msg(f"  Save error: {e}")
+
+    def _load_epic_state(self):
+        """Load ingestion state from JSON on startup."""
+        if os.path.exists(self._epic_state_path):
+            try:
+                with open(self._epic_state_path, 'r',
+                           encoding='utf-8') as f:
+                    state = json.load(f)
+                self._epic_ingested = state.get("ingested", {})
+                self._epic_qcube_positions = state.get(
+                    "qcube_positions", {})
+            except Exception:
+                self._epic_ingested = {}
+                self._epic_qcube_positions = {}
+
+    def _populate_ingested_list(self):
+        """Fill ingested listbox from persistent state."""
+        self._epic_ingested_list.delete(0, "end")
+        for fname in sorted(self._epic_ingested.keys()):
+            self._epic_ingested_list.insert("end", fname)
+        self._epic_ingested_count.set(
+            f"{len(self._epic_ingested)} ingested")
+
+    # ── Core actions ──
+
+    def _epic_log_msg(self, msg):
+        """Write to EPIC tab log."""
+        self._epic_log.insert("end", msg + "\n")
+        self._epic_log.see("end")
+
+    def _on_epic_select(self, event=None):
+        """Auto-tag selected JSON file."""
+        sel = self._epic_results_list.curselection()
+        if not sel:
+            return
+        fname = self._epic_results_list.get(sel[0])
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        fpath = os.path.join(root_dir, "data", "results", fname)
+        if not os.path.exists(fpath):
+            self._epic_tag_var.set("File not found")
+            return
+        tags = self._auto_tag_file(fpath)
+        s = tags.get("scale", "?")
+        c = tags.get("category", "?")
+        cl = tags.get("class", "?")
+        status = "\u2713 INGESTED" if fname in self._epic_ingested else ""
+        self._epic_tag_var.set(
+            f"[{s}, {c}, {cl}] "
+            f"{self._QCUBE_SCALES.get(s,'?')} | "
+            f"{self._QCUBE_CATS.get(c,'?')} | "
+            f"{self._QCUBE_CLASS.get(cl,'?')}  {status}")
+
+    def _ingest_selected(self):
+        """Ingest selected file — persistent."""
+        sel = self._epic_results_list.curselection()
+        if not sel:
+            return
+        fname = self._epic_results_list.get(sel[0])
+        if fname in self._epic_ingested:
+            self._epic_log_msg(f"  Already ingested: {fname}")
+            return
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        fpath = os.path.join(root_dir, "data", "results", fname)
+        if not os.path.exists(fpath):
+            self._epic_log_msg(f"  ERROR: {fname} not found")
+            return
+        tags = self._auto_tag_file(fpath)
+        pos_key = f"[{tags['scale']}, {tags['category']}, {tags['class']}]"
+        self._epic_ingested[fname] = {
+            "tags": tags,
+            "pos_key": pos_key,
+            "ingested_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        }
+        if pos_key not in self._epic_qcube_positions:
+            self._epic_qcube_positions[pos_key] = []
+        self._epic_qcube_positions[pos_key].append(fname)
+        self._save_epic_state()
+        self._populate_ingested_list()
+        self._on_epic_select()
+        self._update_coverage_display()
+        self._epic_log_msg(
+            f"  INGESTED: {fname} \u2192 {pos_key}")
+
+    def _delete_ingested(self):
+        """Remove selected file from ingestion — persistent."""
+        sel = self._epic_ingested_list.curselection()
+        if not sel:
+            return
+        fname = self._epic_ingested_list.get(sel[0])
+        if fname in self._epic_ingested:
+            info = self._epic_ingested.pop(fname)
+            pos_key = info.get("pos_key", "")
+            if pos_key in self._epic_qcube_positions:
+                flist = self._epic_qcube_positions[pos_key]
+                if fname in flist:
+                    flist.remove(fname)
+                if not flist:
+                    del self._epic_qcube_positions[pos_key]
+            self._save_epic_state()
+            self._populate_ingested_list()
+            self._update_coverage_display()
+            self._epic_log_msg(
+                f"  DELETED: {fname} from {pos_key}")
+
+    def _rebuild_qcube(self):
+        """Rebuild Q-Cube positions from scratch using ingested files."""
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        self._epic_qcube_positions = {}
+        removed = []
+        for fname, info in list(self._epic_ingested.items()):
+            fpath = os.path.join(root_dir, "data", "results", fname)
+            if not os.path.exists(fpath):
+                removed.append(fname)
+                continue
+            tags = self._auto_tag_file(fpath)
+            pos_key = f"[{tags['scale']}, {tags['category']}, {tags['class']}]"
+            info["tags"] = tags
+            info["pos_key"] = pos_key
+            if pos_key not in self._epic_qcube_positions:
+                self._epic_qcube_positions[pos_key] = []
+            self._epic_qcube_positions[pos_key].append(fname)
+        for fname in removed:
+            del self._epic_ingested[fname]
+        self._save_epic_state()
+        self._populate_ingested_list()
+        self._update_coverage_display()
+        self._epic_log_msg(
+            f"  Q-CUBE REBUILT: {len(self._epic_ingested)} files, "
+            f"{len(self._epic_qcube_positions)} positions"
+            + (f" ({len(removed)} removed — file missing)"
+               if removed else ""))
+
+    def _launch_epic_collector(self):
+        """Launch BCM_EPIC_OpT_test_collector.py as separate PySide6 process."""
+        import subprocess
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        epic_dir = os.path.join(root_dir, "TITS_EPICt_BCM")
+        script = os.path.join(epic_dir,
+                              "BCM_EPIC_OpT_test_collector.py")
+        if not os.path.exists(script):
+            self._epic_log_msg(
+                f"  ERROR: Collector not found")
+            return
+        self._epic_log_msg("  Launching EPIC Collector...")
+        try:
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            subprocess.Popen([sys.executable, script],
+                             cwd=epic_dir, env=env)
+            self._epic_log_msg("  Collector launched.")
+        except Exception as e:
+            self._epic_log_msg(f"  LAUNCH ERROR: {e}")
+
+    def _refresh_epic_results(self):
+        """Scan data/results/ for JSON files, sorted by date (newest first)."""
+        self._epic_results_list.delete(0, "end")
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        results_dir = os.path.join(root_dir, "data", "results")
+        if not os.path.isdir(results_dir):
+            self._epic_count_var.set("not found")
+            return
+        json_files = [f for f in os.listdir(results_dir)
+                      if f.endswith(".json")
+                      and not f.startswith("_")]
+        json_files.sort(
+            key=lambda f: os.path.getmtime(
+                os.path.join(results_dir, f)),
+            reverse=True)
+        self._epic_count_var.set(f"{len(json_files)}")
+        for fname in json_files:
+            self._epic_results_list.insert("end", fname)
+
+    def _update_coverage_display(self):
+        """Show Q-Cube coverage summary."""
+        self._epic_coverage_text.delete("1.0", "end")
+        total_possible = (len(self._QCUBE_SCALES) *
+                          len(self._QCUBE_CATS) *
+                          len(self._QCUBE_CLASS))
+        filled = len(self._epic_qcube_positions)
+        pct = (filled / total_possible * 100) if total_possible > 0 else 0
+
+        lines = [
+            f"COVERAGE: {filled} / {total_possible} positions "
+            f"({pct:.1f}%)",
+            f"INGESTED: {len(self._epic_ingested)} files",
+            "",
+            f"{'Scale':<12} {'Category':<18} {'Class':<12} {'Tests':>5}",
+            "\u2500" * 50,
+        ]
+
+        # Show filled positions
+        if self._epic_qcube_positions:
+            for pos_key, files in sorted(
+                    self._epic_qcube_positions.items()):
+                lines.append(f"  {pos_key:<40} {len(files):>3}")
+        else:
+            lines.append("  (no positions filled yet)")
+            lines.append("")
+            lines.append("  Select a JSON result and click INGEST")
+            lines.append("  to start building Q-Cube coverage.")
+
+        # Show gap hints
+        lines.append("")
+        lines.append("\u2500" * 50)
+        lines.append("CATEGORY COVERAGE:")
+        for cat_key, cat_name in self._QCUBE_CATS.items():
+            count = sum(1 for k in self._epic_qcube_positions
+                        if cat_key in k)
+            bar = "\u2588" * count + "\u2591" * (5 - min(count, 5))
+            lines.append(f"  {cat_key} {cat_name:<18} {bar} {count}")
+
+        self._epic_coverage_text.insert("1.0", "\n".join(lines))
+
 
 if __name__ == "__main__":
     root = tk.Tk()

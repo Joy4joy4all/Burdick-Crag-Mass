@@ -1,0 +1,20 @@
+{
+  "test": "baryonic_grind_hr1099",
+  "version": "v24",
+  "grid": 256,
+  "timestamp": "20260415_182206",
+  "elapsed": 1251.2452771663666,
+  "results": {
+    "system": "HR 1099",
+    "grid": 256,
+    "r_ex": 1.462992350261987,
+    "coherence": 0.8497233516404177,
+    "throat_coherence": 0.7732615509392776,
+    "spike_ratio": 0.6099159701190379,
+    "bill_laminar": 502286.15506443335,
+    "bill_turbulent": 306352.34754348535,
+    "elapsed_laminar": 642.7644054889679,
+    "elapsed_turbulent": 608.4685547351837
+  },
+  "foreman_note": "The sand grinds the wave. Spherical sediment is damping (lambda)."
+}

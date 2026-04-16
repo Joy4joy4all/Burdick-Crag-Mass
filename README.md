@@ -51,7 +51,10 @@ lambda=0.1, kappa=2.0, grid=256, layers=8.
 | v18 | 10.5281/zenodo.19487944 | Frastrate Discovery, Phase Projection, Three-Space Coupling, Phase Rigidity |
 | v19 | 10.5281/zenodo.19499128 | Temporal Invariance, Chi Operator, Navigational Drain, Recovery Boiler, Corridor Flight, Graveyard Stress |
 | v20 | 10.5281/zenodo.19535465 | Physical Unit Mapping (12,000c), Stellar Transit (Alpha Centauri A survived), Black Hole Transit (XTE J1650-500 survived), 7D Operators, D=Disguise, Pythagorean Node Clamp, Ballistic Transit, Gradient Kill |
-| v21 | pending | 9D→10D Coherence Gate, 1D-11D Dimensional Stack, Arrival Deceleration (4 profiles survived), Boundary Layer Operator (Jasper Beach), Arrival Lambda Bandwidth (0.020-0.040), Three-AI Convergence |
+| v21 | 10.5281/zenodo.19555411 | 9D→10D Coherence Gate, 1D-11D Dimensional Stack, Arrival Deceleration (4 profiles survived), Boundary Layer Operator (Jasper Beach), Arrival Lambda Bandwidth (0.020-0.040), Three-AI Convergence |
+| v22 | 10.5281/zenodo.19570399 | Chi-Squared Engine (13/29 BCM wins at grid=256, mean χ²=42.1), Reverse Calculation (29/29 GO), Field-Theory Foundation (Action, Lagrangian, Stress-Energy), Neutrino Flux (L_ν ~ v^3.9 Tully-Fisher), Paper A Published (DOI: 10.5281/zenodo.19571033), Launcher Tab 7, EPIC Repurpose (216-test foundation deck) |
+| v23 | 10.5281/zenodo.19599608 | Einstein Coupling (4/5 Newtonian limit PASS, M_sub 10^7-10^12 M☉), Null Pump Test (5/5 ESSENTIAL — σ→0 without J), Conservation Budget (Q<0 = diffusion-funded equilibrium), EPIC Collector Reform (10 substrate physics lenses, Q-Cube 144-position intelligence), Tab 8 Persistent Ingestion, Directory-Scanned Test Runner |
+| v24 | pending | Boundary Dynamics (σ_crit discovery), Baryonic Grind (throat 0.742), Buckshot Healing (0.99987), Edge Perturbation (38× flood), Arrival Timing (no safe window, OpT lead 8000), Boundary Stability Sweep (clamp only), Alpha Centauri Phase-Dependent (8/8 stable), Three Substrate Regimes, Π = σ_edge/σ_crit |
 
 Base DOI (all versions): 10.5281/zenodo.19251192
 
@@ -102,25 +105,27 @@ trajectory before crewed launch.
 SUBSTRATE_SOLVER/
 ├── core/
 │   ├── substrate_solver.py    # Multi-layer wave engine
-│   └── sparc_ingest.py        # SPARC data loader
-├── BCM_drift_test.py          # Lambda drift kill test
-├── BCM_lambda_drive.py        # Lambda drive transit sim
-├── BCM_solar_navigator.py     # 2032 Saturn mission
-├── BCM_inspiral_sweep.py      # Binary black hole inspiral
-├── BCM_inspiral_renderer.py   # 15-frame merger cinematic
-├── BCM_phase_lock.py          # Phi_reach coherence metric
-├── BCM_cavitation_sweep.py    # Amplitude/corridor stress
-├── BCM_tcf_analyzer.py        # Time-cost function
-├── BCM_3d_renderer.py         # 3D sigma visualization
+│   ├── sparc_ingest.py        # SPARC data loader
+│   └── rotation_compare.py    # Four-way comparison
+├── Burdick_Crag_Mass.py       # Main solver with crag mass
 ├── BCM_Substrate_overrides.py # 6-class structural override
-├── BCM_planetary_wave.py      # Planetary substrate solver
 ├── BCM_stellar_overrides.py   # Binary stellar dynamics
-├── launcher.py                # 5-tab GUI
+├── launcher.py                # 8-tab GUI (dir-scanned test runner)
+├── TITS_EPICt_BCM/
+│   ├── BCM_EPIC_OpT_test_collector.py  # Q-Cube intelligence (PySide6)
+│   ├── json_reader.py                  # JSON test ingestion engine
+│   ├── BCM_EPIC_OpT_tests/             # All test scripts (v7-v23)
+│   ├── genesis_brain/                  # Bayesian engine, ML pipeline
+│   └── config/substrate_config_bcm.json
 ├── data/
-│   ├── sparc_raw/             # SPARC rotation curves
-│   ├── results/               # Solver results (JSON)
+│   ├── sparc_raw/             # SPARC rotation curves (175 galaxies)
+│   ├── results/               # All JSON test output (235+ files)
 │   └── images/                # Rendered visualizations
-└── docs/
+├── BCM_Development/           # Session docs (v7-v23)
+├── BCM_Papers/                # Paper A, Paper B drafts
+├── BCM_Formulas/              # Work formulas reference
+├── BCM_Student_Guide/         # Student documentation
+└── BCM_Thoughts/              # Builder thoughts, what-if scenarios
 ```
 
 ## Quick Start
@@ -129,17 +134,17 @@ SUBSTRATE_SOLVER/
 # Galaxy rotation curves
 python Burdick_Crag_Mass.py --galaxy NGC2403
 
-# Lambda drift test (kill condition)
-python BCM_drift_test.py --steps 2000 --grid 128
-
-# Saturn mission navigator
-python BCM_solar_navigator.py --launch 2032-12-01 --lambda-eta 1.0
-
-# Binary black hole inspiral
-python BCM_inspiral_sweep.py --grid 128 --steps 15
-
-# Full launcher (5 tabs)
+# Full launcher (8 tabs: Galactic, Planetary, Stellar, BH, Λ Drive, Probes, Test Runner, EPIC Collector)
 python launcher.py
+
+# Einstein coupling test (v23)
+python TITS_EPICt_BCM/BCM_EPIC_OpT_tests/BCM_v23_einstein_coupling.py --quick
+
+# Null pump test (v23 — proves SMBH pump essential)
+python TITS_EPICt_BCM/BCM_EPIC_OpT_tests/BCM_v23_null_pump_test.py --quick
+
+# Chi-squared engine (v22 — 29 galaxies vs NFW/MOND)
+python TITS_EPICt_BCM/BCM_EPIC_OpT_tests/BCM_chi_squared_engine.py --quick
 ```
 
 ## Key Parameters
@@ -156,13 +161,7 @@ python launcher.py
 ## Computational Tools
 
 All theoretical concepts originated with Stephen Justin Burdick Sr.
-AI systems used as computational tools under his direction:
-
-- **Claude (Anthropic)**: Code execution
-- **ChatGPT (OpenAI)**: Adversarial computation
-- **Gemini (Google)**: Equation formatting
-- **Grok (xAI)**: Anomaly detection computation
-
+AI systems used as computational processing tools under his direction.
 No AI system contributed theoretical concepts.
 
 ## Adversarial Test Record
@@ -734,6 +733,101 @@ python BCM_v19_corridor_flight.py --steps 20000 --grid 256
 python BCM_v19_graveyard_stress.py --steps 20000 --grid 256
 ```
 
+## v22 — Chi-Squared Engine, Reverse Calculation, Neutrino Flux
+
+BCM vs NFW vs MOND vs Newton on 29 SPARC galaxies with published
+error bars. BCM wins 13/29 at grid=256 (mean χ²=42.1 vs NFW 92.1).
+Massive bracket (V>200): BCM dominates 7/12. MOND wins 0/29.
+
+Reverse calculation engine: 29/29 GO destinations. All R_9to10 above
+0.92 threshold. Neutrino flux prediction recovers Tully-Fisher
+(L_ν ~ v_max^3.9). All 29 galaxies sub-Eddington (max L/L_edd = 6e-4).
+28/29 above IceCube sensitivity.
+
+BCM formalized as classical field theory: action, Lagrangian,
+Euler-Lagrange equations, stress-energy tensor T_μν.
+
+Paper A published: DOI 10.5281/zenodo.19571033.
+
+## v23 — Einstein Coupling, Null Pump Proof, EPIC Q-Cube Intelligence
+
+### Einstein Coupling Test
+
+Clean covariant Lagrangian (no memory term), explicit T_μν from
+physical velocity excess, Newtonian limit test, lensing prediction.
+Physical unit mapping: code-unit σ → v_excess via compare_rotation()
+→ ρ_sub in kg/m³ → T_00 in J/m³.
+
+| Galaxy | M_sub (M☉) | θ_E (") | Newton Limit |
+|--------|-----------|---------|:------------:|
+| NGC2841 | 1.26e12 | 64.0 | PASS |
+| NGC7331 | 2.68e11 | 29.6 | PASS |
+| NGC6503 | 6.23e10 | 14.2 | PASS |
+| NGC3953 | 3.33e9 | 3.3 | FAIL |
+| UGC04305 | 9.27e7 | 0.5 | PASS |
+
+NGC3953 FAIL is the Class VI barred pipe where Newton already wins.
+This is the failure case required for peer review.
+
+### Null Pump Test (J = 0) — The Decisive Fork
+
+Removed SMBH injection. Substrate field collapsed to σ = 0.000000
+in all 5 galaxies. Rotation fits degraded by +129 to +188 km/s.
+
+PUMP ESSENTIAL: 5/5. The substrate is a funded state, not an
+initial condition. Without the pump, the universe goes dark.
+Q(r) < 0 everywhere is the signature of diffusion-funded
+equilibrium — the SMBH injects at core, diffusion redistributes,
+maintenance is paid from the redistributed pool at every radius.
+
+### EPIC Q-Cube Intelligence System
+
+I-Corps Fusion Interview Collector repurposed for substrate physics.
+10 lenses across 3 tiers (Foundation, Analytical, Innovation).
+144-position Q-Cube coverage space. Gap-directed test planning.
+Persistent ingestion surviving launcher restart. The same
+architecture that identified $38.7M in industrial damage now
+diagnoses the electric bill of galaxies.
+
+## v24 — Boundary Dynamics, Baryonic Grind, σ_crit Discovery
+
+### Three Substrate Regimes (Burdick)
+
+Multi-scale perturbation testing: perturbation scale maps to physical
+scale. The target response determines glass or steel.
+
+| Regime | Test | Result |
+|--------|------|--------|
+| Diffusive Healing | Buckshot (Swiss Cheese) | Coherence 0.99987 — pump noise heals |
+| Coherence Failure | Baryonic Grind (8-Buck) | Throat 0.742 — dense matter degrades |
+| Boundary Nonlinear | Edge Perturbation | 38× flood — edge dissolves to bulk |
+
+### Boundary Stability Discovery
+
+Eight boundary treatments tested after shear perturbation.
+Only the nonlinear saturation clamp (σ_crit) maintains a
+stable thin edge. Dissipation alone fails. Injection is
+catastrophic. The torus edge is a pressure vessel with a
+maximum σ capacity — not an elastic membrane.
+
+New constant: σ_crit (boundary saturation limit).
+System-dependent. Dimensionless control: Π = σ_edge/σ_crit.
+
+### Alpha Centauri Phase-Dependent Arrival
+
+8/8 stable across all approach angles and clamp values.
+Wide binary (sep=4.0) produces thinner boundary (σ=1.31
+vs HR 1099 σ=3.18). Asymmetry 7%. Anti-throat safest
+approach: minimum gradient, smoothest impedance profile.
+
+Safe = min(|∇σ|) — gradient, not absolute σ.
+
+### Arrival Timing
+
+No oscillation. Monotonic rise. No safe window for timed
+entry. OpT lead time: 8000 steps (predictive precursor).
+Deceleration must occur in void corridor before torus edge.
+
 ## Applications for Scientists
 
 ### What These Models Solve
@@ -825,16 +919,20 @@ cyclic agitation.
 
 ### What Scientists Should Run First
 
-1. Galaxy rotation curves: verify 6-class boundaries
-2. Neutrino gradient: stack IceCube data on Class IV targets
-3. Binary mass transfer: compare predictions to RS CVn catalogs
-4. Frequency coupling: apply harm band analysis to your domain
-5. Perturbation isolation: use the 4-run decomposition method
+1. Null pump test: run BCM_v23_null_pump_test.py --quick to verify
+   σ → 0 without SMBH injection (the funded state proof)
+2. Einstein coupling: run BCM_v23_einstein_coupling.py --quick for
+   T_μν derivation, Newtonian limit, and lensing predictions
+3. Chi-squared comparison: run BCM_chi_squared_engine.py --quick
+   for 29-galaxy BCM vs NFW vs MOND vs Newton comparison
+4. Galaxy rotation curves: verify 6-class boundaries
+5. Neutrino gradient: stack IceCube data on Class IV targets
+6. Binary mass transfer: compare predictions to RS CVn catalogs
+7. Frequency coupling: apply harm band analysis to your domain
+8. Perturbation isolation: use the 4-run decomposition method
    on any observer-coupled measurement system
-6. Fractal dimension: run BCM_v18_frastrate_v2.py to measure
-   D_f of probe-written boundaries in your own system — any
-   cyclic sampling process writes a causal frontier with
-   measurable fractal dimension
+9. Fractal dimension: run BCM_v18_frastrate_v2.py to measure
+   D_f of probe-written boundaries in your own system
 
 All code is open source. All data is on Zenodo with
 timestamped JSON evidence. Reproduce, challenge, extend.
