@@ -1,0 +1,617 @@
+{
+  "test_name": "BCM_v27_5_24_phase1_stability_gate",
+  "timestamp": "20260503_083027",
+  "all_invariant": true,
+  "records": [
+    {
+      "config_label": "sc=0.0010, sep=5",
+      "sigma_crit": 0.001,
+      "separation": 5,
+      "result_128": {
+        "sigma_crit": 0.001,
+        "separation": 5,
+        "grid": 128,
+        "elapsed_sec": 27.871638774871826,
+        "valid": true,
+        "rho_max": 2.457922068706038,
+        "rho_sub_max": 2.457922068706038,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.0005,
+              0.001,
+              0.0015,
+              0.002
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.04742587317756678,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 3.469446951953614e-18,
+            "max_abs_curl_inner": 0.09750345397107543,
+            "curl_to_div_ratio": 2.8103457214174184e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 0.4162569752334386,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 15155,
+            "phi_min_in_region": 0.9975273768433587,
+            "phi_mean_in_region": 0.9975273768433651,
+            "threshold": 0.95
+          }
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.001,
+        "separation": 5,
+        "grid": 256,
+        "elapsed_sec": 27.885013818740845,
+        "valid": true,
+        "rho_max": 2.1314133707867473,
+        "rho_sub_max": 2.1314133707867473,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.0005,
+              0.001,
+              0.0015,
+              0.002
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.04742587317756678,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 1.0842021724855044e-19,
+            "max_abs_curl_inner": 0.014378447603241556,
+            "curl_to_div_ratio": 1.3261777155711974e+17,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 0.6177876324335585,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 62498,
+            "phi_min_in_region": 0.9975273768433653,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "per_hyp_invariant": {
+        "H_PAPER_B_1_PHI_SIGMOID": true,
+        "H_PAPER_B_2_J_VORTICITY": true,
+        "H_PAPER_B_3_LOOP_CONVERGES": true,
+        "H_PAPER_B_4_RECOVERY_LIMIT": true
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.0010, sep=25",
+      "sigma_crit": 0.001,
+      "separation": 25,
+      "result_128": {
+        "sigma_crit": 0.001,
+        "separation": 25,
+        "grid": 128,
+        "elapsed_sec": 20.716434478759766,
+        "valid": true,
+        "rho_max": 5.54104874012528,
+        "rho_sub_max": 5.54104874012528,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.0005,
+              0.001,
+              0.0015,
+              0.002
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.04742587317756678,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 3.469446951953614e-18,
+            "max_abs_curl_inner": 0.117503156562382,
+            "curl_to_div_ratio": 3.386797901498884e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 2.12845182878796,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 14525,
+            "phi_min_in_region": 0.9975273768433558,
+            "phi_mean_in_region": 0.9975273768433649,
+            "threshold": 0.95
+          }
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.001,
+        "separation": 25,
+        "grid": 256,
+        "elapsed_sec": 25.4262375831604,
+        "valid": true,
+        "rho_max": 7.741410229552184,
+        "rho_sub_max": 7.741410229552184,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.0005,
+              0.001,
+              0.0015,
+              0.002
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.04742587317756678,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 4.336808689942018e-19,
+            "max_abs_curl_inner": 0.03201143583734342,
+            "curl_to_div_ratio": 7.381334554043104e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 1.6515305396696094,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 61862,
+            "phi_min_in_region": 0.9975273768433653,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "per_hyp_invariant": {
+        "H_PAPER_B_1_PHI_SIGMOID": true,
+        "H_PAPER_B_2_J_VORTICITY": true,
+        "H_PAPER_B_3_LOOP_CONVERGES": true,
+        "H_PAPER_B_4_RECOVERY_LIMIT": true
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.1000, sep=5",
+      "sigma_crit": 0.1,
+      "separation": 5,
+      "result_128": {
+        "sigma_crit": 0.1,
+        "separation": 5,
+        "grid": 128,
+        "elapsed_sec": 21.123209476470947,
+        "valid": true,
+        "rho_max": 2.457922068706038,
+        "rho_sub_max": 2.457922068706038,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.047425873177566726,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 3.469446951953614e-18,
+            "max_abs_curl_inner": 0.09750345397107543,
+            "curl_to_div_ratio": 2.8103457214174184e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 0.4162569752334386,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 15155,
+            "phi_min_in_region": 0.9975273768433651,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.1,
+        "separation": 5,
+        "grid": 256,
+        "elapsed_sec": 25.91101884841919,
+        "valid": true,
+        "rho_max": 2.1314133707867473,
+        "rho_sub_max": 2.1314133707867473,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.047425873177566726,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 1.0842021724855044e-19,
+            "max_abs_curl_inner": 0.014378447603241556,
+            "curl_to_div_ratio": 1.3261777155711974e+17,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 0.6177876324335585,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 62498,
+            "phi_min_in_region": 0.9975273768433653,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "per_hyp_invariant": {
+        "H_PAPER_B_1_PHI_SIGMOID": true,
+        "H_PAPER_B_2_J_VORTICITY": true,
+        "H_PAPER_B_3_LOOP_CONVERGES": true,
+        "H_PAPER_B_4_RECOVERY_LIMIT": true
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.1000, sep=25",
+      "sigma_crit": 0.1,
+      "separation": 25,
+      "result_128": {
+        "sigma_crit": 0.1,
+        "separation": 25,
+        "grid": 128,
+        "elapsed_sec": 20.523562908172607,
+        "valid": true,
+        "rho_max": 5.54104874012528,
+        "rho_sub_max": 5.54104874012528,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.047425873177566726,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 3.469446951953614e-18,
+            "max_abs_curl_inner": 0.117503156562382,
+            "curl_to_div_ratio": 3.386797901498884e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 2.12845182878796,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 14525,
+            "phi_min_in_region": 0.9975273768433651,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.1,
+        "separation": 25,
+        "grid": 256,
+        "elapsed_sec": 25.27157187461853,
+        "valid": true,
+        "rho_max": 7.741410229552184,
+        "rho_sub_max": 7.741410229552184,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.047425873177566726,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 4.336808689942018e-19,
+            "max_abs_curl_inner": 0.03201143583734342,
+            "curl_to_div_ratio": 7.381334554043104e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 1.6515305396696094,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 61862,
+            "phi_min_in_region": 0.9975273768433653,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "per_hyp_invariant": {
+        "H_PAPER_B_1_PHI_SIGMOID": true,
+        "H_PAPER_B_2_J_VORTICITY": true,
+        "H_PAPER_B_3_LOOP_CONVERGES": true,
+        "H_PAPER_B_4_RECOVERY_LIMIT": true
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.0100, sep=12",
+      "sigma_crit": 0.01,
+      "separation": 12,
+      "result_128": {
+        "sigma_crit": 0.01,
+        "separation": 12,
+        "grid": 128,
+        "elapsed_sec": 20.832330226898193,
+        "valid": true,
+        "rho_max": 5.091630207575094,
+        "rho_sub_max": 5.091630207575094,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.005,
+              0.01,
+              0.015,
+              0.02
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.04742587317756678,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 6.938893903907228e-18,
+            "max_abs_curl_inner": 0.12282703458047076,
+            "curl_to_div_ratio": 1.7701241189364196e+16,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 1.108520556053514,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 14956,
+            "phi_min_in_region": 0.9975273768433645,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.01,
+        "separation": 12,
+        "grid": 256,
+        "elapsed_sec": 25.389893531799316,
+        "valid": true,
+        "rho_max": 5.592951424088888,
+        "rho_sub_max": 5.592951424088888,
+        "classifications": {
+          "H_PAPER_B_1_PHI_SIGMOID": "PASS",
+          "H_PAPER_B_2_J_VORTICITY": "PASS",
+          "H_PAPER_B_3_LOOP_CONVERGES": "FAIL",
+          "H_PAPER_B_4_RECOVERY_LIMIT": "PASS"
+        },
+        "diagnostics": {
+          "h1": {
+            "sigma_samples": [
+              0.0,
+              0.005,
+              0.01,
+              0.015,
+              0.02
+            ],
+            "phi_samples": [
+              0.9975273768433653,
+              0.9525741268224334,
+              0.5,
+              0.04742587317756678,
+              0.0024726231566347743
+            ],
+            "monotonic": true,
+            "phi_at_crit": 0.5,
+            "near_half": true
+          },
+          "h2": {
+            "max_abs_div_inner": 2.168404344971009e-19,
+            "max_abs_curl_inner": 0.032903389442410225,
+            "curl_to_div_ratio": 1.5174010105043456e+17,
+            "vorticity_threshold": 1e-06,
+            "ratio_threshold_K": 10.0
+          },
+          "h3": {
+            "loop_integral": 1.5469681705016591,
+            "floor": 1e-09,
+            "phase1_convergence_held": false,
+            "fail_reason": "phase 1 convergence not confirmed"
+          },
+          "h4": {
+            "n_low_sigma_pixels": 62322,
+            "phi_min_in_region": 0.9975273768433653,
+            "phi_mean_in_region": 0.9975273768433653,
+            "threshold": 0.95
+          }
+        }
+      },
+      "per_hyp_invariant": {
+        "H_PAPER_B_1_PHI_SIGMOID": true,
+        "H_PAPER_B_2_J_VORTICITY": true,
+        "H_PAPER_B_3_LOOP_CONVERGES": true,
+        "H_PAPER_B_4_RECOVERY_LIMIT": true
+      },
+      "invariant": true
+    }
+  ]
+}

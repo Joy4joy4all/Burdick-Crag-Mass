@@ -1,0 +1,242 @@
+{
+  "test_name": "BCM_v27_SPARC_M_sigma_phase1_stability_gate",
+  "timestamp": "20260502_090040",
+  "all_invariant": true,
+  "records": [
+    {
+      "galaxy_name": "UGC04483",
+      "percentile": 0.0,
+      "percentile_index": 0,
+      "M_proxy": 247.92658,
+      "result_128": {
+        "galaxy_name": "UGC04483",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\dwarf_V0-50\\UGC04483_rotmod.dat",
+        "grid": 128,
+        "elapsed_sec": 79.45039558410645,
+        "sigma_baseline": 3855.6165296445824,
+        "sigma_plus": 3894.1726949412355,
+        "sigma_minus": 3817.060364348552,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 3817.060364348552,
+          "sigma_baseline": 3855.6165296445824,
+          "sigma_plus": 3894.1726949412355,
+          "delta_plus": 38.556165296653035,
+          "delta_minus": 38.556165296030485,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "result_256": {
+        "galaxy_name": "UGC04483",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\dwarf_V0-50\\UGC04483_rotmod.dat",
+        "grid": 256,
+        "elapsed_sec": 72.65965819358826,
+        "sigma_baseline": 3988.5241287535446,
+        "sigma_plus": 4028.4093700421013,
+        "sigma_minus": 3948.6388874661034,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 3948.6388874661034,
+          "sigma_baseline": 3988.5241287535446,
+          "sigma_plus": 4028.4093700421013,
+          "delta_plus": 39.8852412885567,
+          "delta_minus": 39.885241287441204,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "invariant": true
+    },
+    {
+      "galaxy_name": "DDO170",
+      "percentile": 0.25,
+      "percentile_index": 44,
+      "M_proxy": 13264.955541000003,
+      "result_128": {
+        "galaxy_name": "DDO170",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\low_V50-100\\DDO170_rotmod.dat",
+        "grid": 128,
+        "elapsed_sec": 52.97486448287964,
+        "sigma_baseline": 2313.8896468716916,
+        "sigma_plus": 2337.0285433406416,
+        "sigma_minus": 2290.7507504031482,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 2290.7507504031482,
+          "sigma_baseline": 2313.8896468716916,
+          "sigma_plus": 2337.0285433406416,
+          "delta_plus": 23.13889646894995,
+          "delta_minus": 23.138896468543408,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "result_256": {
+        "galaxy_name": "DDO170",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\low_V50-100\\DDO170_rotmod.dat",
+        "grid": 256,
+        "elapsed_sec": 73.68543815612793,
+        "sigma_baseline": 2438.774574869869,
+        "sigma_plus": 2463.1623206182294,
+        "sigma_minus": 2414.3868291215626,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 2414.3868291215626,
+          "sigma_baseline": 2438.774574869869,
+          "sigma_plus": 2463.1623206182294,
+          "delta_plus": 24.38774574836043,
+          "delta_minus": 24.387745748306315,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "invariant": true
+    },
+    {
+      "galaxy_name": "ESO116-G012",
+      "percentile": 0.5,
+      "percentile_index": 87,
+      "M_proxy": 48275.33400999999,
+      "result_128": {
+        "galaxy_name": "ESO116-G012",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\mid_V100-150\\ESO116-G012_rotmod.dat",
+        "grid": 128,
+        "elapsed_sec": 54.49060034751892,
+        "sigma_baseline": 18072.945833481335,
+        "sigma_plus": 18253.675291816133,
+        "sigma_minus": 17892.216375147378,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 17892.216375147378,
+          "sigma_baseline": 18072.945833481335,
+          "sigma_plus": 18253.675291816133,
+          "delta_plus": 180.72945833479753,
+          "delta_minus": 180.72945833395715,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "result_256": {
+        "galaxy_name": "ESO116-G012",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\mid_V100-150\\ESO116-G012_rotmod.dat",
+        "grid": 256,
+        "elapsed_sec": 78.52631616592407,
+        "sigma_baseline": 19290.643408701024,
+        "sigma_plus": 19483.549842781125,
+        "sigma_minus": 19097.736974613686,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 19097.736974613686,
+          "sigma_baseline": 19290.643408701024,
+          "sigma_plus": 19483.549842781125,
+          "delta_plus": 192.90643408010146,
+          "delta_minus": 192.9064340873374,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "invariant": true
+    },
+    {
+      "galaxy_name": "NGC4138",
+      "percentile": 0.75,
+      "percentile_index": 130,
+      "M_proxy": 986213.21749,
+      "result_128": {
+        "galaxy_name": "NGC4138",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\high_V150-200\\NGC4138_rotmod.dat",
+        "grid": 128,
+        "elapsed_sec": 53.60200023651123,
+        "sigma_baseline": 252373.66418748017,
+        "sigma_plus": 254897.40082946228,
+        "sigma_minus": 249849.92754545825,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 249849.92754545825,
+          "sigma_baseline": 252373.66418748017,
+          "sigma_plus": 254897.40082946228,
+          "delta_plus": 2523.7366419821046,
+          "delta_minus": 2523.7366420219187,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "result_256": {
+        "galaxy_name": "NGC4138",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\high_V150-200\\NGC4138_rotmod.dat",
+        "grid": 256,
+        "elapsed_sec": 73.15879940986633,
+        "sigma_baseline": 289474.70496123284,
+        "sigma_plus": 292369.4520108834,
+        "sigma_minus": 286579.9579115735,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 286579.9579115735,
+          "sigma_baseline": 289474.70496123284,
+          "sigma_plus": 292369.4520108834,
+          "delta_plus": 2894.747049650585,
+          "delta_minus": 2894.747049659316,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "invariant": true
+    },
+    {
+      "galaxy_name": "UGC09133",
+      "percentile": 1.0,
+      "percentile_index": 174,
+      "M_proxy": 12771186.92356,
+      "result_128": {
+        "galaxy_name": "UGC09133",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\massive_V200plus\\UGC09133_rotmod.dat",
+        "grid": 128,
+        "elapsed_sec": 53.6900908946991,
+        "sigma_baseline": 210448.66648831143,
+        "sigma_plus": 212553.15315325905,
+        "sigma_minus": 208344.1798234361,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 208344.1798234361,
+          "sigma_baseline": 210448.66648831143,
+          "sigma_plus": 212553.15315325905,
+          "delta_plus": 2104.486664947617,
+          "delta_minus": 2104.486664875323,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "result_256": {
+        "galaxy_name": "UGC09133",
+        "dat_path": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\sparc_raw\\massive_V200plus\\UGC09133_rotmod.dat",
+        "grid": 256,
+        "elapsed_sec": 73.46501898765564,
+        "sigma_baseline": 429956.81376656273,
+        "sigma_plus": 434256.381904148,
+        "sigma_minus": 425657.24562881514,
+        "classification": "PASS",
+        "diagnostics": {
+          "sigma_minus": 425657.24562881514,
+          "sigma_baseline": 429956.81376656273,
+          "sigma_plus": 434256.381904148,
+          "delta_plus": 4299.568137585244,
+          "delta_minus": 4299.568137747585,
+          "sign_plus": 1.0,
+          "sign_minus": 1.0,
+          "monotonic_direction": "increasing"
+        }
+      },
+      "invariant": true
+    }
+  ]
+}

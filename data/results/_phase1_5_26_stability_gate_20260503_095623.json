@@ -1,0 +1,217 @@
+{
+  "test_name": "BCM_v27_5_26_phase1_stability_gate",
+  "timestamp": "20260503_095623",
+  "all_invariant": true,
+  "records": [
+    {
+      "config_label": "sc=0.0010, sep=5",
+      "sigma_crit": 0.001,
+      "separation": 5,
+      "result_128": {
+        "sigma_crit": 0.001,
+        "separation": 5,
+        "grid": 128,
+        "elapsed_sec": 21.71855926513672,
+        "valid": true,
+        "rho_max": 2.457922068706038,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9478357445722031,
+          "spectral_pearson": 0.9975470735785313,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.09750345397107543,
+          "max_abs_curl_V_inner": 0.30963362323220817,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.001,
+        "separation": 5,
+        "grid": 256,
+        "elapsed_sec": 26.317031860351562,
+        "valid": true,
+        "rho_max": 2.1314133707867473,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9853180979557454,
+          "spectral_pearson": 0.9999849312202056,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.014378447603241556,
+          "max_abs_curl_V_inner": 0.08701436176607324,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.0010, sep=25",
+      "sigma_crit": 0.001,
+      "separation": 25,
+      "result_128": {
+        "sigma_crit": 0.001,
+        "separation": 25,
+        "grid": 128,
+        "elapsed_sec": 21.518120288848877,
+        "valid": true,
+        "rho_max": 5.54104874012528,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9433943272632251,
+          "spectral_pearson": 0.9982757870355878,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.117503156562382,
+          "max_abs_curl_V_inner": 0.43156308771747565,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.001,
+        "separation": 25,
+        "grid": 256,
+        "elapsed_sec": 26.185469388961792,
+        "valid": true,
+        "rho_max": 7.741410229552184,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9888259793300797,
+          "spectral_pearson": 0.9997966197086612,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.03201143583734342,
+          "max_abs_curl_V_inner": 0.21548145054591683,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.1000, sep=5",
+      "sigma_crit": 0.1,
+      "separation": 5,
+      "result_128": {
+        "sigma_crit": 0.1,
+        "separation": 5,
+        "grid": 128,
+        "elapsed_sec": 21.38864302635193,
+        "valid": true,
+        "rho_max": 2.457922068706038,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9478357445722031,
+          "spectral_pearson": 0.9975470735785313,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.09750345397107543,
+          "max_abs_curl_V_inner": 0.30963362323220817,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.1,
+        "separation": 5,
+        "grid": 256,
+        "elapsed_sec": 26.108792543411255,
+        "valid": true,
+        "rho_max": 2.1314133707867473,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9853180979557454,
+          "spectral_pearson": 0.9999849312202056,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.014378447603241556,
+          "max_abs_curl_V_inner": 0.08701436176607324,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.1000, sep=25",
+      "sigma_crit": 0.1,
+      "separation": 25,
+      "result_128": {
+        "sigma_crit": 0.1,
+        "separation": 25,
+        "grid": 128,
+        "elapsed_sec": 21.59794020652771,
+        "valid": true,
+        "rho_max": 5.54104874012528,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9433943272632251,
+          "spectral_pearson": 0.9982757870355878,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.117503156562382,
+          "max_abs_curl_V_inner": 0.43156308771747565,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.1,
+        "separation": 25,
+        "grid": 256,
+        "elapsed_sec": 26.054216146469116,
+        "valid": true,
+        "rho_max": 7.741410229552184,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9888259793300797,
+          "spectral_pearson": 0.9997966197086612,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.03201143583734342,
+          "max_abs_curl_V_inner": 0.21548145054591683,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.0100, sep=12",
+      "sigma_crit": 0.01,
+      "separation": 12,
+      "result_128": {
+        "sigma_crit": 0.01,
+        "separation": 12,
+        "grid": 128,
+        "elapsed_sec": 21.781044960021973,
+        "valid": true,
+        "rho_max": 5.091630207575094,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9554751809039486,
+          "spectral_pearson": 0.9995920669413303,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.12282703458047076,
+          "max_abs_curl_V_inner": 0.4684897914148962,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.01,
+        "separation": 12,
+        "grid": 256,
+        "elapsed_sec": 26.579647064208984,
+        "valid": true,
+        "rho_max": 5.592951424088888,
+        "classification": "PASS",
+        "diagnostics": {
+          "spatial_pearson": 0.9873884409697421,
+          "spectral_pearson": 0.9997122886071369,
+          "spatial_threshold": 0.5,
+          "spectral_threshold": 0.5,
+          "max_abs_curl_J_inner": 0.032903389442410225,
+          "max_abs_curl_V_inner": 0.20595926222772287,
+          "n_spectral_modes_compared": 10
+        }
+      },
+      "invariant": true
+    }
+  ]
+}

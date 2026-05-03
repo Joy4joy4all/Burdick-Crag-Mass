@@ -1,0 +1,217 @@
+{
+  "test_name": "BCM_v27_5_25_phase1_stability_gate",
+  "timestamp": "20260503_093342",
+  "all_invariant": true,
+  "records": [
+    {
+      "config_label": "sc=0.0010, sep=5",
+      "sigma_crit": 0.001,
+      "separation": 5,
+      "result_128": {
+        "sigma_crit": 0.001,
+        "separation": 5,
+        "grid": 128,
+        "elapsed_sec": 22.34468388557434,
+        "valid": true,
+        "rho_max": 2.457922068706038,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 5.551115123125783e-17,
+          "max_abs_curl_inner": 0.30963362323220817,
+          "curl_to_div_ratio": 5577863480839797.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.001,
+        "separation": 5,
+        "grid": 256,
+        "elapsed_sec": 27.939571857452393,
+        "valid": true,
+        "rho_max": 2.1314133707867473,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 2.7755575615628914e-17,
+          "max_abs_curl_inner": 0.08701436176607324,
+          "curl_to_div_ratio": 3135022777804552.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.0010, sep=25",
+      "sigma_crit": 0.001,
+      "separation": 25,
+      "result_128": {
+        "sigma_crit": 0.001,
+        "separation": 25,
+        "grid": 128,
+        "elapsed_sec": 22.96070909500122,
+        "valid": true,
+        "rho_max": 5.54104874012528,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 2.7755575615628914e-17,
+          "max_abs_curl_inner": 0.43156308771747565,
+          "curl_to_div_ratio": 1.5548698888250272e+16,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.001,
+        "separation": 25,
+        "grid": 256,
+        "elapsed_sec": 28.615283727645874,
+        "valid": true,
+        "rho_max": 7.741410229552184,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 5.551115123125783e-17,
+          "max_abs_curl_inner": 0.21548145054591683,
+          "curl_to_div_ratio": 3881768721535380.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.1000, sep=5",
+      "sigma_crit": 0.1,
+      "separation": 5,
+      "result_128": {
+        "sigma_crit": 0.1,
+        "separation": 5,
+        "grid": 128,
+        "elapsed_sec": 22.57317352294922,
+        "valid": true,
+        "rho_max": 2.457922068706038,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 5.551115123125783e-17,
+          "max_abs_curl_inner": 0.30963362323220817,
+          "curl_to_div_ratio": 5577863480839797.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.1,
+        "separation": 5,
+        "grid": 256,
+        "elapsed_sec": 27.97939682006836,
+        "valid": true,
+        "rho_max": 2.1314133707867473,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 2.7755575615628914e-17,
+          "max_abs_curl_inner": 0.08701436176607324,
+          "curl_to_div_ratio": 3135022777804552.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.1000, sep=25",
+      "sigma_crit": 0.1,
+      "separation": 25,
+      "result_128": {
+        "sigma_crit": 0.1,
+        "separation": 25,
+        "grid": 128,
+        "elapsed_sec": 22.345465660095215,
+        "valid": true,
+        "rho_max": 5.54104874012528,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 2.7755575615628914e-17,
+          "max_abs_curl_inner": 0.43156308771747565,
+          "curl_to_div_ratio": 1.5548698888250272e+16,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.1,
+        "separation": 25,
+        "grid": 256,
+        "elapsed_sec": 27.15510654449463,
+        "valid": true,
+        "rho_max": 7.741410229552184,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 5.551115123125783e-17,
+          "max_abs_curl_inner": 0.21548145054591683,
+          "curl_to_div_ratio": 3881768721535380.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "invariant": true
+    },
+    {
+      "config_label": "sc=0.0100, sep=12",
+      "sigma_crit": 0.01,
+      "separation": 12,
+      "result_128": {
+        "sigma_crit": 0.01,
+        "separation": 12,
+        "grid": 128,
+        "elapsed_sec": 22.98477530479431,
+        "valid": true,
+        "rho_max": 5.091630207575094,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 1.0408340855860843e-16,
+          "max_abs_curl_inner": 0.4684897914148962,
+          "curl_to_div_ratio": 4501099626758417.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "result_256": {
+        "sigma_crit": 0.01,
+        "separation": 12,
+        "grid": 256,
+        "elapsed_sec": 27.223156213760376,
+        "valid": true,
+        "rho_max": 5.592951424088888,
+        "classification": "PASS",
+        "diagnostics": {
+          "field_under_test": "evolved rho_avg (substrate response)",
+          "test_construction": "V_substrate = curl(rho_2d . z_hat); test curl and div of V_substrate",
+          "max_abs_div_inner": 5.551115123125783e-17,
+          "max_abs_curl_inner": 0.20595926222772287,
+          "curl_to_div_ratio": 3710232226489100.0,
+          "vorticity_threshold": 1e-06,
+          "ratio_threshold_K": 10.0
+        }
+      },
+      "invariant": true
+    }
+  ]
+}
