@@ -1,0 +1,338 @@
+{
+  "test_name": "BCM_v28_TEST19_CMB_PRESTRAIN_ALIGNMENT_SCANNER",
+  "test_number": 19,
+  "timestamp": "20260509_082543",
+  "target": "CMB_Primordial_Substrate_Alignment",
+  "framework": "cmb_prestrain_synthetic_operator_test",
+  "v28_partition": "primordial_gutter (data/results/)",
+  "hypotheses_tested": {
+    "H_V28_PRIMORDIAL_GUTTER_CMB_PRESTRAIN": {
+      "statement": "Synthetic operator validation for H_V28_PRIMORDIAL_GUTTER_CMB_PRESTRAIN. Grid 128\u00d7128. \u03ba_CMB sweep [0.0, 0.25, 0.5, 1.0, 2.0, 5.0]. CMB modes: aligned (void channel, negative \u03c3_CMB), anti_aligned (hot-spot barrier, positive \u03c3_CMB), transverse, random. Operator: A_CMB = \u2207\u03c3_local\u00b7\u2207\u03c3_CMB / (|\u2207\u03c3_local||\u2207\u03c3_CMB| + \u03b5). \u0394W proxy = mean(|\u2207\u03c3_local| \u00d7 |\u2207\u03c3_eff|) [spatial gradient proxy, not BCM temporal path integral]. Baseline \u0394W (\u03ba=0): 1.213920e-10. coherence_score (aligned support rate) = 1.0000. overlap_fraction (all non-ctrl support rate) = 0.5000. Operator valid = True (requires coherence_score \u2265 0.7 AND overlap_fraction \u2265 0.5). Sign convention: aligned = void channel (negative \u03c3_CMB, pre-carved Gutter path); anti_aligned = hot-spot barrier (positive \u03c3_CMB, cross-scar shear risk). Ontological status: LOW (Interpretive). Synthetic only. Does not use Planck or SPARC data.",
+      "result": "FIELD_EXTRACTED",
+      "direction": 1,
+      "evidence_type": "primary",
+      "pass_count": 10,
+      "total_configs": 20,
+      "prior": 0.5,
+      "measurement_targets": [
+        "invariance",
+        "drift",
+        "degeneracy",
+        "resolution"
+      ],
+      "metrics": {
+        "coherence_score": 1.0,
+        "overlap_fraction": 0.5,
+        "baseline_deltaW": 1.2139200229588068e-10,
+        "operator_valid": true,
+        "support_aligned_kappa_gt0": 5,
+        "total_aligned_kappa_gt0": 5,
+        "support_all_non_control": 10,
+        "total_non_control": 20,
+        "coherence_gate": 0.7,
+        "overlap_gate": 0.5,
+        "R_proxy": "|\u2207\u03c3_local| (spatial gradient magnitude)",
+        "dW_proxy": "mean(|\u2207\u03c3_local| \u00d7 |\u2207\u03c3_eff|)",
+        "note_R": "NOT BCM resonance R=cos(\u0394\u03a6). Spatial proxy valid for first-pass directional operator test only.",
+        "kappa_CMB_values": [
+          0.0,
+          0.25,
+          0.5,
+          1.0,
+          2.0,
+          5.0
+        ],
+        "cmb_anisotropy_scale": 1e-05,
+        "sigma_crit": 0.0005,
+        "grid_n": 128,
+        "aligned_sign": "NEGATIVE \u03c3_CMB (void channel = pre-carved Gutter)",
+        "anti_aligned_sign": "POSITIVE \u03c3_CMB (hot-spot = cross-scar barrier)"
+      },
+      "context": {
+        "framework": "cmb_prestrain_synthetic_operator_test",
+        "data_source": "synthetic_only_no_Planck_no_SPARC",
+        "ontological_status": "LOW_COMMITMENT_HYPOTHESIS_LAYER",
+        "next_step": "If operator_valid=True: design observational test overlaying Planck CMB gradient on SPARC/Local Group galaxy substrate signatures. Calibrate \u03ba_CMB against real sky data."
+      },
+      "keywords": [
+        "primordial_gutter",
+        "cmb_prestrain",
+        "sigma_eff",
+        "a_cmb",
+        "kappa_cmb",
+        "recursive_rip",
+        "super_gutter_alignment",
+        "cross_scar_shear",
+        "gutter_depth",
+        "classifier"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "cmb_mode": "aligned",
+      "kappa_CMB": 0.0,
+      "A_CMB_mean": 0.0,
+      "A_CMB_median": 0.0,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2139200229588068e-10,
+      "deltaW_reduction_fraction": 0.0,
+      "verdict": "CONTROL"
+    },
+    {
+      "cmb_mode": "aligned",
+      "kappa_CMB": 0.25,
+      "A_CMB_mean": -0.4335503684944641,
+      "A_CMB_median": -0.11441962853633604,
+      "alignment_class": "WEAK_ANTI_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2095054119825883e-10,
+      "deltaW_reduction_fraction": 0.003606943994221329,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "aligned",
+      "kappa_CMB": 0.5,
+      "A_CMB_mean": -0.5681361341035968,
+      "A_CMB_median": -0.20464886193031462,
+      "alignment_class": "WEAK_ANTI_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2050912346062017e-10,
+      "deltaW_reduction_fraction": 0.007213533717065619,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "aligned",
+      "kappa_CMB": 1.0,
+      "A_CMB_mean": -0.6893383267020643,
+      "A_CMB_median": -0.33891832845953784,
+      "alignment_class": "WEAK_ANTI_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.1962642019092275e-10,
+      "deltaW_reduction_fraction": 0.014425632981227513,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "aligned",
+      "kappa_CMB": 2.0,
+      "A_CMB_mean": -0.7858530321819966,
+      "A_CMB_median": -0.5025917103229123,
+      "alignment_class": "CROSS_SCAR_SHEAR_RISK",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.17861557963136e-10,
+      "deltaW_reduction_fraction": 0.028845384228700584,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "aligned",
+      "kappa_CMB": 5.0,
+      "A_CMB_mean": -0.8731252453115539,
+      "A_CMB_median": -0.7092577565708785,
+      "alignment_class": "CROSS_SCAR_SHEAR_RISK",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.1257168555797547e-10,
+      "deltaW_reduction_fraction": 0.07206612010956595,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "anti_aligned",
+      "kappa_CMB": 0.0,
+      "A_CMB_mean": 0.0,
+      "A_CMB_median": 0.0,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2139200229588068e-10,
+      "deltaW_reduction_fraction": 0.0,
+      "verdict": "CONTROL"
+    },
+    {
+      "cmb_mode": "anti_aligned",
+      "kappa_CMB": 0.25,
+      "A_CMB_mean": 0.4335503684944641,
+      "A_CMB_median": 0.11441962853633604,
+      "alignment_class": "WEAK_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2183350623472876e-10,
+      "deltaW_reduction_fraction": -0.0036072940271109346,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "anti_aligned",
+      "kappa_CMB": 0.5,
+      "A_CMB_mean": 0.5681361341035968,
+      "A_CMB_median": 0.20464886193031462,
+      "alignment_class": "WEAK_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2227505250574043e-10,
+      "deltaW_reduction_fraction": -0.007214933927831211,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "anti_aligned",
+      "kappa_CMB": 1.0,
+      "A_CMB_mean": 0.6893383267020643,
+      "A_CMB_median": 0.33891832845953784,
+      "alignment_class": "WEAK_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2315827005457543e-10,
+      "deltaW_reduction_fraction": -0.014431235093489364,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "anti_aligned",
+      "kappa_CMB": 2.0,
+      "A_CMB_mean": 0.7858530321819966,
+      "A_CMB_median": 0.5025917103229123,
+      "alignment_class": "SUPER_GUTTER_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.249251917450328e-10,
+      "deltaW_reduction_fraction": -0.0288678131158497,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "anti_aligned",
+      "kappa_CMB": 5.0,
+      "A_CMB_mean": 0.8731252453115539,
+      "A_CMB_median": 0.7092577565708785,
+      "alignment_class": "SUPER_GUTTER_ALIGNMENT",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.302295947815926e-10,
+      "deltaW_reduction_fraction": -0.07220727106291788,
+      "verdict": "SUPPORTS_OPERATOR"
+    },
+    {
+      "cmb_mode": "transverse",
+      "kappa_CMB": 0.0,
+      "A_CMB_mean": 0.0,
+      "A_CMB_median": 0.0,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2139200229588068e-10,
+      "deltaW_reduction_fraction": 0.0,
+      "verdict": "CONTROL"
+    },
+    {
+      "cmb_mode": "transverse",
+      "kappa_CMB": 0.25,
+      "A_CMB_mean": -0.03920123140894047,
+      "A_CMB_median": -0.000532267858056028,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2133087230744718e-10,
+      "deltaW_reduction_fraction": 0.0004994606451957357,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "transverse",
+      "kappa_CMB": 0.5,
+      "A_CMB_mean": -0.04481995325761133,
+      "A_CMB_median": -0.001030549987622596,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2128140128654461e-10,
+      "deltaW_reduction_fraction": 0.0009036620633813383,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "transverse",
+      "kappa_CMB": 1.0,
+      "A_CMB_mean": -0.048187329381289105,
+      "A_CMB_median": -0.002024207550725075,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2121629521297092e-10,
+      "deltaW_reduction_fraction": 0.0014356091869875151,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "transverse",
+      "kappa_CMB": 2.0,
+      "A_CMB_mean": -0.04982530417391993,
+      "A_CMB_median": -0.003723773444341493,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2121772570615884e-10,
+      "deltaW_reduction_fraction": 0.00142392138744928,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "transverse",
+      "kappa_CMB": 5.0,
+      "A_CMB_mean": -0.05051566536842813,
+      "A_CMB_median": -0.007475337354477082,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2231009286474166e-10,
+      "deltaW_reduction_fraction": -0.007501230077448269,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "random",
+      "kappa_CMB": 0.0,
+      "A_CMB_mean": 0.0,
+      "A_CMB_median": 0.0,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2139200229588068e-10,
+      "deltaW_reduction_fraction": 0.0,
+      "verdict": "CONTROL"
+    },
+    {
+      "cmb_mode": "random",
+      "kappa_CMB": 0.25,
+      "A_CMB_mean": -0.010003615317292451,
+      "A_CMB_median": 0.001323441910222246,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2139591589684182e-10,
+      "deltaW_reduction_fraction": -3.1975953393436556e-05,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "random",
+      "kappa_CMB": 0.5,
+      "A_CMB_mean": -0.010812573274470983,
+      "A_CMB_median": 0.002462205431281733,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2143143935542725e-10,
+      "deltaW_reduction_fraction": -0.00032221925294786973,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "random",
+      "kappa_CMB": 1.0,
+      "A_CMB_mean": -0.01111893415064168,
+      "A_CMB_median": 0.004462043495521683,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2159094974219997e-10,
+      "deltaW_reduction_fraction": -0.0016254938442655312,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "random",
+      "kappa_CMB": 2.0,
+      "A_CMB_mean": -0.011126423914518135,
+      "A_CMB_median": 0.007352507958586782,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.2224039469286495e-10,
+      "deltaW_reduction_fraction": -0.006931763359286316,
+      "verdict": "NEUTRAL_CONTROL"
+    },
+    {
+      "cmb_mode": "random",
+      "kappa_CMB": 5.0,
+      "A_CMB_mean": -0.010965220675357542,
+      "A_CMB_median": 0.013098857587646204,
+      "alignment_class": "NEUTRAL_SUBSTRATE",
+      "deltaW_baseline": 1.2139200229588068e-10,
+      "deltaW_eff": 1.265772037993174e-10,
+      "deltaW_reduction_fraction": -0.04236552557496023,
+      "verdict": "NEUTRAL_CONTROL"
+    }
+  ],
+  "elapsed_seconds": 0.10522699356079102
+}

@@ -1,0 +1,84 @@
+{
+  "test_name": "BCM_v28_Marginal_Band_Sweep_17",
+  "test_number": 17,
+  "timestamp": "20260509_065903",
+  "target": "Cube2_Marginal_Band_Real_Corpus",
+  "framework": "corpus_reader_three_classifier_sweep",
+  "v28_partition": "cube2_classifier_resolution (data/results/)",
+  "hypotheses_tested": {
+    "H_V28_MARGINAL_BAND_BOUNDARY_REAL": {
+      "statement": "Corpus reader applied three classifiers to 111 real samples from 3 file(s) (v19 combined drain chi + v25 cube2 phase reconciliation 3/7). These are the exact files generating 1777 STABLE Cube 2 anomalies (all 10/10) in AUTO-10 cube export 2026-05-09. coh_est verbatim from qt_layer.py: 1-(mag-1e-5)/(1e-3-1e-5) for mag=|growth_rate| in [1e-5,1e-3]. v28 marginal_band_flag: coh_est in [0.82, 0.97]. divergence_rate=0.4505  marginal_fraction=0.2883  MARGINAL+RED=15  COHFAIL+GREEN=5. Band confirmed=True (requires divergence_rate>0.20 AND marginal_fraction>0.15). v1 proxy finding: simplified 0D ODE yields DIFFUSIVE_HEALING everywhere -- MARGINAL is emergent wave-field regime of 2D solver.",
+      "result": "FIELD_EXTRACTED",
+      "direction": 1,
+      "evidence_type": "primary",
+      "pass_count": 0,
+      "total_configs": 111,
+      "prior": 0.5,
+      "measurement_targets": [
+        "invariance",
+        "drift",
+        "degeneracy",
+        "resolution"
+      ],
+      "metrics": {
+        "coherence_score": 0.7389975718622793,
+        "overlap_fraction": 0.45045045045045046,
+        "total_samples": 111,
+        "files_loaded": 3,
+        "marginal_count": 32,
+        "marginal_fraction": 0.2882882882882883,
+        "agree_count": 61,
+        "diverge_count": 50,
+        "agreement_rate": 0.5495495495495496,
+        "divergence_rate": 0.45045045045045046,
+        "diverge_marginal_red": 15,
+        "diverge_cohfail_green": 5,
+        "mean_growth_marginal": -3.8071875000000006e-06,
+        "std_growth_marginal": 0.0001133051635582635,
+        "mean_coh_marginal": 0.9024870580808081,
+        "std_coh_marginal": 0.0391503642206581,
+        "band_confirmed": true,
+        "regime_diffusive_healing": 58,
+        "regime_marginal": 22,
+        "regime_coherence_failure": 9,
+        "regime_boundary_nonlinear": 22,
+        "zone_green": 40,
+        "zone_yellow": 2,
+        "zone_red": 69,
+        "v1_proxy_finding": "0D_ODE_gives_DIFFUSIVE_HEALING_everywhere_MARGINAL_is_emergent_wave_field_regime",
+        "marg_coh_lo": 0.82,
+        "marg_coh_hi": 0.97,
+        "cube2_stable_anomalies": 1777
+      },
+      "context": {
+        "corpus_patterns": [
+          "BCM_v19_combined_drain_chi_*.json",
+          "BCM_v25_cube2_phase_reconciliation_3_*.json",
+          "BCM_v25_cube2_phase_reconciliation_7_*.json"
+        ],
+        "files_loaded": [
+          "BCM_v19_combined_drain_chi_20260410_071429.json",
+          "BCM_v25_cube2_phase_reconciliation_3_20260419_121208.json",
+          "BCM_v25_cube2_phase_reconciliation_7_20260419_135827.json"
+        ],
+        "coh_est_formula": "1-(mag-1e-5)/(1e-3-1e-5), mag=|growth_rate|",
+        "brucetron_hemorrhage": 0.0045,
+        "chi_c": 0.002582,
+        "framework": "corpus_reader_three_classifier_sweep"
+      },
+      "keywords": [
+        "classifier_divergence",
+        "test_zone",
+        "regime",
+        "diffusive_lock",
+        "fracture_lambda",
+        "attractor",
+        "regime_classification_confidence",
+        "brucetron",
+        "lambda",
+        "classifier"
+      ]
+    }
+  },
+  "elapsed_seconds": 0.007552385330200195
+}

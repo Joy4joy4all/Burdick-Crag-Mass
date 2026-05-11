@@ -1,0 +1,617 @@
+{
+  "test_name": "BCM_v28_TEST23_UNIFIED_CMB_SIGNAL",
+  "test_number": 23,
+  "timestamp": "20260509_094142",
+  "target": "UNIFIED_CMB_21_GALAXY_SWEEP",
+  "framework": "unified_cmb_signal_weight_sweep",
+  "v28_partition": "primordial_gutter (data/results/)",
+  "hypotheses_tested": {
+    "H_V28_UNIFIED_CMB_CRAG_SIGNAL": {
+      "statement": "Unified A_CMB signal sweep over 21 galaxies. A_CMB_full = w_t \u00d7 A_planck + (1\u2212w_t) \u00d7 A_v3k. \u03ba_align=2.0. w_t sweep 0.0\u21921.0 (11 steps). Planck data source: real Planck nside=64 JSON. Proxy rank correlation A_planck vs A_v3k = \u22120.047 (Test 22): orthogonal signals confirmed. Max rho at w_t=0.6 (rho=0.8948). Min flips at w_t=0.6 (flips=6). Max spread at w_t=1.0. Stable galaxies (class holds all weights): 9/21. Equal weight (w_t=0.5): rho=0.8701, flips=7. coherence_score=0.4286, overlap_fraction=0.8701.",
+      "result": "FIELD_EXTRACTED",
+      "direction": 0,
+      "evidence_type": "primary",
+      "pass_count": 9,
+      "total_configs": 21,
+      "prior": 0.5,
+      "measurement_targets": [
+        "invariance",
+        "drift",
+        "degeneracy",
+        "resolution"
+      ],
+      "metrics": {
+        "coherence_score": 0.42857142857142855,
+        "overlap_fraction": 0.8701298701298701,
+        "n_galaxies": 21,
+        "n_stable": 9,
+        "n_sensitive": 12,
+        "proxy_rho_planck_v3k": -0.0468,
+        "rho_wt_0_0": 0.17792207792207793,
+        "rho_wt_0_5": 0.8701298701298701,
+        "rho_wt_1_0": 0.8545454545454545,
+        "best_rho_wt": 0.6,
+        "best_rho_value": 0.8948051948051948,
+        "best_stable_wt": 0.6,
+        "best_stable_flips": 6,
+        "best_spread_wt": 1.0,
+        "flip_count_equal_weight": 7,
+        "kappa": 2.0,
+        "t_rms_uk": 70.0,
+        "v_scale": 500.0,
+        "h0": 70.0
+      },
+      "context": {
+        "framework": "unified_cmb_signal_weight_sweep",
+        "key_finding": "Planck thermal and V_3K kinematic A_CMB proxies are orthogonal (rho=\u22120.047). Both carry independent primordial signal. The optimal weight ratio reveals relative contribution of thermal scar topology vs kinematic substrate pressure.",
+        "next_step": "Test 24: SPARC rotation curve correlation with C_I_CMB. Does unified A_CMB correct BCM rotation curve residuals beyond what morphology alone explains?"
+      },
+      "keywords": [
+        "primordial_gutter",
+        "cmb_prestrain",
+        "a_cmb",
+        "crag_intensity",
+        "cmb_fused_crag_intensity",
+        "primordial_routing",
+        "tier_flip",
+        "super_gutter",
+        "cross_scar",
+        "classifier"
+      ]
+    }
+  },
+  "weight_sweep": [
+    {
+      "w_t": 0.0,
+      "w_k": 1.0,
+      "rho": 0.17792207792207793,
+      "flips": 9,
+      "spread": 0.20263305061342707,
+      "mean_ci": 0.10970142298438379
+    },
+    {
+      "w_t": 0.1,
+      "w_k": 0.9,
+      "rho": 0.2324675324675325,
+      "flips": 10,
+      "spread": 0.22574751234886606,
+      "mean_ci": 0.12390824127071746
+    },
+    {
+      "w_t": 0.2,
+      "w_k": 0.8,
+      "rho": 0.4207792207792208,
+      "flips": 9,
+      "spread": 0.25361027682712245,
+      "mean_ci": 0.13991440080255674
+    },
+    {
+      "w_t": 0.3,
+      "w_k": 0.7,
+      "rho": 0.6012987012987012,
+      "flips": 8,
+      "spread": 0.2579438288046002,
+      "mean_ci": 0.16169798166598814
+    },
+    {
+      "w_t": 0.4,
+      "w_k": 0.6,
+      "rho": 0.6896103896103896,
+      "flips": 8,
+      "spread": 0.3147618050997199,
+      "mean_ci": 0.18543468888827216
+    },
+    {
+      "w_t": 0.5,
+      "w_k": 0.5,
+      "rho": 0.8701298701298701,
+      "flips": 7,
+      "spread": 0.37649756512979615,
+      "mean_ci": 0.21311853112391693
+    },
+    {
+      "w_t": 0.6,
+      "w_k": 0.4,
+      "rho": 0.8948051948051948,
+      "flips": 6,
+      "spread": 0.4083766500093207,
+      "mean_ci": 0.24089026203622957
+    },
+    {
+      "w_t": 0.7,
+      "w_k": 0.3,
+      "rho": 0.8883116883116883,
+      "flips": 8,
+      "spread": 0.455707112491982,
+      "mean_ci": 0.2687949243811568
+    },
+    {
+      "w_t": 0.8,
+      "w_k": 0.2,
+      "rho": 0.8779220779220779,
+      "flips": 8,
+      "spread": 0.5017665442765192,
+      "mean_ci": 0.2972583532038765
+    },
+    {
+      "w_t": 0.9,
+      "w_k": 0.1,
+      "rho": 0.8558441558441559,
+      "flips": 8,
+      "spread": 0.55111705900401,
+      "mean_ci": 0.3266947396224548
+    },
+    {
+      "w_t": 1.0,
+      "w_k": 0.0,
+      "rho": 0.8545454545454545,
+      "flips": 8,
+      "spread": 0.600467573731501,
+      "mean_ci": 0.35648408970887957
+    }
+  ],
+  "stability_map": [
+    {
+      "name": "NGC 5055",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    },
+    {
+      "name": "Bootes Void",
+      "class_base": "VOID-EDGE",
+      "is_stable": false,
+      "class_w0": "VOID-EDGE",
+      "class_w5": "LEAF",
+      "class_w10": "LEAF",
+      "unique_classes": [
+        "LEAF",
+        "VOID-EDGE"
+      ]
+    },
+    {
+      "name": "NGC 7496",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    },
+    {
+      "name": "IC 5332",
+      "class_base": "BRANCH",
+      "is_stable": false,
+      "class_w0": "BRANCH",
+      "class_w5": "BRANCH",
+      "class_w10": "VOID-EDGE",
+      "unique_classes": [
+        "LEAF",
+        "VOID-EDGE",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 3137",
+      "class_base": "BRANCH",
+      "is_stable": false,
+      "class_w0": "BRANCH",
+      "class_w5": "BRANCH",
+      "class_w10": "VOID-EDGE",
+      "unique_classes": [
+        "VOID-EDGE",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 3175",
+      "class_base": "ROOT",
+      "is_stable": false,
+      "class_w0": "ROOT",
+      "class_w5": "BRANCH",
+      "class_w10": "VOID-EDGE",
+      "unique_classes": [
+        "BRANCH",
+        "LEAF",
+        "VOID-EDGE",
+        "ROOT"
+      ]
+    },
+    {
+      "name": "NGC 628",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    },
+    {
+      "name": "NGC 1087",
+      "class_base": "BRANCH",
+      "is_stable": false,
+      "class_w0": "LEAF",
+      "class_w5": "LEAF",
+      "class_w10": "VOID-EDGE",
+      "unique_classes": [
+        "LEAF",
+        "VOID-EDGE"
+      ]
+    },
+    {
+      "name": "NGC 1300",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    },
+    {
+      "name": "NGC 1365",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    },
+    {
+      "name": "NGC 1385",
+      "class_base": "BRANCH",
+      "is_stable": true,
+      "class_w0": "BRANCH",
+      "class_w5": "BRANCH",
+      "class_w10": "BRANCH",
+      "unique_classes": [
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 1433",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "BRANCH",
+      "class_w5": "BRANCH",
+      "class_w10": "BRANCH",
+      "unique_classes": [
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 1566",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    },
+    {
+      "name": "NGC 1672",
+      "class_base": "ROOT",
+      "is_stable": false,
+      "class_w0": "VOID-EDGE",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT",
+        "VOID-EDGE",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 2835",
+      "class_base": "BRANCH",
+      "is_stable": false,
+      "class_w0": "LEAF",
+      "class_w5": "BRANCH",
+      "class_w10": "BRANCH",
+      "unique_classes": [
+        "LEAF",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 3351",
+      "class_base": "ROOT",
+      "is_stable": false,
+      "class_w0": "VOID-EDGE",
+      "class_w5": "BRANCH",
+      "class_w10": "BRANCH",
+      "unique_classes": [
+        "LEAF",
+        "VOID-EDGE",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 3627",
+      "class_base": "ROOT",
+      "is_stable": false,
+      "class_w0": "BRANCH",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 4254",
+      "class_base": "ROOT",
+      "is_stable": false,
+      "class_w0": "VOID-EDGE",
+      "class_w5": "BRANCH",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT",
+        "VOID-EDGE",
+        "BRANCH"
+      ]
+    },
+    {
+      "name": "NGC 4321",
+      "class_base": "ROOT",
+      "is_stable": false,
+      "class_w0": "VOID-EDGE",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "VOID-EDGE",
+        "ROOT"
+      ]
+    },
+    {
+      "name": "NGC 5068",
+      "class_base": "BRANCH",
+      "is_stable": false,
+      "class_w0": "VOID-EDGE",
+      "class_w5": "VOID-EDGE",
+      "class_w10": "LEAF",
+      "unique_classes": [
+        "LEAF",
+        "VOID-EDGE"
+      ]
+    },
+    {
+      "name": "M74",
+      "class_base": "ROOT",
+      "is_stable": true,
+      "class_w0": "ROOT",
+      "class_w5": "ROOT",
+      "class_w10": "ROOT",
+      "unique_classes": [
+        "ROOT"
+      ]
+    }
+  ],
+  "fusion_table_w05": [
+    {
+      "name": "NGC 5055",
+      "a_planck": 0.5143088670191197,
+      "a_v3k": -0.1858159809327376,
+      "a_full_w05": 0.16424644304319105,
+      "ci_base": 0.24,
+      "ci_cmb_w05": 0.31883829266073166,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "Bootes Void",
+      "a_planck": 0.6428811989818285,
+      "a_v3k": 0.0,
+      "a_full_w05": 0.32144059949091425,
+      "ci_base": 0.0009375,
+      "ci_cmb_w05": 0.001540201124045464,
+      "class_base": "VOID-EDGE",
+      "class_w05": "LEAF"
+    },
+    {
+      "name": "NGC 7496",
+      "a_planck": -0.13674781752609078,
+      "a_v3k": -0.1877462058682854,
+      "a_full_w05": -0.16224701169718808,
+      "ci_base": 0.18375,
+      "ci_cmb_w05": 0.12412422320128338,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "IC 5332",
+      "a_planck": -0.7308564422150666,
+      "a_v3k": 0.3363755443363322,
+      "a_full_w05": -0.1972404489393672,
+      "ci_base": 0.0459375,
+      "ci_cmb_w05": 0.027816033753695638,
+      "class_base": "BRANCH",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 3137",
+      "a_planck": -0.7379723693260698,
+      "a_v3k": 0.0019999973333376,
+      "a_full_w05": -0.3679861859963661,
+      "ci_base": 0.08734183075830387,
+      "ci_cmb_w05": 0.023060656400927193,
+      "class_base": "BRANCH",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 3175",
+      "a_planck": -0.5988356382238218,
+      "a_v3k": 0.003999978666803199,
+      "a_full_w05": -0.2974178297785093,
+      "ci_base": 0.15610947883206713,
+      "ci_cmb_w05": 0.06324999402789205,
+      "class_base": "ROOT",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 628",
+      "a_planck": 0.4283090962485605,
+      "a_v3k": 0.477700012168498,
+      "a_full_w05": 0.45300455420852925,
+      "ci_base": 0.29551620137917894,
+      "ci_cmb_w05": 0.5632565715135248,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 1087",
+      "a_planck": -0.49535343996139547,
+      "a_v3k": -0.45262761660337403,
+      "a_full_w05": -0.47399052828238475,
+      "ci_base": 0.045592981542276874,
+      "ci_cmb_w05": 0.002371698727891209,
+      "class_base": "BRANCH",
+      "class_w05": "LEAF"
+    },
+    {
+      "name": "NGC 1300",
+      "a_planck": 0.8902826099890523,
+      "a_v3k": -0.1683810458708147,
+      "a_full_w05": 0.3609507820591188,
+      "ci_base": 0.19269959668285494,
+      "ci_cmb_w05": 0.33180973693316146,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 1365",
+      "a_planck": 0.7701311708438981,
+      "a_v3k": -0.39861398571723183,
+      "a_full_w05": 0.18575859256333316,
+      "ci_base": 0.8792690780892244,
+      "ci_cmb_w05": 1.205932650949852,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 1385",
+      "a_planck": 0.2545006667655968,
+      "a_v3k": -0.12139829936450594,
+      "a_full_w05": 0.06655118370054543,
+      "ci_base": 0.05119817764909367,
+      "ci_cmb_w05": 0.05801277630080966,
+      "class_base": "BRANCH",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 1433",
+      "a_planck": -0.3583442415166423,
+      "a_v3k": -0.43981386041546483,
+      "a_full_w05": -0.39907905096605356,
+      "ci_base": 0.17368278085713074,
+      "ci_cmb_w05": 0.03505646214991316,
+      "class_base": "ROOT",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 1566",
+      "a_planck": -0.2661292293724715,
+      "a_v3k": -0.21079197182064136,
+      "a_full_w05": -0.23846060059655644,
+      "ci_base": 0.25919077434853666,
+      "ci_cmb_w05": 0.1355771989080595,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 1672",
+      "a_planck": 0.12974528620930062,
+      "a_v3k": -0.5941136625777168,
+      "a_full_w05": -0.2321841881842081,
+      "ci_base": 0.37295265596366134,
+      "ci_cmb_w05": 0.1997652366515274,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 2835",
+      "a_planck": -0.40166330211897316,
+      "a_v3k": -0.4652571273092522,
+      "a_full_w05": -0.43346021471411267,
+      "ci_base": 0.0769252919042011,
+      "ci_cmb_w05": 0.010237184812719496,
+      "class_base": "BRANCH",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 3351",
+      "a_planck": -0.2449290357913127,
+      "a_v3k": -0.6384779573958917,
+      "a_full_w05": -0.4417034965936022,
+      "ci_base": 0.18111202026041895,
+      "ci_cmb_w05": 0.021116395012102204,
+      "class_base": "ROOT",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 3627",
+      "a_planck": 0.603223106501349,
+      "a_v3k": -0.43981386041546483,
+      "a_full_w05": 0.0817046230429421,
+      "ci_base": 0.284771288240738,
+      "ci_cmb_w05": 0.331305549759063,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 4254",
+      "a_planck": 0.2402338877358589,
+      "a_v3k": -0.9984157517232097,
+      "a_full_w05": -0.3790909319936754,
+      "ci_base": 0.3122001328448064,
+      "ci_cmb_w05": 0.07549565418743255,
+      "class_base": "ROOT",
+      "class_w05": "BRANCH"
+    },
+    {
+      "name": "NGC 4321",
+      "a_planck": 0.9479502072557119,
+      "a_v3k": -0.919224284865496,
+      "a_full_w05": 0.014362961195107937,
+      "ci_base": 0.37295265596366134,
+      "ci_cmb_w05": 0.38366606501409833,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    },
+    {
+      "name": "NGC 5068",
+      "a_planck": -0.4536256111084351,
+      "a_v3k": -0.8299575597888287,
+      "a_full_w05": -0.6417915854486319,
+      "ci_base": 0.010855173803570671,
+      "ci_cmb_w05": 0.0,
+      "class_base": "BRANCH",
+      "class_w05": "VOID-EDGE"
+    },
+    {
+      "name": "M74",
+      "a_planck": 0.4283090962485605,
+      "a_v3k": 0.477700012168498,
+      "a_full_w05": 0.45300455420852925,
+      "ci_base": 0.29551620137917894,
+      "ci_cmb_w05": 0.5632565715135248,
+      "class_base": "ROOT",
+      "class_w05": "ROOT"
+    }
+  ],
+  "elapsed_seconds": 0.0
+}

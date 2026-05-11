@@ -1,0 +1,372 @@
+{
+  "test_name": "BCM_v28_JWST_Pierce_Gauntlet_18",
+  "test_number": 18,
+  "timestamp": "20260509_071246",
+  "target": "NGC7496_IC5332_JWST_Pierce_Gauntlet",
+  "framework": "pierce_gauntlet_blowthrough",
+  "v28_partition": "jwst_pierce_gauntlet (data/results/)",
+  "velocity_sweep_c": [
+    5000,
+    10000,
+    12000,
+    20000,
+    30000
+  ],
+  "phases": [
+    "ENTRY",
+    "EXIT"
+  ],
+  "n_half_steps": 60,
+  "sparc_status": "NOT_IN_SPARC",
+  "jwst_surveys": {
+    "NGC7496": "PHANGS-JWST",
+    "IC5332": "JWST_early_release"
+  },
+  "hypotheses_tested": {
+    "H_V28_NGC7496_PIERCE_GAUNTLET": {
+      "statement": "Pierce Test Gauntlet on NGC 7496 (barred_spiral, 18.7 Mpc, JWST-characterized, outside SPARC). J_amp=7.0 (normalized to NGC5055 ref J=8.0). Velocity sweep [5000, 10000, 12000, 20000, 30000]c \u00d7 ENTRY/EXIT phases = 10 pierces. Burdick Coupling: d\u03c3/dt = \u03b1\u00b7R \u2212 \u03b2\u00b7sgn(R)\u00b7R\u00b2. Gutter Depth \u0394W = \u222bR\u00b7d\u03c3 (Measurement as Manifold Work, SJB 2026). 7D operators: OpT (f/2 heartbeat stability), OpC (velocity shadow). STARGATE condition: R_7D>0.92, \u0394OP<0.08, R_9to10>0.92, phi_rms<0.0045. STARGATE passes: 4/10. Architect-mode (\u0394W<0, net Gutter): 0 pierces. Best ENTRY: 12000c  R_7D=0.9964  R_9to10=1.0000. Sigma deficit=2.6250e-02  Restoration effort=3.7500e-03. Physical interpretation: Central bar acts as natural waveguide for J flux. \u0394W < 0 at high velocity confirms SJB Measurement-as-Architecture insight: at 30000c the craft carves a net Gutter rather than absorbing torus energy -- the observer has become the Architect.",
+      "result": "FIELD_EXTRACTED",
+      "direction": 1,
+      "evidence_type": "primary",
+      "pass_count": 4,
+      "total_configs": 10,
+      "prior": 0.5,
+      "measurement_targets": [
+        "invariance",
+        "drift",
+        "degeneracy",
+        "resolution"
+      ],
+      "metrics": {
+        "coherence_score": 0.7391758950271459,
+        "overlap_fraction": 0.4,
+        "target_name": "NGC 7496",
+        "target_type": "barred_spiral",
+        "J_amp": 7.0,
+        "f_base": 148.0,
+        "distance_mpc": 18.7,
+        "stargate_count": 4,
+        "total_pierces": 10,
+        "architect_mode_count": 0,
+        "sigma_deficit": 0.02625,
+        "restoration_effort": 0.0037499999994642856,
+        "best_entry_velocity": 12000,
+        "best_entry_R_7D": 0.9964244738962709,
+        "best_entry_R_9to10": 1.0,
+        "best_entry_delta_W": 0.15506729624152948,
+        "best_entry_stargate": true,
+        "per_velocity_entry": {
+          "5000": {
+            "R_7D": 0.8249430700355654,
+            "R_9to10": 1.0,
+            "delta_OP": 0.12011441893183628,
+            "coherence": 0.8777865426838173,
+            "delta_W": 0.17672071186587113,
+            "phi_rms": 0.00023855810681636672,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "10000": {
+            "R_7D": 0.9862399450355654,
+            "R_9to10": 1.0,
+            "delta_OP": 0.007614418931836342,
+            "coherence": 0.9900181648136488,
+            "delta_W": 0.011688356030833721,
+            "phi_rms": 0.00023855810681636672,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "12000": {
+            "R_7D": 0.9964244738962709,
+            "R_9to10": 1.0,
+            "delta_OP": 0.002385581068163667,
+            "coherence": 0.9952345288607054,
+            "delta_W": 0.15506729624152948,
+            "phi_rms": 0.00023855810681636672,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "20000": {
+            "R_7D": 0.7739899450355654,
+            "R_9to10": 1.0,
+            "delta_OP": 0.15761441893183636,
+            "coherence": 0.8403760019738734,
+            "delta_W": 0.011923698995580632,
+            "phi_rms": 0.00023855810681636672,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "30000": {
+            "R_7D": 0.11423994503556541,
+            "R_9to10": 1.0,
+            "delta_OP": 0.8076144189318364,
+            "coherence": 0.19192662966817975,
+            "delta_W": 0.012161959306269038,
+            "phi_rms": 0.00023855810681636672,
+            "stargate": false,
+            "crew_safe": true
+          }
+        },
+        "per_velocity_exit": {
+          "5000": {
+            "R_7D": 0.8250281069228009,
+            "R_9to10": 1.0,
+            "delta_OP": 0.11994350046452318,
+            "coherence": 0.877806635503221,
+            "delta_W": 0.1767195060384674,
+            "phi_rms": 0.0002556499535476797,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "10000": {
+            "R_7D": 0.9863249819228009,
+            "R_9to10": 1.0,
+            "delta_OP": 0.007443500464523245,
+            "coherence": 0.9900190293054799,
+            "delta_W": 0.011696250936149998,
+            "phi_rms": 0.0002556499535476797,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "12000": {
+            "R_7D": 0.9961685185417223,
+            "R_9to10": 1.0,
+            "delta_OP": 0.002556499535476764,
+            "coherence": 0.9948935366189213,
+            "delta_W": 0.15505865480773956,
+            "phi_rms": 0.0002556499535476797,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "20000": {
+            "R_7D": 0.7740749819228009,
+            "R_9to10": 1.0,
+            "delta_OP": 0.15744350046452327,
+            "coherence": 0.8404025042358013,
+            "delta_W": 0.011939622512127955,
+            "phi_rms": 0.0002556499535476797,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "30000": {
+            "R_7D": 0.1143249819228009,
+            "R_9to10": 1.0,
+            "delta_OP": 0.8074435004645233,
+            "coherence": 0.19206422893386124,
+            "delta_W": 0.012186043471761457,
+            "phi_rms": 0.0002556499535476797,
+            "stargate": false,
+            "crew_safe": true
+          }
+        }
+      },
+      "context": {
+        "velocity_sweep_c": [
+          5000,
+          10000,
+          12000,
+          20000,
+          30000
+        ],
+        "n_half_steps": 60,
+        "alpha_excite": 0.006,
+        "beta_damp": 0.003,
+        "dt_pierce": 0.015,
+        "sig_crit": 0.0005,
+        "brucetron_hemorrhage": 0.0045,
+        "c_substrate": 12000.0,
+        "r_7d_min": 0.92,
+        "delta_op_max": 0.08,
+        "theta_9to10": 0.92,
+        "framework": "pierce_gauntlet_blowthrough",
+        "sparc_status": "NOT_IN_SPARC_JWST_only",
+        "test_type": "characterization_not_steering"
+      },
+      "keywords": [
+        "anchor_projection",
+        "anchor_bridge_probe",
+        "classifier_divergence",
+        "attractor",
+        "brucetron",
+        "lambda",
+        "regime",
+        "classifier",
+        "fracture_lambda",
+        "diffusive_lock"
+      ]
+    },
+    "H_V28_IC5332_PIERCE_GAUNTLET": {
+      "statement": "Pierce Test Gauntlet on IC 5332 (late_type_flocculent, 9.0 Mpc, JWST-characterized, outside SPARC). J_amp=3.5 (normalized to NGC5055 ref J=8.0). Velocity sweep [5000, 10000, 12000, 20000, 30000]c \u00d7 ENTRY/EXIT phases = 10 pierces. Burdick Coupling: d\u03c3/dt = \u03b1\u00b7R \u2212 \u03b2\u00b7sgn(R)\u00b7R\u00b2. Gutter Depth \u0394W = \u222bR\u00b7d\u03c3 (Measurement as Manifold Work, SJB 2026). 7D operators: OpT (f/2 heartbeat stability), OpC (velocity shadow). STARGATE condition: R_7D>0.92, \u0394OP<0.08, R_9to10>0.92, phi_rms<0.0045. STARGATE passes: 4/10. Architect-mode (\u0394W<0, net Gutter): 0 pierces. Best ENTRY: 12000c  R_7D=0.9982  R_9to10=1.0000. Sigma deficit=1.3125e-02  Restoration effort=3.7500e-03. Physical interpretation: Flocculent arms; no bar; slow J restoration after pierce. \u0394W < 0 at high velocity confirms SJB Measurement-as-Architecture insight: at 30000c the craft carves a net Gutter rather than absorbing torus energy -- the observer has become the Architect.",
+      "result": "FIELD_EXTRACTED",
+      "direction": 1,
+      "evidence_type": "primary",
+      "pass_count": 4,
+      "total_configs": 10,
+      "prior": 0.5,
+      "measurement_targets": [
+        "invariance",
+        "drift",
+        "degeneracy",
+        "resolution"
+      ],
+      "metrics": {
+        "coherence_score": 0.739053718514332,
+        "overlap_fraction": 0.4,
+        "target_name": "IC 5332",
+        "target_type": "late_type_flocculent",
+        "J_amp": 3.5,
+        "f_base": 144.0,
+        "distance_mpc": 9.0,
+        "stargate_count": 4,
+        "total_pierces": 10,
+        "architect_mode_count": 0,
+        "sigma_deficit": 0.013125,
+        "restoration_effort": 0.0037499999989285713,
+        "best_entry_velocity": 12000,
+        "best_entry_R_7D": 0.9982115255735063,
+        "best_entry_R_9to10": 1.0,
+        "best_entry_delta_W": 0.09942827056019277,
+        "best_entry_stargate": true,
+        "per_velocity_entry": {
+          "5000": {
+            "R_7D": 0.8243488088924118,
+            "R_9to10": 1.0,
+            "delta_OP": 0.12130720946591811,
+            "coherence": 0.8776446940911669,
+            "delta_W": 0.14823540220488893,
+            "phi_rms": 0.00011927905340818336,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "10000": {
+            "R_7D": 0.9856456838924118,
+            "R_9to10": 1.0,
+            "delta_OP": 0.008807209465918175,
+            "coherence": 0.9900105051560826,
+            "delta_W": 0.07586574728053683,
+            "phi_rms": 0.00011927905340818336,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "12000": {
+            "R_7D": 0.9982115255735063,
+            "R_9to10": 1.0,
+            "delta_OP": 0.0011927905340818334,
+            "coherence": 0.9976158416810945,
+            "delta_W": 0.09942827056019277,
+            "phi_rms": 0.00011927905340818336,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "20000": {
+            "R_7D": 0.7733956838924118,
+            "R_9to10": 1.0,
+            "delta_OP": 0.1588072094659182,
+            "coherence": 0.8401894237361949,
+            "delta_W": 0.07606318434552627,
+            "phi_rms": 0.00011927905340818336,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "30000": {
+            "R_7D": 0.11364568389241178,
+            "R_9to10": 1.0,
+            "delta_OP": 0.8088072094659182,
+            "coherence": 0.19096473758334803,
+            "delta_W": 0.07626058020370599,
+            "phi_rms": 0.00011927905340818336,
+            "stargate": false,
+            "crew_safe": true
+          }
+        },
+        "per_velocity_exit": {
+          "5000": {
+            "R_7D": 0.824391432922635,
+            "R_9to10": 1.0,
+            "delta_OP": 0.12122175023226156,
+            "coherence": 0.8776549516740793,
+            "delta_W": 0.14823334756066894,
+            "phi_rms": 0.00012782497677383986,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "10000": {
+            "R_7D": 0.9856883079226348,
+            "R_9to10": 1.0,
+            "delta_OP": 0.008721750232261627,
+            "coherence": 0.9900111485752087,
+            "delta_W": 0.07587244115022955,
+            "phi_rms": 0.00012782497677383986,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "12000": {
+            "R_7D": 0.9980834423096268,
+            "R_9to10": 1.0,
+            "delta_OP": 0.001278249767738382,
+            "coherence": 0.997445134386992,
+            "delta_W": 0.099420653418053,
+            "phi_rms": 0.00012782497677383986,
+            "stargate": true,
+            "crew_safe": true
+          },
+          "20000": {
+            "R_7D": 0.7734383079226348,
+            "R_9to10": 1.0,
+            "delta_OP": 0.15872175023226165,
+            "coherence": 0.8402028860403694,
+            "delta_W": 0.07607657031102204,
+            "phi_rms": 0.00012782497677383986,
+            "stargate": false,
+            "crew_safe": true
+          },
+          "30000": {
+            "R_7D": 0.11368830792263479,
+            "R_9to10": 1.0,
+            "delta_OP": 0.8087217502322617,
+            "coherence": 0.19103374838939932,
+            "delta_W": 0.07628065634075484,
+            "phi_rms": 0.00012782497677383986,
+            "stargate": false,
+            "crew_safe": true
+          }
+        }
+      },
+      "context": {
+        "velocity_sweep_c": [
+          5000,
+          10000,
+          12000,
+          20000,
+          30000
+        ],
+        "n_half_steps": 60,
+        "alpha_excite": 0.006,
+        "beta_damp": 0.003,
+        "dt_pierce": 0.015,
+        "sig_crit": 0.0005,
+        "brucetron_hemorrhage": 0.0045,
+        "c_substrate": 12000.0,
+        "r_7d_min": 0.92,
+        "delta_op_max": 0.08,
+        "theta_9to10": 0.92,
+        "framework": "pierce_gauntlet_blowthrough",
+        "sparc_status": "NOT_IN_SPARC_JWST_only",
+        "test_type": "characterization_not_steering"
+      },
+      "keywords": [
+        "anchor_projection",
+        "anchor_bridge_probe",
+        "classifier_divergence",
+        "attractor",
+        "brucetron",
+        "lambda",
+        "regime",
+        "classifier",
+        "fracture_lambda",
+        "diffusive_lock"
+      ]
+    }
+  },
+  "elapsed_seconds": 0.002008199691772461
+}

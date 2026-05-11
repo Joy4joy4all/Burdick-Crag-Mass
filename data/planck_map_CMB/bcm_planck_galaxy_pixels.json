@@ -1,0 +1,197 @@
+{
+  "source": "C:\\TITS\\TITS_GIBUSH_AISOS_SPINE\\Burdick_Crag_Mass_Substrate_Solver\\data\\planck_map_CMB\\COM_CMB_IQU-smica_2048_R3.00_full.fits",
+  "nside_out": 64,
+  "units": "\u03bcK (CMB temperature anisotropy)",
+  "note": "\u0394T < 0 = CMB cold spot = void channel = SUPER_GUTTER (A_CMB < 0). \u0394T > 0 = CMB hot spot  = barrier      = CROSS_SCAR  (A_CMB > 0). A_CMB_planck = tanh(\u0394T_\u03bcK / 70).",
+  "extracted": [
+    {
+      "name": "NGC 5055",
+      "ra_deg": 198.96,
+      "dec_deg": 42.03,
+      "theta_rad": 0.8372344421816799,
+      "phi_rad": 3.4725070797679183,
+      "pixel": 8205,
+      "delta_T_uK": 39.79995346069336
+    },
+    {
+      "name": "Bootes Void",
+      "ra_deg": 216.0,
+      "dec_deg": 46.0,
+      "theta_rad": 0.767944870877505,
+      "phi_rad": 3.7699111843077517,
+      "pixel": 6985,
+      "delta_T_uK": 53.41484069824219
+    },
+    {
+      "name": "NGC 7496",
+      "ra_deg": 347.45,
+      "dec_deg": -43.43,
+      "theta_rad": 2.3287928209360342,
+      "phi_rad": 6.064146486054298,
+      "pixel": 41579,
+      "delta_T_uK": -9.63269329071045
+    },
+    {
+      "name": "IC 5332",
+      "ra_deg": 350.85,
+      "dec_deg": -36.1,
+      "theta_rad": 2.2008601867648494,
+      "phi_rad": 6.123487680622105,
+      "pixel": 39033,
+      "delta_T_uK": -65.13943481445312
+    },
+    {
+      "name": "NGC 3137",
+      "ra_deg": 151.57,
+      "dec_deg": -29.0,
+      "theta_rad": 2.076941809873252,
+      "phi_rad": 2.645395547247805,
+      "pixel": 36588,
+      "delta_T_uK": -66.22085571289062
+    },
+    {
+      "name": "NGC 3175",
+      "ra_deg": 153.35,
+      "dec_deg": -28.87,
+      "theta_rad": 2.0746728818456597,
+      "phi_rad": 2.6764624079333044,
+      "pixel": 36589,
+      "delta_T_uK": -48.393089294433594
+    },
+    {
+      "name": "NGC 628",
+      "ra_deg": 24.17,
+      "dec_deg": 15.78,
+      "theta_rad": 1.2953833708301914,
+      "phi_rad": 0.42184608020702946,
+      "pixel": 17809,
+      "delta_T_uK": 32.04768371582031
+    },
+    {
+      "name": "NGC 1087",
+      "ra_deg": 41.51,
+      "dec_deg": -0.5,
+      "theta_rad": 1.5795229730548683,
+      "phi_rad": 0.7244861725028462,
+      "pixel": 24477,
+      "delta_T_uK": -38.01908493041992
+    },
+    {
+      "name": "NGC 1300",
+      "ra_deg": 49.92,
+      "dec_deg": -19.41,
+      "theta_rad": 1.909564734606996,
+      "phi_rad": 0.8712683625955694,
+      "pixel": 32675,
+      "delta_T_uK": 99.63008117675781
+    },
+    {
+      "name": "NGC 1365",
+      "ra_deg": 53.4,
+      "dec_deg": -36.14,
+      "theta_rad": 2.201558318465647,
+      "phi_rad": 0.9320058205649719,
+      "pixel": 39078,
+      "delta_T_uK": 71.44550323486328
+    },
+    {
+      "name": "NGC 1385",
+      "ra_deg": 54.37,
+      "dec_deg": -24.5,
+      "theta_rad": 1.9984019935335073,
+      "phi_rad": 0.9489355143093169,
+      "pixel": 34726,
+      "delta_T_uK": 18.21535301208496
+    },
+    {
+      "name": "NGC 1433",
+      "ra_deg": 55.51,
+      "dec_deg": -47.22,
+      "theta_rad": 2.394940799586619,
+      "phi_rad": 0.9688322677820523,
+      "pixel": 42575,
+      "delta_T_uK": -26.248943328857422
+    },
+    {
+      "name": "NGC 1566",
+      "ra_deg": 65.0,
+      "dec_deg": -54.94,
+      "theta_rad": 2.529680217840581,
+      "phi_rad": 1.1344640137963142,
+      "pixel": 44482,
+      "delta_T_uK": -19.08853530883789
+    },
+    {
+      "name": "NGC 1672",
+      "ra_deg": 71.43,
+      "dec_deg": -59.25,
+      "theta_rad": 2.604903908601537,
+      "phi_rad": 1.2466886846995497,
+      "pixel": 45740,
+      "delta_T_uK": 9.13365364074707
+    },
+    {
+      "name": "NGC 2835",
+      "ra_deg": 139.47,
+      "dec_deg": -22.35,
+      "theta_rad": 1.9608774146156291,
+      "phi_rad": 2.4342107077564914,
+      "pixel": 34019,
+      "delta_T_uK": -29.794143676757812
+    },
+    {
+      "name": "NGC 3351",
+      "ra_deg": 160.99,
+      "dec_deg": 11.7,
+      "theta_rad": 1.36659280431156,
+      "phi_rad": 2.8098055627856713,
+      "pixel": 19442,
+      "delta_T_uK": -17.50077247619629
+    },
+    {
+      "name": "NGC 3627",
+      "ra_deg": 170.06,
+      "dec_deg": 12.99,
+      "theta_rad": 1.3440780569608333,
+      "phi_rad": 2.968106925941557,
+      "pixel": 19193,
+      "delta_T_uK": 48.8739013671875
+    },
+    {
+      "name": "NGC 4254",
+      "ra_deg": 184.71,
+      "dec_deg": 14.42,
+      "theta_rad": 1.3191198486573141,
+      "phi_rad": 3.2237976613587263,
+      "pixel": 18435,
+      "delta_T_uK": 17.151561737060547
+    },
+    {
+      "name": "NGC 4321",
+      "ra_deg": 185.73,
+      "dec_deg": 15.82,
+      "theta_rad": 1.2946852391293937,
+      "phi_rad": 3.241600019729068,
+      "pixel": 17668,
+      "delta_T_uK": 126.78162384033203
+    },
+    {
+      "name": "NGC 5068",
+      "ra_deg": 199.73,
+      "dec_deg": -21.04,
+      "theta_rad": 1.9380136014145033,
+      "phi_rad": 3.4859461150082742,
+      "pixel": 33550,
+      "delta_T_uK": -34.24790954589844
+    },
+    {
+      "name": "M74",
+      "ra_deg": 24.17,
+      "dec_deg": 15.78,
+      "theta_rad": 1.2953833708301914,
+      "phi_rad": 0.42184608020702946,
+      "pixel": 17809,
+      "delta_T_uK": 32.04768371582031
+    }
+  ]
+}
