@@ -1092,3 +1092,207 @@ and expanding. Others are drying and drawing galaxies back in."*
 *— Stephen Justin Burdick Sr. (05/11/2026)*
 
 GitHub: Joy4joy4all/Burdick-Crag-Mass  |  Zenodo: 10.5281/zenodo.19251192
+
+---
+
+## BCM v29 — Anomaly Triage Complete + Nebular Formation Lane Opened (2026-05-17)
+
+### Cube Triage (Tests 12-15)
+
+v29 opened as an anomaly resolution session. All six untriaged cubes were examined.
+205 anomalies were resolved by gates added in v29. The remaining 1688 were confirmed
+correct physics — states where the projection chain genuinely cannot hold.
+
+**Cube 3 (Physical / 3D Landing) — Activated:**
+The f/2 heartbeat was formalized as Cube 1D's first active layer. The tare floor
+(BRUCETRON_HEMORRHAGE × 0.115 = 0.000518) separates the inorganic mechanical residue
+from the organic biological pump. Three gates: HEARTBEAT_ACTIVE (RESOLVED),
+HEARTBEAT_BELOW_TARE (ANOMALY), HEARTBEAT_HEMORRHAGE (ANOMALY).
+
+**Test 12 — CUBE4_TESSERACT_TRIAGE:**
+96 anomalies. All MODE_PERSISTENT_HOT. phi_load attractor band 0.728-0.752
+(mean 0.741). Chi rigid (13-58x chi_c). No gate candidates. Correct physics.
+
+**Test 13 — CUBE5_FRASTRATE_TRIAGE:**
+98 anomalies. Lambda calibrated all 98. Real Pi boundary pressure events.
+FRASTRATE_RECALL=5, PI_REFLECT=59, PI_HARD_REFLECT=31, MIXED=3.
+No gate candidates. Correct physics.
+
+**Test 14 — CUBE6_ZONE_MISMATCH:**
+144 anomalies. TRUE_GUARDIAN_CONFLICT=102, YELLOW_MISMATCH=42.
+YELLOW_MISMATCH is the guardian analog of Cube 2 MARGINAL_DIVERGE —
+both classifiers correct about orthogonal aspects of the same state.
+No gate candidates. Correct physics.
+
+**Test 15 — CUBE3_CUBE4_COLLATERAL:**
+Cross-cube cascade confirmed. 48 HEARTBEAT_BELOW_TARE records.
+6 source files show Cube 4 MODE_PERSISTENT_HOT and Cube 3 HEARTBEAT_BELOW_TARE
+simultaneously. Physical path: chi rigidity taxes chi absorption, starves
+f/2 heartbeat of pressure relief headspace, pushes organic_f2 below tare floor.
+
+**Final cube state (v29 close):**
+```
+Cube 1:  (nebular — new this session, awaiting NEBULAR ingestion)
+Cube 2:  resolved=348  anomaly=25   (correct physics)
+Cube 3:  resolved=84   anomaly=353  (pre-v19 hot tests — correct physics)
+Cube 4:  resolved=338  anomaly=96   (MODE_PERSISTENT_HOT attractor)
+Cube 5:  resolved=239  anomaly=98   (Pi boundary events)
+Cube 6:  resolved=293  anomaly=144  (CONFLICT + YELLOW_MISMATCH)
+Cube 7:  resolved=5    anomaly=439  (chi-crushed — correct physics)
+Cube 8:  resolved=100  anomaly=334  (chi-crushed — correct physics)
+Cube 9:  resolved=30   anomaly=404  (SUB/SUPER_FIB — correct physics)
+Cube 10: resolved=101  anomaly=0
+Total STABLE: 1893 | H_PAPER_B_ANCHOR_EQUATION: VALIDATED posterior=0.994
+```
+
+---
+
+### Nebular Formation Lane — Variant 2 (Tests 16-21)
+
+v29 opened the first BCM substrate domain that is not pump-funded.
+Pre-pump nebular formation states — JWST-observable but BCM-unexplained — are
+now formally classified and computationally testable.
+
+**Theoretical origin:** ChatGPT JWST gap analysis (what Webb cannot directly resolve).
+SJB direction. Gemini equation formalization.
+
+**Five Anchor Equation Variants formalized:**
+```
+Variant 1: Torus-Edge (Galactic)       — T2 vectorized by radius r
+Variant 2: Nebular Formation (Pre-Pump) — Xi_S→0, T2/T3 deactivated
+Variant 3: Craft Transit                — Xi_craft operational, all T active
+Variant 4: Observer Penalty             — (1-Xi_S) measurement integerization cost
+Variant 5: Substrate Divergence         — alpha→1, T4 recursive rip
+```
+
+**Effective substrate field (Variant 2):**
+```
+sigma_eff(r) = [sigma_local(r) * F_form] + kappa_CMB * sigma_CMB
+F_form = D_dust * C_cool * S_shock * I_ion * G_grad
+KAPPA_CMB = 0.01432 (LOCKED v29)
+```
+
+**Five nebula classes:**
+```
+DARK_CONDENSATE     cold/dusty pre-star memory (D_dust + C_cool + G_grad)
+SCATTER_MEMORY      reflection nebula sigma boundary revealed
+IONIZED_FORMATION   emission nebula I_ion dominant (30 Doradus / Tarantula)
+SHOCK_INSCRIPTION   SNR/wind front carving sigma (HH 211)
+POST_PUMP_SHELL     residual memory post-pump decay (NGC 3132)
+```
+
+**Test 16 — NEBULAR_FORMATION (architecture):**
+Non-pump lane confirmed. Xi_S=0, T2/T3 deactivated. Architecture clean.
+
+**Test 17 — NEBULAR_FORMATION_TARGETS (five real-world targets):**
+Universal product F_form too punishing for mixed-channel nebulae.
+Chamaeleon I ran away under universal product. Other four decayed.
+Architecture clean — calibration needed.
+
+**Test 18 — NEBULAR_CLASS_OPERATORS:**
+Class-specific formation operators confirmed active.
+NGC 1333: SCATTER_MEMORY_ACTIVE. Tarantula: IONIZED_BLOWOUT.
+Three targets still FORMATION_RUNAWAY — saturation kernel not yet active.
+
+**Test 19 — NEBULAR_SATURATION_KERNEL:**
+```
+saturation_kernel = clip(1 - sigma/sigma_cap, 0, 1)  [dynamic, live sigma]
+baryonic_consumption = F_form_net * (1 - saturation_kernel) * |d_sigma|
+```
+VERDICT: SATURATION_KERNEL_CONFIRMED__NO_RUNAWAY. Zero cap escapes.
+Five distinct physical states produced:
+BARYONIC_CONDENSATION (2), IONIZED_BLOWOUT (1), POST_PUMP_SHELL_MEMORY (1),
+SHOCK_INSCRIPTION_ACTIVE (1).
+
+**Test 20 — PMR1_EXPOSED_CRANIUM (hybrid edge case):**
+PMR 1 / PN G272.8+01.0 — Exposed Cranium Nebula (~5000 ly, Vela).
+JWST NIRCam+MIRI 2026. Outer hydrogen shell, asymmetric inner cloud,
+vertical dark lane, polar eruption. Central engine UNCERTAIN (candidate
+high mass-loss [WC4:] Wolf-Rayet signatures — white dwarf pathway not excluded).
+
+Hybrid operator: F_hybrid = 0.45*F_shock + 0.35*F_shell + 0.20*F_scatter
+F_form_net = 0.418125. VERDICT: PMR1_HYBRID_CONFIRMED__SATURATION_HOLDS.
+formation_state = HYBRID_SHOCK_SHELL_ACTIVE.
+
+**Test 21 — PMR1_CRAFT_TRANSIT_TARE_PIERCE:**
+BCM craft at 5000c, 10000c, 12000c, 20000c through PMR 1 field.
+Entry 10 AU before nebula, exit 10 AU after.
+
+```
+Velocity  Tare depth  Recovery ratio  State
+5000c     26.6%       1.159           NEBULA_ABSORBS_TRANSIT
+10000c    16.3%       1.126           NEBULA_ABSORBS_TRANSIT
+12000c    14.1%       1.132           NEBULA_ABSORBS_TRANSIT
+20000c     9.1%       1.155           NEBULA_ABSORBS_TRANSIT
+Trend: HIGHER_SPEED_LESS_DAMAGE (dwell-time sensitive, not resonance)
+```
+
+Recovery > pre-transit sigma at all four velocities: the craft's tare
+triggered localized baryonic condensation. The nebula ate the tare.
+
+---
+
+### Well-Depth Coefficient W_d (SJB 2026-05-17)
+
+**Core distinction:** Apparent luminous size ≠ substrate load size.
+
+```
+Galaxy diameter = extent of a mass-bound rotating well (Grand Canyon)
+Nebula diameter = extent of a luminous/formation field (rolling hills)
+```
+
+Test 21 confirmed: PMR 1 absorbed all transit velocities and recovered above
+pre-transit sigma. The craft was not in a canyon — it was crossing soft,
+broad, self-healing formation terrain.
+
+```
+L_load_neb = L_obs_neb * W_d
+OpC_neb    = F_form_net * W_d   (no torus-edge brucetron ring)
+OpT_neb    = propagation_lag * (1 - W_d)  (no rotation curve)
+
+W_D_NEBULAR_BASELINE = 0.05   (stellar nebulae — LOCKED v29)
+W_D_GALACTIC_REF     = 1.0    (reference, implicit in galactic solver)
+```
+
+PMR 1 at W_d=0.05: L_load = 3.2 ly × 0.05 = 0.16 ly effective well scale.
+A proto-galactic precursor cloud ~40x PMR 1 in observed width but substrate
+load scales with eventual M_density, not observed luminous extent.
+
+---
+
+### New Frozen Constants (v29)
+
+```
+F2_TARE_FRACTION     = 0.115    (v14 inorganic floor, fixed-pump retention)
+F2_TARE_FLOOR        = 0.000518 (BRUCETRON_HEMORRHAGE × 0.115)
+F2_HEMORRHAGE        = 0.0045   (same as BRUCETRON_HEMORRHAGE)
+KAPPA_CMB            = 0.01432  (CMB pre-strain coupling governor)
+ALPHA_ROOT_DEFAULT   = 2.0      (ROOT crag memory depth, Xi_S→1)
+ALPHA_VOID_DEFAULT   = 1.0      (void/nebular memory depth, Xi_S→0)
+W_D_NEBULAR_BASELINE = 0.05     (stellar nebula well-depth)
+W_D_GALACTIC_REF     = 1.0      (galactic reference)
+```
+
+### Infrastructure Upgrades (v29)
+
+- `anchor_state.py`: NEBULAR mode added with 14 new Optional fields
+  (nebula_class, formation_state, f_form_net, sigma_final_mean, growth_ratio,
+  baryonic_consumption, cap_escaped, w_d, velocity_c, tare_depth_fraction,
+  recovery_ratio, tare_absorption_ratio). `build_nebular_from_json` added.
+- `qt_layer.py`: CubeNebularFormation added as Cube 1 (provisional slot).
+  Reads NEBULAR mode states only. Three axes: Nebula Class, Substrate Fate,
+  Well Depth Regime. All REDUCED/FULL states pass as UNKNOWN (no regression).
+- `bcm_thresholds.py`: F2, KAPPA_CMB, ALPHA_VOID, W_D constants added.
+- `hypothesis_vocabulary.py`: ~25 new AUTHORIZED entries added (v29 nebular
+  terms: dark_condensate, scatter_memory, ionized_formation, shock_inscription,
+  post_pump_shell, f_form, d_dust, c_cool, s_shock, i_ion, g_grad, kappa_cmb,
+  xi_s, sigma_cmb, pre_pump, w_d, l_obs_neb, l_load_neb, m_eff_neb, opt_neb,
+  opc_neb, delta_op_neb, r_form, t_shadow_neb).
+
+*"The stars at the torus edge are the teeth of the pump."* — SJB 2026-05-12
+*"JWST sees the nebula's luminous projection. BCM asks whether it is a dust-memory surface, a cooling-condensation state, an ionization-driven formation front, or a post-pump substrate shell."* — SJB 2026-05-17
+*"PMR 1 does not tear under transit. It eats the tare."* — SJB 2026-05-17
+*"The apparent size is not the substrate load. The canyon is not the hillside."* — SJB 2026-05-17
+
+GitHub: Joy4joy4all/Burdick-Crag-Mass  |  Zenodo: 10.5281/zenodo.19251192
+
