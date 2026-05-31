@@ -2640,6 +2640,345 @@ HYPOTHESIS_KEYWORDS: Dict[str, KeywordEntry] = {
         first_seen="BCM_v29_TEST21_PMR1_TARE_PIERCE.py",
     ),
 
+    # =========================================================================
+    # v30 — Variant 6 SMBH Torsion-Unwind + M51 Tidal Bridge
+    # Authorized: 2026-05-29
+    # SJB theoretical origin. All physics: Burdick.
+    # =========================================================================
+
+    "theta_spring": KeywordEntry(
+        keyword="theta_spring",
+        status="AUTHORIZED",
+        description=(
+            "Torsion spring parameter for Variant 6 SMBH polar ejection. "
+            "theta_spring = memory_loss * omega_chi * j_circ / xi_nozzle. "
+            "Spring fires when theta_spring >= theta_crit (0.5). "
+            "v30 Test08: first clearing at VMAX=12, theta_final=0.597. "
+            "Below VMAX=10: theta_spring<0.5, spring ghosted."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["xi_nozzle", "omega_chi", "j_circ", "relax_damp",
+                 "variant_6", "memory_loss"],
+        notes="SJB theoretical origin. v30 Variant 6 chain Tests 08-09.",
+        first_seen="BCM_v30_TEST08_M51_VMAX_SWEEP.py",
+    ),
+
+    "xi_nozzle": KeywordEntry(
+        keyword="xi_nozzle",
+        status="AUTHORIZED",
+        description=(
+            "Spatially resolved freeboard resistance at the polar nozzle. "
+            "Sampled from the polar column OUTSIDE the dense core radius "
+            "(r > R_core along polar axis). Where the Gaussian gradient "
+            "flattens, xi is naturally low (~4.75 in v30 physical coords). "
+            "Replaces scalar core-mean xi from Tests 04-06 which was ~95. "
+            "No artificial FREEBOARD_DAMP — spatial geometry does the work."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["theta_spring", "xi_s", "variant_6"],
+        notes="Spatial xi fix identified v30 Test07. Gemini insight: "
+              "measure freeboard where the packet exits, not at core center.",
+        first_seen="BCM_v30_TEST07_M51_SPATIAL_NOZZLE.py",
+    ),
+
+    "variant_6": KeywordEntry(
+        keyword="variant_6",
+        status="AUTHORIZED",
+        description=(
+            "BCM Variant 6: torsion-unwind SMBH jet mechanism. "
+            "At SMBH circumpunct (r->0): 3D mass becomes illegible 1D "
+            "memory under torsion. When torsion exceeds Xi-freeboard "
+            "containment, packet unloads along polar axis as "
+            "chirality-unwind. Observed jet = 3D manifestation of "
+            "torsional memory release. Four-stage requirement: "
+            "1) angular torsion winding, "
+            "2) spatial polar Xi escape path, "
+            "3) VMAX/shear above threshold, "
+            "4) relaxation drain for episodic ejection. "
+            "THEORETICAL PROBE ONLY. Standard SMBH jet mechanisms "
+            "(frame-dragging, Blandford-Znajek) not ruled out."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["theta_spring", "xi_nozzle", "omega_chi", "j_circ",
+                 "relax_damp", "relax_recover"],
+        notes="SJB theoretical origin. v30 M51 test chain Tests 01-09.",
+        first_seen="BCM_v30_TEST01_M51_VARIANT6_TORSION.py",
+    ),
+
+    "relax_damp": KeywordEntry(
+        keyword="relax_damp",
+        status="AUTHORIZED",
+        description=(
+            "Relaxation drain coefficient. Per-step decay applied to "
+            "omega_dyn and j_circ_dyn when torsion spring fires. "
+            "Converts continuous runaway (DAMP=1.0) into episodic burst "
+            "train. v30 Test09: DAMP=0.9999 yields 737 bursts, "
+            "DAMP=0.999 yields 433 bursts with mean gap 5.6 steps. "
+            "Physical interpretation: winding depletes on each ejection; "
+            "outer disk must rewind before next burst. "
+            "RELAX_DAMP is a placeholder — SJB calibration needed."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["relax_recover", "theta_spring", "variant_6",
+                 "episodic_burst"],
+        notes="v30 Test09. RELAX_RECOVER=0.002 is placeholder.",
+        first_seen="BCM_v30_TEST09_M51_RELAX_DRAIN.py",
+    ),
+
+    "relax_recover": KeywordEntry(
+        keyword="relax_recover",
+        status="AUTHORIZED",
+        description=(
+            "Per-step winding recovery rate toward natural omega/j_circ "
+            "when torsion spring is not firing. Simulates outer galactic "
+            "rotation re-feeding angular momentum to the core between "
+            "burst events. v30 placeholder: RELAX_RECOVER=0.002. "
+            "SJB calibration needed from real M51 nuclear rotation data."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["relax_damp", "theta_spring", "episodic_burst"],
+        notes="Placeholder value. Physical calibration pending ALMA data.",
+        first_seen="BCM_v30_TEST09_M51_RELAX_DRAIN.py",
+    ),
+
+    "episodic_burst": KeywordEntry(
+        keyword="episodic_burst",
+        status="AUTHORIZED",
+        description=(
+            "Discrete torsion spring ejection event produced by the "
+            "relaxation drain mechanism. Burst train: spring fires, "
+            "winding depletes (relax_damp), spring quiets, outer disk "
+            "rewinds (relax_recover), spring fires again. "
+            "Physically maps to episodic AGN jet structure / knots. "
+            "v30 Test09: burst duration 1.3-3.1 steps, gap 1.0-5.6 steps "
+            "depending on drain strength. Period is solver steps, "
+            "not physical time — calibration needed."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["relax_damp", "relax_recover", "theta_spring", "variant_6"],
+        notes="v30 Test09 confirmed. Burst period not calibrated to "
+              "physical M51 jet timescales.",
+        first_seen="BCM_v30_TEST09_M51_RELAX_DRAIN.py",
+    ),
+
+    "tidal_bridge": KeywordEntry(
+        keyword="tidal_bridge",
+        status="AUTHORIZED",
+        description=(
+            "Substrate corridor between M51 (NGC5194, Pump A) and "
+            "NGC5195 (Pump B). Low-sigma valley connecting two funded "
+            "potential wells. Material flows from NGC5195 (source) "
+            "toward M51 (destination) along a slight sigma gradient. "
+            "v30 Test10 (1D model): axial transit gutters at 5000-12000c. "
+            "v30 Test11C (2D model): broad bridge is resilient, "
+            "orientation gradient present (0.78-0.875 recovery by angle). "
+            "Bridge sigma and gradient are proxy estimates — not ALMA "
+            "calibrated."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["pump_a_m51", "pump_b_ngc5195", "gutter_formed",
+                 "recovery_ratio", "axial_transit", "s_arc",
+                 "orientation_gradient"],
+        notes="SJB direction. v30 Tests 10-11C. Two models: 1D worst-case "
+              "tunnel and 2D broad bridge. Both are valid, not equivalent.",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "pump_a_m51": KeywordEntry(
+        keyword="pump_a_m51",
+        status="AUTHORIZED",
+        description=(
+            "M51 (NGC5194, Whirlpool Galaxy) as Pump A — the greater, "
+            "destination-side funded substrate well in the M51/NGC5195 "
+            "tidal bridge system. SMBH mass ~1e7 M_sun. "
+            "Vmax=219 km/s (SPARC). Distance 7.9-9.5 Mpc. "
+            "Pump A receives substrate transfer from Pump B (NGC5195) "
+            "through the tidal bridge corridor."
+        ),
+        bucket_hint="Cube2",
+        category="context",
+        related=["pump_b_ngc5195", "tidal_bridge"],
+        notes="M51 empirical anchors: distance, SMBH mass, Vmax from "
+              "peer-reviewed SPARC/HST data. Grid is synthetic.",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "pump_b_ngc5195": KeywordEntry(
+        keyword="pump_b_ngc5195",
+        status="AUTHORIZED",
+        description=(
+            "NGC5195 as Pump B — the lesser, source-side funded substrate "
+            "well in the M51/NGC5195 tidal bridge system. Companion galaxy "
+            "to M51. Provides tidal shear asymmetry to M51 core rotation "
+            "(TIDAL_VX=0.30, TIDAL_VY=0.20 in v30 solver). "
+            "Also the source end of the tidal bridge transfer corridor."
+        ),
+        bucket_hint="Cube2",
+        category="context",
+        related=["pump_a_m51", "tidal_bridge"],
+        notes="NGC5195 tidal shear is the asymmetry that activates "
+              "vector vorticity in Variant 6 (Tests 02-03).",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "gutter_formed": KeywordEntry(
+        keyword="gutter_formed",
+        status="AUTHORIZED",
+        description=(
+            "Boolean flag: True when craft axial transit collapses "
+            "the tidal bridge transfer corridor below 50% of its "
+            "pre-transit connected width. "
+            "v30 Test10 (1D): gutter at 5000c, 10000c, 12000c. "
+            "v30 Test11C (2D): no gutter at any angle — broad bridge "
+            "has lateral redundancy. "
+            "Physical meaning: bridge-transfer lane blocked; "
+            "NGC5195 to M51 substrate flow disrupted."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["tidal_bridge", "recovery_ratio", "axial_transit",
+                 "transfer_disruption"],
+        notes="1D vs 2D model gives different gutter behavior. "
+              "1D is worst-case tunnel limit, not equivalent to 2D bridge.",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "recovery_ratio": KeywordEntry(
+        keyword="recovery_ratio",
+        status="AUTHORIZED",
+        description=(
+            "Bridge sigma post-transit / bridge sigma pre-transit. "
+            "1.0 = full recovery, 0.0 = complete depletion. "
+            "v30 Test10 (1D axial): 0.194 at 5000c, 0.485 at 12000c, "
+            "0.625 at 20000c. Higher speed = less damage (dwell-time). "
+            "v30 Test11C (2D): 0.783-0.875 by angle at 12kc. "
+            "Perpendicular always recovers better than axial."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["tidal_bridge", "gutter_formed", "axial_transit",
+                 "orientation_gradient"],
+        notes="Dwell-time mechanism: higher speed = fewer steps/cell "
+              "= less tare exposure per bridge cell.",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "axial_transit": KeywordEntry(
+        keyword="axial_transit",
+        status="AUTHORIZED",
+        description=(
+            "Craft path aligned with the tidal bridge transfer axis "
+            "(NGC5195 -> M51 direction, 0 degrees). Worst-case "
+            "orientation for bridge damage. In 1D model, craft scrapes "
+            "the only transfer path for its full length. "
+            "In 2D model, craft path crosses bridge center but lateral "
+            "redundancy allows recovery. "
+            "Contrast with perpendicular transit (90 deg) and s_arc."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["tidal_bridge", "gutter_formed", "recovery_ratio",
+                 "s_arc", "orientation_gradient"],
+        notes="v30 Tests 10-11C. Axial is most damaging orientation.",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "s_arc": KeywordEntry(
+        keyword="s_arc",
+        status="AUTHORIZED",
+        description=(
+            "Gradient-following craft transit path through the tidal bridge. "
+            "SJB direction 2026-05-29: a craft navigating a substrate "
+            "gradient field follows the gradient, not a fixed bearing. "
+            "The tidal bridge slopes from NGC5195 (source, higher sigma) "
+            "to M51 (destination). S-arc path curves with this slope via "
+            "sinusoidal y-deviation (amplitude 0.04 grid fraction, "
+            "first estimate — SJB calibration needed). "
+            "v30 Test11C result: S-arc recovery=0.810 at 12kc, "
+            "between axial (0.783) and 45deg (0.838). "
+            "Physical interpretation: gradient-following path stays inside "
+            "low-sigma corridor longer than a chord cut but exits faster "
+            "than a full axial scrape."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["tidal_bridge", "axial_transit", "orientation_gradient",
+                 "recovery_ratio"],
+        notes="SJB theoretical direction. S-arc amplitude is placeholder. "
+              "v30 Test11C first characterization.",
+        first_seen="BCM_v30_TEST11C_M51_ANGLE_SARC.py",
+    ),
+
+    "orientation_gradient": KeywordEntry(
+        keyword="orientation_gradient",
+        status="AUTHORIZED",
+        description=(
+            "Angle-dependent tidal bridge damage pattern. "
+            "Recovery increases monotonically from axial (0 deg) to "
+            "perpendicular (90 deg). "
+            "v30 Test11C at 12kc: 0.783 (0deg) -> 0.810 (S-arc) -> "
+            "0.838 (45deg) -> 0.875 (90deg). "
+            "20kc shows same ordering with higher recovery throughout. "
+            "12kc has stronger angle sensitivity than 20kc "
+            "(lower speed = longer dwell = more orientation-coupled damage). "
+            "Physical meaning: orientation determines how much of the "
+            "craft transit overlaps with the transfer corridor."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["tidal_bridge", "axial_transit", "s_arc", "recovery_ratio"],
+        notes="v30 Test11C. 2D bridge model accepted as distinct physics "
+              "from 1D Test10. Not parity failure — different geometry.",
+        first_seen="BCM_v30_TEST11C_M51_ANGLE_SARC.py",
+    ),
+
+    "transfer_disruption": KeywordEntry(
+        keyword="transfer_disruption",
+        status="AUTHORIZED",
+        description=(
+            "Fractional reduction in NGC5195 -> M51 substrate flow "
+            "gradient caused by craft transit. "
+            "0.0 = flow fully maintained. 1.0 = gradient suppressed. "
+            "v30 Test10 (1D): 0.86 at 5000c axial, 0.66 at 12000c axial, "
+            "0.38 at 12000c perpendicular. "
+            "v30 Test11C (2D): metric insensitive — 0.000 across all angles "
+            "(G3 failed, 2D bridge too broad for point-gradient metric). "
+            "Metric needs connected corridor width formulation for 2D."
+        ),
+        bucket_hint="Cube2",
+        category="physics",
+        related=["tidal_bridge", "gutter_formed", "recovery_ratio"],
+        notes="1D metric works. 2D metric needs redesign (Test11C G3 fail).",
+        first_seen="BCM_v30_TEST10_M51_TIDAL_BRIDGE.py",
+    ),
+
+    "vmax_threshold": KeywordEntry(
+        keyword="vmax_threshold",
+        status="AUTHORIZED",
+        description=(
+            "Critical VMAX_SCALED value at which torsion spring first fires "
+            "in Variant 6 M51 probe (physical coordinate solver). "
+            "v30 Test08: VMAX_crit=12 (theta_final=0.597 >= theta_crit=0.5). "
+            "Below VMAX=10: theta_final=0.415, spring ghosted. "
+            "Transition is sharp between VMAX=10 and VMAX=12. "
+            "Physical km/s mapping: requires real M51 nuclear rotation "
+            "data at r~150pc (ALMA resolution). Proxy only."
+        ),
+        bucket_hint="Cube9",
+        category="physics",
+        related=["theta_spring", "variant_6", "xi_nozzle"],
+        notes="Proxy value. Physical calibration pending ALMA M51 data. "
+              "Standard SMBH mechanisms not ruled out.",
+        first_seen="BCM_v30_TEST08_M51_VMAX_SWEEP.py",
+    ),
+
 }
 
 
